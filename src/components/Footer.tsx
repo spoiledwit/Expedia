@@ -1,9 +1,174 @@
-import React from 'react'
+import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  return (
-    <div>Footer</div>
-  )
-}
+  const quickLinks = [
+    {
+      name: "Home",
+      href: "/",
+    },
+    {
+      name: "About Us",
+      href: "/",
+    },
+    {
+      name: "Services",
+      href: "/",
+    },
+    {
+      name: "Pay Online",
+      href: "/",
+    },
+    {
+      name: "Free Assessment",
+      href: "/",
+    },
+  ];
 
-export default Footer
+  const immigrationCountries = [
+    {
+      name: "Canada",
+      href: "/",
+    },
+    {
+      name: "Australia",
+      href: "/",
+    },
+    {
+      name: "Poland",
+      href: "/",
+    },
+    {
+      name: "Malta",
+      href: "/",
+    },
+    {
+      name: "UK",
+      href: "/",
+    },
+  ];
+
+  const importantLinks = [
+    {
+      name: "Contact Us",
+      href: "/",
+    },
+    {
+      name: "Submit Your Documents",
+      href: "/",
+    },
+    {
+      name: "Terms & Conditions",
+      href: "/",
+    },
+    {
+      name: "Privacy Policy",
+      href: "/",
+    },
+    {
+      name: "Refund Policy",
+      href: "/",
+    },
+    {
+      name: "Latest News",
+      href: "/",
+    },
+  ];
+
+  return (
+    <footer className=" p-4 md:px-40 md:py-20 w-full bg-sky-950 flex flex-col">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4">
+        {/* Quick Links */}
+        <section className=" flex flex-col gap-8">
+          <h3 className=" text-2xl font-bold text-white">Quick Links</h3>
+          <div className="flex flex-col gap-2">
+            {quickLinks.map((link, i) => (
+              <Link
+                key={i}
+                className="text-white hover:text-yellow-400 transition-all"
+                to={link.href}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Migrat To */}
+        <section className=" flex flex-col gap-8">
+          <h3 className=" text-2xl font-bold text-white">Migrate To</h3>
+          <div className="flex flex-col gap-2">
+            {immigrationCountries.map((link, i) => (
+              <Link
+                key={i}
+                className="text-white hover:text-yellow-400 transition-all"
+                to={link.href}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Important Links */}
+        <section className=" flex flex-col gap-8">
+          <h3 className=" text-2xl font-bold text-white">Important Links</h3>
+          <div className="flex flex-col gap-2">
+            {importantLinks.map((link, i) => (
+              <Link
+                key={i}
+                className="text-white hover:text-yellow-400 transition-all"
+                to={link.href}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        {/* Contact Us */}
+        <section className=" flex flex-col gap-8">
+          <h3 className=" text-2xl font-bold text-white">Contact Us</h3>
+          <div className="flex flex-col gap-2">
+            <a
+              className=" text-white hover:text-yellow-400 transition-all"
+              href="/"
+            >
+              Address House No. -, Street --, City
+            </a>
+            <a
+              className=" text-white hover:text-yellow-400 transition-all"
+              href="/"
+            >
+              example@domain.com
+            </a>
+            <a
+              className=" text-white hover:text-yellow-400 transition-all"
+              href="/"
+            >
+              +01 2345678910
+            </a>
+          </div>
+        </section>
+      </div>
+
+      {/* Social Links */}
+      <div className="w-full justify-end gap-4 flex">
+        <BsFacebook
+          size={24}
+          className="text-white hover:text-yellow-400 transition-all"
+        />
+        <BsTwitter
+          size={24}
+          className="text-white hover:text-yellow-400 transition-all"
+        />
+        <BsYoutube
+          size={24}
+          className="text-white hover:text-yellow-400 transition-all"
+        />
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
