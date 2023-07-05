@@ -5,6 +5,7 @@ import About from "../components/Home/About"
 import Faq from "../components/Home/Faq"
 import Testimonials from "../components/Home/Testimonials"
 
+
 const Home = () => {
   return (
     <div>

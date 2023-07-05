@@ -1,6 +1,6 @@
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import globe from "../assets/globe.png";
+import Globe from "./Home/Globe";
 
 const Footer = () => {
   const quickLinks = [
@@ -80,11 +80,7 @@ const Footer = () => {
     <footer className=" p-4 md:px-40 md:py-20 w-full bg-sky-950 flex flex-col">
       <div className="w-full flex justify-between items-center">
         <div className="w-full grid place-items-center">
-          <img
-            alt="globe"
-            src={globe}
-            className="h-96 text-sky-200 opacity-50"
-          />
+          <Globe />
         </div>
         <section className=" text-white text-lg font-medium flex flex-col w-full">
           <h3 className=" mb-8 text-white font-bold text-2xl md:text-4xl tracking-wide">
