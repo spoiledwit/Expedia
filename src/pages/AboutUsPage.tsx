@@ -1,7 +1,7 @@
-import Hero from "../components/About/Hero";
-import OurMission from "../components/About/OurMission";
-import StartProcess from "../components/About/StartProcess";
-import StepsToApply from "../components/About/StepsToApply";
+import Hero from "../components/AboutUs/Hero";
+import OurMission from "../components/AboutUs/OurMission";
+import StartProcess from "../components/AboutUs/StartProcess";
+import StepsToApply from "../components/AboutUs/StepsToApply";
 
 const AboutPage = () => {
   return (

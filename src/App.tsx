@@ -2,7 +2,7 @@ import { Routes } from "react-router-dom"
 import { Route } from "react-router-dom"
 import Home from "./pages/Home"
 import Layout from "./Layout"
-import AboutPage from "./pages/AboutPage"
+import AboutPage from "./pages/AboutUsPage"
 
 const App = () => {
   return (
