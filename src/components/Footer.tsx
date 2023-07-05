@@ -1,5 +1,6 @@
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import globe from "../assets/globe.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -77,6 +78,33 @@ const Footer = () => {
 
   return (
     <footer className=" p-4 md:px-40 md:py-20 w-full bg-sky-950 flex flex-col">
+      <div className="w-full flex justify-between items-center">
+        <div className="w-full grid place-items-center">
+          <img
+            alt="globe"
+            src={globe}
+            className="h-96 text-sky-200 opacity-50"
+          />
+        </div>
+        <section className=" text-white text-lg font-medium flex flex-col w-full">
+          <h3 className=" mb-8 text-white font-bold text-2xl md:text-4xl tracking-wide">
+            Key Services
+          </h3>
+          <p>1. We predominantly receive inquiries gor Australia and Canada.</p>
+          <p>
+            2. Our bespoke services rank us among the top immigration
+            consultants for Canada in Dubai.
+          </p>
+          <p>
+            3. Our quality services have also established us as one of the best
+            immigration advisers for Australia in Dubai.
+          </p>
+        </section>
+      </div>
+
+      {/* Separator */}
+      <div className="my-12 md:my-20 h-[2px] min-w-max mx-20 md:mx-80 bg-sky-400" />
+
       <div className="w-full grid grid-cols-2 md:grid-cols-4">
         {/* Quick Links */}
         <section className=" flex flex-col gap-8">
