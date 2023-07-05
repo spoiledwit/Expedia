@@ -13,7 +13,7 @@ const ImmigrationPage = () => {
   const countryData = immigrationData[countryName] as CountryData
 
   return (
-    <div className="flex flex-col gap-20">
+    <div className="flex flex-col gap-20 mb-40">
       <Hero countryData={countryData} />
       <DiscoverImmigrationOptions countryData={countryData} />
       <ImmigrationPlans countryData={countryData} />

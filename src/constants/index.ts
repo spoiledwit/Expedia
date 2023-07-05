@@ -2,40 +2,40 @@ export const navLinks = [
   {
     id: "home",
     title: "Home",
-    slug: "/",
+    href: "/",
   },
   {
     id: "about",
     title: "About Us",
-    slug: "/about",
+    href: "/about-us",
   },
   {
     id: "canada",
     title: "Canada",
-    slug: "/canada",
+    href: "/immigration/canada",
     hasChildren: true,
   },
   {
     id: "canada",
     title: "Australia",
-    slug: "/canada",
+    href: "/immigration/australia",
     hasChildren: true,
   },
   {
     id: "canada",
     title: "UK",
-    slug: "/canada",
+    href: "/immigration/uk",
     hasChildren: true,
   },
   {
     id: "canada",
     title: "Europe",
-    slug: "/canada",
+    href: "/immigration/europe",
     hasChildren: true,
   },
   {
     id: "contact",
     title: "Contact Us",
-    slug: "/contact",
+    href: "/contact",
   },
 ];

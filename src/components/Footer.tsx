@@ -1,6 +1,7 @@
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Globe from "./Home/Globe";
+import globe from '../assets/globe.png'
 
 const Footer = () => {
   const quickLinks = [
@@ -29,30 +30,30 @@ const Footer = () => {
   const immigrationCountries = [
     {
       name: "Canada",
-      href: "/",
+      href: "/immigration/canada",
     },
     {
       name: "Australia",
-      href: "/",
+      href: "/immigration/australia",
     },
     {
       name: "Poland",
-      href: "/",
+      href: "/immigration/poland",
     },
     {
       name: "Malta",
-      href: "/",
+      href: "/immigration/malta",
     },
     {
       name: "UK",
-      href: "/",
+      href: "/immigration/uk",
     },
   ];
 
   const importantLinks = [
     {
       name: "Contact Us",
-      href: "/",
+      href: "/contact",
     },
     {
       name: "Submit Your Documents",
@@ -76,12 +77,16 @@ const Footer = () => {
     },
   ];
 
+  const scrollToTop = () => {
+    window.scrollTo(0,0)
+  }
+
   return (
     <footer className=" p-4 md:px-40 md:py-20 w-full bg-sky-950 flex flex-col">
       <div className="w-full flex justify-between items-center">
-        <div className="w-full grid place-items-center">
-          <Globe />
-        </div>
+        <div className="w-full grid place-items-center">{/* <Globe /> */}
+        <img alt="globe" src={globe} className="max-w-[360px]" />
+          </div>
         <section className=" text-white text-lg font-medium flex flex-col w-full">
           <h3 className=" mb-8 text-white font-bold text-2xl md:text-4xl tracking-wide">
             Key Services
@@ -108,6 +113,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             {quickLinks.map((link, i) => (
               <Link
+                onClick={scrollToTop}
                 key={i}
                 className="text-white hover:text-yellow-400 transition-all"
                 to={link.href}
@@ -124,6 +130,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             {immigrationCountries.map((link, i) => (
               <Link
+                onClick={scrollToTop}
                 key={i}
                 className="text-white hover:text-yellow-400 transition-all"
                 to={link.href}
@@ -140,6 +147,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             {importantLinks.map((link, i) => (
               <Link
+                onClick={scrollToTop}
                 key={i}
                 className="text-white hover:text-yellow-400 transition-all"
                 to={link.href}
