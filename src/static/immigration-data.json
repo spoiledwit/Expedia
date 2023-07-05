@@ -66,6 +66,49 @@
       ]
     }
   },
+  "europe": {
+    "name": "europe",
+    "hero": {
+      "title": "Immigration To Europe",
+      "imageURL": "https://loremflickr.com/640/480/nature",
+      "description": "Get your questions answered by an expert. Speak with a Regulated Europian Immigration Consultant to help plan your move."
+    },
+    "options": {
+      "title": "Discover All European Immigration Options",
+      "descriptionHTML": "<p>Europe is a historically rich continent. The inhabitants of Europe are renowned for their trading, creative and scientific acumen and many other skills. Consequently, the continent always stands firmly on the ground even if the economy of the whole world is shaking. Europe has industries in abundance and a huge job market offering exciting opportunities to aspiring immigrants, making it a dream destination to migrate to.</p><p>Let First Choice Consultants – one of the most sought-after immigration consultants in UAE lessen your migration worries and help you realize your European dreams!</p><p>How Imperium Can Help You to Immigrate to Europe from UAE?<br>Imperium has been helping individuals who wish to immigrate to Europe from UAE by providing them reliable immigration services. We make sure that our clients are fed with up to date immigration information and they are given the best possible suggestions &amp; advice. We guide them throughout the entire immigration process right from processing the documents until the part where you get yourself comfortable in a European Country.</p>",
+      "slogan": "EUROPE IMMIGRATION"
+    },
+    "plans": {
+      "title": "Explore European Countries",
+      "description": "We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.",
+      "values": [
+        {
+          "id": "1",
+          "name": "Portugal",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+        },
+        {
+          "id": "2",
+          "name": "Malta",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+        },
+        {
+          "id": "3",
+          "name": "Germany",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+        },
+        {
+          "id": "4",
+          "name": "Finland",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+        }
+      ]
+    }
+  },
   "uk": {
     "name": "UK",
     "hero": {
