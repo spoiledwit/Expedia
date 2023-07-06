@@ -29,14 +29,25 @@ const Faq = () => {
     },
   ];
 
-  const [open, setOpen] = useState(1);
+  const [openIndex, setOpenIndex] = useState(1);
+
+  const _setOpen = (index: number) => {
+    if (openIndex === index) {
+      index = 0;
+    }
+    setOpenIndex(index);
+  };
 
   return (
-    <div className="mb-20 p-4 md:px-40 md:py-20 flex w-full flex-col gap-2">
+    <div className="p-4 md:px-40 lg:px-64 xl:px-[400px] flex w-full flex-col gap-2">
       {FAQs.map((faq) => {
-        const isActive = open === faq.index;
+        const isActive = openIndex === faq.index;
         return (
-          <div key={faq.index} onClick={() => setOpen(faq.index)} className="flex flex-col w-full cursor-pointer">
+          <div
+            key={faq.index}
+            onClick={() => _setOpen(faq.index)}
+            className="flex flex-col w-full cursor-pointer"
+          >
             <div className=" w-full flex justify-between p-4 text-sky-900 text-lg font-bold tracking-wide rounded-t-md border-b-2 border-gray-200">
               {faq.question}
               {isActive ? (

@@ -82,7 +82,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className=" px-4 py-12 md:px-40 md:py-20 w-full bg-sky-950 flex flex-col">
+    <footer className=" px-4 py-12 md:px-24 xl:px-40 md:py-20 w-full bg-sky-950 flex flex-col">
       <div className="w-full flex flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
         <div className="w-full grid place-items-center">
           {/* <Globe /> */}

@@ -8,7 +8,7 @@ import Testimonials from "../components/Home/Testimonials"
 
 const Home = () => {
   return (
-    <div>
+    <div className="w-full flex flex-col gap-20 mb-40 ">
       <Hero />
       <Contact />
       <Consultancy />

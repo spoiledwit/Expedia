@@ -3,7 +3,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import { AiFillPhone } from "react-icons/ai";
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { useState } from "react";
-import "./styles.module.css";
+import Input from "../Input";
+import Select from "../Select";
 
 const Info = () => {
   return (
@@ -129,35 +130,18 @@ const Form = ({ onSubmit }: { onSubmit: (props: SubmitProps) => void }) => {
           />
           <Input label="Phone" onChange={(e) => setPhone(e.target.value)} />
           <Input label="Job Title" onChange={(e) => setJob(e.target.value)} />
-
-          <select
-            id="countries"
-            defaultValue={"canada"}
+          <Select
+            options={["canada", "australia", "uk", "europe"]}
             onChange={(e) => setService(e.target.value)}
-            className="bg-transparent text-white border border-sky-600 text-sm rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          >
-            <option className="text-black" value="canada">
-              Canada
-            </option>
-            <option className="text-black" value="australia">
-              Australia
-            </option>
-            <option className="text-black" value="uk">
-              UK
-            </option>
-            <option className="text-black" value="europe">
-              Europe
-            </option>
-          </select>
+          />
         </div>
         <textarea
           onChange={(e) => setMessage(e.target.value)}
           className="w-full h-32 caret-sky-500 text-gray-200 bg-transparent border-[2px] border-sky-700 focus:border-sky-500 outline-none ring-0 transition-all rounded-xl p-4"
         />
-
         <button
           type="submit"
-          className="mt-4 rounded-xl h-12 px-6 text-white hover:text-yellow-400 font-bold text-lg self-end bg-transparent border-[2px] border-sky-700 hover:border-sky-500 transition-all"
+          className="mt-4 rounded-xl h-12 px-6 text-white hover:text-yellow-300 text-lg self-end bg-transparent border-[2px] border-sky-700 hover:border-sky-500 transition-all"
         >
           Submit
         </button>
@@ -183,31 +167,3 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
-
-const Input = ({
-  label,
-  type,
-  onChange,
-}: {
-  label: string;
-  type?: "text" | "number" | "email";
-  onChange: (e: any) => void;
-}) => {
-  return (
-    <div className="relative z-0">
-      <input
-        onChange={onChange}
-        type={type || "text"}
-        id="name"
-        className="block appearance-none py-2.5 px-0 w-full h-10 bg-transparent caret-sky-500 text-gray-200 border-b-[2px] border-sky-700 focus:border-sky-500 outline-none ring-0 focus:delay-[99999] peer"
-        placeholder=" "
-      />
-      <label
-        htmlFor="name"
-        className="absolute text-sm text-gray-300 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-sky-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-      >
-        {label}
-      </label>
-    </div>
-  );
-};

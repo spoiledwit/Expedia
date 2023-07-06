@@ -21,7 +21,11 @@ const DiscoverImmigrationOptions = ({countryData}:{countryData: CountryData}) =>
         </h2>
         <section className=" prose" dangerouslySetInnerHTML={{__html: countryData.options.descriptionHTML}} />
       </section>
-      <div className="md:w-2/5">
+      <div className="md:w-2/5 h-min shadow-2xl shadow-gray-500 bg-sky-950 rounded-xl px-4 py-8">
+
+      <h2 className="text-white text-xl md:text-3xl text-center tracking-wider">
+Apply For Free Assessment
+      </h2>
         <AssessmentForm onSubmit={handleSubmit} />
       </div>
     </div>
