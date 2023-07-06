@@ -1,7 +1,7 @@
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Globe from "./Home/Globe";
-import globe from '../assets/globe.png'
+import globe from "../assets/globe.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -78,15 +78,16 @@ const Footer = () => {
   ];
 
   const scrollToTop = () => {
-    window.scrollTo(0,0)
-  }
+    window.scrollTo(0, 0);
+  };
 
   return (
     <footer className=" p-4 md:px-40 md:py-20 w-full bg-sky-950 flex flex-col">
       <div className="w-full flex justify-between items-center">
-        <div className="w-full grid place-items-center">{/* <Globe /> */}
-        <img alt="globe" src={globe} className="max-w-[360px]" />
-          </div>
+        <div className="w-full grid place-items-center">
+          {/* <Globe /> */}
+          <img alt="globe" src={globe} className="max-w-[360px]" />
+        </div>
         <section className=" text-white text-lg font-medium flex flex-col w-full">
           <h3 className=" mb-8 text-white font-bold text-2xl md:text-4xl tracking-wide">
             Key Services
@@ -186,18 +187,24 @@ const Footer = () => {
 
       {/* Social Links */}
       <div className="w-full justify-end gap-4 flex">
-        <BsFacebook
-          size={24}
-          className="text-white hover:text-yellow-400 transition-all"
-        />
-        <BsTwitter
-          size={24}
-          className="text-white hover:text-yellow-400 transition-all"
-        />
-        <BsYoutube
-          size={24}
-          className="text-white hover:text-yellow-400 transition-all"
-        />
+        <a href="/">
+          <BsFacebook
+            size={24}
+            className="text-white hover:text-yellow-400 transition-all"
+          />
+        </a>
+        <a href="/">
+          <BsTwitter
+            size={24}
+            className="text-white hover:text-yellow-400 transition-all"
+          />
+        </a>
+        <a href="/">
+          <BsYoutube
+            size={24}
+            className="text-white hover:text-yellow-400 transition-all"
+          />
+        </a>
       </div>
     </footer>
   );

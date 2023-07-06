@@ -16,19 +16,19 @@ export const navLinks = [
     hasChildren: true,
   },
   {
-    id: "canada",
+    id: "australia",
     title: "Australia",
     href: "/immigration/australia",
     hasChildren: true,
   },
   {
-    id: "canada",
+    id: "uk",
     title: "UK",
     href: "/immigration/uk",
     hasChildren: true,
   },
   {
-    id: "canada",
+    id: "europe",
     title: "Europe",
     href: "/immigration/europe",
     hasChildren: true,
