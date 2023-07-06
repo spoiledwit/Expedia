@@ -21,7 +21,7 @@ const StepSection = ({ step }: { step: Step }) => {
           {step.label}
         </h3>
       </div>
-      <p className=" mt-4 md:mt-0 text-center text-gray-700 text-sm tracking-wide">{step.text}</p>
+      <p className=" mt-4 md:mt-0 text-center text-base lg:text-sm text-gray-500 tracking-wide">{step.text}</p>
     </div>
   );
 };
@@ -51,7 +51,7 @@ const StepsToApply = () => {
   return (
     <div className="w-full h-max px-4 md:px-20 py-20 flex flex-col gap-20 items-center bg-white">
       <section className="w-full flex flex-col gap-8 text-center">
-        <h3 className=" text-sjy-900 text-3xl md:text-4xl tracking-wide">
+        <h3 className=" text-sky-900 text-3xl md:text-4xl tracking-wide">
           We create solutions for your Future
         </h3>
         <p className=" text-2xl tracking-wide text-sky-900">

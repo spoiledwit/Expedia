@@ -1,8 +1,16 @@
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+import Accordion from "./Accordion";
+
+export type FAQ = {
+  index: number;
+  question: string;
+  answer: string;
+};
 
 const Faq = () => {
-  const FAQs = [
+  const FAQs: FAQ[] = [
     {
       index: 1,
       question: "Why are you running?",
@@ -31,37 +39,19 @@ const Faq = () => {
 
   const [openIndex, setOpenIndex] = useState(1);
 
-  const _setOpen = (index: number) => {
-    if (openIndex === index) {
-      index = 0;
-    }
-    setOpenIndex(index);
-  };
-
   return (
     <div className="p-4 md:px-40 lg:px-64 xl:px-[400px] flex w-full flex-col gap-2">
-      {FAQs.map((faq) => {
-        const isActive = openIndex === faq.index;
-        return (
-          <div
-            key={faq.index}
-            onClick={() => _setOpen(faq.index)}
-            className="flex flex-col w-full cursor-pointer"
-          >
-            <div className=" w-full flex justify-between p-4 text-sky-900 text-lg font-bold tracking-wide rounded-t-md border-b-2 border-gray-200">
-              {faq.question}
-              {isActive ? (
-                <IoIosArrowDown size={20} className="text-gray-500" />
-              ) : (
-                <IoIosArrowUp size={20} className="text-gray-500" />
-              )}
-            </div>
-            {isActive && (
-              <div className=" w-full px-4 py-2 text-sm">{faq.answer}</div>
-            )}
-          </div>
-        );
-      })}
+      {FAQs.map((faq, i) => (
+        <>
+        {i !== 0 && <div className="h-[2px] w-1/2 my-4 bg-gray-200 self-center" />}
+        <Accordion
+          key={faq.index}
+          faq={faq}
+          isOpen={faq.index === openIndex}
+          onClick={() => faq.index === openIndex? setOpenIndex(-1): setOpenIndex(faq.index)}
+        />
+        </>
+      ))}
     </div>
   );
 };
