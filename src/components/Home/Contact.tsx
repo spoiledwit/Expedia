@@ -65,46 +65,10 @@ const Contact = () => {
         <motion.h1 className='text-4xl text-white font-medium' animate={{ scale: 1.2 }} transition={{ duration: 1 }}>
           Apply Now For Free Assessment
         </motion.h1>
-        <AssessmentForm onSubmit={(e) => {e.preventDefalut()}} />
-        {/* <div className='w-full space-y-6 flex flex-col items-center'>
-          <Input label="Name" />
-          <Input label="Phone" />
-          <Input label="Email" />
-          <Input label="Job Title" />
-          <Input label="Education" />
-          <Select label="Country" options={["Pakistan", "India", "Bangladesh"]} />
-          <Select label="Visa Service" options={["Study Visa", "Work Visa", "Visit Visa"]} />
-        </div> */}
+        <AssessmentForm onSubmit={(props) => {console.log(Object.values(props))}} />
       </div>
     </motion.div>
   );
 };
-
-interface InputProps {
-  label: string
-}
-
-const Input:React.FC<InputProps> = ({ label }) => (
-  <div className='w-full flex flex-col'>
-    <label className='text-white'>{label}</label>
-    <input className='border border-white rounded-md h-10 pl-2 bg-transparent text-white' />
-  </div>
-);
-
-interface SelectProps {
-  label: string,
-  options: string[]
-}
-
-const Select:React.FC<SelectProps> = ({ label, options }) => (
-  <div className='w-full flex flex-col'>
-    <label className='text-white'>{label}</label>
-    <select className='border border-white rounded-md h-10 pl-2 bg-transparent text-white'>
-      {options.map((option) => (
-        <option key={option} className='text-black'>{option}</option>
-      ))}
-    </select>
-  </div>
-);
 
 export default Contact;

@@ -139,7 +139,6 @@ const Form = ({ onSubmit }: { onSubmit: (props: SubmitProps) => void }) => {
           onChange={(e) => setMessage(e.target.value)}
           className="w-full h-32 caret-sky-500 text-gray-200 bg-transparent border-[2px] border-sky-700 focus:border-sky-500 outline-none ring-0 transition-all rounded-xl p-4"
         />
-
         <button
           type="submit"
           className="mt-4 rounded-xl h-12 px-6 text-white hover:text-yellow-300 text-lg self-end bg-transparent border-[2px] border-sky-700 hover:border-sky-500 transition-all"
