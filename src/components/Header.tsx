@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { navLinks } from '../constants';
+import { useState, useEffect } from "react";
+import { navLinks } from "../constants";
 import styles from "../styles/navbar.module.css";
-import { Link, useLocation } from 'react-router-dom';
-import { AiOutlineClose } from 'react-icons/ai';
-import { RiMenu3Fill } from 'react-icons/ri';
-import InfoHeader from './Home/InfoHeader';
-import Logo from "../assets/expedia.png"
+import { Link, useLocation } from "react-router-dom";
+import { AiOutlineClose } from "react-icons/ai";
+import { RiMenu3Fill } from "react-icons/ri";
+import InfoHeader from "./Home/InfoHeader";
+import Logo from "../assets/expedia.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -19,7 +19,12 @@ const Navbar = () => {
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    setIsVisible(!((lastScrollPos > currentScrollPos && (currentScrollPos < 100)) || currentScrollPos < 100));
+    setIsVisible(
+      !(
+        (lastScrollPos > currentScrollPos && currentScrollPos < 100) ||
+        currentScrollPos < 100
+      )
+    );
     setLastScrollPos(currentScrollPos);
   };
 
@@ -33,7 +38,9 @@ const Navbar = () => {
   }, [lastScrollPos]);
 
   useEffect(() => {
-    const activeLinkIndex = navLinks.findIndex(link => location.pathname === link.href);
+    const activeLinkIndex = navLinks.findIndex(
+      (link) => location.pathname === link.href
+    );
     if (activeLinkIndex === -1) {
       setIsMatchingNavLink(false);
     } else {
@@ -43,22 +50,33 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <header className={`${pathname === "/" && !isVisible ? "" : "bg-white"} transition duration-200 ease-in-out z-50`}>
+    <header
+      className={`${
+        pathname === "/" && !isVisible
+          ? ""
+          : " bg-white bg-opacity-25 backdrop-blur-md"
+      } transition duration-200 ease-in-out z-50`}
+    >
       {pathname === "/" && !isVisible ? <InfoHeader /> : null}
       <nav className={`${styles.navbar} ${styles.container} px-28`}>
-        <Link to={"/"} className={`${styles.nav_link} text-xl whitespace-nowrap lg:ml-10 font-bold`}>
+        <Link
+          to={"/"}
+          className={`${styles.nav_link} text-xl whitespace-nowrap lg:ml-10 font-bold`}
+        >
           <img src={Logo} alt="logo" className="h-[60px] object-cover" />
         </Link>
         <ul className={`${styles.nav_list}`}>
           {navLinks.map((link, index) => {
             const isActive = location.pathname === link.href;
             return (
-              <Link to={link.href} key={index}
+              <Link
+                to={link.href}
+                key={index}
                 className={`
                 text-[15px]
                 font-poppins
                 font-medium
-                ${isVisible ? "text-black" : "text-white"}
+                "text-white"
                 hover:text-yellow-500
                 cursor-pointer
                 transition
@@ -67,32 +85,55 @@ const Navbar = () => {
                 lg:mr-10
                 `}
                 onMouseEnter={() => setBarPosition(index * 7)}
-                onMouseLeave={() => setBarPosition(navLinks.findIndex(link => location.pathname === link.href) * 7)}
+                onMouseLeave={() =>
+                  setBarPosition(
+                    navLinks.findIndex(
+                      (link) => location.pathname === link.href
+                    ) * 7
+                  )
+                }
               >
-                <p>
-                  {link.title.toUpperCase()}
-                </p>
+                <p>{link.title.toUpperCase()}</p>
               </Link>
-            )
+            );
           })}
-          </ul>
-        <button className= {`bg-sky-950 hover:text-yellow-400 mr-10 text-white px-6 rounded-[4px] h-[37px] font-poppins text-sm`}>Free Assesment</button>
+        </ul>
+        <button
+          className={`bg-sky-950 hover:text-yellow-400 mr-10 text-white px-6 rounded-[4px] h-[37px] font-poppins text-sm`}
+        >
+          Free Assesment
+        </button>
         <div className={`${styles.hb} flex-1 justify-end items-center`}>
-          {toggle ? <AiOutlineClose className="w-[28px] text-white cursor-pointer h-[28px] object-contain" onClick={() => setToggle(!toggle)} /> : <RiMenu3Fill className="w-[28px] text-white cursor-pointer h-[28px] object-contain" onClick={() => setToggle(!toggle)} />}
+          {toggle ? (
+            <AiOutlineClose
+              className="w-[28px] text-white cursor-pointer h-[28px] object-contain"
+              onClick={() => setToggle(!toggle)}
+            />
+          ) : (
+            <RiMenu3Fill
+              className="w-[28px] text-white cursor-pointer h-[28px] object-contain"
+              onClick={() => setToggle(!toggle)}
+            />
+          )}
           <div
-            className={`${!toggle ? "hidden" : "flex"
-              } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+            className={`${
+              !toggle ? "hidden" : "flex"
+            } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
           >
-            <ul className={`list-none z-50 flex justify-end items-start flex-1 flex-col bg-fuchsia-900 p-10 rounded-3xl`}>
-              {navLinks.map((nav, index) => (
+            <ul
+              className={`list-none z-50 flex justify-end items-start flex-1 flex-col bg-fuchsia-900 p-10 rounded-3xl`}
+            >
+              {navLinks.map((link, index) => (
                 <Link
-                  to={nav.href}
+                  id={link.id}
+                  to={link.href}
                   onClick={() => setToggle(!toggle)}
-                  key={nav.id}
+                  key={link.id}
                   className={`font-poppins font-medium cursor-pointer text-white text-[16px] 
                  ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 >
-                  <p>{nav.title}</p>
+                  {/* //TODO: add dialog (opens on hover) for links children */}
+                  <p>{link.title}</p>
                 </Link>
               ))}
             </ul>
@@ -100,7 +141,7 @@ const Navbar = () => {
         </div>
       </nav>
     </header>
-  )
-}
+  );
+};
 
 export default Navbar;

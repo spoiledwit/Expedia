@@ -9,7 +9,7 @@ import Select from "../Select";
 const Info = () => {
   return (
     <div className="w-full h-full flex flex-col gap-8">
-      <section className=" w-full flex flex-col gap-4">
+      <section className=" w-full flex flex-col gap-4 ">
         <h2 className="capitalize text-2xl md:text-4xl font-medium text-sky-900 tracking-wide">
           Contact Info
         </h2>
@@ -19,68 +19,70 @@ const Info = () => {
         </p>
       </section>
 
-      <div className=" w-full flex flex-col gap-8">
-        <div className="flex gap-4 items-center">
-          <div className="w-6">
-            <AiFillPhone size={24} className="text-yellow-500" />
+      <div className="w-full flex md:flex-col items-center justify-between md:gap-12">
+        <div className=" w-full flex flex-col gap-8">
+          <div className="flex gap-4 items-center">
+            <div className="w-6">
+              <AiFillPhone size={24} className="text-yellow-500" />
+            </div>
+            <section className="w-full flex flex-col">
+              <h5 className=" text-lg tracking-wide font-bold text-gray-700">
+                Phone
+              </h5>
+              <a href="/" className=" text-sky-700 text-sm">
+                +01 2345678910
+              </a>
+            </section>
           </div>
-          <section className="w-full flex flex-col">
-            <h5 className=" text-lg tracking-wide font-bold text-gray-700">
-              Phone
-            </h5>
-            <a href="/" className=" text-sky-700 text-sm">
-              +01 2345678910
-            </a>
-          </section>
-        </div>
-        <div className="flex gap-4 items-center">
-          <div className="w-6">
-            <MdEmail size={24} className="text-yellow-500" />
+          <div className="flex gap-4 items-center">
+            <div className="w-6">
+              <MdEmail size={24} className="text-yellow-500" />
+            </div>
+            <section className="w-full flex flex-col">
+              <h5 className=" text-lg tracking-wide font-bold text-gray-700">
+                Email
+              </h5>
+              <a href="/" className=" text-sky-700 text-sm">
+                example@domain.com
+              </a>
+            </section>
           </div>
-          <section className="w-full flex flex-col">
-            <h5 className=" text-lg tracking-wide font-bold text-gray-700">
-              Email
-            </h5>
-            <a href="/" className=" text-sky-700 text-sm">
-              example@domain.com
-            </a>
-          </section>
-        </div>
-        <div className="flex gap-4 items-center">
-          <div className="w-6">
-            <FaLocationDot size={24} className="text-yellow-500" />
+          <div className="flex gap-4 items-center">
+            <div className="w-6">
+              <FaLocationDot size={24} className="text-yellow-500" />
+            </div>
+            <section className="w-full flex flex-col">
+              <h5 className=" text-lg tracking-wide font-bold text-gray-700">
+                Location
+              </h5>
+              <a href="/" className=" text-sky-700 text-sm">
+                Address House No. -, Street --, City
+              </a>
+            </section>
           </div>
-          <section className="w-full flex flex-col">
-            <h5 className=" text-lg tracking-wide font-bold text-gray-700">
-              Location
-            </h5>
-            <a href="/" className=" text-sky-700 text-sm">
-              Address House No. -, Street --, City
-            </a>
-          </section>
         </div>
-      </div>
 
-      {/* Social Links */}
-      <div className="mt-4 w-full justify-center gap-4 flex">
-        <a href="/">
-          <BsFacebook
-            size={24}
-            className="text-sky-700 hover:text-yellow-400 transition-all"
-          />
-        </a>
-        <a href="/">
-          <BsTwitter
-            size={24}
-            className="text-sky-700 hover:text-yellow-400 transition-all"
-          />
-        </a>
-        <a href="/">
-          <BsYoutube
-            size={24}
-            className="text-sky-700 hover:text-yellow-400 transition-all"
-          />
-        </a>
+        {/* Social Links */}
+        <div className="md:w-full flex flex-col md:flex-row justify-center gap-6 md:gap-4">
+          <a href="/">
+            <BsFacebook
+              size={24}
+              className="text-sky-700 hover:text-yellow-400 transition-all"
+            />
+          </a>
+          <a href="/">
+            <BsTwitter
+              size={24}
+              className="text-sky-700 hover:text-yellow-400 transition-all"
+            />
+          </a>
+          <a href="/">
+            <BsYoutube
+              size={24}
+              className="text-sky-700 hover:text-yellow-400 transition-all"
+            />
+          </a>
+        </div>
       </div>
     </div>
   );
@@ -156,9 +158,9 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="w-full flex gap-12 md:gap-0">
+    <div className="w-full flex flex-col md:flex-row gap-12 md:gap-0">
       <div className="hidden w-1 md:block bg-sky-500 mr-10 my-24" />
-      <div className=" w-3/5 min-w-[240px] mr-10">
+      <div className=" md:w-3/5 min-w-[240px] mr-10">
         <Info />
       </div>
       <Form onSubmit={handleSubmit} />

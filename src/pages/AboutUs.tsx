@@ -5,12 +5,12 @@ import StepsToApply from "../components/AboutUs/StepsToApply";
 
 const AboutPage = () => {
   return (
-    <>
+    <div className="flex flex-col gap-20">
       <Hero />
       <StartProcess />
       <OurMission />
       <StepsToApply />
-    </>
+    </div>
   );
 };
 

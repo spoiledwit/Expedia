@@ -1,4 +1,3 @@
-import { Im500Px } from "react-icons/im";
 import Button from "../Button";
 
 const StartProcess = () => {
@@ -7,9 +6,9 @@ const StartProcess = () => {
   };
 
   return (
-    <div className="w-full h-max md-4 md:px-16 lg:px-48 xl:px-80 md:my-20 flex flex-col md:flex-row gap-12 md:gap-16 items-center">
-      <section className="w-[60%] flex flex-col gap-8 md:gap-12">
-        <h3 className=" -translate-x-10 text-lg text-yellow-500 uppercase tracking-wide">
+    <div className="w-full h-max px-4 md:px-16 lg:px-48 xl:px-80 flex flex-col md:flex-row gap-12 md:gap-16 items-center">
+      <section className="md:w-[60%] flex flex-col gap-8 md:gap-12">
+        <h3 className=" md:-translate-x-10 text-lg text-yellow-500 uppercase tracking-wide">
           WE MAKE A DIFFERENCE
         </h3>
         <div className=" flex flex-col w-full gap-4">
@@ -24,7 +23,7 @@ const StartProcess = () => {
           </p>
         </div>
 
-        <div className="w-full h-full flex flex-col">
+        <div className="w-full h-full flex flex-col  items-center md:items-start">
           <div className="mb-12 w-full h-full">
             <img
               alt=""
@@ -43,7 +42,7 @@ const StartProcess = () => {
       <img
         alt=""
         src="https://loremflickr.com/640/480/cats"
-        className="w-[40%] h-[60vh] rounded-xl object-cover"
+        className="md:w-[40%] h-[60vh] rounded-xl object-cover hidden md:block"
       />
     </div>
   );

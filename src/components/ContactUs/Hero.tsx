@@ -1,5 +1,5 @@
 import { CountryData } from "../../types";
-import pic from '../../assets/pic.png'
+import pic from "../../assets/pic.png";
 
 const Hero = () => {
   return (
@@ -10,15 +10,15 @@ const Hero = () => {
         alt=""
         className="w-full h-full object-cover object-center"
       />
-      <div className="absolute w-full h-full flex px-40">
-        <div className="flex flex-col mt-20 justify-center">
-          <p className="text-white text-5xl mb-4 w-[700px] leading-snug">
+      <div className="absolute w-full h-full flex px-4 md:px-20 xl:px-40">
+        <div className="flex flex-col mt-20 justify-center items-start">
+          <p className="text-white text-3xl md:text-5xl mb-4 leading-snug">
             Contact Us
           </p>
           <p className="text-white text-xl mb-6">
             Get your queries answered by our experienced consultants!
           </p>
-          </div>
+        </div>
       </div>
     </div>
   );

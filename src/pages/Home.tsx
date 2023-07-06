@@ -2,7 +2,8 @@ import Hero from "../components/Home/Hero"
 import Contact from "../components/Home/Contact"
 import Consultancy from "../components/Home/Consultancy"
 import About from "../components/Home/About"
-import Faq from "../components/Home/Faq"
+// import Faq from "../components/Home/Faq"
+import Faq from "../components/Home/faq"
 import Testimonials from "../components/Home/Testimonials"
 
 
