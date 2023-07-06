@@ -60,16 +60,16 @@ const Footer = () => {
       href: "/",
     },
     {
-      name: "Terms & Conditions",
-      href: "/",
-    },
-    {
       name: "Privacy Policy",
-      href: "/",
+      href: "/policy/privacy",
     },
     {
       name: "Refund Policy",
-      href: "/",
+      href: "/policy/refund",
+    },
+    {
+      name: "Terms & Conditions",
+      href: "/policy/terms_and_conditions",
     },
     {
       name: "Latest News",
@@ -82,8 +82,8 @@ const Footer = () => {
   };
 
   return (
-    <footer className=" p-4 md:px-40 md:py-20 w-full bg-sky-950 flex flex-col">
-      <div className="w-full flex justify-between items-center">
+    <footer className=" px-4 py-12 md:px-40 md:py-20 w-full bg-sky-950 flex flex-col">
+      <div className="w-full flex flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
         <div className="w-full grid place-items-center">
           {/* <Globe /> */}
           <img alt="globe" src={globe} className="max-w-[360px]" />
@@ -105,9 +105,9 @@ const Footer = () => {
       </div>
 
       {/* Separator */}
-      <div className="my-12 md:my-20 h-[2px] min-w-max mx-20 md:mx-80 bg-sky-400" />
+      <div className="my-16 md:my-20 h-[2px] min-w-max mx-20 md:mx-80 bg-sky-400" />
 
-      <div className="w-full grid grid-cols-2 md:grid-cols-4">
+      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-y-16 md:gap-y-0">
         {/* Quick Links */}
         <section className=" flex flex-col gap-8">
           <h3 className=" text-2xl font-bold text-white">Quick Links</h3>
@@ -186,7 +186,7 @@ const Footer = () => {
       </div>
 
       {/* Social Links */}
-      <div className="w-full justify-end gap-4 flex">
+      <div className="mt-16 md:mt-0 w-full justify-center md:justify-end gap-8 md:gap-4 flex">
         <a href="/">
           <BsFacebook
             size={24}
