@@ -2,42 +2,40 @@ export const navLinks = [
   {
     id: "home",
     title: "Home",
-    slug: "/",
-  },  
+    href: "/",
+  },
   {
     id: "about",
     title: "About Us",
-    slug: "/about",
+    href: "/about-us",
   },
   {
-      id: "canada",
-      title: "Canada",
-      slug: "/canada",
-      hasChildren: true,
-    },
-    {
-      id: "canada",
-      title: "Australia",
-      slug: "/canada",
-      hasChildren: true,
-    },
-    {
-      id: "canada",
-      title: "UK",
-      slug: "/canada",
-      hasChildren: true,
-    },
-    {
-      id: "canada",
-      title: "Europe",
-      slug: "/canada",
-      hasChildren: true,
-    },
-    {
-      id: "contact",
-      title: "Contact Us",
-      slug: "/contact",
-    },
+    id: "canada",
+    title: "Canada",
+    href: "/immigration/canada",
+    hasChildren: true,
+  },
+  {
+    id: "australia",
+    title: "Australia",
+    href: "/immigration/australia",
+    hasChildren: true,
+  },
+  {
+    id: "uk",
+    title: "UK",
+    href: "/immigration/uk",
+    hasChildren: true,
+  },
+  {
+    id: "europe",
+    title: "Europe",
+    href: "/immigration/europe",
+    hasChildren: true,
+  },
+  {
+    id: "contact",
+    title: "Contact Us",
+    href: "/contact",
+  },
 ];
-
-  

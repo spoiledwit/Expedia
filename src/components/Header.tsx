@@ -33,7 +33,7 @@ const Navbar = () => {
   }, [lastScrollPos]);
 
   useEffect(() => {
-    const activeLinkIndex = navLinks.findIndex(link => location.pathname === link.slug);
+    const activeLinkIndex = navLinks.findIndex(link => location.pathname === link.href);
     if (activeLinkIndex === -1) {
       setIsMatchingNavLink(false);
     } else {
@@ -51,9 +51,9 @@ const Navbar = () => {
         </Link>
         <ul className={`${styles.nav_list}`}>
           {navLinks.map((link, index) => {
-            const isActive = location.pathname === link.slug;
+            const isActive = location.pathname === link.href;
             return (
-              <Link to={link.slug} key={index}
+              <Link to={link.href} key={index}
                 className={`
                 text-[15px]
                 font-poppins
@@ -67,7 +67,7 @@ const Navbar = () => {
                 lg:mr-10
                 `}
                 onMouseEnter={() => setBarPosition(index * 7)}
-                onMouseLeave={() => setBarPosition(navLinks.findIndex(link => location.pathname === link.slug) * 7)}
+                onMouseLeave={() => setBarPosition(navLinks.findIndex(link => location.pathname === link.href) * 7)}
               >
                 <p>
                   {link.title.toUpperCase()}
@@ -86,7 +86,7 @@ const Navbar = () => {
             <ul className={`list-none z-50 flex justify-end items-start flex-1 flex-col bg-fuchsia-900 p-10 rounded-3xl`}>
               {navLinks.map((nav, index) => (
                 <Link
-                  to={nav.slug}
+                  to={nav.href}
                   onClick={() => setToggle(!toggle)}
                   key={nav.id}
                   className={`font-poppins font-medium cursor-pointer text-white text-[16px] 
