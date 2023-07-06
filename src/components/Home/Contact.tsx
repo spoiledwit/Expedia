@@ -61,7 +61,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <div className=' lg:rounded-l-3xl bg-sky-950 flex flex-col justify-center items-start px-20 lg:px-16 xl:px-28 gap-12 py-20 space-y-4'>
+      <div className=' lg:rounded-l-3xl bg-sky-950 shadow-2xl shadow-gray-500 flex flex-col justify-center items-start px-20 lg:px-16 xl:px-28 gap-12 py-20 space-y-4'>
         <motion.h1 className='text-4xl text-white font-medium' animate={{ scale: 1.2 }} transition={{ duration: 1 }}>
           Apply Now For Free Assessment
         </motion.h1>

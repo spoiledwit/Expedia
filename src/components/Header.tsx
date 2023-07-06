@@ -43,7 +43,7 @@ const Navbar = () => {
   }, [location]);
 
   return (
-    <header className={`${pathname === "/" && !isVisible ? "" : "bg-white"} transition duration-200 ease-in-out z-50`}>
+    <header className={`${pathname === "/" && !isVisible ? "" : " bg-white bg-opacity-25 backdrop-blur-md"} transition duration-200 ease-in-out z-50`}>
       {pathname === "/" && !isVisible ? <InfoHeader /> : null}
       <nav className={`${styles.navbar} ${styles.container} px-28`}>
         <Link to={"/"} className={`${styles.nav_link} text-xl whitespace-nowrap lg:ml-10 font-bold`}>
@@ -58,7 +58,7 @@ const Navbar = () => {
                 text-[15px]
                 font-poppins
                 font-medium
-                ${isVisible ? "text-black" : "text-white"}
+                "text-white"
                 hover:text-yellow-500
                 cursor-pointer
                 transition
