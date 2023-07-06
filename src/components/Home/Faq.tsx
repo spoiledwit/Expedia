@@ -32,7 +32,7 @@ const Faq = () => {
   const [open, setOpen] = useState(1);
 
   return (
-    <div className="mb-20 p-4 md:px-40 md:py-20 flex w-full flex-col gap-2">
+    <div className="p-4 md:px-40 lg:px-64 xl:px-[400px] flex w-full flex-col gap-2">
       {FAQs.map((faq) => {
         const isActive = open === faq.index;
         return (

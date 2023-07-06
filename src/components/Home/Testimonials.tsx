@@ -44,7 +44,7 @@ const Testimonials = () => {
     },
   ]
 
-  return <div className="mb-20 w-full p-4 md:px-40 md:py-20 grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-20">
+  return <div className="w-full p-4 md:px-40 grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-20">
     {
       testimonials.map((t, i) => (
         <TestimonialCard key={i} testimonial={t} />

@@ -218,5 +218,48 @@
         }
       ]
     }
+  },
+  "malta": {
+    "name": "malta",
+    "hero": {
+      "title": "IMMIGRATE TO MALTA",
+      "imageURL": "https://loremflickr.com/640/480/nature",
+      "description": "Get your questions answered by an expert. Speak with a Regulated Europian Immigration Consultant to help plan your move."
+    },
+    "options": {
+      "title": "About the Program",
+      "descriptionHTML": "<p>Malta is a very attractive location for private residence. The island nation enjoys a stable political climate and is strategically located, with excellent air links. The Malta Residence and Visa Program (MRVP) offers non-Maltese persons the possibility of acquiring a European residence permit in an EU country and visa-free travel within Europe’s <strong>Schengen</strong> Area.</p><h3 id=\"why-malta-\">Why Malta?</h3><p>All those who move to Malta, the smallest EU state, fall in love with its natural beauty, architectural gems and the Mediterranean <strong>joie de vivre</strong> that permeates life on the island. Many are also attracted by the various successful industries that are flourishing in Malta such as the gaming industry and the financial services. Situated in the center of the Mediterranean Sea, Malta enjoys an excellent</p><h3 id=\"citizenship-by-investment-malta\">Citizenship by Investment Malta</h3><p>Introduced in November 2020, legislation granting Malta citizenship by naturalization for exceptional services offers citizenship in a highly respected EU member country to individuals and families worldwide who contribute to the nation’s economic development. Malta has been a member of the European Union since 2004, enjoys a stable political climate, bi-partisan political scene, growing economy, and has some of the soundest banks in the world. The Malta citizenship by investment application process is extremely efficient, and the Government of Malta is committed to the highest standard of due diligence and vetting of investor applicants ensuring only persons of impeccable standing and repute will be admitted.</p>",
+      "slogan": "MALTA IMMIGRATION"
+    },
+    "plans": {
+      "title": "Explore European Countries",
+      "description": "We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.",
+      "values": [
+        {
+          "id": "1",
+          "name": "Portugal",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+        },
+        {
+          "id": "2",
+          "name": "Malta",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+        },
+        {
+          "id": "3",
+          "name": "Germany",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+        },
+        {
+          "id": "4",
+          "name": "Finland",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+        }
+      ]
+    }
   }
 }

@@ -6,12 +6,12 @@ import Button from '../Button';
 const Contact = () => {
   return (
     <motion.div
-      className="flex"
+      className="w-full flex flex-col md:flex-row"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-[60%] h-[100vh] flex flex-col pt-5 px-40 bg-white dark:bg-gray-800">
+      <div className="w-full md:w-[60%] h-[100vh] flex flex-col items-center md:items-start pt-5 px-4 md:px-40 bg-white dark:bg-gray-800">
         <motion.p className="text-yellow-500 mt-16" animate={{ scale: 1.2 }} transition={{ duration: 1 }}>
           WHY CHOOSE EXPEDIA?
         </motion.p>
@@ -55,16 +55,16 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+        <motion.div className='mt-12' whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button text="Contact Us" onClick={() => {}} />
         </motion.div>
       </div>
 
-      <div className='h-[100vh] bg-sky-950 flex flex-col justify-center items-start p-40 space-y-4'>
+      <div className='bg-sky-950 flex flex-col justify-center items-start px-20 md:px-40 gap-12 py-12 md:py-20 space-y-4'>
         <motion.h1 className='text-4xl text-white font-medium' animate={{ scale: 1.2 }} transition={{ duration: 1 }}>
           Apply Now For Free Assessment
         </motion.h1>
-        <div className='w-full max-w-lg space-y-2'>
+        <div className='w-full max-w-lg space-y-6'>
           <Input label="Name" />
           <Input label="Phone" />
           <Input label="Email" />
