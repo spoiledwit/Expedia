@@ -1,44 +1,43 @@
-type InputProps = {
-  label: string;
+import { useState } from "react";
+import Input from "./Input";
+import Select from "./Select";
+
+type SubmitProps = {
+  name: string;
+  email: string;
+  phone: string;
+  job: string;
+  education: string;
+  country: string;
+  visaType: string;
 };
-const Input: React.FC<InputProps> = ({ label }) => (
-  <div className="flex flex-col">
-    <label className="text-white">{label}</label>
-    <input className="border border-white rounded-md h-10 pl-2 bg-transparent text-white" />
-  </div>
-);
 
-type SelectProps = {
-  label: string;
-  options: string[];
-};
+const AssessmentForm = ({ onSubmit }: { onSubmit: (e: any) => void }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [job, setJob] = useState("");
+  const [education, setEducation] = useState("");
+  const [country, setCountry] = useState("");
+  const [visaType, setVisaType] = useState("");
 
-const Select: React.FC<SelectProps> = ({ label, options }) => (
-  <div className="flex flex-col">
-    <label className="text-white">{label}</label>
-    <select className="border border-white rounded-md h-10 pl-2 bg-transparent text-white">
-      {options.map((option) => (
-        <option key={option} className="text-black">
-          {option}
-        </option>
-      ))}
-    </select>
-  </div>
-);
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    onSubmit({ name, email, phone, job, country, visaType });
+  };
 
-const AssessmentForm = ({onSubmit}:{onSubmit:(e:any) => void}) => {
   return (
-    <form onSubmit={onSubmit} className="w-full flex flex-col gap-4 bg-sky-950 rounded-xl p-4">
-      <Input label="Name" />
-      <Input label="Phone" />
-      <Input label="Email" />
-      <Input label="Job Title" />
-      <Input label="Education" />
-      <Select label="Country" options={["Pakistan", "India", "Bangladesh"]} />
-      <Select
-        label="Visa Service"
-        options={["Study Visa", "Work Visa", "Visit Visa"]}
-      />
+    <form
+      onSubmit={onSubmit}
+      className="w-full flex flex-col gap-8 bg-sky-950 rounded-xl p-4"
+    >
+      <Input label="Name" onChange={(e) => setName(e.target.value)} />
+      <Input label="Phone" onChange={(e) => setPhone(e.target.value)} />
+      <Input label="Email" type="email" onChange={(e) => setEmail(e.target.value)} />
+      <Input label="Job Title" onChange={(e) => setJob(e.target.value)} />
+      <Input label="Education" onChange={(e) => setEducation(e.target.value)} />
+      <Select onChange={(e) => setCountry(e.target.value)} options={["Pakistan", "India", "Bangladesh"]} />
+      <Select onChange={(e) => setVisaType(e.target.value)} options={["Study Visa", "Work Visa", "Visit Visa"]} />
     </form>
   );
 };

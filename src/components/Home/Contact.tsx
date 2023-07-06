@@ -2,16 +2,17 @@ import { motion } from 'framer-motion';
 import { PiAirplaneTakeoffFill } from 'react-icons/pi';
 import { IoDocumentText } from 'react-icons/io5';
 import Button from '../Button';
+import AssessmentForm from '../AssessmentForm';
 
 const Contact = () => {
   return (
     <motion.div
-      className="w-full flex flex-col md:flex-row"
+      className="w-full flex flex-col lg:flex-row gap-20 lg:gap-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full md:w-[60%] h-[100vh] flex flex-col items-center md:items-start pt-5 px-4 md:px-40 bg-white dark:bg-gray-800">
+      <div className="w-full lg:w-[60%] flex flex-col items-center lg:items-start pt-5 px-4 lg:px-28 xl:px-40 bg-white dark:bg-gray-800">
         <motion.p className="text-yellow-500 mt-16" animate={{ scale: 1.2 }} transition={{ duration: 1 }}>
           WHY CHOOSE EXPEDIA?
         </motion.p>
@@ -60,11 +61,12 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <div className='bg-sky-950 flex flex-col justify-center items-start px-20 md:px-40 gap-12 py-12 md:py-20 space-y-4'>
+      <div className=' lg:rounded-l-3xl bg-sky-950 flex flex-col justify-center items-start px-20 lg:px-16 xl:px-28 gap-12 py-20 space-y-4'>
         <motion.h1 className='text-4xl text-white font-medium' animate={{ scale: 1.2 }} transition={{ duration: 1 }}>
           Apply Now For Free Assessment
         </motion.h1>
-        <div className='w-full max-w-lg space-y-6'>
+        <AssessmentForm onSubmit={(e) => {e.preventDefalut()}} />
+        {/* <div className='w-full space-y-6 flex flex-col items-center'>
           <Input label="Name" />
           <Input label="Phone" />
           <Input label="Email" />
@@ -72,7 +74,7 @@ const Contact = () => {
           <Input label="Education" />
           <Select label="Country" options={["Pakistan", "India", "Bangladesh"]} />
           <Select label="Visa Service" options={["Study Visa", "Work Visa", "Visit Visa"]} />
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
@@ -83,7 +85,7 @@ interface InputProps {
 }
 
 const Input:React.FC<InputProps> = ({ label }) => (
-  <div className='flex flex-col'>
+  <div className='w-full flex flex-col'>
     <label className='text-white'>{label}</label>
     <input className='border border-white rounded-md h-10 pl-2 bg-transparent text-white' />
   </div>
@@ -95,7 +97,7 @@ interface SelectProps {
 }
 
 const Select:React.FC<SelectProps> = ({ label, options }) => (
-  <div className='flex flex-col'>
+  <div className='w-full flex flex-col'>
     <label className='text-white'>{label}</label>
     <select className='border border-white rounded-md h-10 pl-2 bg-transparent text-white'>
       {options.map((option) => (
