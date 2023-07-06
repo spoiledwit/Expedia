@@ -2,9 +2,10 @@ import { Routes } from "react-router-dom"
 import { Route } from "react-router-dom"
 import Home from "./pages/Home"
 import Layout from "./Layout"
-import AboutPage from "./pages/AboutUsPage"
+import AboutPage from "./pages/AboutUs"
 import ImmigrationPage from "./pages/Immigration"
 import ContactUsPage from "./pages/ContactUs"
+import PolicyPage from './pages/Policy'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
           <Route path="/immigration/:country" element={<ImmigrationPage />} />
+          <Route path="/policy/:article" element={<PolicyPage />} />
         </Route>
       </Routes>
     )
