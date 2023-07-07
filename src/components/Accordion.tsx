@@ -10,8 +10,6 @@ const Accordion = ({
   isOpen: boolean;
   onClick: () => void;
 }) => {
-  // By using `AnimatePresence` to mount and unmount the contents, we can animate
-  // them in and out while also only rendering the contents of open accordions
   return (
     <>
       <div
@@ -32,7 +30,7 @@ const Accordion = ({
             exit="collapsed"
             variants={{
               open: { opacity: 1, height: "auto" },
-              collapsed: { opacity: 0, height: 1 },
+              collapsed: { opacity: 0, height: 0 },
             }}
             transition={{ duration: 0.2, ease: [0.04, 0.62, 0.23, 0.98] }}
           >

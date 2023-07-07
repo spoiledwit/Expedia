@@ -8,13 +8,18 @@ import Logo from "../assets/expedia.png";
 import { AnimatePresence, motion } from "framer-motion";
 import Accordion from "./Accordion";
 
+type LinkWithChildren = {
+  id: string;
+  title: string;
+  href: string;
+  children: { id: string; href: string; title: string }[];
+};
+
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openIndex, setOpenIndex] = useState(-1);
 
   const onBeforeNavigate = () => {
-    window.scrollTo(0, 0);
-    window.scrollTo(0, 0);
     setOpenIndex(-1);
     setIsOpen(false);
   };
@@ -65,7 +70,7 @@ const MobileNav = () => {
                             ),
                             content: (
                               <div className="flex w-full my-3 text-sm text-gray-500">
-                                <div className="w-[2px] bg-gray-300 bor mx-3 py-8" />
+                                <div className="w-[2px] bg-gray-300 mx-3 py-8" />
                                 <div className="w-full">
                                   {link.children.map((c) => (
                                     <Link
@@ -100,7 +105,11 @@ const MobileNav = () => {
                   ))}
                 </motion.nav>
               </div>
-              <Link to={"/"} onClick={onBeforeNavigate} className="min-w-max self-center mt-8 opacity-25 grayscale">
+              <Link
+                to={"/"}
+                onClick={onBeforeNavigate}
+                className="min-w-max self-center mt-8 opacity-25 grayscale"
+              >
                 <img src={Logo} alt="logo" className="md:h-14 h-12" />
               </Link>
             </motion.div>
@@ -115,6 +124,7 @@ const Navbar = () => {
   const location = useLocation();
   const [lastScrollPos, setLastScrollPos] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [activeEle, setActiveEle] = useState<Element | null>(null);
 
   const pathname = location.pathname;
 
@@ -138,6 +148,50 @@ const Navbar = () => {
     };
   }, [lastScrollPos]);
 
+  const isDropdownLink = (id: string): boolean => {
+    return ["canada", "uk"].includes(id);
+  };
+
+  useEffect(() => {
+    const linkEles = document.getElementsByClassName("nav-links");
+    for (let i = 0; i < linkEles.length; i++) {
+      const ele = linkEles.item(i);
+      ele?.addEventListener("mouseover", () => {
+        isDropdownLink(ele.id) ? setActiveEle(ele) : setActiveEle(null);
+      });
+      ele?.addEventListener("mouseleave", () => {
+        setActiveEle(null);
+      });
+    }
+  }, []);
+
+  const LinkDropdown = ({ link }: { link: LinkWithChildren }) => {
+    const isOpen = activeEle?.id === link.id;
+    return (
+      <motion.dialog
+        id={link.id}
+        open={isOpen}
+        animate={{ opacity: 1.0, y: 0 }}
+        initial={{ opacity: 0, y: 32 }}
+        transition={{
+          ease: "circOut",
+          duration: 0.15,
+        }}
+        className="px-0 min-w-[160px] rounded-b-md shadow-xl shadow-black/[0.2] bg-white "
+      >
+        {link.children.map((c) => (
+          <Link
+            key={c.id}
+            to={c.href}
+            className="w-full px-2 max-w-[200px] text-xs h-10 flex items-center hover:text-sky-600 hover:bg-gray-100 transition-all"
+          >
+            {c.title}
+          </Link>
+        ))}
+      </motion.dialog>
+    );
+  };
+
   return (
     <header className="bg-white bg-opacity-25 backdrop-blur-md transition duration-200 ease-in-out z-50">
       {pathname === "/" && !isVisible ? <InfoHeader /> : null}
@@ -146,26 +200,22 @@ const Navbar = () => {
           <img src={Logo} alt="logo" className="md:h-14 h-12" />
         </Link>
         <div className="w-full hidden md:block">
-          <ul className="gap-6 w-full flex justify-center">
+          <ul id="desktop-nav" className="w-full flex justify-center">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
               return (
-                <Link
-                  onClick={() => window.scrollTo(0, 0)}
-                  to={link.href}
+                <div
+                  id={link.id}
                   key={link.id}
-                  className={`
-                ${isActive ? "text-sky-700" : "text-black hover:text-sky-900"}
-                text-xs
-                tracking-wide
-                font-poppins
-                font-medium
-                cursor-pointer
-                transition-all
-                `}
+                  className={`${
+                    isActive ? "text-sky-500" : "text-black hover:text-sky-900"
+                  } relative p-3 text-xs tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
                 >
-                  <p className="uppercase">{link.title}</p>
-                </Link>
+                  <Link to={link.href} className="uppercase">
+                    {link.title}
+                  </Link>
+                  {link.children && <LinkDropdown key={link.id} link={link} />}
+                </div>
               );
             })}
           </ul>
