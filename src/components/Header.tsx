@@ -65,7 +65,7 @@ const MobileNav = () => {
                             ),
                             content: (
                               <div className="flex w-full my-3 text-sm text-gray-500">
-                                <div className="w-[2px] bg-gray-300 bor mx-3 py-8" />
+                                <div className="w-[2px] bg-gray-300 mx-3 py-8" />
                                 <div className="w-full">
                                   {link.children.map((c) => (
                                     <Link
@@ -100,7 +100,11 @@ const MobileNav = () => {
                   ))}
                 </motion.nav>
               </div>
-              <Link to={"/"} onClick={onBeforeNavigate} className="min-w-max self-center mt-8 opacity-25 grayscale">
+              <Link
+                to={"/"}
+                onClick={onBeforeNavigate}
+                className="min-w-max self-center mt-8 opacity-25 grayscale"
+              >
                 <img src={Logo} alt="logo" className="md:h-14 h-12" />
               </Link>
             </motion.div>
@@ -115,6 +119,8 @@ const Navbar = () => {
   const location = useLocation();
   const [lastScrollPos, setLastScrollPos] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [activeEle, setActiveEle] = useState<Element | null>(null);
+  const [navContainerLastX, setNavContainerLastX] = useState(0);
 
   const pathname = location.pathname;
 
@@ -138,30 +144,107 @@ const Navbar = () => {
     };
   }, [lastScrollPos]);
 
+  const isDropdownLink = (id: string): boolean => {
+    return ["canada", "uk"].includes(id);
+  };
+
+  useEffect(() => {
+    const linkEles = document.getElementsByClassName("nav-links");
+    for (let i = 0; i < linkEles.length; i++) {
+      const ele = linkEles.item(i);
+      ele?.addEventListener("mouseover", () => {
+        isDropdownLink(ele.id) ? setActiveEle(ele) : setActiveEle(null);
+      });
+      ele?.addEventListener("mouseleave", () => {
+        setActiveEle(null);
+        setNavContainerLastX(
+          ele?.getBoundingClientRect().left || window.innerWidth / 2
+        );
+      });
+    }
+    setNavContainerLastX(
+      linkEles.item(0)?.getBoundingClientRect().left || window.innerWidth / 2
+    );
+  }, []);
+
+  const getNavContainerX = (): number => {
+    const navCont = document
+      .getElementById("nav-container")
+      ?.getBoundingClientRect();
+    const boundingBox = activeEle?.getBoundingClientRect();
+    let posX = boundingBox?.left || 0;
+    if (posX <= 0) {
+      posX = navContainerLastX;
+    }
+    // offset the container by 40%
+    return posX - (navCont?.width || 0) * 0.4;
+  };
+
+  const getNavContainerY = (): number => {
+    let offset = activeEle?.getBoundingClientRect().top;
+    if (offset) {
+      offset -= 48;
+    }
+    return offset || 0;
+  };
+
+  const getNavContainerAnimDuration = () => {
+    const navCont = document.getElementById("nav-container");
+    return Math.sqrt(
+      Math.abs(
+        (navCont?.getBoundingClientRect().left || 0) -
+          (activeEle?.getBoundingClientRect().left || 0)
+      ) / window.innerWidth
+    );
+  };
+
+  const getNavContainerOpacity = () => {
+    return activeEle === null ? 0 : 1.0;
+  };
+
   return (
     <header className="bg-white bg-opacity-25 backdrop-blur-md transition duration-200 ease-in-out z-50">
       {pathname === "/" && !isVisible ? <InfoHeader /> : null}
       <nav className="w-full flex items-center justify-between px-4 xl:px-24">
+        <motion.div
+          id="nav-container"
+          className="absolute w-96 h-72 top-24 rounded-md bg-white shadow-2xl shadow-gray-600"
+          animate={{
+            x: getNavContainerX(),
+            y: getNavContainerY(),
+            opacity: getNavContainerOpacity(),
+            transition: {
+              ease: "circOut",
+              duration: getNavContainerAnimDuration(),
+              opacity: { duration: 0.12 },
+              y: { duration: 0.05 },
+            },
+          }}
+        ></motion.div>
+
         <Link to={"/"} className="min-w-max">
           <img src={Logo} alt="logo" className="md:h-14 h-12" />
         </Link>
         <div className="w-full hidden md:block">
-          <ul className="gap-6 w-full flex justify-center">
+          <ul id="desktop-nav" className="w-full flex justify-center">
             {navLinks.map((link) => {
               const isActive = location.pathname === link.href;
               return (
                 <Link
+                  id={link.id}
                   onClick={() => window.scrollTo(0, 0)}
                   to={link.href}
                   key={link.id}
                   className={`
                 ${isActive ? "text-sky-700" : "text-black hover:text-sky-900"}
+                p-3
                 text-xs
                 tracking-wide
                 font-poppins
                 font-medium
                 cursor-pointer
                 transition-all
+                nav-links
                 `}
                 >
                   <p className="uppercase">{link.title}</p>
