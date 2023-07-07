@@ -6,11 +6,12 @@ import { AiOutlineClose } from "react-icons/ai";
 import { RiMenu3Fill } from "react-icons/ri";
 import InfoHeader from "./Home/InfoHeader";
 import Logo from "../assets/expedia.png";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Navbar = () => {
   const location = useLocation();
   const [barPosition, setBarPosition] = useState(0);
-  const [toggle, setToggle] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [lastScrollPos, setLastScrollPos] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const [isMatchingNavLink, setIsMatchingNavLink] = useState(false);
@@ -58,14 +59,14 @@ const Navbar = () => {
       } transition duration-200 ease-in-out z-50`}
     >
       {pathname === "/" && !isVisible ? <InfoHeader /> : null}
-      <nav className={`${styles.navbar} ${styles.container} px-28`}>
+      <nav className={`${styles.navbar} ${styles.container} px-4 xl:px-24`}>
         <Link
           to={"/"}
           className={`${styles.nav_link} text-xl whitespace-nowrap lg:ml-10 font-bold`}
         >
-          <img src={Logo} alt="logo" className="h-[60px] object-cover" />
+          <img src={Logo} alt="logo" className="md:h-14 h-12 object-cover" />
         </Link>
-        <ul className={`${styles.nav_list}`}>
+        <ul className={`${styles.nav_list} gap-4`}>
           {navLinks.map((link, index) => {
             const isActive = location.pathname === link.href;
             return (
@@ -73,16 +74,14 @@ const Navbar = () => {
                 to={link.href}
                 key={index}
                 className={`
-                text-[15px]
+                ${isActive ? "text-sky-700" : "text-black hover:text-sky-900"}
+                text-sm
+                tracking-wide
                 font-poppins
                 font-medium
-                "text-white"
-                hover:text-yellow-500
                 cursor-pointer
-                transition
-                duration-200
-                ease-in-out
-                lg:mr-10
+                transition-all
+                whitespace-nowrap
                 `}
                 onMouseEnter={() => setBarPosition(index * 7)}
                 onMouseLeave={() =>
@@ -99,45 +98,53 @@ const Navbar = () => {
           })}
         </ul>
         <button
-          className={`bg-sky-950 hover:text-yellow-400 mr-10 text-white px-6 rounded-[4px] h-[37px] font-poppins text-sm`}
+          className={`bg-sky-950 hidden lg:block hover:text-yellow-400 mr-10 text-white px-6 rounded-[4px] h-[37px] font-poppins text-sm`}
         >
           Free Assesment
         </button>
-        <div className={`${styles.hb} flex-1 justify-end items-center`}>
-          {toggle ? (
-            <AiOutlineClose
-              className="w-[28px] text-white cursor-pointer h-[28px] object-contain"
-              onClick={() => setToggle(!toggle)}
-            />
-          ) : (
-            <RiMenu3Fill
-              className="w-[28px] text-white cursor-pointer h-[28px] object-contain"
-              onClick={() => setToggle(!toggle)}
-            />
-          )}
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
-          >
-            <ul
-              className={`list-none z-50 flex justify-end items-start flex-1 flex-col bg-fuchsia-900 p-10 rounded-3xl`}
-            >
-              {navLinks.map((link, index) => (
-                <Link
-                  id={link.id}
-                  to={link.href}
-                  onClick={() => setToggle(!toggle)}
-                  key={link.id}
-                  className={`font-poppins font-medium cursor-pointer text-white text-[16px] 
-                 ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
+        {/* placeholder */}
+        <div className="lg:hidden" />
+        <div>
+          <RiMenu3Fill
+            className="w-[24px] text-black cursor-pointer h-[24px]"
+            onClick={() => setIsOpen(true)}
+          />
+          {
+            <AnimatePresence>
+              {isOpen && (
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-screen absolute top-0 left-0 bg-white px-4 py-8 transition-all"
                 >
-                  {/* //TODO: add dialog (opens on hover) for links children */}
-                  <p>{link.title}</p>
-                </Link>
-              ))}
-            </ul>
-          </div>
+                  <div className="flex flex-col w-full">
+                    <AiOutlineClose
+                      className="w-[24px] self-end text-black cursor-pointer h-[24px]"
+                      onClick={() => setIsOpen(false)}
+                    />
+                    <motion.nav
+                      initial={{ y: 32 }}
+                      animate={{ y: 0 }}
+                      transition={{ ease: "easeOut", duration: 0.15 }}
+                      className=" w-full flex flex-col gap-2"
+                    >
+                      {navLinks.map((link) => (
+                        <Link
+                          key={link.id}
+                          to={link.href}
+                          className="w-full max-w-[200px] h-10 flex items-center"
+                        >
+                          {link.title}
+                        </Link>
+                      ))}
+                    </motion.nav>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          }
         </div>
       </nav>
     </header>
