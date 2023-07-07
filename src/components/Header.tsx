@@ -177,7 +177,7 @@ const Navbar = () => {
           ease: "circOut",
           duration: 0.15,
         }}
-        className="px-0 min-w-[160px] rounded-b-md shadow-xl shadow-gray-300 "
+        className="px-0 min-w-[160px] rounded-b-md shadow-xl shadow-black/[0.2] "
       >
         {link.children.map((c) => (
           <Link
