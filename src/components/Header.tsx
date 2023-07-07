@@ -177,7 +177,7 @@ const Navbar = () => {
           ease: "circOut",
           duration: 0.15,
         }}
-        className="px-0 min-w-[160px] rounded-b-md shadow-xl shadow-black/[0.2] "
+        className="px-0 min-w-[160px] rounded-b-md shadow-xl shadow-black/[0.2] bg-white "
       >
         {link.children.map((c) => (
           <Link
@@ -208,7 +208,7 @@ const Navbar = () => {
                   id={link.id}
                   key={link.id}
                   className={`${
-                    isActive ? "text-yellow-600" : "text-black hover:text-sky-900"
+                    isActive ? "text-sky-500" : "text-black hover:text-sky-900"
                   } relative p-3 text-xs tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
                 >
                   <Link to={link.href} className="uppercase">

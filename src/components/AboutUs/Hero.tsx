@@ -5,7 +5,7 @@ import Button from "../Button"
 const Hero = () => {
   return (
     <div className="flex w-full h-[100vh] justify-center items-center">
-      <div className="absolute w-[100vw] h-full bg-black opacity-30"></div>
+      <div className="absolute w-full h-full bg-black opacity-30"></div>
       <img
         src={pic}
         alt=""
