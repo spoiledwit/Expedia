@@ -208,7 +208,7 @@ const Navbar = () => {
                   id={link.id}
                   key={link.id}
                   className={`${
-                    isActive ? "text-sky-700" : "text-black hover:text-sky-900"
+                    isActive ? "text-yellow-600" : "text-black hover:text-sky-900"
                   } relative p-3 text-xs tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
                 >
                   <Link to={link.href} className="uppercase">
