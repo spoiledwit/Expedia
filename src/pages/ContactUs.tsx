@@ -1,8 +1,16 @@
+import { useEffect } from "react";
 import ContactForm from "../components/ContactUs/ContactFrom";
 import Hero from "../components/ContactUs/Hero";
 import Map from "../components/ContactUs/Map";
 
+
 const ContactUsPage = () => {
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  }, [])
+  
+
   return (
     <div className="w-full mb-20">
       <Hero />

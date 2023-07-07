@@ -1,7 +1,15 @@
 import { useParams } from "react-router-dom";
 import policies from "../static/policies.json";
+import { useEffect } from "react";
+
+
 
 const PolicyPage = () => {
+
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  }, [])
+
   const { article } = useParams();
   // @ts-ignore
   const html = policies[article];
