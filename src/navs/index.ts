@@ -60,19 +60,58 @@ export const navLinks = [
     id: "australia",
     title: "Australia",
     href: "/immigration/australia",
-    hasChildren: true,
   },
   {
     id: "uk",
     title: "UK",
     href: "/immigration/uk",
-    hasChildren: true,
+    children: [
+      {
+        id: "express-entry",
+        title: "Express Entry",
+        href: "/immigration/express-entry",
+      },
+      {
+        id: "pnp",
+        title: "PNP",
+        href: "/immigration/pnp",
+      },
+      {
+        id: "rnip",
+        title: "RNIP",
+        href: "/immigration/rnip",
+      },
+      {
+        id: "aip",
+        title: "AIP",
+        href: "/immigration/aip",
+      },
+      {
+        id: "ycp",
+        title: "YCP",
+        href: "/immigration/ycp",
+      },
+      {
+        id: "Work Permit",
+        title: "work-permit",
+        href: "/immigration/Work Permit",
+      },
+      {
+        id: "startup-visa",
+        title: "Startup Visa",
+        href: "/immigration/startup-visa",
+      },
+      {
+        id: "study-visa",
+        title: "Study Visa",
+        href: "/immigration/study-visa",
+      },
+    ]
   },
   {
     id: "europe",
     title: "Europe",
     href: "/immigration/europe",
-    hasChildren: true,
   },
   {
     id: "contact",

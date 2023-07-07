@@ -1,13 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { FAQ } from ".";
 import { IoIosArrowUp } from "react-icons/io";
 
 const Accordion = ({
-  faq,
+  data,
   isOpen,
   onClick,
 }: {
-  faq: FAQ;
+  data: { title: JSX.Element; content: JSX.Element };
   isOpen: boolean;
   onClick: () => void;
 }) => {
@@ -19,7 +18,7 @@ const Accordion = ({
         onClick={onClick}
         className=" text-sky-900 tracking-wide text-lg flex items-center justify-between w-full cursor-pointer"
       >
-        {faq.question}
+        {data.title}
         <motion.div animate={{ rotate: isOpen ? 0 : 180 }} className="h-4">
           <IoIosArrowUp size={16} className="text-sky-500" />
         </motion.div>
@@ -42,7 +41,7 @@ const Accordion = ({
               transition={{ duration: 0.2 }}
               className="w-full px-4 py-2 text-sm"
             >
-              {faq.answer}
+              {data.content}
             </motion.div>
           </motion.section>
         )}

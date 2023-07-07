@@ -48,7 +48,7 @@ const OurMission = () => {
           We create solutions for your Future
         </h3>
         <p className=" text-2xl tracking-wide text-white">
-          Imperium gives their consultancy by a registered and experienced
+          Expedia gives their consultancy by a registered and experienced
           consultants.
         </p>
       </section>

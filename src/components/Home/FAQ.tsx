@@ -1,9 +1,7 @@
-import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-import Accordion from "./Accordion";
+import Accordion from "../Accordion";
 
-export type FAQ = {
+type FAQ = {
   index: number;
   question: string;
   answer: string;
@@ -42,15 +40,20 @@ const Faq = () => {
   return (
     <div className="p-4 md:px-40 lg:px-64 xl:px-[400px] flex w-full flex-col gap-2">
       {FAQs.map((faq, i) => (
-        <>
-        {i !== 0 && <div className="h-[2px] w-1/2 my-4 bg-gray-200 self-center" />}
-        <Accordion
-          key={faq.index}
-          faq={faq}
-          isOpen={faq.index === openIndex}
-          onClick={() => faq.index === openIndex? setOpenIndex(-1): setOpenIndex(faq.index)}
-        />
-        </>
+        <div key={faq.index}>
+          {i !== 0 && (
+            <div className="h-[2px] w-1/2 my-4 bg-gray-200 self-center" />
+          )}
+          <Accordion
+            data={{ title: <p>{faq.question}</p>, content: <p>{faq.answer}</p> }}
+            isOpen={faq.index === openIndex}
+            onClick={() =>
+              faq.index === openIndex
+                ? setOpenIndex(-1)
+                : setOpenIndex(faq.index)
+            }
+          />
+        </div>
       ))}
     </div>
   );

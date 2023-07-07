@@ -20,7 +20,7 @@ const Contact = () => {
           Countless Benefits & Easy Processing
         </motion.p>
         <motion.p className='mb-6' animate={{ x: 10 }} transition={{ duration: 1 }}>
-          You choose <strong> Expedia Visa Services </strong> because immigration rules and dynamic, Complicated to apply, and its difficult to deal with the migration department and you need to increase the success rate Imperium will help you to get that easily.
+          You choose <strong> Expedia Visa Services </strong> because immigration rules and dynamic, Complicated to apply, and its difficult to deal with the migration department and you need to increase the success rate Expedia will help you to get that easily.
         </motion.p>
         <div className='space-y-4 mb-8'>
           <div className='flex space-x-2 items-center'>
@@ -34,7 +34,7 @@ const Contact = () => {
                 Legal Immigration Success
               </p>
               <p>
-                Since 2018 Imperium Visa Services immigration success rate is 97 percent. So you don’t need to worry about that.
+                Since 2018 Expedia Visa Services immigration success rate is 97 percent. So you don’t need to worry about that.
               </p>
             </div>
           </div>
@@ -51,7 +51,7 @@ const Contact = () => {
                 Required Documents Support
               </p>
               <p>
-                Sometimes it is difficult for the student or people which document is required and when. Imperium will help you to manage that.
+                Sometimes it is difficult for the student or people which document is required and when. Expedia will help you to manage that.
               </p>
             </div>
           </div>
@@ -61,7 +61,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <div className=' lg:rounded-l-3xl bg-sky-950 shadow-2xl shadow-gray-500 flex flex-col justify-center items-start px-20 lg:px-16 xl:px-28 gap-12 py-20 space-y-4'>
+      <div className=' lg:rounded-l-3xl bg-sky-950 lg:shadow-2xl shadow-gray-500 flex flex-col justify-center items-start px-20 lg:px-16 xl:px-28 gap-12 py-20 space-y-4'>
         <motion.h1 className='text-4xl text-white font-medium' animate={{ scale: 1.2 }} transition={{ duration: 1 }}>
           Apply Now For Free Assessment
         </motion.h1>

@@ -16,7 +16,7 @@ const StartProcess = () => {
             Welcome to immigration Advisory services
           </h2>
           <p className=" text-gray-700 text-sm tracking-wide">
-            Imperium Visa Services foundation was established with a small idea
+            Expedia Visa Services foundation was established with a small idea
             that was incepted in the minds of its promoters in the year 2018! We
             skilfully guide applicants for the immigration process to any
             country they aspire to settle down.

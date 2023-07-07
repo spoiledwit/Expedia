@@ -31,13 +31,13 @@ const StepsToApply = () => {
     {
       index: 1,
       label: "Fill in the form",
-      text: "Imperium will fill up all your required forms when you apply for a visa.",
+      text: "Expedia will fill up all your required forms when you apply for a visa.",
       icon: <AiOutlineForm size={56} className="text-sky-800" />,
     },
     {
       index: 2,
       label: "Submit your attested documents",
-      text: "Imperium will also submit all your attested documents that need to be submitted.",
+      text: "Expedia will also submit all your attested documents that need to be submitted.",
       icon: <AiOutlineFileDone size={56} className="text-sky-800" />,
     },
     {
@@ -55,7 +55,7 @@ const StepsToApply = () => {
           We create solutions for your Future
         </h3>
         <p className=" text-2xl tracking-wide text-sky-900">
-          Imperium gives their consultancy by a registered and experienced
+          Expedia gives their consultancy by a registered and experienced
           consultants.
         </p>
       </section>
