@@ -16,49 +16,49 @@
       "description": "We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.",
       "values": [
         {
-          "id": "1",
+          "id": "express-entry",
           "name": "Express Entry",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Canada is the 2nd largest country in the world when it comes to total area and the 4th largest in terms of land area."
         },
         {
-          "id": "2",
+          "id": "aip",
           "name": "AIP",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "The Atlantic Immigration Program is an employer-driven program for hiring foreign workers."
         },
         {
-          "id": "3",
+          "id": "rnip",
           "name": "RNIP",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "RNIP is a unique immigration program that is designed for small and remote communities."
         },
         {
-          "id": "4",
+          "id": "ycp",
           "name": "YCP",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "The YCP is an immigration program launched by Canada's northern territory of the Yukon."
         },
         {
-          "id": "5",
+          "id": "pnp",
           "name": "PNP",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "This program is for applicants who are missing some points from their Express Entry Profile."
         },
         {
-          "id": "6",
+          "id": "work-permit",
           "name": "Work Permit",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Canada is a great country for workers to start their careers, earn and live well with work permits."
         },
         {
-          "id": "7",
+          "id": "study-visa",
           "name": "Study Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "We provide services on Student Visa Requirements in Canada, Process, Fees & Application,"
         },
         {
-          "id": "8",
+          "id": "startup-visa",
           "name": "Startup Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "The Atlantic Immigration Program is an employer-driven program for hiring foreign workers."
@@ -83,25 +83,25 @@
       "description": "We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.",
       "values": [
         {
-          "id": "1",
+          "id": "portugal",
           "name": "Portugal",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
         },
         {
-          "id": "2",
+          "id": "malta",
           "name": "Malta",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
         },
         {
-          "id": "3",
+          "id": "germany",
           "name": "Germany",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
         },
         {
-          "id": "4",
+          "id": "finland",
           "name": "Finland",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
@@ -126,49 +126,49 @@
       "description": "We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.",
       "values": [
         {
-          "id": "1",
+          "id": "express-entry",
           "name": "Express Entry",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Canada is the 2nd largest country in the world when it comes to total area and the 4th largest in terms of land area."
         },
         {
-          "id": "2",
+          "id": "aip",
           "name": "AIP",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "The Atlantic Immigration Program is an employer-driven program for hiring foreign workers."
         },
         {
-          "id": "3",
+          "id": "rnip",
           "name": "RNIP",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "RNIP is a unique immigration program that is designed for small and remote communities."
         },
         {
-          "id": "4",
+          "id": "ycp",
           "name": "YCP",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "The YCP is an immigration program launched by Canada's northern territory of the Yukon."
         },
         {
-          "id": "5",
+          "id": "pnp",
           "name": "PNP",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "This program is for applicants who are missing some points from their Express Entry Profile."
         },
         {
-          "id": "6",
+          "id": "work-permit",
           "name": "Work Permit",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Canada is a great country for workers to start their careers, earn and live well with work permits."
         },
         {
-          "id": "7",
+          "id": "study-visa",
           "name": "Study Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "We provide services on Student Visa Requirements in Canada, Process, Fees & Application,"
         },
         {
-          "id": "8",
+          "id": "startup-visa",
           "name": "Startup Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "The Atlantic Immigration Program is an employer-driven program for hiring foreign workers."
@@ -193,25 +193,25 @@
       "description": "We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.",
       "values": [
         {
-          "id": "1",
+          "id": "skilled-visa",
           "name": "Skilled Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Australia is offering multiple types of visas for skilled migration so you can work in Australia."
         },
         {
-          "id": "2",
-          "name": "AIPBusiness Visa",
+          "id": "business-visa",
+          "name": "Business Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Do you have a business idea and want to execute it in Australia then we are here to help you."
         },
         {
-          "id": "7",
+          "id": "study-visa",
           "name": "Study Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "With Study Visa, you can explore a unique way of life and study in an excellent educational environment."
         },
         {
-          "id": "8",
+          "id": "visit-visa",
           "name": "Visit Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Visit Australia with our visit visa program and explore the new world of possibilities."
@@ -236,25 +236,25 @@
       "description": "We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.",
       "values": [
         {
-          "id": "1",
+          "id": "portugal",
           "name": "Portugal",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
         },
         {
-          "id": "2",
+          "id": "malta",
           "name": "Malta",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
         },
         {
-          "id": "3",
+          "id": "germany",
           "name": "Germany",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
         },
         {
-          "id": "4",
+          "id": "finland",
           "name": "Finland",
           "imageURL": "https://loremflickr.com/640/480/nature",
           "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
