@@ -6,7 +6,6 @@ import AboutPage from "./pages/AboutUs"
 import ImmigrationPage from "./pages/Immigration"
 import ContactUsPage from "./pages/ContactUs"
 import PolicyPage from './pages/Policy'
-import SubImmigrationPage from "./pages/SubImmigrationPage"
 
 const App = () => {
   return (
@@ -15,8 +14,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/contact" element={<ContactUsPage />} />
-          <Route path="/immigration/:country" element={<ImmigrationPage />} />
-          <Route path="/immigration/:country/:plan" element={<SubImmigrationPage />} />
+          <Route path="/immigration/:country/" element={<ImmigrationPage />} />
+          <Route path="/immigration/:country/:plan" element={<ImmigrationPage />} />
           <Route path="/policy/:article" element={<PolicyPage />} />
         </Route>
       </Routes>

@@ -6,9 +6,9 @@
       "imageURL": "https://loremflickr.com/640/480/nature",
       "description": "Get your questions answered by an expert. Speak with a Regulated Australia Immigration Consultant to help plan your move."
     },
-    "options": {
-      "title": "Discover All Canada Immigration Options",
-      "descriptionHTML": "<p>Looking for the best and most trusted immigration consultants for Canada in Dubai? Expedia Visas is here to help you! Canada is the 2nd largest country in the world when it comes to the total area and the 4th largest in terms of the land area. The country also ranks high in terms of quality of life, education, economic freedom, civil liberties, and government transparency. These are some of the reasons why more and more people are now looking for opportunities to move to Canada to have a fruitful and balanced life.</p><p>With a significant requirement for skilled professionals and workers, the government of Canada has allowed immigration to fill in the vacant seats across the sectors where locals are unwilling or unable to meet the market demand. At present, the country is one of the topmost options for skilled workers who are interested in immigrating to countries with a high standard of living. With one of the highest per-capita immigration rates worldwide, the country is expected to welcome more new permanent residents when compared to the numbers of previous year. If this is something in which you are interested in, then ensure that you get professional assistance and guidance from the most reliable Canada immigration consultant in Dubai at Expedia Visas to assure yourself of a hassle-free and smooth immigration experience!</p>",
+    "description": {
+      "title": "Discover All Canadian Immigration Options",
+      "html": "<p>Looking for the best and most trusted immigration consultants for Canada in Dubai? Expedia Visas is here to help you! Canada is the 2nd largest country in the world when it comes to the total area and the 4th largest in terms of the land area. The country also ranks high in terms of quality of life, education, economic freedom, civil liberties, and government transparency. These are some of the reasons why more and more people are now looking for opportunities to move to Canada to have a fruitful and balanced life.</p><p>With a significant requirement for skilled professionals and workers, the government of Canada has allowed immigration to fill in the vacant seats across the sectors where locals are unwilling or unable to meet the market demand. At present, the country is one of the topmost options for skilled workers who are interested in immigrating to countries with a high standard of living. With one of the highest per-capita immigration rates worldwide, the country is expected to welcome more new permanent residents when compared to the numbers of previous year. If this is something in which you are interested in, then ensure that you get professional assistance and guidance from the most reliable Canada immigration consultant in Dubai at Expedia Visas to assure yourself of a hassle-free and smooth immigration experience!</p>",
       "slogan": "WE MAKE A DIFFERENCE"
     },
     "plans": {
@@ -19,49 +19,89 @@
           "id": "express-entry",
           "name": "Express Entry",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Canada is the 2nd largest country in the world when it comes to total area and the 4th largest in terms of land area."
+          "subtitle": "Canada is the 2nd largest country in the world when it comes to total area and the 4th largest in terms of land area.",
+          "description": {
+            "title": "Discover All Canadian Immigration Options",
+            "html": "<p>The Canada Express Entry Program is a points-based immigration program for professionals looking to settle in Canada. It awards points to professionals based on skills, experience, Canadian employment status, and provincial/territorial nomination. The higher your points, the greater your chances of receiving an invitation to Apply (ITA) for a Permanent Residency in Canada. Typically PR applications submitted through this route are processed in 6-12 months or fewer. Take advantage of this fastest program with Expedia Visas.  </p><h3 id=\"eligibility-for-express-entry-program\">Eligibility for Express Entry Program</h3><p>The Canada Express Entry Program relies on a points-based system to evaluate applicants. The main objective of this system is to identify applicants who have the highest chance of succeeding after they migrate to Canada. The points scale has a maximum score of 1200 and evaluates you and your spouse (if any) on you’re:</p><ul><li>Age</li><li>The highest level of education</li><li>Language skills</li><li>Canadian work experience</li><li>Other work experience</li><li>Skill transferability</li><li>Other factors</li></ul>",
+            "slogan": "WE MAKE A DIFFERENCE"
+          }
         },
         {
           "id": "aip",
           "name": "AIP",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "The Atlantic Immigration Program is an employer-driven program for hiring foreign workers."
+          "subtitle": "The Atlantic Immigration Program is an employer-driven program for hiring foreign workers.",
+          "description": {
+            "title": "Canada Atlantic Immigration Program",
+            "html": "<p>The Atlantic Immigration Program is a federal immigration program that helps employers recruit skilled foreign workers and international graduates to meet labor needs. All principal applicants arriving in Canada under the Atlantic Immigration Program must have a job offer from a designated employer and an individualized settlement plan for themselves and their families.</p><h3 id=\"eligibility\">ELIGIBILITY</h3><p>To participate in the Atlantic Immigration Program, employers must first be approved by being designated and then have their positions endorsed by the Province.</p><p>Once the employer’s positions are endorsed, foreign worker(s) identified by the employer can apply directly to Immigration, Refugees, and Citizenship Canada for permanent residency. The foreign worker can also get a temporary work permit while waiting for permanent residency.</p>",
+            "slogan": "WE MAKE A DIFFERENCE"
+          }
         },
         {
           "id": "rnip",
           "name": "RNIP",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "RNIP is a unique immigration program that is designed for small and remote communities."
+          "subtitle": "RNIP is a unique immigration program that is designed for small and remote communities.",
+          "description": {
+            "title": "RURAL & NORTHERN IMMIGRATION PILOT PROGRAM",
+            "html": "<p>Rural &amp; Northern Immigration Pilot is a unique immigration program that is designed for small and remote communities in Ontario, Western Canada and three territories to attract and retain foreign workers in these communities. During the consultation, we review your background, education, and experience to assess and strategize the immigration option most suitable for you.</p><h3 id=\"some-of-the-communities-participating-in-the-rural-and-northern-pilot-are\">Some of the communities participating in the Rural and Northern pilot are</h3><p>North Bay, Ontario<br>Sudbury, Ontario<br>Timmins, Ontario<br>Sault Ste, Marie, Ontario<br>Thunder Bay, Ontario</p><h3 id=\"immigrate-to-canada-with-expedia-visas\">IMMIGRATE TO CANADA WITH IMPERIUM VISAS</h3><p>Planning to move to Canada? Expedia Visas, the best Canadian immigration consultants in Canada can help you choose the best program keeping your profile and precise needs in mind. Since the federal government of Canada provides several routes to potential immigrants for immigration, it is necessary to have an expert like us by your side to make an informed decision.</p>",
+            "slogan": "CANADA IMMIGRATION"
+          }
         },
         {
           "id": "ycp",
           "name": "YCP",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "The YCP is an immigration program launched by Canada's northern territory of the Yukon."
+          "subtitle": "The YCP is an immigration program launched by Canada's northern territory of the Yukon.",
+          "description": {
+            "title": "Yukon Community Pilot Program",
+            "html": "<p>For foreign workers in Yukon who are employed at two or three permanent part time jobs, for which the hours worked equate to that of a full time job. You can apply for YCP with NO IELTS and No age limit. The Yukon Community Pilot (YCP) is an immigration program launched by Canada’s northern territory of the Yukon. As part of the Yukon Nominee Program, the YCP takes an innovative approach to immigration, helping those who have received provincial nomination to gain a special type of work permit allowing them to work for multiple employers in a participating community in the Yukon. The pilot is slated to run from January 2020 to June 2023. The Yukon Community Pilot allows an applicant with a provincial nomination from the Yukon government to work two or three jobs simultaneously in order to meet that requirement. </p><h3 id=\"immigrate-to-canada-with-expedia-visas\">IMMIGRATE TO CANADA WITH EXPEDIA VISAS</h3><p>Planning to move to Canada? Expedia Visas, the best Canadian immigration consultants in Canada can help you choose the best program keeping your profile and precise needs in mind. Since the federal government of Canada provides several routes to potential immigrants for immigration, it is necessary to have an expert like us by your side to make an informed decision.</p>",
+            "slogan": "CANADA IMMIGRATION"
+          }
         },
         {
           "id": "pnp",
           "name": "PNP",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "This program is for applicants who are missing some points from their Express Entry Profile."
+          "subtitle": "This program is for applicants who are missing some points from their Express Entry Profile.",
+          "description": {
+            "title": "Canada Provincial Nominee Program",
+            "html": "<p>The provincial nomination program has been very popular in recent years due to the very high threshold of Federal programs. Provincial programs have comparatively soft eligibility criteria. However, each province has its own demographic composition due to which most of their nomination programs are either occupation restricted or job offer based. For high tech and technical jobs, job offer route may work. Other applicants have to adopt the occupations in demand route.</p><h3 id=\"provinces-in-canada-with-provincial-nominee-program-are\">Provinces in Canada with provincial nominee program are</h3><ul><li>Alberta (Canada immigration provincial nominee program Alberta)</li><li>British Columbia (Canada immigration provincial nominee program British Columbia)</li><li>Saskatchewan (Canada immigration provincial nominee program Saskatchewan)</li><li>Ontario (Canada immigration provincial nominee program Ontario)</li><li>Prince Edward Island</li><li>Nova Scotia (Canada immigration provincial nominee program nova scotia)</li><li>Northwest Territories</li><li>Newfoundland and Labrador</li><li>New Brunswick</li><li>Manitoba</li><li>Whereas provincial nominee program in Quebec Canada have different programs and selection criteria.</li></ul>",
+            "slogan": "CANADA IMMIGRATION"
+          }
         },
         {
           "id": "work-permit",
           "name": "Work Permit",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Canada is a great country for workers to start their careers, earn and live well with work permits."
+          "subtitle": "Canada is a great country for workers to start their careers, earn and live well with work permits.",
+          "description": {
+            "title": "Canada Work Permit Program",
+            "html": "<p>Canada is in great need of immigrants to continue the excellent economic growth the country has experienced over the past few years. To keep up with the trend the country keeps increasing immigration targets to numbers over 400,000 every year.</p><p>Canada is still accepting work permit applications. The following foreign workers are now allowed to cross the border into Canada by land or air:</p><ul><li><strong>Temporary workers</strong> who hold a valid work permit or who are approved for a work permit but have not yet been issued the work permit</li><li><strong>IEC participants</strong> who have not yet activated their work permits must have a valid job offer in order to enter</li><li><strong>IEC participants</strong> who have already activated their work permits and were outside the country temporarily do not require a valid job offer in order to re-enter</li><li>If you’re <strong>travelling by air</strong>, you need to follow all airline requirements and pass a health check conducted by airlines before you’re allowed to board your flight. Anyone who shows symptoms of COVID-19 will <strong>not be allowed to enter</strong> Canada by air.</li><li>When you arrive in Canada, they will assess your health before you leave the port of entry. You must have a plan to <strong>quarantine for 14 days</strong> when you arrive in Canada. <strong>This is mandatory, even if you have no symptoms</strong>. If you don’t have a plan, you should not travel to Canada.</li><li>Only people who provide essential services, for example, truck drivers who regularly cross the border to maintain the flow of goods, are exempt from the quarantine requirements.</li></ul>",
+            "slogan": "CANADA IMMIGRATION"
+          }
         },
         {
           "id": "study-visa",
           "name": "Study Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "We provide services on Student Visa Requirements in Canada, Process, Fees & Application,"
+          "subtitle": "We provide services on Student Visa Requirements in Canada, Process, Fees & Application,",
+          "description": {
+            "title": "Canada Study Visa",
+            "html": "<p>Canada has always been the most preferred destination for higher education among international students, by serving as the epitome of quality education and renowned highly ranked universities. It has one of the best curriculums with recognized degrees. Students studying longer than 6 months will require a study permit (Canada student visa), for students with 6 months or less than that it is not mandatory.</p><h3 id=\"why-study-in-canada-\">Why Study in CANADA?</h3><ul><li>The Qualifications obtained here are valued around the world.</li><li>Affordable education.</li><li>Easy to thrive being a multicultural society.</li><li>Healthy and safe communities to live with.</li><li>Possibility of stipend internships while studying.</li><li>Post-study work visa is available, thus good job opportunities after completion of studies.</li><li>Possibility of getting Permanent Residency.</li></ul><p>If you too have plans to move to Canada to study, we can help you secure the study visa easily and effectively. Once you obtain the study visa, you and your family can live in Canada for three to four years during which your family can work full time and you can work part time. What is exciting is that once you complete your educational program, the Canadian government will issue you a three-year work permit allowing you to find a job and work full time in Canada. Following that you can apply for permanent residency for yourself and your family which ultimately could lead to Canadian citizenship.</p><p>All you need to start your application for study visa in Canada is a Letter of Acceptance from a Canadian educational institution, and IELTS exam the scores of which vary from college to college. Let us assess your case and we will extend professional support on how to secure your student visa faster and in a more hassle-free way.</p>",
+            "slogan": "CANADA IMMIGRATION"
+          }
         },
         {
           "id": "startup-visa",
           "name": "Startup Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "The Atlantic Immigration Program is an employer-driven program for hiring foreign workers."
+          "subtitle": "The Atlantic Immigration Program is an employer-driven program for hiring foreign workers.",
+          "description": {
+            "title": "Canada Startup Visa",
+            "html": "<p>Within the Canadian investor and business immigration, there is a program known as the Canadian Start-up Visa program, which presents a special chance for Start-ups to not just launch a new business in Canada but also get financing from a qualified financier along with Permanent Residency status.</p><h3 id=\"start-your-immigration-to-canada-on-a-start-up-visa\">Start Your Immigration to Canada on a Start-up Visa</h3><p>With 4,000+ Immigrant Investor cases processed since 1995, we help you immigrate to Canada. If you want to move to Canada with your family, you can count on our 25+ years of experience. Canada is a real opportunity for businesspeople seeking an incomparable quality of life. Get Canadian Permanent Residency within 31 months for CAD 50,000.</p><h3 id=\"eligibility-requirements\">Eligibility Requirements</h3><p>Below is the list of requirements for you to assess and conclude whether you have a qualifying business under the SUV program:</p><ul><li>Foreign nationals must get a letter of support or investment commitment from one of the designated Canadian organizations;</li><li>Each foreign national must hold a minimum of 10% of voting rights in the startup. Foreign nationals and their designated organization must jointly have more than 50% of the total voting rights in the business;</li><li>Each applicant must meet the minimum English or French language skill at CLB level 5</li></ul>",
+            "slogan": "CANADA IMMIGRATION"
+          }
         }
       ]
     }
@@ -73,9 +113,9 @@
       "imageURL": "https://loremflickr.com/640/480/nature",
       "description": "Get your questions answered by an expert. Speak with a Regulated Europian Immigration Consultant to help plan your move."
     },
-    "options": {
+    "description": {
       "title": "Discover All European Immigration Options",
-      "descriptionHTML": "<p>Europe is a historically rich continent. The inhabitants of Europe are renowned for their trading, creative and scientific acumen and many other skills. Consequently, the continent always stands firmly on the ground even if the economy of the whole world is shaking. Europe has industries in abundance and a huge job market offering exciting opportunities to aspiring immigrants, making it a dream destination to migrate to.</p><p>Let First Choice Consultants &minus; one of the most sought-after immigration consultants in UAE lessen your migration worries and help you realize your European dreams!</p><h3>How Expedia Can Help You to Immigrate to Europe from UAE?</h3><p>Expedia has been helping individuals who wish to immigrate to Europe from UAE by providing them reliable immigration services. We make sure that our clients are fed with up to date immigration information and they are given the best possible suggestions &amp; advice. We guide them throughout the entire immigration process right from processing the documents until the part where you get yourself comfortable in a European Country.</p>",
+      "html": "<p>Europe is a historically rich continent. The inhabitants of Europe are renowned for their trading, creative and scientific acumen and many other skills. Consequently, the continent always stands firmly on the ground even if the economy of the whole world is shaking. Europe has industries in abundance and a huge job market offering exciting opportunities to aspiring immigrants, making it a dream destination to migrate to.</p><p>Let First Choice Consultants &minus; one of the most sought-after immigration consultants in UAE lessen your migration worries and help you realize your European dreams!</p><h3>How Expedia Can Help You to Immigrate to Europe from UAE?</h3><p>Expedia has been helping individuals who wish to immigrate to Europe from UAE by providing them reliable immigration services. We make sure that our clients are fed with up to date immigration information and they are given the best possible suggestions &amp; advice. We guide them throughout the entire immigration process right from processing the documents until the part where you get yourself comfortable in a European Country.</p>",
       "slogan": "EUROPE IMMIGRATION"
     },
     "plans": {
@@ -83,28 +123,92 @@
       "description": "We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.",
       "values": [
         {
-          "id": "portugal",
-          "name": "Portugal",
+          "id": "express-entry",
+          "name": "Express Entry",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+          "subtitle": "Canada is the 2nd largest country in the world when it comes to total area and the 4th largest in terms of land area.",
+          "description": {
+            "title": "Discover All Canadian Immigration Options",
+            "html": "<p>The Canada Express Entry Program is a points-based immigration program for professionals looking to settle in Canada. It awards points to professionals based on skills, experience, Canadian employment status, and provincial/territorial nomination. The higher your points, the greater your chances of receiving an invitation to Apply (ITA) for a Permanent Residency in Canada. Typically PR applications submitted through this route are processed in 6-12 months or fewer. Take advantage of this fastest program with Expedia Visas.  </p><h3 id=\"eligibility-for-express-entry-program\">Eligibility for Express Entry Program</h3><p>The Canada Express Entry Program relies on a points-based system to evaluate applicants. The main objective of this system is to identify applicants who have the highest chance of succeeding after they migrate to Canada. The points scale has a maximum score of 1200 and evaluates you and your spouse (if any) on you’re:</p><ul><li>Age</li><li>The highest level of education</li><li>Language skills</li><li>Canadian work experience</li><li>Other work experience</li><li>Skill transferability</li><li>Other factors</li></ul>",
+            "slogan": "WE MAKE A DIFFERENCE"
+          }
         },
         {
-          "id": "malta",
-          "name": "Malta",
+          "id": "aip",
+          "name": "AIP",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+          "subtitle": "The Atlantic Immigration Program is an employer-driven program for hiring foreign workers.",
+          "description": {
+            "title": "Canada Atlantic Immigration Program",
+            "html": "<p>The Atlantic Immigration Program is a federal immigration program that helps employers recruit skilled foreign workers and international graduates to meet labor needs. All principal applicants arriving in Canada under the Atlantic Immigration Program must have a job offer from a designated employer and an individualized settlement plan for themselves and their families.</p><h3 id=\"eligibility\">ELIGIBILITY</h3><p>To participate in the Atlantic Immigration Program, employers must first be approved by being designated and then have their positions endorsed by the Province.</p><p>Once the employer’s positions are endorsed, foreign worker(s) identified by the employer can apply directly to Immigration, Refugees, and Citizenship Canada for permanent residency. The foreign worker can also get a temporary work permit while waiting for permanent residency.</p>",
+            "slogan": "WE MAKE A DIFFERENCE"
+          }
         },
         {
-          "id": "germany",
-          "name": "Germany",
+          "id": "rnip",
+          "name": "RNIP",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+          "subtitle": "RNIP is a unique immigration program that is designed for small and remote communities.",
+          "description": {
+            "title": "RURAL & NORTHERN IMMIGRATION PILOT PROGRAM",
+            "html": "<p>Rural &amp; Northern Immigration Pilot is a unique immigration program that is designed for small and remote communities in Ontario, Western Canada and three territories to attract and retain foreign workers in these communities. During the consultation, we review your background, education, and experience to assess and strategize the immigration option most suitable for you.</p><h3 id=\"some-of-the-communities-participating-in-the-rural-and-northern-pilot-are\">Some of the communities participating in the Rural and Northern pilot are</h3><p>North Bay, Ontario<br>Sudbury, Ontario<br>Timmins, Ontario<br>Sault Ste, Marie, Ontario<br>Thunder Bay, Ontario</p><h3 id=\"immigrate-to-canada-with-expedia-visas\">IMMIGRATE TO CANADA WITH IMPERIUM VISAS</h3><p>Planning to move to Canada? Expedia Visas, the best Canadian immigration consultants in Canada can help you choose the best program keeping your profile and precise needs in mind. Since the federal government of Canada provides several routes to potential immigrants for immigration, it is necessary to have an expert like us by your side to make an informed decision.</p>",
+            "slogan": "CANADA IMMIGRATION"
+          }
         },
         {
-          "id": "finland",
-          "name": "Finland",
+          "id": "ycp",
+          "name": "YCP",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+          "subtitle": "The YCP is an immigration program launched by Canada's northern territory of the Yukon.",
+          "description": {
+            "title": "Yukon Community Pilot Program",
+            "html": "<p>For foreign workers in Yukon who are employed at two or three permanent part time jobs, for which the hours worked equate to that of a full time job. You can apply for YCP with NO IELTS and No age limit. The Yukon Community Pilot (YCP) is an immigration program launched by Canada’s northern territory of the Yukon. As part of the Yukon Nominee Program, the YCP takes an innovative approach to immigration, helping those who have received provincial nomination to gain a special type of work permit allowing them to work for multiple employers in a participating community in the Yukon. The pilot is slated to run from January 2020 to June 2023. The Yukon Community Pilot allows an applicant with a provincial nomination from the Yukon government to work two or three jobs simultaneously in order to meet that requirement. </p><h3 id=\"immigrate-to-canada-with-expedia-visas\">IMMIGRATE TO CANADA WITH EXPEDIA VISAS</h3><p>Planning to move to Canada? Expedia Visas, the best Canadian immigration consultants in Canada can help you choose the best program keeping your profile and precise needs in mind. Since the federal government of Canada provides several routes to potential immigrants for immigration, it is necessary to have an expert like us by your side to make an informed decision.</p>",
+            "slogan": "CANADA IMMIGRATION"
+          }
+        },
+        {
+          "id": "pnp",
+          "name": "PNP",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "subtitle": "This program is for applicants who are missing some points from their Express Entry Profile.",
+          "description": {
+            "title": "Canada Provincial Nominee Program",
+            "html": "<p>The provincial nomination program has been very popular in recent years due to the very high threshold of Federal programs. Provincial programs have comparatively soft eligibility criteria. However, each province has its own demographic composition due to which most of their nomination programs are either occupation restricted or job offer based. For high tech and technical jobs, job offer route may work. Other applicants have to adopt the occupations in demand route.</p><h3 id=\"provinces-in-canada-with-provincial-nominee-program-are\">Provinces in Canada with provincial nominee program are</h3><ul><li>Alberta (Canada immigration provincial nominee program Alberta)</li><li>British Columbia (Canada immigration provincial nominee program British Columbia)</li><li>Saskatchewan (Canada immigration provincial nominee program Saskatchewan)</li><li>Ontario (Canada immigration provincial nominee program Ontario)</li><li>Prince Edward Island</li><li>Nova Scotia (Canada immigration provincial nominee program nova scotia)</li><li>Northwest Territories</li><li>Newfoundland and Labrador</li><li>New Brunswick</li><li>Manitoba</li><li>Whereas provincial nominee program in Quebec Canada have different programs and selection criteria.</li></ul>",
+            "slogan": "CANADA IMMIGRATION"
+          }
+        },
+        {
+          "id": "work-permit",
+          "name": "Work Permit",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "subtitle": "Canada is a great country for workers to start their careers, earn and live well with work permits.",
+          "description": {
+            "title": "Canada Work Permit Program",
+            "html": "<p>Canada is in great need of immigrants to continue the excellent economic growth the country has experienced over the past few years. To keep up with the trend the country keeps increasing immigration targets to numbers over 400,000 every year.</p><p>Canada is still accepting work permit applications. The following foreign workers are now allowed to cross the border into Canada by land or air:</p><ul><li><strong>Temporary workers</strong> who hold a valid work permit or who are approved for a work permit but have not yet been issued the work permit</li><li><strong>IEC participants</strong> who have not yet activated their work permits must have a valid job offer in order to enter</li><li><strong>IEC participants</strong> who have already activated their work permits and were outside the country temporarily do not require a valid job offer in order to re-enter</li><li>If you’re <strong>travelling by air</strong>, you need to follow all airline requirements and pass a health check conducted by airlines before you’re allowed to board your flight. Anyone who shows symptoms of COVID-19 will <strong>not be allowed to enter</strong> Canada by air.</li><li>When you arrive in Canada, they will assess your health before you leave the port of entry. You must have a plan to <strong>quarantine for 14 days</strong> when you arrive in Canada. <strong>This is mandatory, even if you have no symptoms</strong>. If you don’t have a plan, you should not travel to Canada.</li><li>Only people who provide essential services, for example, truck drivers who regularly cross the border to maintain the flow of goods, are exempt from the quarantine requirements.</li></ul>",
+            "slogan": "CANADA IMMIGRATION"
+          }
+        },
+        {
+          "id": "study-visa",
+          "name": "Study Visa",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "subtitle": "We provide services on Student Visa Requirements in Canada, Process, Fees & Application,",
+          "description": {
+            "title": "Canada Study Visa",
+            "html": "<p>Canada has always been the most preferred destination for higher education among international students, by serving as the epitome of quality education and renowned highly ranked universities. It has one of the best curriculums with recognized degrees. Students studying longer than 6 months will require a study permit (Canada student visa), for students with 6 months or less than that it is not mandatory.</p><h3 id=\"why-study-in-canada-\">Why Study in CANADA?</h3><ul><li>The Qualifications obtained here are valued around the world.</li><li>Affordable education.</li><li>Easy to thrive being a multicultural society.</li><li>Healthy and safe communities to live with.</li><li>Possibility of stipend internships while studying.</li><li>Post-study work visa is available, thus good job opportunities after completion of studies.</li><li>Possibility of getting Permanent Residency.</li></ul><p>If you too have plans to move to Canada to study, we can help you secure the study visa easily and effectively. Once you obtain the study visa, you and your family can live in Canada for three to four years during which your family can work full time and you can work part time. What is exciting is that once you complete your educational program, the Canadian government will issue you a three-year work permit allowing you to find a job and work full time in Canada. Following that you can apply for permanent residency for yourself and your family which ultimately could lead to Canadian citizenship.</p><p>All you need to start your application for study visa in Canada is a Letter of Acceptance from a Canadian educational institution, and IELTS exam the scores of which vary from college to college. Let us assess your case and we will extend professional support on how to secure your student visa faster and in a more hassle-free way.</p>",
+            "slogan": "CANADA IMMIGRATION"
+          }
+        },
+        {
+          "id": "startup-visa",
+          "name": "Startup Visa",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "subtitle": "The Atlantic Immigration Program is an employer-driven program for hiring foreign workers.",
+          "description": {
+            "title": "Canada Startup Visa",
+            "html": "<p>Within the Canadian investor and business immigration, there is a program known as the Canadian Start-up Visa program, which presents a special chance for Start-ups to not just launch a new business in Canada but also get financing from a qualified financier along with Permanent Residency status.</p><h3 id=\"start-your-immigration-to-canada-on-a-start-up-visa\">Start Your Immigration to Canada on a Start-up Visa</h3><p>With 4,000+ Immigrant Investor cases processed since 1995, we help you immigrate to Canada. If you want to move to Canada with your family, you can count on our 25+ years of experience. Canada is a real opportunity for businesspeople seeking an incomparable quality of life. Get Canadian Permanent Residency within 31 months for CAD 50,000.</p><h3 id=\"eligibility-requirements\">Eligibility Requirements</h3><p>Below is the list of requirements for you to assess and conclude whether you have a qualifying business under the SUV program:</p><ul><li>Foreign nationals must get a letter of support or investment commitment from one of the designated Canadian organizations;</li><li>Each foreign national must hold a minimum of 10% of voting rights in the startup. Foreign nationals and their designated organization must jointly have more than 50% of the total voting rights in the business;</li><li>Each applicant must meet the minimum English or French language skill at CLB level 5</li></ul>",
+            "slogan": "CANADA IMMIGRATION"
+          }
         }
       ]
     }
@@ -116,9 +220,9 @@
       "imageURL": "https://loremflickr.com/640/480/nature",
       "description": "Get your questions answered by an expert. Speak with a Regulated UK Immigration Consultant to help plan your move."
     },
-    "options": {
+    "description": {
       "title": "Discover All Immigration Options to UK With Us",
-      "descriptionHTML": "<p>United Kingdom or the UK is one of the popularly known destinations for travel and migration around the world. It attracts a wide number of international migrants every year. For the past years, UK has been open to skilled international migrants from craftsmen to doctors around the world. It is the center of Europe and that alone makes its international trade one of the top and the country’s reputation around the world is very good especially in sectors such as investment, employment, and studies.</p><p>We make sure that our clients are fed with up to date immigration information and they are given the best possible suggestions &amp; advice. We guide them throughout the entire immigration process right from processing the documents. Expedia Visa Services helps &amp; provides you with:</p><ul><li>Free Assessment &amp; Counselling</li><li>Review on Rejection and Appeal Guidance</li><li>Training for Embassy Interview</li><li>Preparing Financial Papers</li><li>Authenticating Documents</li><li>Filling &amp; Filing Applications</li><li>Acquiring Work, Residence Permits etc.</li></ul>",
+      "html": "<p>United Kingdom or the UK is one of the popularly known destinations for travel and migration around the world. It attracts a wide number of international migrants every year. For the past years, UK has been open to skilled international migrants from craftsmen to doctors around the world. It is the center of Europe and that alone makes its international trade one of the top and the country’s reputation around the world is very good especially in sectors such as investment, employment, and studies.</p><p>We make sure that our clients are fed with up to date immigration information and they are given the best possible suggestions &amp; advice. We guide them throughout the entire immigration process right from processing the documents. Expedia Visa Services helps &amp; provides you with:</p><ul><li>Free Assessment &amp; Counselling</li><li>Review on Rejection and Appeal Guidance</li><li>Training for Embassy Interview</li><li>Preparing Financial Papers</li><li>Authenticating Documents</li><li>Filling &amp; Filing Applications</li><li>Acquiring Work, Residence Permits etc.</li></ul>",
       "slogan": "UNITED KINGDOM IMMIGRATION"
     },
     "plans": {
@@ -183,9 +287,9 @@
       "imageURL": "https://loremflickr.com/640/480/nature",
       "description": "Get your questions answered by an expert. Speak with a Regulated Canadian Immigration Consultant to help plan your move."
     },
-    "options": {
+    "description": {
       "title": "Discover All Immigration Options to Australia With Us",
-      "descriptionHTML": "<p>Australia is in great need of immigrants to continue the excellent economic growth the country has experienced over the past few decades. To keep up with the trend the country keeps increasing immigration targets to numbers over 400,000 every year. Australia is one of the most dynamic and multicultural countries across the globe. Australia’s immigration system has over 100 different visas and immigration programs to help you move to Australia in the simplest and quickest way.</p><h3 id=\"how-we-can-help-you-to-immigrate-to-australia-from-uae-\">How We Can Help You to Immigrate to Australia from UAE?</h3><p>Expedia Visas has been helping individuals who wish to immigrate to Australia from UAE by providing them reliable immigration services. We make sure that our clients are fed with up to date immigration information and they are given the best possible suggestions &amp; advice. We guide them throughout the entire immigration process right from processing the documents. Expedia Visas helps &amp; provides you with:</p><ul><li>Free Assessment &amp; Counselling</li><li>Review on Rejection and Appeal Guidance</li><li>Training for Embassy Interview</li><li>Preparing Financial Papers</li><li>Authenticating Documents</li><li>Filling &amp; Filing Applications</li><li>Acquiring Work, Residence Permits etc.</li></ul>",
+      "html": "<p>Australia is in great need of immigrants to continue the excellent economic growth the country has experienced over the past few decades. To keep up with the trend the country keeps increasing immigration targets to numbers over 400,000 every year. Australia is one of the most dynamic and multicultural countries across the globe. Australia’s immigration system has over 100 different visas and immigration programs to help you move to Australia in the simplest and quickest way.</p><h3 id=\"how-we-can-help-you-to-immigrate-to-australia-from-uae-\">How We Can Help You to Immigrate to Australia from UAE?</h3><p>Expedia Visas has been helping individuals who wish to immigrate to Australia from UAE by providing them reliable immigration services. We make sure that our clients are fed with up to date immigration information and they are given the best possible suggestions &amp; advice. We guide them throughout the entire immigration process right from processing the documents. Expedia Visas helps &amp; provides you with:</p><ul><li>Free Assessment &amp; Counselling</li><li>Review on Rejection and Appeal Guidance</li><li>Training for Embassy Interview</li><li>Preparing Financial Papers</li><li>Authenticating Documents</li><li>Filling &amp; Filing Applications</li><li>Acquiring Work, Residence Permits etc.</li></ul>",
       "slogan": "AUSTRALIA IMMIGRATION"
     },
     "plans": {
@@ -196,68 +300,45 @@
           "id": "skilled-visa",
           "name": "Skilled Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Australia is offering multiple types of visas for skilled migration so you can work in Australia."
+          "subtitle": "Australia is offering multiple types of visas for skilled migration so you can work in Australia.",
+          "description": {
+            "title": "Australia Skilled Migration Program",
+            "slogan": "Australian Immigration",
+            "html": "<p>Interested in moving to <strong>Australia</strong>? <strong>Expedia Visas</strong> have competent lawyers to help you <strong>migrate to Australia in 9-12 months</strong>.</p><p>Australia is offering multiple types of visas for skilled migration:</p><ol><li><strong>Skilled Independent Subclass 189</strong>: In this category, you can get a guaranteed Australian Work Permit to live and work anywhere in Australia.</li><li><strong>Skilled Nominated Subclass 190</strong>: In this category, you can get a guaranteed Australia Work Permit to live and work in a specific state.</li><li><strong>Skilled Nominated Subclass 489</strong>: In this category, you can get a guaranteed Australia Work Permit to live and work in the specific region.</li></ol><p><strong>During the consultation, we review your background, education, and experience to assess and strategize the immigration option most suitable for you.</strong></p><h4 id=\"australia-skilled-immigration\">Australia Skilled Immigration</h4><p>It’s a great opportunity for skilled workers to migrate to <strong>Australia</strong>, work in one of the top countries in the world with their families. Australia offers one of the world’s best career opportunities. We have listed down few interesting facts and figures for you:</p><ul><li>Work &amp; Live in World’s top Cities: Brisbane, Melbourne, Sydney, Adelaide, Perth, and Darwin.</li><li>Currency: <strong>AUD</strong> Australia Dollar</li><li>Average Living Cost: <strong>18,000 AUD</strong> per year.</li><li>Language: English</li></ul>"
+          }
         },
         {
           "id": "business-visa",
           "name": "Business Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Do you have a business idea and want to execute it in Australia then we are here to help you."
+          "subtitle": "Do you have a business idea and want to execute it in Australia then we are here to help you.",
+          "description": {
+            "title": "Australia Business Visa",
+            "slogan": "Australian Immigration",
+            "html": "<p>Both Business and Investor Visa Australia programs are significant components of the Skilled Migration Program. All Business Visa Australia applications under the Business Innovation &amp; Investment Program or Business Talent Program require careful preparation and planning. Given that the source of funds for your financial eligibility for a business visa in Australia is a particularly complex area, there are significant benefits to discussing your case with one of our team. No matter how similar, each business migrant or investor migrant has their own story, making each application unique.</p><p>Business and Investor Visas are designed to attract business owners and investors into Australia to either start a business in Australia or to invest in certain designated or complying investments. This visa is not for everyone, but if you are one of the lucky selected ones who can qualify, you will need professional advice to get the right outcome.</p><p>We offer a premium service to Business and Investor Visa Australia applicants, including assistance to cover every aspect of the very detailed and complicated visa process. We also make sure that you are planning properly for your arrival in Australia, not making mistakes, and not taking unnecessary risks.</p><p><strong>Expedia Visas</strong> is your point of contact, to make sure that due diligence is done on any investments you make.</p>"
+          }
         },
         {
           "id": "study-visa",
           "name": "Study Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "With Study Visa, you can explore a unique way of life and study in an excellent educational environment."
+          "subtitle": "With Study Visa, you can explore a unique way of life and study in an excellent educational environment.",
+          "description": {
+            "title": "Australia Study Visa",
+            "slogan": "Australian Immigration",
+            "html": "<p>The Australia student visa affords you the quality education, opportunity, and exposure that you seek in Australia. Studying in Australia is one of the best decisions you can take as an international student. There are about 8 Australian schools ranked among the top 100 in the world. At Expedia Visas, we provide a seamless and effective study transition. From admission to visa procurement, we are well-equipped to guide you through the bumpy procedures. We do not only have MARA-certified consultants; our student counselors will help you in making the right course decision. And choose the appropriate college in Australia.</p><h3 id=\"requirements-to-apply-for-the-australia-student-visa\">Requirements to Apply for the Australia Student Visa</h3><p>To successfully secure a student visa to Australia, you need to fulfill the following requirements:</p><ul><li>Provide an electronic confirmation of Enrollment certificate from your university</li><li>Genuine statement of purpose/intent</li><li>4 passport-sized photographs</li><li>OSHC – AND health insurance cover</li><li>Proof of funds to cater for living expenses</li><li>Police clearance report (where applicable)</li><li>Visa fees</li><li>English test result (for nonnative speakers)</li><li>Any other requirements as requested by the visa officer</li></ul>"
+          }
         },
         {
           "id": "visit-visa",
           "name": "Visit Visa",
           "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Visit Australia with our visit visa program and explore the new world of possibilities."
-        }
-      ]
-    }
-  },
-  "malta": {
-    "name": "malta",
-    "hero": {
-      "title": "IMMIGRATE TO MALTA",
-      "imageURL": "https://loremflickr.com/640/480/nature",
-      "description": "Get your questions answered by an expert. Speak with a Regulated Europian Immigration Consultant to help plan your move."
-    },
-    "options": {
-      "title": "About the Program",
-      "descriptionHTML": "<p>Malta is a very attractive location for private residence. The island nation enjoys a stable political climate and is strategically located, with excellent air links. The Malta Residence and Visa Program (MRVP) offers non-Maltese persons the possibility of acquiring a European residence permit in an EU country and visa-free travel within Europe’s <strong>Schengen</strong> Area.</p><h3 id=\"why-malta-\">Why Malta?</h3><p>All those who move to Malta, the smallest EU state, fall in love with its natural beauty, architectural gems and the Mediterranean <strong>joie de vivre</strong> that permeates life on the island. Many are also attracted by the various successful industries that are flourishing in Malta such as the gaming industry and the financial services. Situated in the center of the Mediterranean Sea, Malta enjoys an excellent</p><h3 id=\"citizenship-by-investment-malta\">Citizenship by Investment Malta</h3><p>Introduced in November 2020, legislation granting Malta citizenship by naturalization for exceptional services offers citizenship in a highly respected EU member country to individuals and families worldwide who contribute to the nation’s economic development. Malta has been a member of the European Union since 2004, enjoys a stable political climate, bi-partisan political scene, growing economy, and has some of the soundest banks in the world. The Malta citizenship by investment application process is extremely efficient, and the Government of Malta is committed to the highest standard of due diligence and vetting of investor applicants ensuring only persons of impeccable standing and repute will be admitted.</p>",
-      "slogan": "MALTA IMMIGRATION"
-    },
-    "plans": {
-      "title": "Explore European Countries",
-      "description": "We provide a skilled staff to help you get the most out of your immigration. Our qualified and dependable Immigration Consultants can assist you in obtaining a favorable result in your case.",
-      "values": [
-        {
-          "id": "portugal",
-          "name": "Portugal",
-          "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
-        },
-        {
-          "id": "malta",
-          "name": "Malta",
-          "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
-        },
-        {
-          "id": "germany",
-          "name": "Germany",
-          "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
-        },
-        {
-          "id": "finland",
-          "name": "Finland",
-          "imageURL": "https://loremflickr.com/640/480/nature",
-          "description": "Europe is a historically rich continent. Europe renowned for their trading and many other skills."
+          "subtitle": "Visit Australia with our visit visa program and explore the new world of possibilities.",
+          "description": {
+            "title": "Australia Visit Visa",
+            "slogan": "Australian Immigration",
+            "html": "<p>Congratulations! Are you planning to visit Australia from Dubai to explore the beautiful and relaxing beaches? Hold on a minute, have you applied for an Australia visitor visa from Dubai? If not, we are here to help you secure your Australia visit visa from Dubai hassle-free and faster. Expedia Visas, the <strong>best immigration consultant</strong> and visit visa agency in Dubai, provides visit visa services for significant countries like the US, UK, Thailand, Australia, and all major tourist destinations. <strong>Expedia Visas</strong> is here to help you apply for your Australian visa in Dubai through a smooth, hassle-free, and seamless process. We will guide you along the way and provide end-to-end guidance to ensure that your application and all required documentation are submitted on time. Schedule a free consultation with us to know how we can assist you with your travel requirements.</p><h3 id=\"documents-required-to-apply-for-an-australian-visit-visa\">Documents Required to Apply for an Australian Visit Visa</h3><p>The eligibility requirements to apply for an <strong>Australian visit visa</strong> are as follows:</p><ul><li>Valid passport with a validity of at least six months</li><li>Prove that you have enough funds to meet the trip costs</li><li>Police clearance certificate with zero criminal record</li><li>Meet all the health standards and submit the medical &amp; health examination report, if required</li><li>Provide all the valid documents and letters of Invitation from the sponsors</li><li>Be ready to provide all the supporting documents, if the case officer asks for</li><li>Travel itinerary (complete details of your trip, accommodation details, and point of contact details)</li><li>Passport-sized photographs</li><li>Proof of your return with a valid return ticket</li><li>Filled Australia tourist visa application</li></ul>"
+          }
         }
       ]
     }

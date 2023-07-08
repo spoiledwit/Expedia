@@ -138,22 +138,22 @@ export const navLinks = [
       {
         id: "eu-portugal",
         title: "Portugal",
-        href: "imigration/europe/portugal",
+        href: "immigration/europe/portugal",
       },
       {
         id: "eu-malta",
         title: "Malta",
-        href: "imigration/europe/malta",
+        href: "immigration/europe/malta",
       },
       {
         id: "eu-germany",
         title: "Germany",
-        href: "imigration/europe/germany",
+        href: "immigration/europe/germany",
       },
       {
         id: "eu-finland",
         title: "Finland",
-        href: "imigration/europe/finland",
+        href: "immigration/europe/finland",
       },
     ],
   },

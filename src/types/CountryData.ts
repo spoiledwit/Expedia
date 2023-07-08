@@ -1,3 +1,5 @@
+import { PlanData } from ".";
+
 type CountryData = {
   name: string;
   hero: {
@@ -5,20 +7,15 @@ type CountryData = {
     description: string;
     imageURL: string;
   };
-  options: {
+  description: {
     title: string;
-    descriptionHTML: string;
+    html: string;
     slogan: string;
   };
   plans: {
     title: string;
     description: string;
-    values: {
-      id: string;
-      name: string;
-      imageURL: string;
-      description: string;
-    }[];
+    values: PlanData[];
   };
 };
 

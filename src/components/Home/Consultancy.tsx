@@ -23,7 +23,7 @@ const Consultancy = () => {
           Unparalleled Consultancy from Experienced Lawyers
         </h2>
         <h4 className=" text-gray-200 text-lg md:text-xl tracking-wide">
-          Imperium gives their consultancy by a registered and experienced
+          Expedia gives their consultancy by a registered and experienced
           lawyer.
         </h4>
 

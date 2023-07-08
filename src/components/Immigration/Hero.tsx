@@ -18,7 +18,7 @@ const Hero = ({ countryData }: { countryData: CountryData }) => {
           <p className="text-white text-xl mb-6">
             {countryData.hero.description}
           </p>
-          <Button text="Get Free Assessment" onClick={() => {console.log('get assessment')}} />
+          <Button text="Book Free Consultation" onClick={() => {console.log('get assessment')}} />
         </div>
       </div>
     </div>
