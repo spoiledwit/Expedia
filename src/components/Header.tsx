@@ -7,6 +7,7 @@ import InfoHeader from "./Home/InfoHeader";
 import Logo from "../assets/expedia.png";
 import { AnimatePresence, motion } from "framer-motion";
 import Accordion from "./Accordion";
+import { IoIosArrowDown } from "react-icons/io";
 
 type LinkWithChildren = {
   id: string;
@@ -211,8 +212,14 @@ const Navbar = () => {
                     isActive ? "text-sky-500" : "text-black hover:text-sky-900"
                   } relative p-3 text-xs tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
                 >
-                  <Link to={link.href} className="uppercase">
+                  <Link
+                    to={link.href}
+                    className="uppercase flex gap-1 items-center"
+                  >
                     {link.title}
+                    {link.children && (
+                      <IoIosArrowDown size={12} />
+                    )}
                   </Link>
                   {link.children && <LinkDropdown key={link.id} link={link} />}
                 </div>

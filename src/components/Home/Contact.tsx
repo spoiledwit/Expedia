@@ -38,30 +38,18 @@ const Contact = () => {
           success rate Expedia will help you to get that easily.
         </motion.p>
         <div className="space-y-4 mb-8">
-          <div className="flex space-x-2 items-center">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 2 }}
-              className="h-[100px] w-[200px] mr-2 border-2 border-yellow-500 flex justify-center items-center"
-            >
-              <PiAirplaneTakeoffFill size={50} className="text-yellow-500" />
-            </motion.div>
+          <div className="flex space-x-4 items-center">
+            <PiAirplaneTakeoffFill size={64} className="text-yellow-500 w-16" />
             <div>
               <p className="font-semibold">Legal Immigration Success</p>
               <p>
                 Since 2018 Expedia Visa Services immigration success rate is 97
-                percent. So you don’t need to worry about that.
+                percent. So you don't need to worry about that.
               </p>
             </div>
           </div>
-          <div className="flex space-x-2 items-center">
-            <div
-              className="
-            mr-2 border-2 h-[100px] w-[230px] border-yellow-500 flex justify-center items-center
-            "
-            >
-              <IoDocumentText size={50} className="text-yellow-500" />
-            </div>
+          <div className="flex space-x-4 items-center">
+            <IoDocumentText size={64} className="text-yellow-500 w-16" />
             <div>
               <p className="font-semibold">Required Documents Support</p>
               <p>

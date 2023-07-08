@@ -9,8 +9,6 @@ import { useEffect } from "react";
 
 const ImmigrationPage = () => {
 
-  
-
   const {country} = useParams()
   const countryName = country as string
   // @ts-ignore

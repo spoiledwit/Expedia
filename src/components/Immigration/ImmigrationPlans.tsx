@@ -1,6 +1,7 @@
 import { FaCanadianMapleLeaf } from "react-icons/fa";
 import { CountryData } from "../../types";
 import { HiFlag } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 type Plan = {
   id: string;
@@ -16,13 +17,9 @@ const PlanCard = ({
   countryName: string;
   plan: Plan;
 }) => {
-  const handleClick = () => {
-    console.log(plan.name);
-  };
-
   return (
-    <div
-      onClick={handleClick}
+    <Link
+    to={`/immigration/${countryName}/${plan.id}`}
       className="relative text-white hover:text-yellow-400 filter grayscale hover:filter-none w-full min-h-60 cursor-pointer transition-all"
     >
       <img
@@ -30,15 +27,15 @@ const PlanCard = ({
         src={plan.imageURL}
         className="w-full h-full absolute opacity-50 -z-[5]"
       />
-      <div className="w-full h-full bg-black absolute opacity-75 -z-[4]" />
-      <div className="p-4 flex flex-col items-center gap-4 opacity-100">
-        <div className="w-10">{getCountryIcon(countryName)}</div>
-        <h4 className=" text-white  text-lg font-semibold text-center">
+      <div className="w-full h-full bg-black absolute opacity-50 -z-[4]" />
+      <div className="p-4 flex flex-col items-center gap-12">
+        {/* <div className="w-10">{getCountryIcon(countryName)}</div> */}
+        <h4 className="text-white  text-lg font-semibold text-center">
           {plan.name}
         </h4>
-        <p className=" text-white text-sm text-center">{plan.description}</p>
+        <p className="text-white text-sm text-center">{plan.description}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
