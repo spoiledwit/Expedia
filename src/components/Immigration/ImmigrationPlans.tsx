@@ -1,39 +1,29 @@
-import { FaCanadianMapleLeaf } from "react-icons/fa";
-import { CountryData } from "../../types";
-import { HiFlag } from "react-icons/hi";
+import { CountryData, PlanData } from "../../types";
 import { Link } from "react-router-dom";
-
-type Plan = {
-  id: string;
-  name: string;
-  imageURL: string;
-  description: string;
-};
 
 const PlanCard = ({
   countryName,
   plan,
 }: {
   countryName: string;
-  plan: Plan;
-}) => {
+  plan: PlanData;
+}) => {  
   return (
     <Link
     to={`/immigration/${countryName}/${plan.id}`}
-      className="relative text-white hover:text-yellow-400 filter grayscale hover:filter-none w-full min-h-60 cursor-pointer transition-all"
+      className="relative text-white hover:text-yellow-400 filter-none md:filter grayscale hover:filter-none w-full min-h-60 cursor-pointer transition-all"
     >
       <img
         alt="canada immigration plan"
         src={plan.imageURL}
         className="w-full h-full absolute opacity-50 -z-[5]"
       />
-      <div className="w-full h-full bg-black absolute opacity-50 -z-[4]" />
-      <div className="p-4 flex flex-col items-center gap-12">
-        {/* <div className="w-10">{getCountryIcon(countryName)}</div> */}
+      <div className="w-full h-full bg-black absolute bg-opacity-50 -z-[4]" />
+      <div className="p-4 h-full flex flex-col items-center justify-between gap-12">
         <h4 className="text-white  text-lg font-semibold text-center">
           {plan.name}
         </h4>
-        <p className="text-white text-sm text-center">{plan.description}</p>
+        <p className="text-white text-sm text-center">{plan.subtitle}</p>
       </div>
     </Link>
   );
@@ -63,12 +53,3 @@ const ImmigrationPlans = ({ countryData }: { countryData: CountryData }) => {
 };
 
 export default ImmigrationPlans;
-
-const getCountryIcon = (countryName: string): JSX.Element => {
-  switch (countryName) {
-    case "canada":
-      return <FaCanadianMapleLeaf size={40} />;
-    default:
-      return <HiFlag size={40} />;
-  }
-};

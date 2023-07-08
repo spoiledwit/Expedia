@@ -19,7 +19,7 @@ const Info = () => {
         </p>
       </section>
 
-      <div className="w-full flex md:flex-col items-center justify-between md:gap-12">
+      <div className="w-full h-full flex md:flex-col items-center justify-between md:gap-12">
         <div className=" w-full flex flex-col gap-8">
           <div className="flex gap-4 items-center">
             <div className="w-6">
@@ -83,7 +83,11 @@ const Info = () => {
             />
           </a>
         </div>
+
+        {/* placeholder */}
+        <div />
       </div>
+      <div />
     </div>
   );
 };

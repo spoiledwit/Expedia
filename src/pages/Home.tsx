@@ -16,8 +16,8 @@ const Home = () => {
     <div className="w-full flex flex-col gap-20 mb-40 ">
       <Hero />
       <Contact />
-      <Consultancy />
       <About />
+      <Consultancy />
       <Faq />
       <Testimonials />
     </div>

@@ -15,42 +15,42 @@ export const navLinks = [
     href: "/immigration/canada",
     children: [
       {
-        id: "ca-express-entry",
+        id: "express-entry",
         title: "Express Entry",
         href: "/immigration/canada/express-entry",
       },
       {
-        id: "ca-pnp",
+        id: "pnp",
         title: "PNP",
         href: "/immigration/canada/pnp",
       },
       {
-        id: "ca-rnip",
+        id: "rnip",
         title: "RNIP",
         href: "/immigration/canada/rnip",
       },
       {
-        id: "ca-aip",
+        id: "aip",
         title: "AIP",
         href: "/immigration/canada/aip",
       },
       {
-        id: "ca-ycp",
+        id: "ycp",
         title: "YCP",
         href: "/immigration/canada/ycp",
       },
       {
-        id: "ca-work-permit",
+        id: "work-permit",
         title: "Work Permit",
         href: "/immigration/canada/Work Permit",
       },
       {
-        id: "ca-startup-visa",
+        id: "startup-visa",
         title: "Startup Visa",
         href: "/immigration/canada/startup-visa",
       },
       {
-        id: "ca-study-visa",
+        id: "study-visa",
         title: "Study Visa",
         href: "/immigration/canada/study-visa",
       },
@@ -62,22 +62,22 @@ export const navLinks = [
     href: "/immigration/australia",
     children: [
       {
-        id: "au-business-visa",
+        id: "business-visa",
         title: "Business Visa",
         href: "/immigration/canada/business-visa",
       },
       {
-        id: "au-skilled-visa",
+        id: "skilled-visa",
         title: "Skilled Visa",
         href: "/immigration/canada/skilled-visa",
       },
       {
-        id: "au-visit-visa",
+        id: "visit-visa",
         title: "Visit Visa",
         href: "/immigration/canada/visit-visa",
       },
       {
-        id: "au-study-visa",
+        id: "study-visa",
         title: "Study Visa",
         href: "/immigration/canada/study-visa",
       },
@@ -89,42 +89,42 @@ export const navLinks = [
     href: "/immigration/uk",
     children: [
       {
-        id: "uk-express-entry",
+        id: "express-entry",
         title: "Express Entry",
         href: "/immigration/uk/express-entry",
       },
       {
-        id: "uk-pnp",
+        id: "pnp",
         title: "PNP",
         href: "/immigration/uk/pnp",
       },
       {
-        id: "uk-rnip",
+        id: "rnip",
         title: "RNIP",
         href: "/immigration/uk/rnip",
       },
       {
-        id: "uk-aip",
+        id: "aip",
         title: "AIP",
         href: "/immigration/uk/aip",
       },
       {
-        id: "uk-ycp",
+        id: "ycp",
         title: "YCP",
         href: "/immigration/uk/ycp",
       },
       {
-        id: "uk-work-permit",
+        id: "work-permit",
         title: "Work Permit",
-        href: "/immigration/uk/Work Permit",
+        href: "/immigration/uk/work-permit",
       },
       {
-        id: "uk-startup-visa",
+        id: "startup-visa",
         title: "Startup Visa",
         href: "/immigration/uk/startup-visa",
       },
       {
-        id: "uk-study-visa",
+        id: "study-visa",
         title: "Study Visa",
         href: "/immigration/uk/study-visa",
       },
@@ -136,24 +136,44 @@ export const navLinks = [
     href: "/immigration/europe",
     children: [
       {
-        id: "eu-portugal",
+        id: "portugal",
         title: "Portugal",
-        href: "imigration/europe/portugal",
+        href: "immigration/europe/portugal",
       },
       {
-        id: "eu-malta",
+        id: "malta",
         title: "Malta",
-        href: "imigration/europe/malta",
+        href: "immigration/europe/malta",
       },
       {
-        id: "eu-germany",
+        id: "germany",
         title: "Germany",
-        href: "imigration/europe/germany",
+        href: "immigration/europe/germany",
       },
       {
-        id: "eu-finland",
+        id: "finland",
         title: "Finland",
-        href: "imigration/europe/finland",
+        href: "immigration/europe/finland",
+      },
+      {
+        id: "poland",
+        title: "Poland",
+        href: "immigration/europe/poland",
+      },
+      {
+        id: "hungary",
+        title: "Hungary",
+        href: "immigration/europe/hungary",
+      },
+      {
+        id: "lithuania",
+        title: "Lithuania",
+        href: "immigration/europe/lithuania",
+      },
+      {
+        id: "czech-republic",
+        title: "Czech Republic",
+        href: "immigration/europe/czech-republic",
       },
     ],
   },

@@ -39,7 +39,7 @@ const MobileNav = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="w-screen absolute h-screen flex flex-col overflow-y-scroll top-0 left-0 bg-white border-b-[2px] shadow-xl border-gray-300 px-4 py-8 transition-all"
+              className="w-screen absolute h-screen flex flex-col overflow-y-scroll top-0 left-0 bg-white border-b-[2px] shadow-xl border-gray-300 px-4 py-4 transition-all"
             >
               <div className="flex flex-col w-full">
                 <AiOutlineClose
@@ -210,7 +210,7 @@ const Navbar = () => {
                 >
                   <Link
                     to={link.href}
-                    className="uppercase flex gap-1 items-center"
+                    className="uppercase flex gap-1 items-center py-2"
                   >
                     {link.title}
                     {link.children && <IoIosArrowDown size={12} />}
