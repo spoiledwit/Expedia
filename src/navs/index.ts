@@ -15,51 +15,73 @@ export const navLinks = [
     href: "/immigration/canada",
     children: [
       {
-        id: "express-entry",
+        id: "ca-express-entry",
         title: "Express Entry",
         href: "/immigration/canada/express-entry",
       },
       {
-        id: "pnp",
+        id: "ca-pnp",
         title: "PNP",
         href: "/immigration/canada/pnp",
       },
       {
-        id: "rnip",
+        id: "ca-rnip",
         title: "RNIP",
         href: "/immigration/canada/rnip",
       },
       {
-        id: "aip",
+        id: "ca-aip",
         title: "AIP",
         href: "/immigration/canada/aip",
       },
       {
-        id: "ycp",
+        id: "ca-ycp",
         title: "YCP",
         href: "/immigration/canada/ycp",
       },
       {
-        id: "work-permit",
+        id: "ca-work-permit",
         title: "Work Permit",
         href: "/immigration/canada/Work Permit",
       },
       {
-        id: "startup-visa",
+        id: "ca-startup-visa",
         title: "Startup Visa",
         href: "/immigration/canada/startup-visa",
       },
       {
-        id: "study-visa",
+        id: "ca-study-visa",
         title: "Study Visa",
         href: "/immigration/canada/study-visa",
       },
-    ]
+    ],
   },
   {
     id: "australia",
     title: "Australia",
     href: "/immigration/australia",
+    children: [
+      {
+        id: "au-business-visa",
+        title: "Business Visa",
+        href: "/immigration/canada/business-visa",
+      },
+      {
+        id: "au-skilled-visa",
+        title: "Skilled Visa",
+        href: "/immigration/canada/skilled-visa",
+      },
+      {
+        id: "au-visit-visa",
+        title: "Visit Visa",
+        href: "/immigration/canada/visit-visa",
+      },
+      {
+        id: "au-study-visa",
+        title: "Study Visa",
+        href: "/immigration/canada/study-visa",
+      },
+    ],
   },
   {
     id: "uk",
@@ -67,51 +89,73 @@ export const navLinks = [
     href: "/immigration/uk",
     children: [
       {
-        id: "express-entry",
+        id: "uk-express-entry",
         title: "Express Entry",
         href: "/immigration/uk/express-entry",
       },
       {
-        id: "pnp",
+        id: "uk-pnp",
         title: "PNP",
         href: "/immigration/uk/pnp",
       },
       {
-        id: "rnip",
+        id: "uk-rnip",
         title: "RNIP",
         href: "/immigration/uk/rnip",
       },
       {
-        id: "aip",
+        id: "uk-aip",
         title: "AIP",
         href: "/immigration/uk/aip",
       },
       {
-        id: "ycp",
+        id: "uk-ycp",
         title: "YCP",
         href: "/immigration/uk/ycp",
       },
       {
-        id: "work-permit",
+        id: "uk-work-permit",
         title: "Work Permit",
         href: "/immigration/uk/Work Permit",
       },
       {
-        id: "startup-visa",
+        id: "uk-startup-visa",
         title: "Startup Visa",
         href: "/immigration/uk/startup-visa",
       },
       {
-        id: "study-visa",
+        id: "uk-study-visa",
         title: "Study Visa",
         href: "/immigration/uk/study-visa",
       },
-    ]
+    ],
   },
   {
     id: "europe",
     title: "Europe",
     href: "/immigration/europe",
+    children: [
+      {
+        id: "eu-portugal",
+        title: "Portugal",
+        href: "imigration/europe/portugal",
+      },
+      {
+        id: "eu-malta",
+        title: "Malta",
+        href: "imigration/europe/malta",
+      },
+      {
+        id: "eu-germany",
+        title: "Germany",
+        href: "imigration/europe/germany",
+      },
+      {
+        id: "eu-finland",
+        title: "Finland",
+        href: "imigration/europe/finland",
+      },
+    ],
   },
   {
     id: "contact",

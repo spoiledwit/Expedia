@@ -149,16 +149,12 @@ const Navbar = () => {
     };
   }, [lastScrollPos]);
 
-  const isDropdownLink = (id: string): boolean => {
-    return ["canada", "uk"].includes(id);
-  };
-
   useEffect(() => {
     const linkEles = document.getElementsByClassName("nav-links");
     for (let i = 0; i < linkEles.length; i++) {
       const ele = linkEles.item(i);
       ele?.addEventListener("mouseover", () => {
-        isDropdownLink(ele.id) ? setActiveEle(ele) : setActiveEle(null);
+        setActiveEle(ele);
       });
       ele?.addEventListener("mouseleave", () => {
         setActiveEle(null);
@@ -178,7 +174,7 @@ const Navbar = () => {
           ease: "circOut",
           duration: 0.15,
         }}
-        className="px-0 min-w-[160px] rounded-b-md shadow-xl shadow-black/[0.2] bg-white "
+        className="px-0 z-[100] min-w-[160px] rounded-b-md shadow-xl shadow-black/[0.2] bg-white "
       >
         {link.children.map((c) => (
           <Link
@@ -217,9 +213,7 @@ const Navbar = () => {
                     className="uppercase flex gap-1 items-center"
                   >
                     {link.title}
-                    {link.children && (
-                      <IoIosArrowDown size={12} />
-                    )}
+                    {link.children && <IoIosArrowDown size={12} />}
                   </Link>
                   {link.children && <LinkDropdown key={link.id} link={link} />}
                 </div>
