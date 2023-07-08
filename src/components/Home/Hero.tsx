@@ -3,10 +3,11 @@ import Button from "../Button";
 
 const Hero = () => {
   return (
-    <div className="flex w-full h-[calc(100vh)] justify-center items-center">
-      <div className="absolute w-full h-full bg-black opacity-30"></div>
+    <div className="flex w-full h-[80vh] justify-center items-center">
+      <div className="absolute w-full h-[80vh] bg-black opacity-30"></div>
       <img
-        src={pic}
+        // src={pic}
+        src="https://loremflickr.com/cache/resized/65535_52986225788_a4a30da35a_h_1280_720_nofilter.jpg"
         alt=""
         className="w-full h-full object-cover object-center"
       />

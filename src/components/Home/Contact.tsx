@@ -12,55 +12,56 @@ const Contact = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full lg:w-[60%] flex flex-col items-center lg:items-start pt-5 px-4 lg:px-28 xl:px-40 bg-white dark:bg-gray-800">
-        <motion.p
-          className="text-yellow-500 mt-16"
-          animate={{ scale: 1.2 }}
-          transition={{ duration: 1 }}
-        >
-          WHY CHOOSE EXPEDIA?
-        </motion.p>
-        <motion.p
-          className="text-sky-900 text-4xl my-10 font-medium"
-          animate={{ scale: 1.1 }}
-          transition={{ duration: 1 }}
-        >
-          Countless Benefits & Easy Processing
-        </motion.p>
-        <motion.p
-          className="mb-6"
-          animate={{ x: 10 }}
-          transition={{ duration: 1 }}
-        >
-          You choose <strong> Expedia Visa Services </strong> because
-          immigration rules and dynamic, Complicated to apply, and its difficult
-          to deal with the migration department and you need to increase the
-          success rate Expedia will help you to get that easily.
-        </motion.p>
-        <div className="space-y-4 mb-8">
-          <div className="flex space-x-4 items-center">
-            <PiAirplaneTakeoffFill size={64} className="text-yellow-500 w-16" />
-            <div>
-              <p className="font-semibold">Legal Immigration Success</p>
-              <p>
-                Since 2018 Expedia Visa Services immigration success rate is 97
-                percent. So you don't need to worry about that.
-              </p>
+      <div className="w-full lg:w-[60%] flex flex-col items-center justify-between lg:items-start pt-5 px-4 lg:px-28 xl:px-40 bg-white dark:bg-gray-800">
+        <div className=" w-full flex flex-col">
+          <h3 className=" md:-translate-x-10 text-yellow-500 mt-16">
+            WHY CHOOSE EXPEDIA?
+          </h3>
+          <h2 className="text-sky-900 text-4xl my-10 font-medium">
+            Countless Benefits & Easy Processing
+          </h2>
+          <p className="mb-6">
+            You choose <strong> Expedia Visa Services </strong> because
+            immigration rules and dynamic, Complicated to apply, and its
+            difficult to deal with the migration department and you need to
+            increase the success rate Expedia will help you to get that easily.
+          </p>
+          <div className="space-y-4 mb-8">
+            <div className="flex space-x-8 items-center">
+              <div className="w-12">
+                <PiAirplaneTakeoffFill
+                  size={48}
+                  className="text-yellow-500 w-16"
+                />
+              </div>
+              <div>
+                <p className="font-semibold">Legal Immigration Success</p>
+                <p>
+                  Since 2018 Expedia Visa Services immigration success rate is
+                  97 percent. So you don't need to worry about that.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="flex space-x-4 items-center">
-            <IoDocumentText size={64} className="text-yellow-500 w-16" />
-            <div>
-              <p className="font-semibold">Required Documents Support</p>
-              <p>
-                Sometimes it is difficult for the student or people which
-                document is required and when. Expedia will help you to manage
-                that.
-              </p>
+            <div className="flex space-x-8 items-center">
+              <div className="w-12">
+                <IoDocumentText size={48} className="text-yellow-500" />
+              </div>
+              <div>
+                <p className="font-semibold">Required Documents Support</p>
+                <p>
+                  Sometimes it is difficult for the student or people which
+                  document is required and when. Expedia will help you to manage
+                  that.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <Button text="Contact Us" onClick={() => {}} />
+        <div className="flex w-full justify-center">
+          <Button text="Contact Us" onClick={() => {}} />
+        </div>
+        {/* placeholder */}
+        <div />
       </div>
 
       <div className=" lg:rounded-l-3xl bg-sky-950 lg:shadow-2xl shadow-gray-500 flex flex-col justify-center items-start px-20 lg:px-16 xl:px-28 gap-12 py-20 space-y-4">

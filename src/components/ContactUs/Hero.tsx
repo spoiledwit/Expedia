@@ -1,12 +1,12 @@
-import { CountryData } from "../../types";
 import pic from "../../assets/pic.png";
 
 const Hero = () => {
   return (
-    <div className="flex w-full h-[calc(80vh)] justify-center items-center">
+    <div className="flex w-full h-[80vh] justify-center items-center">
       <div className="absolute w-full h-[80vh] bg-black opacity-30"></div>
       <img
-        src={pic}
+        // src={pic}
+        src="https://loremflickr.com/cache/resized/65535_52986225788_a4a30da35a_h_1280_720_nofilter.jpg"
         alt=""
         className="w-full h-full object-cover object-center"
       />
@@ -15,7 +15,7 @@ const Hero = () => {
           <p className="text-white text-3xl md:text-5xl mb-4 leading-snug">
             Contact Us
           </p>
-          <p className="text-white text-xl mb-6">
+          <p className="text-white text-xl mb-12">
             Get your queries answered by our experienced consultants!
           </p>
         </div>

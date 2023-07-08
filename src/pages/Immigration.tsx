@@ -6,30 +6,32 @@ import immigrationData from "../static/immigration-data.json";
 import { CountryData, PlanData } from "../types";
 import { useEffect } from "react";
 
-
 const ImmigrationPage = () => {
-
-  const {country, plan} = useParams()
-  const countryName = country as string
+  const { country, plan } = useParams();
+  const countryName = country as string;
   // @ts-ignore
-  const countryData = immigrationData[countryName] as CountryData
-  let planData : PlanData|undefined= undefined
+  const countryData = immigrationData[countryName] as CountryData;
+  let planData: PlanData | undefined = undefined;
   if (plan) {
-    planData = (countryData.plans.values.find(p => p.id === plan)) as PlanData
+    console.log(plan, countryData.plans.values);
+    
+    planData = countryData.plans.values.find((p) => p.id === plan) as PlanData;
   }
 
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  }, [country, plan])
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [country, plan]);
 
-  const slogan: string = planData?.description.title || countryData.description.title
-  const title: string = planData?.description.slogan || countryData.description.slogan
-  const html: string = planData?.description.html || countryData.description.html
+  const optionsData = {
+    slogan: planData?.description.slogan || countryData.description.slogan,
+    title: planData?.description.title || countryData.description.title,
+    html: planData?.description.html || countryData.description.html,
+  };
 
   return (
     <div className="flex flex-col gap-20 mb-40">
-      <Hero countryData={countryData} />
-      <DiscoverImmigrationOptions slogan={slogan} title={title} html={html} />
+      <Hero {...countryData.hero} />
+      <DiscoverImmigrationOptions {...optionsData} />
       <ImmigrationPlans countryData={countryData} />
     </div>
   );

@@ -210,7 +210,7 @@ const Navbar = () => {
                 >
                   <Link
                     to={link.href}
-                    className="uppercase flex gap-1 items-center"
+                    className="uppercase flex gap-1 items-center py-2"
                   >
                     {link.title}
                     {link.children && <IoIosArrowDown size={12} />}
