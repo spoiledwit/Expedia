@@ -12,7 +12,7 @@ const Contact = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className="w-full lg:w-[60%] flex flex-col items-center justify-between lg:items-start pt-5 px-4 lg:px-28 xl:px-40 bg-white dark:bg-gray-800">
+      <div className="w-full lg:w-[60%] flex flex-col items-center justify-between lg:items-start pt-5 px-4 lg:px-28 xl:px-40 bg-white">
         <div className=" w-full flex flex-col">
           <h3 className=" md:-translate-x-10 text-yellow-500 mt-16">
             WHY CHOOSE EXPEDIA?
