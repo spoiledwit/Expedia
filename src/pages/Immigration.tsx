@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import immigrationData from "../static/immigration-data.json";
 import { CountryData, PlanData } from "../types";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 const ImmigrationPage = () => {
   const { country, plan } = useParams();
@@ -30,6 +31,10 @@ const ImmigrationPage = () => {
 
   return (
     <div className="flex flex-col gap-20 mb-40">
+         <Helmet>
+        <title>{countryData.name.toUpperCase()} | Expedia</title>
+        <meta name="description" content="Home | Expedia" />
+      </Helmet>
       <Hero {...countryData.hero} />
       <DiscoverImmigrationOptions {...optionsData} />
       <ImmigrationPlans countryData={countryData} />

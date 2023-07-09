@@ -7,6 +7,7 @@ import Testimonials from "../components/Home/Testimonials"
 import Countries from "../components/Home/Countries"
 import Partners from "../components/Partners";
 import { useEffect } from "react"
+import {Helmet} from "react-helmet";
 
 const Home = () => {
 
@@ -16,6 +17,10 @@ const Home = () => {
   
   return (
     <div className="w-full flex flex-col md:gap-20 gap-10 mb-40 ">
+      <Helmet>
+        <title>Expedia | UAE's top Visa consulting firm</title>
+        <meta name="description" content="Home | Expedia" />
+      </Helmet>
       <Hero />
       <Contact />
       <Countries />
