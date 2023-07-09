@@ -11,34 +11,32 @@ const Faq = () => {
   const FAQs: FAQ[] = [
     {
       index: 1,
-      question: "Why are you running?",
+      question: "What makes Expedia Visa Services a reliable choice for immigration consultancy?",
       answer:
-        "I run because I love it. I run because I need it. I've run nearly everyday since 2005. Before that there was four years of cross country and track, and before that two years of middle school track and field. I didn't really enjoy it as a kid, and didn't treat it seriously for a lot of reasons, so I don't count those years. Just the last decade or so, because my running has been voluntary.",
+        "Expedia Visa Services, established in 2018, is known for its expertise in handling immigration processes. With an impressive success rate of 97% in immigration cases, and professional, registered agents, Expedia ensures that your immigration application process is as smooth as possible.",
     },
     {
       index: 2,
-      question: "Why are you running?",
+      question: "What kind of support does Expedia offer for visa applications?",
       answer:
-        "I run because I love it. I run because I need it. I've run nearly everyday since 2005. Before that there was four years of cross country and track, and before that two years of middle school track and field. I didn't really enjoy it as a kid, and didn't treat it seriously for a lot of reasons, so I don't count those years. Just the last decade or so, because my running has been voluntary.",
-    },
+        "Expedia provides comprehensive assistance throughout the visa application process. This includes helping you understand immigration rules, which can often be complicated and dynamic, assisting with the application to increase the success rate, and supporting you with necessary documentation."
+      },
     {
       index: 3,
-      question: "Why are you running?",
+      question: "Which countries does Expedia Visa Services specialize in for immigration?",
       answer:
-        "I run because I love it. I run because I need it. I've run nearly everyday since 2005. Before that there was four years of cross country and track, and before that two years of middle school track and field. I didn't really enjoy it as a kid, and didn't treat it seriously for a lot of reasons, so I don't count those years. Just the last decade or so, because my running has been voluntary.",
-    },
+        "Expedia Visa Services specializes in handling immigration processes for countries like Canada, Australia, the UK, and Europe. The team has a commendable reputation as top immigration consultants for Canada and Australia in Dubai."},
     {
       index: 4,
-      question: "Why are you running?",
+      question: "Why does expedia offers the best service?",
       answer:
-        "I run because I love it. I run because I need it. I've run nearly everyday since 2005. Before that there was four years of cross country and track, and before that two years of middle school track and field. I didn't really enjoy it as a kid, and didn't treat it seriously for a lot of reasons, so I don't count those years. Just the last decade or so, because my running has been voluntary.",
-    },
+        "Since 2018 Expedia Visa Services immigration success rate is 97 percent. So you don't need to worry about that. Sometimes it is difficult for the student or people which document is required and when. Expedia will help you to manage that."},
   ];
 
   const [openIndex, setOpenIndex] = useState(1);
 
   return (
-    <div className="p-4 md:px-40 lg:px-64 xl:px-[400px] flex w-full flex-col gap-2">
+    <div className="py-4 px-8 md:px-40 lg:px-64 xl:px-[400px] flex w-full flex-col gap-2">
       {FAQs.map((faq, i) => (
         <div key={faq.index}>
           {i !== 0 && (

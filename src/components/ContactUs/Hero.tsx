@@ -1,13 +1,12 @@
-// import pic from "../../assets/pic.png";
+import pic from "../../assets/london.jpg"
 
 const Hero = () => {
   return (
-    <div className="flex w-full h-[80vh] justify-center items-center">
-      <div className="absolute w-full h-[80vh] bg-black opacity-30"></div>
+    <div className="flex w-full h-[100vh] justify-center items-center">
+      <div className="absolute w-full h-[100vh] bg-black opacity-30"></div>
       <img
-        // src={pic}
-        src="https://loremflickr.com/cache/resized/65535_52986225788_a4a30da35a_h_1280_720_nofilter.jpg"
-        alt=""
+        src={pic}
+         alt=""
         className="w-full h-full object-cover object-center"
       />
       <div className="absolute w-full h-full flex px-4 md:px-20 xl:px-40">

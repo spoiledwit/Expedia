@@ -1,7 +1,6 @@
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Globe from "./Home/Globe";
-// import globe from "../assets/globe.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -82,16 +81,16 @@ const Footer = () => {
   };
 
   return (
-    <footer className=" px-4 py-12 md:px-24 xl:px-40 md:py-20 w-full bg-sky-950 flex flex-col">
-      <div className="w-full flex flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
-        <div className="w-full grid place-items-center">
+    <footer className=" px-8 py-12 md:px-24 xl:px-40 md:py-20 w-full bg-[#002336] flex flex-col">
+      <div className="w-full md:flex hidden flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
+        <div className="w-1/2 md:grid hidden place-items-center">
           <Globe />
-          {/* <img alt="globe" src={globe} className="max-w-[360px]" /> */}
         </div>
-        <section className=" text-white text-lg font-medium flex flex-col w-full">
-          <h3 className=" mb-8 text-white font-bold text-2xl md:text-4xl tracking-wide">
+        <section className=" text-white md:flex hidden text-lg font-medium flex-col w-full">
+          <h3 className=" mb-8 text-white font-medium text-2xl md:text-4xl tracking-wide">
             Key Services
           </h3>
+          <div className="flex flex-col gap-2">
           <p>1. We predominantly receive inquiries gor Australia and Canada.</p>
           <p>
             2. Our bespoke services rank us among the top immigration
@@ -101,16 +100,17 @@ const Footer = () => {
             3. Our quality services have also established us as one of the best
             immigration advisers for Australia in Dubai.
           </p>
+          </div>
         </section>
       </div>
 
       {/* Separator */}
-      <div className="my-16 md:my-20 h-[2px] min-w-max mx-20 md:mx-80 bg-sky-400" />
+      <div className="my-16 md:block hidden md:my-20 h-[2px] min-w-max mx-20 md:mx-80 bg-sky-400" />
 
-      <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-y-16 md:gap-y-0">
+      <div className="w-full gap-x-5 grid grid-cols-2 md:grid-cols-4 gap-y-16 md:gap-y-0">
         {/* Quick Links */}
         <section className=" flex flex-col gap-8">
-          <h3 className=" text-2xl font-bold text-white">Quick Links</h3>
+          <h3 className="text-xl md:text-2xl font-medium md:font-bold text-white">Quick Links</h3>
           <div className="flex flex-col gap-2">
             {quickLinks.map((link, i) => (
               <Link
@@ -127,7 +127,7 @@ const Footer = () => {
 
         {/* Migrat To */}
         <section className=" flex flex-col gap-8">
-          <h3 className=" text-2xl font-bold text-white">Migrate To</h3>
+          <h3 className="text-xl md:text-2xl font-medium md:font-bold text-white">Migrate To</h3>
           <div className="flex flex-col gap-2">
             {immigrationCountries.map((link, i) => (
               <Link
@@ -144,7 +144,7 @@ const Footer = () => {
 
         {/* Important Links */}
         <section className=" flex flex-col gap-8">
-          <h3 className=" text-2xl font-bold text-white">Important Links</h3>
+          <h3 className="text-xl md:text-2xl font-medium md:font-bold text-white">Important Links</h3>
           <div className="flex flex-col gap-2">
             {importantLinks.map((link, i) => (
               <Link
@@ -161,7 +161,7 @@ const Footer = () => {
 
         {/* Contact Us */}
         <section className=" flex flex-col gap-8">
-          <h3 className=" text-2xl font-bold text-white">Contact Us</h3>
+          <h3 className="text-xl md:text-2xl font-medium md:font-bold text-white">Contact Us</h3>
           <div className="flex flex-col gap-2">
             <a
               className=" text-white hover:text-yellow-400 transition-all"

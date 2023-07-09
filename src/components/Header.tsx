@@ -8,6 +8,8 @@ import Logo from "../assets/expedia.png";
 import { AnimatePresence, motion } from "framer-motion";
 import Accordion from "./Accordion";
 import { IoIosArrowDown } from "react-icons/io";
+import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 type LinkWithChildren = {
   id: string;
@@ -28,7 +30,7 @@ const MobileNav = () => {
   return (
     <div>
       <RiMenu3Fill
-        className="w-[24px] md:hidden text-black cursor-pointer h-[24px]"
+        className="w-[24px] md:hidden text-white cursor-pointer h-[24px]"
         onClick={() => setIsOpen(true)}
       />
       {
@@ -39,7 +41,7 @@ const MobileNav = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="w-screen absolute h-screen flex flex-col overflow-y-scroll top-0 left-0 bg-white border-b-[2px] shadow-xl border-gray-300 px-4 py-4 transition-all"
+              className="w-screen absolute h-screen flex flex-col overflow-y-scroll top-0 left-0 bg-white border-b-[2px] shadow-xl border-gray-300 px-8 py-4 transition-all"
             >
               <div className="flex flex-col w-full">
                 <AiOutlineClose
@@ -64,7 +66,7 @@ const MobileNav = () => {
                               <Link
                                 onClick={onBeforeNavigate}
                                 to={link.href}
-                                className="hover:text-sky-600 text-gray-600 transition-all"
+                                className="hover:text-yellow-500 text-gray-600 transition-all"
                               >
                                 {link.title}
                               </Link>
@@ -78,7 +80,7 @@ const MobileNav = () => {
                                       onClick={onBeforeNavigate}
                                       key={c.id}
                                       to={c.href}
-                                      className="w-full max-w-[200px] h-10 flex items-center hover:text-sky-600 transition-all"
+                                      className="w-full max-w-[200px] h-10 flex items-center hover:text-yellow-500 transition-all"
                                     >
                                       {c.title}
                                     </Link>
@@ -97,7 +99,7 @@ const MobileNav = () => {
                           onClick={onBeforeNavigate}
                           key={link.id}
                           to={link.href}
-                          className="w-full max-w-[200px] flex items-center text-gray-700 hover:text-sky-600 transition-all"
+                          className="w-full max-w-[200px] flex items-center text-gray-700 hover:text-yellow-500 transition-all"
                         >
                           {link.title}
                         </Link>
@@ -174,13 +176,13 @@ const Navbar = () => {
           ease: "circOut",
           duration: 0.15,
         }}
-        className="px-0 z-[100] min-w-[160px] rounded-b-md shadow-xl shadow-black/[0.2] bg-white "
+        className="px-0 z-[100] min-w-[180px] rounded-b-md shadow-xl shadow-black/[0.2] bg-white "
       >
         {link.children.map((c) => (
           <Link
             key={c.id}
             to={c.href}
-            className="w-full px-2 max-w-[200px] text-xs h-10 flex items-center hover:text-sky-600 hover:bg-gray-100 transition-all"
+            className="w-full px-6 max-w-[200px] text-xs h-10 flex items-center hover:text-yellow-500 hover:bg-gray-100 transition-all"
           >
             {c.title}
           </Link>
@@ -189,10 +191,18 @@ const Navbar = () => {
     );
   };
 
+  const navigate = useNavigate(); 
+
   return (
-    <header className="bg-white bg-opacity-25 backdrop-blur-md transition duration-200 ease-in-out z-50">
-      {pathname === "/" && !isVisible ? <InfoHeader /> : null}
-      <nav className="w-full flex items-center justify-between px-4 xl:px-24">
+    <header className={`bg-white  flex flex-col bg-opacity-25 backdrop-blur-md transition duration-200 ease-in-out z-50`}>
+      {pathname === "/" && !isVisible ?
+        <div className="md:block hidden">
+          <InfoHeader />
+
+        </div>
+
+        : null}
+      <nav className={`w-full flex bg-opacity-25 backdrop-blur-md py-3 items-center justify-between px-4 xl:px-24`}>
         <Link to={"/"} className="min-w-max">
           <img src={Logo} alt="logo" className="md:h-14 h-12" />
         </Link>
@@ -204,9 +214,8 @@ const Navbar = () => {
                 <div
                   id={link.id}
                   key={link.id}
-                  className={`${
-                    isActive ? "text-sky-500" : "text-black hover:text-sky-900"
-                  } relative p-3 text-xs tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
+                  className={`${isActive ? "text-sky-500" : "text-black hover:text-yellow-500"
+                    } relative p-3 text-xs tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
                 >
                   <Link
                     to={link.href}
@@ -221,11 +230,17 @@ const Navbar = () => {
             })}
           </ul>
         </div>
-        <button
-          className={`bg-sky-950 hidden lg:block hover:text-yellow-400 text-white rounded-md h-10 px-10 font-poppins whitespace-nowrap text-sm`}
+        <div
+        className="hidden md:block"
         >
-          Free Assesment
-        </button>
+        <Button 
+       text="Free Assessment"
+       onClick={()=>{
+          navigate("/contact")
+       }}
+       />
+        </div>
+       
         {/* placeholder */}
         <div className="lg:hidden" />
         <MobileNav />

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Input from "./Input";
 import Select from "./Select";
+import {FiSend} from "react-icons/fi";
 
 type SubmitProps = {
   name: string;

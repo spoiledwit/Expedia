@@ -15,6 +15,7 @@ const InfoHeader = () => {
               info@skypass.com
             </a>
           </div>
+
           <div className="h-4 hidden md:block w-0.5 bg-yellow-500"></div>
           <div className="flex items-center">
             <AiOutlineClockCircle className="mr-2" size={18} />
