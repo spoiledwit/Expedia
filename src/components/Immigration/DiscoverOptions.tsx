@@ -1,3 +1,4 @@
+import { toast } from "react-hot-toast";
 import AssessmentForm from "../AssessmentForm";
 
 const DiscoverImmigrationOptions = ({
@@ -9,12 +10,8 @@ const DiscoverImmigrationOptions = ({
   title: string;
   html: string;
 }) => {
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    console.log(
-      "form submitted: ",
-      e.target.elements.map((ele: any) => ele.value)
-    );
+  const handleSubmit = () => {
+      toast.success("This is a test request before the website is live.");
   };
 
   return (

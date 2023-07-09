@@ -35,7 +35,7 @@ const Hero = ({
         src={title.includes("Canada") ? Canada : title.includes("Australia") ? aus : title.includes("Europe") ? europe : uk}
         className="w-full h-full object-cover"
       />
-      <div className="absolute w-full h-full flex px-4 md:px-20 xl:px-40">
+      <div className="absolute w-full h-screen flex px-4 md:px-20 xl:px-40">
         <div className="flex flex-col mt-20 justify-center items-start">
           <AnimatePresence>
             {inView && (

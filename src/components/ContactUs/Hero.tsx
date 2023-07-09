@@ -9,7 +9,7 @@ const Hero = () => {
          alt=""
         className="w-full h-full object-cover object-center"
       />
-      <div className="absolute w-full h-full flex px-4 md:px-20 xl:px-40">
+      <div className="absolute w-full h-screen flex px-4 md:px-20 xl:px-40">
         <div className="flex flex-col mt-20 justify-center items-start">
           <p className="text-white text-3xl md:text-5xl mb-4 leading-snug">
             Contact Us
