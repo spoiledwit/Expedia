@@ -16,7 +16,9 @@ const AboutPage = () => {
       <Hero />
       <StartProcess />
       <OurMission />
+      <div className="md:block hidden">
       <StepsToApply />
+      </div>
     </div>
   );
 };
