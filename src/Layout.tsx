@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { Toaster } from "react-hot-toast";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Layout = () => {
