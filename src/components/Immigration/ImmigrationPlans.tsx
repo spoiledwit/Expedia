@@ -1,5 +1,10 @@
 import { CountryData, PlanData } from "../../types";
 import { Link } from "react-router-dom";
+import canada from "../../assets/canada.jpg";
+import eu from "../../assets/eu.jpeg";
+import uk from "../../assets/uk.jpg";
+import aus from "../../assets/australia.jpg";
+import { useLocation } from "react-router-dom";
 
 const PlanCard = ({
   countryName,
@@ -7,23 +12,26 @@ const PlanCard = ({
 }: {
   countryName: string;
   plan: PlanData;
-}) => {  
+}) => {
+
+  const pathname = useLocation().pathname;
+
   return (
     <Link
-    to={`/immigration/${countryName}/${plan.id}`}
-      className="relative text-white hover:text-yellow-400 filter-none md:filter grayscale hover:filter-none w-full min-h-60 cursor-pointer transition-all"
+      to={`/immigration/${countryName}/${plan.id}`}
+      className={`relative hover:scale-110 transition duration-300 ease-in-out overflow-hidden rounded-2xl  ${pathname==`/immigration/${countryName}/${plan.id}` ? " scale-110" : ""}`}
     >
-      <img
-        alt="canada immigration plan"
-        src={plan.imageURL}
-        className="w-full h-full absolute opacity-50 -z-[5]"
-      />
-      <div className="w-full h-full bg-black absolute bg-opacity-50 -z-[4]" />
-      <div className="p-4 h-full flex flex-col items-center justify-between gap-12">
-        <h4 className="text-white  text-lg font-semibold text-center">
-          {plan.name}
-        </h4>
-        <p className="text-white text-sm text-center">{plan.subtitle}</p>
+      <div className="w-full relative h-64 bg-sky-900 rounded-lg overflow-hidden">
+        <img
+          src={countryName == "canada" ? canada : countryName == "europe" ? eu : countryName == "UK" ? uk : aus}
+          alt="Canada"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className={`absolute inset-0 w-full h-full ${pathname==`/immigration/${countryName}/${plan.id}` ? "bg-black" : "bg-black"} opacity-50`}></div>
+        <div className="absolute inset-0 px-3 py-5 justify-between w-full h-full flex flex-col bottom-0 gap-4">
+          <h4 className={`text-lg text-white uppercase  ${pathname==`/immigration/${countryName}/${plan.id}` ? "text-yellow-500" : "text-white"}`}>{plan.name}</h4>
+          <p className="text-white text-xs">{plan.subtitle}</p>
+        </div>
       </div>
     </Link>
   );
