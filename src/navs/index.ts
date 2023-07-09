@@ -64,22 +64,22 @@ export const navLinks = [
       {
         id: "business-visa",
         title: "Business Visa",
-        href: "/immigration/canada/business-visa",
+        href: "/immigration/australia/business-visa",
       },
       {
         id: "skilled-visa",
         title: "Skilled Visa",
-        href: "/immigration/canada/skilled-visa",
+        href: "/immigration/australia/skilled-visa",
       },
       {
         id: "visit-visa",
         title: "Visit Visa",
-        href: "/immigration/canada/visit-visa",
+        href: "/immigration/australia/visit-visa",
       },
       {
         id: "study-visa",
         title: "Study Visa",
-        href: "/immigration/canada/study-visa",
+        href: "/immigration/australia/study-visa",
       },
     ],
   },

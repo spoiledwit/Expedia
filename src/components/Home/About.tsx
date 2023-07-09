@@ -1,19 +1,50 @@
 import Button from "../Button";
+import consultants from "../../assets/consultants.jpg";
+import { useNavigate } from "react-router-dom";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const navigate = useNavigate();
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.7
+  });
+
   const handleClick = () => {
-    console.log("Get free assessment");
+    navigate("/contact");
   };
 
+  if (inView) {
+    controls.start("visible");
+  }
+
   return (
-    <div className="w-full md:px-40 p-4 flex flex-col lg:flex-row-reverse items-center lg:gap-20 xl:gap-40 gap-12">
-      <section className="w-full lg:w-[60%] flex flex-col items-center md:items-start gap-8 md:gap-12">
-        <h3 className=" self-start md:-translate-x-10 text-lg text-yellow-500 uppercase tracking-wide">
+    <motion.div 
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: -50 }
+      }}
+      transition={{ duration: 1 }}
+      className="w-full md:px-40 px-8 md:p-4 flex flex-col lg:flex-row-reverse items-center lg:gap-20 xl:gap-40 gap-12"
+    >
+      <motion.section 
+        className="w-full lg:w-[60%] flex flex-col items-center md:items-start gap-8 md:gap-12"
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0.95 }
+        }}
+        transition={{ duration: 1 }}
+      >
+        <h3 className="md:block hidden self-start text-lg text-yellow-500 uppercase tracking-wide">
           WHO WE ARE
         </h3>
         <div className=" w-full gap-4 flex flex-col items-center">
-          <h2 className="capitalize text-2xl md:text-4xl text-center lg:text-start w-full font-medium text-sky-900 tracking-wide">
-            not just traditional visa & immigration firm
+          <h2 className="capitalize text-2xl md:text-4xl text-center lg:text-start w-full font-medium text-sky-950 tracking-wide">
+            not just a traditional visa & immigration firm
           </h2>
           <p className=" text-gray-700 text-sm tracking-wide text-center lg:text-justify">
             The most trusted immigration and Visa consultant. There are
@@ -24,16 +55,23 @@ const About = () => {
           </p>
         </div>
         <Button text="Get Free Assessment" onClick={handleClick} />
-      </section>
+      </motion.section>
 
-      <div className="lg:w-[40%] min-w-[320px] max-w-[520px] rounded-xl overflow-clip bg-gray-200">
+      <motion.div 
+        className="lg:w-[40%] min-w-[320px] max-w-[520px] rounded-xl overflow-clip bg-gray-200"
+        variants={{
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: 100 }
+        }}
+        transition={{ duration: 1 }}
+      >
         <img
           alt=""
-          src="https://loremflickr.com/cache/resized/8108_8468369831_59c9de0c5d_c_640_480_nofilter.jpg"
+          src={consultants}
           className="w-full min-w-[320px]"
         />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

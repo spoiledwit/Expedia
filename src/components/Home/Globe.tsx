@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
-import { OrbitControls} from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { TextureLoader } from "three";
 import { useThree } from "@react-three/fiber";
 
@@ -14,7 +14,7 @@ function Scene() {
     <>
       <ambientLight intensity={1.4} />
       <directionalLight />
-      <mesh scale={(viewport.width / 17)}>
+      <mesh scale={(viewport.width / 11)}>
         <sphereBufferGeometry args={[3.0, 30, 30]} />
         <meshStandardMaterial
           map={colorMap}
@@ -27,7 +27,7 @@ function Scene() {
 
 export default function Globe() {
   return (
-    <div className="w-1/2 h-full absolute left-0">
+    <div className="w-[400px] h-[300px]">
       <Canvas>
         <Suspense fallback={null}>
           <Scene />

@@ -5,6 +5,7 @@ import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { useState } from "react";
 import Input from "../Input";
 import Select from "../Select";
+import { toast } from "react-hot-toast";
 
 const Info = () => {
   return (
@@ -158,7 +159,10 @@ const Form = ({ onSubmit }: { onSubmit: (props: SubmitProps) => void }) => {
 
 const ContactForm = () => {
   const handleSubmit = (props: SubmitProps) => {
-    console.log(Object.values(props));
+    if (!props.name || !props.email || !props.phone || !props.message) {
+      return toast.error("Please fill all the required fields");
+    }
+    toast.success("Message Sent Successfully");
   };
 
   return (
