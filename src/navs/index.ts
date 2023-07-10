@@ -183,3 +183,5 @@ export const navLinks = [
     href: "/contact",
   },
 ];
+
+export { default as adminNav } from "./admin";

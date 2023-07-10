@@ -1,12 +1,12 @@
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ContactsTable from "../components/Admin/ContactsTable";
-import { Contact } from "../types";
+import ContactsTable from "../../components/Admin/Contact/DataTable";
+import { Contact } from "../../types";
 import toast from "react-hot-toast";
-import Header from '../components/Admin/Header'
+import Header from "../../components/Admin/Header";
 
-const AdminPage = () => {
+const ContactsPage = () => {
   const [cookies] = useCookies(["Authorization"]);
   const [loading, setLoading] = useState(false);
   const [contacts, setContacts] = useState<Contact[]>([]);
@@ -37,7 +37,7 @@ const AdminPage = () => {
     } else {
       toast.error("Unable to delete info");
     }
-    fetchContacts()
+    fetchContacts();
   }
 
   useEffect(() => {
@@ -45,13 +45,10 @@ const AdminPage = () => {
   }, []);
 
   return (
-    <div>
-    <Header />
-      <div className="px-8 my-12 w-full">
-        <ContactsTable contacts={contacts} onDelete={deleteContact} />
-      </div>
-    </div>
+    <main className="w-full px-4 md:px-20 mt-28">
+      <ContactsTable contacts={contacts} onDelete={deleteContact} />
+    </main>
   );
 };
 
-export default AdminPage;
+export default ContactsPage;
