@@ -7,6 +7,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Layout = () => {
+
   const FAB = () => {
     const scrollToTop = () => {
       window.scrollTo({
