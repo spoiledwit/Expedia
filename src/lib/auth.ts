@@ -14,10 +14,9 @@ export const register = async (
   email: string,
   password: string
 ) => {
-  const { data } = await axios.post(
+  const res = await axios.post(
     `${import.meta.env.VITE_BASE_URI}/user/register`,
     { name, email, password }
   );
-  localStorage.setItem("token", data.token);
-  return data;
+  return res;
 };

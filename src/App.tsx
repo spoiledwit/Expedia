@@ -8,7 +8,9 @@ import ContactUsPage from "./pages/ContactUs";
 import PolicyPage from "./pages/Policy";
 import { useCookies } from "react-cookie";
 import Login from "./pages/Login";
-import AdminPage from "./pages/Admin";
+import AdminPage from "./pages/Admin/Contacts";
+import AdminLayout from "./AdminLayout";
+import UsersPage from "./pages/Admin/Users";
 
 const App = () => {
   const [cookies] = useCookies(["Authorization"]);
@@ -31,8 +33,11 @@ const App = () => {
       </Route>
       <Route
         path="/admin"
-        element={isAdminLoggedIn() ? <AdminPage /> : <Login />}
-      />
+        element={isAdminLoggedIn() ? <AdminLayout /> : <Login />}
+      >
+        <Route path="/admin/" element={<AdminPage />} />
+        <Route path="/admin/users" element={<UsersPage />} />
+      </Route>
     </Routes>
   );
 };

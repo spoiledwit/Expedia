@@ -1,21 +1,18 @@
-import { useCookies } from "react-cookie";
-import { Contact } from "../../types";
+import { Contact } from "../../../types";
 
 export default function DataTable({ contacts, onDelete }: { contacts: Contact[], onDelete: (id: string) => void }) {
-  const [cookies] = useCookies(["Authorization"]);
-
   return (
     <main className="w-full overflow-x-scroll shadow-xl sm:rounded-lg">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
           <tr>
-            <th scope="col" className="px-6 py-3 min-w-[256px]">
+            <th scope="col" className="px-6 py-3 min-w-[128px]">
               Name
             </th>
-            <th scope="col" className="px-6 py-3 min-w-[256px]">
+            <th scope="col" className="px-6 py-3 min-w-[160px]">
               Email
             </th>
-            <th scope="col" className="px-6 py-3 min-w-[128px]">
+            <th scope="col" className="px-6 py-3 min-w-[160px]">
               Phone
             </th>
             <th scope="col" className="px-6 py-3 min-w-[128px]">

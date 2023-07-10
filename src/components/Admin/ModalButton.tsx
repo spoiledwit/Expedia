@@ -23,7 +23,7 @@ const ModalButton = ({ children, modal }:{children:JSX.Element, modal: JSX.Eleme
       </button>
       <dialog
         ref={modalRef}
-        className="bg-gray-50 px-4 py-8 rounded-lg  backdrop:bg-black backdrop:bg-opacity-50 shadow-xl cursor-default"
+        className="bg-gray-50 p-4 rounded-lg top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  backdrop:bg-black backdrop:bg-opacity-50 shadow-xl cursor-default"
       >
         <div className="w-full flex flex-col items-end gap-4">
           <button
