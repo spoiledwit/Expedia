@@ -43,7 +43,7 @@ const About = () => {
           WHO WE ARE
         </h3>
         <div className=" w-full gap-4 flex flex-col items-center">
-          <h2 className="capitalize text-2xl md:text-4xl text-center lg:text-start w-full font-medium text-sky-950 tracking-wide">
+          <h2 className="capitalize text-2xl md:text-4xl text-center lg:text-start w-full font-medium text-sky-700 tracking-wide">
             not just a traditional visa & immigration firm
           </h2>
           <p className=" text-gray-700 text-sm tracking-wide text-center lg:text-justify">

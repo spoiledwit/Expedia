@@ -7,7 +7,7 @@ import { AiFillYoutube } from "react-icons/ai";
 const InfoHeader = () => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row px-4 py-2 md:py-0 md:px-16 xl:px-40 h-16 md:h-10 justify-between items-center bg-sky-950 text-white text-sm">
+      <div className="flex flex-col md:flex-row px-4 py-2 md:py-0 md:px-16 xl:px-40 h-16 md:h-10 justify-between items-center bg-sky-700 text-white text-sm">
         <div className=" w-full md:w-max flex md:gap-4 justify-between">
           <div className="flex items-center">
             <AiOutlineMail className="mr-2" size={18} />
