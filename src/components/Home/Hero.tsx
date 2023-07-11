@@ -9,7 +9,6 @@ import canada from "../../assets/canada_im_cover.jpg";
 import aus from "../../assets/aus_im_cover.jpg";
 import europe from "../../assets/europe_im_cover.jpg";
 import uk from "../../assets/uk_im_cover.jpg";
-import { useState, useEffect } from "react";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -38,7 +37,7 @@ const Hero = () => {
   };
 
   return (
-    <div className="w-full h-screen relative">
+    <div className="w-full h-screen relative overflow-hidden">
       <Slider {...settings}>
         {images.map((img, i) => {
           return (
