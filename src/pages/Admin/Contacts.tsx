@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import ContactsTable from "../../components/Admin/Contact/DataTable";
 import { Contact } from "../../types";
 import toast from "react-hot-toast";
-import Header from "../../components/Admin/Header";
+// import Header from "../../components/Admin/Header";
 
 const ContactsPage = () => {
   const [cookies] = useCookies(["Authorization"]);
@@ -18,7 +18,6 @@ const ContactsPage = () => {
         Authorization: cookies.Authorization,
       },
     });
-    console.log(res.data);
     setContacts(res.data);
     setLoading(false);
   };
@@ -46,6 +45,11 @@ const ContactsPage = () => {
 
   return (
     <main className="w-full px-4 md:px-20 mt-28">
+      {loading && (
+        <div className="flex justify-center items-center h-96">
+          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
+          </div>
+          )}
       <ContactsTable contacts={contacts} onDelete={deleteContact} />
     </main>
   );
