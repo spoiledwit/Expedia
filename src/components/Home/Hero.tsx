@@ -1,9 +1,18 @@
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Button from "../Button";
-import img from "../../assets/hero_cover3.jpg";
 import { BsChevronCompactDown } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import Slider from "react-slick";
+import home from "../../assets/hero_cover3.jpg";
+import canada from "../../assets/canada_im_cover.jpg";
+import aus from "../../assets/aus_im_cover.jpg";
+import europe from "../../assets/europe_im_cover.jpg";
+import uk from "../../assets/uk_im_cover.jpg";
+import { useState, useEffect } from "react";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -17,16 +26,38 @@ const Hero = () => {
     controls.start("visible");
   }
 
+  const images = [home, canada, aus, uk, europe];
+
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
   return (
-    <div className="flex w-full h-screen justify-center items-center relative">
-      <div className="absolute w-full h-screen bg-black opacity-30"></div>
-      <img
-        src={img}
-        alt=""
-        className="w-full h-full object-cover object-center"
-      />
+    <div className="w-full h-screen relative">
+      <Slider {...settings}>
+        {images.map((img, i) => {
+          return (
+            <div
+              key={i}
+              className="flex w-full h-screen justify-center items-center relative"
+            >
+              <img
+                src={img}
+                alt=""
+                className="w-full h-full object-cover object-center"
+              />
+            </div>
+          );
+        })}
+      </Slider>
+
       <motion.div
-        className="absolute w-full h-full flex px-8 md:px-20 xl:px-40"
+        className="absolute bg-black bg-opacity-30 top-0 left-0 w-full h-full flex px-8 md:px-20 xl:px-40"
         ref={ref}
         animate={controls}
         initial="hidden"
