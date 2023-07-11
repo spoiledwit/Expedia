@@ -23,18 +23,17 @@ const Home = () => {
       </Helmet>
       <Hero />
       <Countries />
-      {/* 
+
       <Contact />
       <StepsToApply />
       <Consultancy />
       <Testimonials />
-      <div className="md:px-20 px-4 xl:px-40 my-20">
-        <Partners />
-      </div>
-    <AnimateToView>
-    </AnimateToView>
-    <Info />
-  */}
+      <AnimateToView>
+        <div className="md:px-20 px-4 xl:px-40 my-20">
+          <Partners />
+        </div>
+      </AnimateToView>
+      <Info />
     </div>
   );
 };
