@@ -207,7 +207,8 @@ const Navbar = () => {
         className={`w-full flex py-3 items-center justify-between border-b-2 border-gray-200 px-4 xl:px-24`}
       >
         <Link to={"/"} className="min-w-max">
-          <img src={Logo} alt="logo" className="md:h-14 h-12" />
+          <h2 className="text-sky-900 font-bold md:text-2xl">Centennial Migration</h2>
+          {/* <img src={Logo} alt="logo" className="md:h-14 h-12" /> */}
         </Link>
         <div className="w-full hidden md:block">
           <ul id="desktop-nav" className="w-full flex justify-center">
