@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import AnimateToView from "../AnimateToView";
 
 type Step = {
   index: number;
@@ -45,11 +44,6 @@ const StepsToApply = () => {
     },
   ];
 
-  const { ref, inView } = useInView({
-    triggerOnce: true, // The animation will only run once
-    threshold: 0.7, // Percentage of the element that is in view before the callback is run
-  });
-
   return (
     <div className="w-full py-20 px-4 md:px-20 pb-20 flex flex-col items-center bg-white">
       <section className="w-full flex flex-col gap-3 text-center">
@@ -63,29 +57,21 @@ const StepsToApply = () => {
         </p>
       </section>
 
-      <motion.div
-        ref={ref}
-        initial="hidden"
-        animate={inView ? "visible" : "hidden"}
-        variants={{
-          visible: { opacity: 1, y: 0 },
-          hidden: { opacity: 0, y: 48 },
-        }}
-        transition={{ duration: 1 }}
-        className="w-full flex flex-col lg:flex-row"
-      >
-        {steps.map((s, i) => (
-          <div
-            key={s.index}
-            className="w-full flex-wrap flex flex-col lg:flex-row justify-center items-center"
-          >
-            {i !== 0 && (
-              <div className=" w-[60%] lg:hidden h-[1px] bg-sky-600 my-8" />
-            )}
-            <StepSection step={s} />
-          </div>
-        ))}
-      </motion.div>
+      <AnimateToView>
+        <div className="w-full flex flex-col lg:flex-row">
+          {steps.map((s, i) => (
+            <div
+              key={s.index}
+              className="w-full flex-wrap flex flex-col lg:flex-row justify-center items-center"
+            >
+              {i !== 0 && (
+                <div className=" w-[60%] lg:hidden h-[1px] bg-sky-600 my-8" />
+              )}
+              <StepSection step={s} />
+            </div>
+          ))}
+        </div>
+      </AnimateToView>
     </div>
   );
 };

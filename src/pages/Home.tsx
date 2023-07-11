@@ -1,13 +1,14 @@
 import Hero from "../components/Home/Hero";
 import Contact from "../components/Home/Contact";
 import Consultancy from "../components/Home/Consultancy";
-import About from "../components/Home/About";
-import Faq from "../components/Home/FAQ";
 import Testimonials from "../components/Home/Testimonials";
 import Countries from "../components/Home/Countries";
 import Partners from "../components/Partners";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import StepsToApply from "../components/AboutUs/StepsToApply";
+import Info from "../components/Home/Info";
+import AnimateToView from "../components/AnimateToView";
 
 const Home = () => {
   useEffect(() => {
@@ -21,17 +22,17 @@ const Home = () => {
         <meta name="description" content="Home | CentenniaImmigration" />
       </Helmet>
       <Hero />
-      <Contact />
       <Countries />
-      <About />
-      <div className=" md:block hidden">
-        <Consultancy />
-      </div>
-      <Faq />
-      <div className="md:px-20 px-4 xl:px-40">
-        <Partners />
-      </div>
+      <Contact />
+      <StepsToApply />
+      <Consultancy />
       <Testimonials />
+      <AnimateToView>
+        <div className="md:px-20 px-4 xl:px-40 my-20">
+          <Partners />
+        </div>
+      </AnimateToView>
+      <Info />
     </div>
   );
 };
