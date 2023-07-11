@@ -14,7 +14,7 @@ const Accordion = ({
     <>
       <div
         onClick={onClick}
-        className=" text-sky-900 tracking-wide text-lg flex items-center justify-between w-full cursor-pointer"
+        className=" text-sky-700 tracking-wide text-lg flex items-center justify-between w-full cursor-pointer"
       >
         {data.title}
         <motion.div animate={{ rotate: isOpen ? 0 : 180 }} className="h-4">

@@ -15,7 +15,7 @@ const Input = ({
         onChange={onChange}
         type={type || "text"}
         id="name"
-        className="block appearance-none py-2.5 px-0 w-full h-10 bg-transparent caret-sky-500 text-gray-200 border-b-[2px] border-sky-700 focus:border-sky-500 outline-none ring-0 focus:delay-[99999] peer"
+        className="block appearance-none py-2.5 px-0 w-full h-10 bg-transparent caret-sky-500 text-gray-200 border-b-[2px] border-sky-300 focus:border-sky-500 outline-none ring-0 focus:delay-[99999] peer"
         placeholder=" "
       />
       <label

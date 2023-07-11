@@ -70,12 +70,12 @@ const OurMission = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="our-mission bg-sky-950 py-10"
+        className="our-mission bg-sky-700 py-10"
       >
         <section className="mission-intro">
           <h3>We create solutions for your Future</h3>
           <p>
-            Expedia gives their consultancy by a registered and experienced
+            CentenniaImmigration gives their consultancy by a registered and experienced
             consultants.
           </p>
         </section>

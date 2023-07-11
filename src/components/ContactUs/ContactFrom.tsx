@@ -11,7 +11,7 @@ const Info = () => {
   return (
     <div className="w-full h-full flex flex-col gap-8">
       <section className=" w-full flex flex-col gap-4 ">
-        <h2 className="capitalize text-2xl md:text-4xl font-medium text-sky-900 tracking-wide">
+        <h2 className="capitalize text-2xl md:text-4xl font-medium text-sky-700 tracking-wide">
           Contact Info
         </h2>
         <p>
@@ -68,19 +68,19 @@ const Info = () => {
           <a href="/">
             <BsFacebook
               size={24}
-              className="text-sky-700 hover:text-yellow-400 transition-all"
+              className="text-sky-500 hover:text-yellow-400 transition-all"
             />
           </a>
           <a href="/">
             <BsTwitter
               size={24}
-              className="text-sky-700 hover:text-yellow-400 transition-all"
+              className="text-sky-500 hover:text-yellow-400 transition-all"
             />
           </a>
           <a href="/">
             <BsYoutube
               size={24}
-              className="text-sky-700 hover:text-yellow-400 transition-all"
+              className="text-sky-500 hover:text-yellow-400 transition-all"
             />
           </a>
         </div>
@@ -116,7 +116,7 @@ const Form = ({ onSubmit }: { onSubmit: (props: SubmitProps) => void }) => {
   };
 
   return (
-    <div className="w-full p-8 bg-sky-950 rounded-xl shadow-2xl shadow-gray-500 flex flex-col gap-4">
+    <div className="w-full p-8 bg-sky-700 rounded-xl shadow-2xl shadow-gray-500 flex flex-col gap-4">
       <h2 className="text-2xl md:text-4xl font-medium text-white tracking-wide">
         Get In Touch With Us!
       </h2>
@@ -144,11 +144,11 @@ const Form = ({ onSubmit }: { onSubmit: (props: SubmitProps) => void }) => {
         </div>
         <textarea
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full h-32 caret-sky-500 text-gray-200 bg-transparent border-[2px] border-sky-700 focus:border-sky-500 outline-none ring-0 transition-all rounded-xl p-4"
+          className="w-full h-32 caret-sky-500 text-gray-200 bg-transparent border-[2px] border-sky-300 focus:border-sky-500 outline-none ring-0 transition-all rounded-xl p-4"
         />
         <button
           type="submit"
-          className="mt-4 rounded-xl h-12 px-6 text-white hover:text-yellow-300 text-lg self-end bg-transparent border-[2px] border-sky-700 hover:border-sky-500 transition-all"
+          className="mt-4 rounded-xl h-12 px-6 text-white hover:text-yellow-300 text-lg self-end bg-transparent border-[2px] border-sky-300 hover:border-sky-500 transition-all"
         >
           Submit
         </button>

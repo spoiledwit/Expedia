@@ -81,7 +81,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className=" px-8 py-12 md:px-24 xl:px-40 md:py-20 w-full bg-[#002336] flex flex-col">
+    <footer className=" px-8 py-12 md:px-24 xl:px-40 md:py-20 w-full bg-sky-700 flex flex-col">
       <div className="w-full md:flex hidden flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
         <div className="w-1/2 md:grid hidden place-items-center">
           <Globe />
@@ -116,7 +116,7 @@ const Footer = () => {
               <Link
                 onClick={scrollToTop}
                 key={i}
-                className="text-white hover:text-yellow-400 transition-all"
+                className="text-white hover:text-yellow-300 transition-all"
                 to={link.href}
               >
                 {link.name}
@@ -133,7 +133,7 @@ const Footer = () => {
               <Link
                 onClick={scrollToTop}
                 key={i}
-                className="text-white hover:text-yellow-400 transition-all"
+                className="text-white hover:text-yellow-300 transition-all"
                 to={link.href}
               >
                 {link.name}
@@ -150,7 +150,7 @@ const Footer = () => {
               <Link
                 onClick={scrollToTop}
                 key={i}
-                className="text-white hover:text-yellow-400 transition-all"
+                className="text-white hover:text-yellow-300 transition-all"
                 to={link.href}
               >
                 {link.name}

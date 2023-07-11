@@ -51,7 +51,7 @@ const AssessmentForm = ({
       />
       <button
         type="submit"
-        className="mt-4 rounded-lg h-12 px-6 text-white hover:text-yellow-300 text-lg bg-transparent border-[2px] border-sky-700 hover:border-sky-500 transition-all"
+        className="mt-4 rounded-lg h-12 px-6 text-white hover:text-yellow-300 text-lg bg-transparent border-[2px] border-sky-300 hover:border-sky-500 transition-all"
       >
         Submit
       </button>

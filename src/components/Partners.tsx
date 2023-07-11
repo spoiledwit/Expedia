@@ -13,7 +13,7 @@ import Slider from "react-slick";
 const Partners = () => {
   const imageArray = [test1, test2, test3, test4, test5, test6, test7];
 
-  let settings = {
+  const settings = {
     dots: true,
     infinite: true,
     speed: 500,

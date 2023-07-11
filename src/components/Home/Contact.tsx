@@ -4,7 +4,7 @@ import { PiAirplaneTakeoffFill } from "react-icons/pi";
 import { IoDocumentText } from "react-icons/io5";
 import Button from "../Button";
 import AssessmentForm from "../AssessmentForm";
-import {FiSend} from "react-icons/fi";
+import { FiSend } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
@@ -13,13 +13,13 @@ const Contact = () => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   const controlsForm = useAnimation();
   const { ref: refForm, inView: inViewForm } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   if (inView) {
@@ -43,58 +43,63 @@ const Contact = () => {
         initial="hidden"
         variants={{
           visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: -100 }
+          hidden: { opacity: 0, x: -100 },
         }}
         transition={{ duration: 1 }}
         className="w-full lg:w-[50%] flex flex-col items-center justify-between lg:items-start pt-5 lg:px-28 px-8 xl:px-40 bg-white"
       >
         <div className=" w-full flex flex-col">
-          <h3 className=" md:-translate-x-10 text-yellow-500 md:mt-16">
-            WHY CHOOSE EXPEDIA?
+          <h3 className=" lg:-translate-x-10 text-yellow-500 md:mt-16">
+            WHY CHOOSE CENTENNIA?
           </h3>
-          <h2 className="text-sky-900 text-2xl md:text-3xl my-10 font-medium">
+          <h2 className="text-sky-700 text-2xl md:text-3xl my-10 font-medium">
             Countless Benefits & Easy Processing
           </h2>
           <p className="mb-6">
-            You choose <strong> Expedia Visa Services </strong> because
-            immigration rules and dynamic, Complicated to apply, and its
+            You choose <strong> CentenniaImmigration Visa Services </strong>{" "}
+            because immigration rules and dynamic, Complicated to apply, and its
             difficult to deal with the migration department and you need to
-            increase the success rate Expedia will help you to get that easily.
+            increase the success rate CentenniaImmigration will help you to get
+            that easily.
           </p>
           <div className="space-y-4 mb-8">
             <div className="flex space-x-8 items-center">
-              <div className="border-2 border-sky-900 py-2">
+              <div className="w-16">
                 <PiAirplaneTakeoffFill
                   size={48}
-                  className="text-sky-900 w-16"
+                  className="text-sky-500"
                 />
               </div>
               <div>
                 <p className="font-semibold">Legal Immigration Success</p>
                 <p>
-                  Since 2018 Expedia Visa Services immigration success rate is
-                  97 percent. So you don't need to worry about that.
+                  Since 2018 CentenniaImmigration Visa Services immigration
+                  success rate is 97 percent. So you don't need to worry about
+                  that.
                 </p>
               </div>
             </div>
             <div className="flex space-x-8 items-center">
-              <div className="border-2 border-sky-900 p-2">
-                <IoDocumentText size={48} className="text-sky-900" />
+              <div className="w-16">
+                <IoDocumentText size={48} className="text-sky-500" />
               </div>
               <div>
                 <p className="font-semibold">Required Documents Support</p>
                 <p>
                   Sometimes it is difficult for the student or people which
-                  document is required and when. Expedia will help you to manage
-                  that.
+                  document is required and when. CentenniaImmigration will help
+                  you to manage that.
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <Button text="Contact Us" onClick={() => {
-          navigate("/contact");
-        }} />
+        <Button
+          text="Contact Us"
+          onClick={() => {
+            navigate("/contact");
+          }}
+        />
       </motion.div>
 
       <motion.div
@@ -103,12 +108,12 @@ const Contact = () => {
         initial="hidden"
         variants={{
           visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: 100 }
+          hidden: { opacity: 0, x: 100 },
         }}
         transition={{ duration: 1 }}
-        className=" lg:rounded-3xl bg-sky-950 max-w-[600px] lg:shadow-2xl shadow-gray-500 flex flex-col justify-center items-start md:px-20 px-8 gap-12 py-20 space-y-4"
+        className=" lg:rounded-3xl bg-sky-700 lg:max-w-[600px] lg:shadow-2xl shadow-gray-500 flex flex-col justify-center items-start md:px-20 px-8 gap-12 py-20 space-y-4"
       >
-        <div className="flex">
+        <div className="flex w-full justify-between">
           <motion.h1
             className="md:text-3xl text-2xl text-white font-medium px-6"
             animate={{ scale: 1.2 }}
