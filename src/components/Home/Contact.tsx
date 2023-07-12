@@ -3,23 +3,39 @@ import { useInView } from "react-intersection-observer";
 import { PiAirplaneTakeoffFill } from "react-icons/pi";
 import { IoDocumentText } from "react-icons/io5";
 import Button from "../Button";
-import AssessmentForm from "../AssessmentForm";
-import {FiSend} from "react-icons/fi";
+import AssessmentForm, { type SubmitProps } from "../AssessmentForm";
+import { FiSend } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import { createAssessment } from "../../lib/assessment";
 
 const Contact = () => {
   const navigate = useNavigate();
   const controls = useAnimation();
   const { ref, inView } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
+
+  const handleSubmit = async (props: SubmitProps, e: any) => {
+    e.preventDefault();
+    if (props.country && props.email && props.name && props.phone) {
+      const success = await createAssessment(props);
+      if (success) {
+        toast.success("Your form has been submitted successfully");
+        e.target.reset();
+      } else {
+        toast.error("Unable to submit form!");
+      }
+    } else {
+      toast.error("Please fill all the fields");
+    }
+  };
 
   const controlsForm = useAnimation();
   const { ref: refForm, inView: inViewForm } = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   if (inView) {
@@ -43,7 +59,7 @@ const Contact = () => {
         initial="hidden"
         variants={{
           visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: -100 }
+          hidden: { opacity: 0, x: -100 },
         }}
         transition={{ duration: 1 }}
         className="w-full lg:w-[50%] flex flex-col items-center justify-between lg:items-start pt-5 lg:px-28 px-8 xl:px-40 bg-white"
@@ -92,9 +108,12 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <Button text="Contact Us" onClick={() => {
-          navigate("/contact");
-        }} />
+        <Button
+          text="Contact Us"
+          onClick={() => {
+            navigate("/contact");
+          }}
+        />
       </motion.div>
 
       <motion.div
@@ -103,7 +122,7 @@ const Contact = () => {
         initial="hidden"
         variants={{
           visible: { opacity: 1, x: 0 },
-          hidden: { opacity: 0, x: 100 }
+          hidden: { opacity: 0, x: 100 },
         }}
         transition={{ duration: 1 }}
         className=" lg:rounded-3xl bg-sky-950 max-w-[600px] lg:shadow-2xl shadow-gray-500 flex flex-col justify-center items-start md:px-20 px-8 gap-12 py-20 space-y-4"
@@ -118,15 +137,7 @@ const Contact = () => {
           </motion.h1>
           <FiSend className="text-white text-5xl" />
         </div>
-        <AssessmentForm
-          onSubmit={(props) => {
-            if (props.country && props.email && props.name && props.phone) {
-              toast.success("Your form has been submitted successfully");
-            } else {
-              toast.error("Please fill all the fields");
-            }
-          }}
-        />
+        <AssessmentForm onSubmit={handleSubmit} />
       </motion.div>
     </motion.div>
   );
