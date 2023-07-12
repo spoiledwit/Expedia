@@ -14,12 +14,23 @@ const countries = [
     { name: "UK", headline: "Journey through time from historic landmarks to cutting-edge cultural phenomena.", image: uk }
 ];
 
+interface CountriesSliderProps {
+    setColor: (color: string) => void;
+}
 
-const CountriesSlider = () => {
+const CountriesSlider:React.FC<CountriesSliderProps> = ({
+    setColor
+}) => {
     const [activeCountry, setActiveCountry] = useState(countries[0]);
     const countryRefs = useRef([]);
     const navigate = useNavigate();
     countryRefs.current = countries.map((_, i) => countryRefs.current[i] ?? React.createRef());
+    const colors = [
+        "#142537",
+        "#0B0610",
+        "#1f0d0d",
+        "#091335",
+    ]
 
     const handleScroll = () => {
         const countryIndex = countryRefs.current.reduce((prevIndex, currRef, index) => {
@@ -27,12 +38,27 @@ const CountriesSlider = () => {
             const prevOffset = countryRefs.current[prevIndex].current.getBoundingClientRect().top;
             //@ts-ignore
             const currOffset = currRef.current.getBoundingClientRect().top;
-
+    
             return Math.abs(currOffset) < Math.abs(prevOffset) ? index : prevIndex;
         }, 0);
-
+    
         setActiveCountry(countries[countryIndex]);
+    
+        // Check if all countries have been scrolled past
+        const allCountriesPassed = countryRefs.current.every((ref) => {
+            //@ts-ignore
+            const offset = ref.current.getBoundingClientRect().top;
+            return offset < 0;
+        });
+    
+        if (allCountriesPassed) {
+            setColor('#FFFFFF'); // Set color to white
+        } else {
+            setColor(colors[countryIndex]);
+        }
     };
+    
+    
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -44,6 +70,7 @@ const CountriesSlider = () => {
 
     return (
         <div style={{ display: 'flex', height: 'max-content', minHeight: '100vh', marginBottom:"40px" }}>
+           
             <div className="max-w-[50%] overflow-hidden">
                 {countries.map((country, index) => (
                     <div className="relative">
@@ -62,15 +89,15 @@ const CountriesSlider = () => {
             <div className="h-96 w-[50%] sticky top-40 ml-10 flex flex-col items-end">
                 <div>
                     <span>
-                        <h1 className="text-2xl text-sky-600">
+                        <h1 className={`text-2xl ${activeCountry.name === "Canada" ? "text-blue-400" : activeCountry.name === "Australia" ? "text-fuchsia-500" : activeCountry.name === "Europe" ? "text-yellow-600" : "text-cyan-400"} font-bold`}>
                             {activeCountry.name}:
                         </h1>
-                        <p className=" max-w-[500px] mb-5 font-light text-3xl mt-2">{activeCountry.headline}</p>
+                        <p className=" max-w-[500px] mb-5 font-light text-3xl text-white opacity-80 mt-2">{activeCountry.headline}</p>
                     </span>{navLinks.map((link, index) => (
                     <div key={index} className=" flex flex-wrap gap-2 max-w-[500px]">
                     {link.id === activeCountry.name.toLowerCase() && (
                         link.children?.map((child, index) => (
-                            <Link key={index} to={child.href} className=" border p-2 text-sm transition duration-300 rounded-md hover:border-black">{child.title}</Link>
+                            <Link key={index} to={child.href} className=" border p-2 text-sm transition text-gray-100 duration-300 rounded-md hover:scale-105">{child.title}</Link>
                         ))
                     )}
                     </div>

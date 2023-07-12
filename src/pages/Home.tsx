@@ -15,14 +15,15 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [bgColor, setBgColor] = useState("bg-sky-700");
+  const [bgColor, setBgColor] = useState("#0369a1");
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 250) {
-        setBgColor("bg-white");
-      } else {
-        setBgColor("bg-sky-700");
+      if (window.scrollY < 250) { 
+        setBgColor("#0369a1");
+      }
+      else if (window.innerWidth < 768) {
+        setBgColor("#FFFFFF");
       }
     };
     window.addEventListener("scroll", handleScroll);
@@ -32,8 +33,8 @@ const Home = () => {
   }, [bgColor]);
 
   return (
-    <div className={`w-full ${bgColor} transition flex flex-col`}
-      style={{ scrollBehavior: "smooth", transitionDuration: "1s" }}
+    <div className={`w-full transition flex flex-col`}
+      style={{ scrollBehavior: "smooth", transitionDuration: "1s", backgroundColor: bgColor }}
     >
       <Helmet>
         <title>Centennial Migration | UAE's top Visa consulting firm</title>
@@ -41,7 +42,7 @@ const Home = () => {
       </Helmet>
       <Hero />
       <div className="md:block hidden">
-      <CountriesSlider />
+      <CountriesSlider setColor={setBgColor}/>
       </div>
       <Countries />
       <div className=" w-full overflow-hidden">
@@ -50,7 +51,7 @@ const Home = () => {
       <StepsToApply />
       <Consultancy />
       <Testimonials />
-      <div className="md:px-20 py-10 px-4 xl:px-40">
+      <div className="md:px-20 py-10 px-4 overflow-hidden xl:px-40">
         <Partners />
       </div>
       <Info />
