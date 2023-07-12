@@ -18,7 +18,7 @@ const PlanCard = ({
 
   return (
     <Link
-      to={`/immigration/${countryName}/${plan.id}`}
+      to={`/immigration/${countryName.toLocaleLowerCase()}/${plan.id}`}
       className={`${pathname!==`/immigration/${countryName.toLocaleLowerCase()}/${plan.id}` && "hover:scale-105"}  relative transition duration-300 ease-in-out overflow-hidden rounded-2xl`}
     >
       <div className="w-full relative h-64 bg-sky-700 rounded-lg overflow-hidden">
@@ -27,9 +27,9 @@ const PlanCard = ({
           alt="Canada"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className={`absolute inset-0 w-full h-full ${pathname===`/immigration/${countryName}/${plan.id}` ? "bg-black" : "bg-black"} opacity-50`}></div>
+        <div className={`absolute inset-0 w-full h-full ${pathname===`/immigration/${countryName.toLocaleLowerCase()}/${plan.id}` ? "bg-black" : "bg-black"} opacity-50`}></div>
         <div className="absolute inset-0 px-3 py-5 justify-between w-full h-full flex flex-col bottom-0 gap-4">
-          <h4 className={`text-lg text-white uppercase  ${pathname===`/immigration/${countryName}/${plan.id}` ? "text-yellow-500" : "text-white"}`}>{plan.name}</h4>
+          <h4 className={`text-lg text-white uppercase  ${pathname===`/immigration/${countryName.toLocaleLowerCase()}/${plan.id}` ? "text-yellow-500" : "text-white"}`}>{plan.name}</h4>
           <p className="text-white text-xs">{plan.subtitle}</p>
         </div>
       </div>
