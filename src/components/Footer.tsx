@@ -1,6 +1,7 @@
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Globe from "./Home/Globe";
+import payments1 from "../assets/payments1.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -206,6 +207,15 @@ const Footer = () => {
           />
         </a>
       </div>
+            <hr className="my-5" />
+            <div className="flex justify-between">
+                <p className=" text-white text-sm">
+                    © 2021 All Rights Reserved. Centennial Migration
+                </p>
+                <div className=" md:block hidden">
+                  <img src={payments1} alt="" />
+                </div>
+            </div>
     </footer>
   );
 };
