@@ -51,10 +51,11 @@ const MobileNav = () => {
   }, [lastScrollPos]);
 
   return (
-    <div>
+    <div    style={{ zIndex: 1000 }}>
       <RiMenu3Fill
         size={24}
         className={`md:hidden ${!isVisible ? "text-white" : "text-black"} cursor-pointer`}
+     
         onClick={() => setIsOpen(true)}
       />
       {
