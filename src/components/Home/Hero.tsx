@@ -12,6 +12,7 @@ import uk from "../../assets/uk_im_cover.jpg";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   const navigate = useNavigate();
@@ -36,8 +37,38 @@ const Hero = () => {
     autoplaySpeed: 3000,
   };
 
+  const [width, setWidth] = useState("95vw");
+  const [height, setHeight] = useState("90vh");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const totalHeight = document.body.scrollHeight - window.innerHeight;
+      const scrollPercent = scrollY / totalHeight;
+  
+      // Starting values are 95vw and 90vh, and they decrease as we scroll down
+       // Starting values are 95vw and 90vh, and they decrease faster as we scroll down
+    const newWidth = 95 - scrollPercent * 130 + "vw"; // Min: 30vw, Max: 95vw
+    const newHeight = 90 - scrollPercent * 120 + "vh"; // Min: 30vh, Max: 90vh
+
+      setWidth(newWidth);
+      setHeight(newHeight);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      // cleanup function
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
+
   return (
-    <div className="w-full h-screen relative overflow-hidden">
+    <div className="flex w-full items-center h-screen justify-center mt-5">
+    <div className={`relative overflow-hidden rounded-[40px]`}
+    style={{ width, height }}
+    >
       <Slider {...settings}>
         {images.map((img, i) => {
           return (
@@ -54,7 +85,6 @@ const Hero = () => {
           );
         })}
       </Slider>
-
       <motion.div
         className="absolute bg-black bg-opacity-30 top-0 left-0 w-full h-full flex px-8 md:px-20 xl:px-40"
         ref={ref}
@@ -100,6 +130,7 @@ const Hero = () => {
       <div className="absolute bottom-10 w-full flex animate-bounce justify-center items-center">
         <BsChevronCompactDown className="text-white text-4xl" />
       </div>
+    </div>
     </div>
   );
 };

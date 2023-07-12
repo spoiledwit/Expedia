@@ -152,6 +152,12 @@ const Navbar = () => {
     };
   }, [lastScrollPos]);
 
+  const variants = {
+    visible: { opacity: 1, height: "auto" },
+    hidden: { opacity: 0, height: 0 },
+  };
+
+
   useEffect(() => {
     const linkEles = document.getElementsByClassName("nav-links");
     for (let i = 0; i < linkEles.length; i++) {
@@ -177,7 +183,7 @@ const Navbar = () => {
           ease: "circOut",
           duration: 0.15,
         }}
-        className="px-0 z-[100] overflow-hidden min-w-[180px] rounded-b-md shadow-xl shadow-black/[0.2] bg-white "
+        className="px-0 rounded-xl z-[100] overflow-hidden min-w-[180px] rounded-b-md shadow-xl shadow-black/[0.2] bg-white "
       >
         {link.children.map((c) => (
           <Link
@@ -195,62 +201,76 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <header
-      className={`bg-white  flex flex-col  transition duration-200 ease-in-out z-50`}
-    >
-      {pathname === "/" && !isVisible ? (
-        <div className="md:block hidden">
-          <InfoHeader />
-        </div>
-      ) : null}
-      <nav
-        className={`w-full flex py-3 items-center justify-between border-b-2 border-gray-200 px-4 xl:px-24`}
-      >
-        <Link to={"/"} className="min-w-max">
-          <h2 className="text-sky-900 font-bold md:text-2xl">Centennial Migration</h2>
-          {/* <img src={Logo} alt="logo" className="md:h-14 h-12" /> */}
-        </Link>
-        <div className="w-full hidden md:block">
-          <ul id="desktop-nav" className="w-full flex justify-center">
-            {navLinks.map((link) => {
-              const isActive = location.pathname === link.href;
-              return (
-                <div
-                  id={link.id}
-                  key={link.id}
-                  className={`${
-                    isActive ? "text-sky-500" : "text-black hover:text-sky-500"
-                  } relative p-3 text-xs lg:text-sm whitespace-nowrap tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
-                >
-                  <Link
-                    to={link.href}
-                    className="uppercase flex items-center font-semibold scale-y-105 py-2"
-                  >
-                    {link.title}
-                    {link.children && <IoMdArrowDropdown size={16} />}
-                  </Link>
-                  {link.children && <LinkDropdown key={link.id} link={link} />}
-                </div>
-              );
-            })}
-          </ul>
-        </div>
-        <div className="hidden md:block">
-          <div className="hidden lg:block">
-            <Button
-              text="Free Assessment"
-              onClick={() => {
-                navigate("/contact");
-              }}
-            />
-          </div>
-        </div>
+    <>
+      <AnimatePresence>
+        {pathname === "/" ? (
+          <motion.div
+            className="md:block"
+            variants={variants}
+            initial="hidden"
+            animate={!isVisible ? "visible" : "hidden"}
+            exit="hidden"
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          >
+            <InfoHeader />
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
 
-        {/* placeholder */}
-        <div className="lg:hidden" />
-        <MobileNav />
-      </nav>
-    </header>
+
+      <header
+        className={`${isVisible ? "bg-white border" : "pt-5"} mt-5 mx-5 rounded-full flex flex-col  transition duration-200 ease-in-out z-50`}
+      >
+        <nav
+          className={`w-full flex py-3 items-center justify-between border-gray-200 px-4 xl:px-24`}
+        >
+          <Link to={"/"} className="min-w-max">
+            <h2 className={`font-bold md:text-2xl ${isVisible ? "text-sky-900" : "text-white opacity-90"}`}>Centennial Migration</h2>
+            {/* <img src={Logo} alt="logo" className="md:h-14 h-12" /> */}
+          </Link>
+          <div className="w-full hidden md:block">
+            <ul id="desktop-nav" className="w-full flex justify-center">
+              {navLinks.map((link) => {
+                const isActive = location.pathname === link.href;
+                return (
+                  <div
+                    id={link.id}
+                    key={link.id}
+                    className={`${isActive ? "text-sky-500" : `${isVisible ? "text-black" : "text-white opacity-85"}  hover:text-sky-500`
+                      } relative p-3 text-xs lg:text-sm whitespace-nowrap tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
+                  >
+                    <Link
+                      to={link.href}
+                      className="uppercase flex items-center font-semibold text-sm py-2"
+                    >
+                      <p className="text-xs">
+                      {link.title}
+                      </p>
+                      {link.children && <IoMdArrowDropdown size={16} />}
+                    </Link>
+                    {link.children && <LinkDropdown key={link.id} link={link} />}
+                  </div>
+                );
+              })}
+            </ul>
+          </div>
+          <div className="hidden md:block">
+            <div className="hidden lg:block">
+              <Button
+                text="Free Assessment"
+                onClick={() => {
+                  navigate("/contact");
+                }}
+              />
+            </div>
+          </div>
+
+          {/* placeholder */}
+          <div className="lg:hidden" />
+          <MobileNav />
+        </nav>
+      </header>
+    </>
   );
 };
 

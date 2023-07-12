@@ -33,7 +33,6 @@ const Layout = () => {
       <Toaster />
       <div className="w-full fixed top-0 z-50">
         <Header />
-        <hr />
       </div>
       <div className="relative">
         <Outlet />

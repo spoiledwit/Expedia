@@ -4,7 +4,6 @@ import { PiAirplaneTakeoffFill } from "react-icons/pi";
 import { IoDocumentText } from "react-icons/io5";
 import Button from "../Button";
 import AssessmentForm from "../AssessmentForm";
-import { FiSend } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
@@ -32,7 +31,7 @@ const Contact = () => {
 
   return (
     <motion.div
-      className="w-full flex flex-col lg:flex-row gap-20 lg:gap-0"
+      className="w-full flex flex-col lg:flex-row gap-20 mt-10 lg:gap-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -46,7 +45,7 @@ const Contact = () => {
           hidden: { opacity: 0, x: -100 },
         }}
         transition={{ duration: 1 }}
-        className="w-full lg:w-[50%] flex flex-col items-center justify-between lg:items-start pt-5 lg:px-28 px-8 xl:px-40 bg-white"
+        className="w-full lg:w-[60%] flex flex-col items-center lg:items-start pt-5 lg:pl-28 px-8 xl:pl-40 bg-white"
       >
         <div className=" w-full flex flex-col">
           <h3 className=" lg:-translate-x-10 text-yellow-500 md:mt-16">
@@ -94,6 +93,8 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <br />
+        <br />
         <Button
           text="Contact Us"
           onClick={() => {
@@ -111,18 +112,8 @@ const Contact = () => {
           hidden: { opacity: 0, x: 100 },
         }}
         transition={{ duration: 1 }}
-        className=" lg:rounded-3xl bg-sky-700 lg:max-w-[600px] lg:shadow-2xl shadow-gray-500 flex flex-col justify-center items-start md:px-20 px-8 gap-12 py-20 space-y-4"
+        className=" lg:rounded-3xl border bg-sky-950 lg:w-[450px] lg:shadow-2xl shadow-gray-500 flex flex-col justify-center items-start md:px-14 px-8 gap-12 py-10 space-y-4"
       >
-        <div className="flex w-full justify-between">
-          <motion.h1
-            className="md:text-3xl text-2xl text-white font-medium px-6"
-            animate={{ scale: 1.2 }}
-            transition={{ duration: 1 }}
-          >
-            Apply Now For Free Assessment
-          </motion.h1>
-          <FiSend className="text-white text-5xl" />
-        </div>
         <AssessmentForm
           onSubmit={(props) => {
             if (props.country && props.email && props.name && props.phone) {
@@ -133,6 +124,7 @@ const Contact = () => {
           }}
         />
       </motion.div>
+      
     </motion.div>
   );
 };

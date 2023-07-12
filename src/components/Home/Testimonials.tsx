@@ -9,7 +9,7 @@ type Testemonial = {
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testemonial }) => {
   return (
-    <div className="w-full border-[1px] border-gray-200 rounded-2xl shadow-xl flex flex-col justify-between items-center">
+    <div className="w-full my-10 border-[1px] border-gray-200 rounded-2xl shadow-xl flex flex-col justify-between items-center">
       <div className="h-max flex flex-col items-end px-4 pt-4 md:pt-8 rounded-t-2xl">
         <p className="font-semibold text-slate-500 tracking-tight text-sm text-center">
           {testimonial.text}
