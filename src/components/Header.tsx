@@ -27,11 +27,34 @@ const MobileNav = () => {
     setIsOpen(false);
   };
 
+  const [isVisible, setIsVisible] = useState(false);
+  const [lastScrollPos, setLastScrollPos] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.scrollY;
+    setIsVisible(
+      !(
+        (lastScrollPos > currentScrollPos && currentScrollPos < 100) ||
+        currentScrollPos < 100
+      )
+    );
+    setLastScrollPos(currentScrollPos);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup function to remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollPos]);
+
   return (
     <div>
       <RiMenu3Fill
         size={24}
-        className=" md:hidden text-black cursor-pointer "
+        className={`md:hidden ${!isVisible ? "text-white" : "text-black"} cursor-pointer`}
         onClick={() => setIsOpen(true)}
       />
       {

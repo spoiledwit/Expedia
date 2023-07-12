@@ -31,7 +31,7 @@ const Home = () => {
   }, [bgColor]);
 
   return (
-    <div className={`w-full ${bgColor} transition flex flex-col`}
+    <div className={`w-full overflow-hidden ${bgColor} transition flex flex-col`}
       style={{ scrollBehavior: "smooth", transitionDuration: "1s" }}
     >
       <Helmet>
