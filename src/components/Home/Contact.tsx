@@ -144,7 +144,7 @@ const Contact = () => {
       >
         <div className="flex">
           <motion.h1
-            className="md:text-3xl text-2xl text-white font-medium px-6"
+            className="md:text-2xl text-2xl text-white font-medium px-6"
             animate={{ scale: 1.2 }}
             transition={{ duration: 1 }}
           >
