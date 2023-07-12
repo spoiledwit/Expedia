@@ -1,7 +1,13 @@
 import { totTitleCase } from "../../../lib/utils";
-import { Contact } from "../../../types";
+import { Assessment } from "../../../types";
 
-export default function DataTable({ contacts, onDelete }: { contacts: Contact[], onDelete: (id: string) => void }) {
+export default function DataTable({
+  assessments,
+  onDelete,
+}: {
+  assessments: Assessment[];
+  onDelete: (id: string) => void;
+}) {
   return (
     <main className="w-full overflow-x-scroll shadow-xl sm:rounded-lg">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -17,10 +23,16 @@ export default function DataTable({ contacts, onDelete }: { contacts: Contact[],
               Phone
             </th>
             <th scope="col" className="px-6 py-3 min-w-[128px]">
-              Job
+              Visa
             </th>
             <th scope="col" className="px-6 py-3 min-w-[128px]">
               Country
+            </th>
+            <th scope="col" className="px-6 py-3 min-w-[128px]">
+              Job
+            </th>
+            <th scope="col" className="px-6 py-3 min-w-[128px]">
+              Education
             </th>
             <th scope="col" className="px-6 py-3 min-w-[128px]">
               Date
@@ -28,7 +40,7 @@ export default function DataTable({ contacts, onDelete }: { contacts: Contact[],
           </tr>
         </thead>
         <tbody>
-          {contacts.map((c, i) => (
+          {assessments.map((c, i) => (
             <tr
               key={i}
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
@@ -36,10 +48,11 @@ export default function DataTable({ contacts, onDelete }: { contacts: Contact[],
               <td className="px-6 py-4">{c.name}</td>
               <td className="px-6 py-4">{c.email}</td>
               <td className="px-6 py-4">{c.phone}</td>
-              <td className="px-6 py-4">{c.jobTitle || "-"}</td>
+              <td className="px-6 py-4">{totTitleCase(c.visaType)}</td>
               <td className="px-6 py-4">{totTitleCase(c.country)}</td>
-              <td className="px-6 py-4">{c.createdAt.substring(0,10)}</td>
-
+              <td className="px-6 py-4">{c.jobTitle || "-"}</td>
+              <td className="px-6 py-4">{c.education || "-"}</td>
+              <td className="px-6 py-4">{c.createdAt.substring(0, 10)}</td>
               <td className="px-6 py-4">
                 <button
                   onClick={() => onDelete(c._id)}

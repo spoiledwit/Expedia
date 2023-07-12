@@ -17,9 +17,19 @@ const Contact = () => {
     threshold: 0.1,
   });
 
+  const validateProps = (props: SubmitProps): boolean => {
+    return (
+      !!props.country &&
+      !!props.email &&
+      !!props.name &&
+      !!props.phone &&
+      !!props.visaType
+    );
+  };
+
   const handleSubmit = async (props: SubmitProps, e: any) => {
     e.preventDefault();
-    if (props.country && props.email && props.name && props.phone) {
+    if (validateProps(props)) {
       const success = await createAssessment(props);
       if (success) {
         toast.success("Form submitted successfully!");

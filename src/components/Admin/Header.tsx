@@ -13,7 +13,7 @@ export default function Header() {
   return (
     <div className="w-full h-16 px-4 flex justify-between items-center border-b-[2px] border-gray-300">
       <h2 className=" text-2xl font-bold text-black">Admin</h2>
-      <nav className=" text-sm font-bold text-gray-500 gap-4 flex w-full justify-center mx-4">
+      <nav className=" text-sm font-bold text-gray-500 gap-8 flex w-full justify-center mx-4">
         {adminNav.map((link) => (
           <Link
             key={link.id}
