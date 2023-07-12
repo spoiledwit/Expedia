@@ -11,8 +11,8 @@ const ContactUsPage = () => {
   return (
     <div className="w-full mb-20">
       <Helmet>
-        <title>Contact Us | CentenniaImmigration</title>
-        <meta name="description" content="About Us | CentenniaImmigration" />
+        <title>Contact Us | Expedia</title>
+        <meta name="description" content="About Us | Expedia" />
       </Helmet>
       <Hero />
       <div className="w-full my-20 md:my-40 px-4 md:px-24 lg:px-48 xl:px-80">

@@ -71,7 +71,7 @@ function CreateUserModal({onCreate}:{onCreate: () => void}) {
       toast.error("Unable to delete user!");
     }
     onCreate()
-    e.reset()
+    e.target.reset()
   }
 
   return (

@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import AdminPage from "./pages/Admin/Contacts";
 import AdminLayout from "./AdminLayout";
 import UsersPage from "./pages/Admin/Users";
+import AssessmentsPage from "./pages/Admin/Assessments";
 
 const App = () => {
   const [cookies] = useCookies(["Authorization"]);
@@ -37,6 +38,7 @@ const App = () => {
       >
         <Route path="/admin/" element={<AdminPage />} />
         <Route path="/admin/users" element={<UsersPage />} />
+        <Route path="/admin/assessments" element={<AssessmentsPage />} />
       </Route>
     </Routes>
   );

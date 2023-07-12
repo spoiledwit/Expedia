@@ -9,6 +9,11 @@ const adminNav = [
     title: "Contacts",
     href: "/admin",
   },
+  {
+    id: "assessments",
+    title: "Assessments",
+    href: "/admin/assessments",
+  },
 ];
 
 

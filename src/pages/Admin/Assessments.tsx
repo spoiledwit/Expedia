@@ -1,29 +1,30 @@
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ContactsTable from "../../components/Admin/Contact/DataTable";
-import { Contact } from "../../types";
+import AssessmentsTable from "../../components/Admin/Assessment/Datatable";
+import { Assessment } from "../../types";
 import toast from "react-hot-toast";
 
-const ContactsPage = () => {
+const AssessmentsPage = () => {
   const [cookies] = useCookies(["Authorization"]);
   const [loading, setLoading] = useState(false);
-  const [contacts, setContacts] = useState<Contact[]>([]);
+  const [assessments, setAssessments] = useState<Assessment[]>([]);
 
-  const fetchContacts = async () => {
+  const fetchAssessments = async () => {
     setLoading(true);
-    const res = await axios.get(`${import.meta.env.VITE_BASE_URI}/contacts`, {
+    const res = await axios.get(`${import.meta.env.VITE_BASE_URI}/assessments`, {
       headers: {
         Authorization: cookies.Authorization,
       },
     });
-    setContacts(res.data);
+    console.log(res.data);
+    setAssessments(res.data);
     setLoading(false);
   };
 
   async function deleteContact(id: string) {
     const res = await axios.delete(
-      `${import.meta.env.VITE_BASE_URI}/contacts/${id}`,
+      `${import.meta.env.VITE_BASE_URI}/assessments/${id}`,
       {
         headers: {
           Authorization: cookies.Authorization,
@@ -35,23 +36,18 @@ const ContactsPage = () => {
     } else {
       toast.error("Unable to delete info");
     }
-    fetchContacts();
+    fetchAssessments();
   }
 
   useEffect(() => {
-    fetchContacts();
+    fetchAssessments();
   }, []);
 
   return (
     <main className="w-full px-4 md:px-20 mt-28">
-      {loading && (
-        <div className="flex justify-center items-center h-96">
-          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
-          </div>
-          )}
-      <ContactsTable contacts={contacts} onDelete={deleteContact} />
+      <AssessmentsTable assessments={assessments} onDelete={deleteContact} />
     </main>
   );
 };
 
-export default ContactsPage;
+export default AssessmentsPage;

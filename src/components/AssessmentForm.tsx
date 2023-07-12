@@ -2,11 +2,11 @@ import { useState } from "react";
 import Input from "./Input";
 import Select from "./Select";
 
-type SubmitProps = {
+export type SubmitProps = {
   name: string;
   email: string;
   phone: string;
-  job: string;
+  jobTitle: string;
   education: string;
   country: string;
   visaType: string;
@@ -15,20 +15,34 @@ type SubmitProps = {
 const AssessmentForm = ({
   onSubmit,
 }: {
-  onSubmit: (e: SubmitProps) => void;
+  onSubmit: (props: SubmitProps, e: any) => void;
 }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [job, setJob] = useState("");
+  const [jobTitle, setJobTitle] = useState("");
   const [education, setEducation] = useState("");
   const [country, setCountry] = useState("");
   const [visaType, setVisaType] = useState("");
 
   const handleSubmit = (e: any) => {
-    e.preventDefault();
-    onSubmit({ name, email, phone, job, education, country, visaType });
+    onSubmit({ name, email, phone, jobTitle, education, country, visaType }, e);
   };
+
+  const countries = [
+    { label: "Pakistan", value: "pakistan" },
+    { label: "India", value: "india" },
+    { label: "Bangladesh", value: "bangladesh" },
+  ];
+
+  const visaTypes = [
+    { label: "Study Visa", value: "study-visa" },
+    { label: "Work Visa", value: "work-visa" },
+    {
+      label: "Visit Visa",
+      value: "visit-visa",
+    },
+  ];
 
   return (
     <form onSubmit={handleSubmit} className="w-full flex flex-col gap-8">
@@ -39,15 +53,17 @@ const AssessmentForm = ({
         type="email"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <Input label="Job Title" onChange={(e) => setJob(e.target.value)} />
+      <Input label="Job Title" onChange={(e) => setJobTitle(e.target.value)} />
       <Input label="Education" onChange={(e) => setEducation(e.target.value)} />
       <Select
+        defaultLabel="Select a Country"
         onChange={(e) => setCountry(e.target.value)}
-        options={["Pakistan", "India", "Bangladesh"]}
+        options={countries}
       />
       <Select
+        defaultLabel="Select a Visa Type"
         onChange={(e) => setVisaType(e.target.value)}
-        options={["Study Visa", "Work Visa", "Visit Visa"]}
+        options={visaTypes}
       />
       <button
         type="submit"
