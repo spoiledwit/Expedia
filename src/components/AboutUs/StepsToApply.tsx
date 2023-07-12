@@ -1,4 +1,4 @@
-import AnimateToView from "../AnimateToView";
+// import AnimateToView from "../AnimateToView";
 
 type Step = {
   index: number;
@@ -57,7 +57,7 @@ const StepsToApply = () => {
         </p>
       </section>
 
-      <AnimateToView>
+      {/* <AnimateToView> */}
         <div className="w-full flex flex-col lg:flex-row">
           {steps.map((s, i) => (
             <div
@@ -71,7 +71,7 @@ const StepsToApply = () => {
             </div>
           ))}
         </div>
-      </AnimateToView>
+      {/* </AnimateToView> */}
     </div>
   );
 };

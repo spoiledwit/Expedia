@@ -1,5 +1,4 @@
 import { ImQuotesRight } from "react-icons/im";
-import AnimateToView from "../AnimateToView";
 
 type Testemonial = {
   customerName: string;
@@ -45,13 +44,11 @@ const Testimonials = () => {
   ];
 
   return (
-    <AnimateToView>
       <div className="w-full p-4 md:px-40 grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-20">
         {testimonials.map((t, i) => (
           <TestimonialCard key={i} testimonial={t} />
         ))}
       </div>
-    </AnimateToView>
   );
 };
 
