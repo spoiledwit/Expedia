@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import StepsToApply from "../components/AboutUs/StepsToApply";
 import Info from "../components/Home/Info";
+import CountriesSlider from "../components/Home/CountriesSlider";
 
 const Home = () => {
   useEffect(() => {
@@ -31,7 +32,7 @@ const Home = () => {
   }, [bgColor]);
 
   return (
-    <div className={`w-full overflow-hidden ${bgColor} transition flex flex-col`}
+    <div className={`w-full ${bgColor} transition flex flex-col`}
       style={{ scrollBehavior: "smooth", transitionDuration: "1s" }}
     >
       <Helmet>
@@ -39,8 +40,13 @@ const Home = () => {
         <meta name="description" content="Home | CentenniaImmigration" />
       </Helmet>
       <Hero />
+      <div className="md:block hidden">
+      <CountriesSlider />
+      </div>
       <Countries />
+      <div className=" w-full overflow-hidden">
       <Contact />
+      </div>
       <StepsToApply />
       <Consultancy />
       <Testimonials />

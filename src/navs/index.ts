@@ -42,7 +42,7 @@ export const navLinks = [
       {
         id: "work-permit",
         title: "Work Permit",
-        href: "/immigration/canada/Work Permit",
+        href: "/immigration/canada/work-permit",
       },
       {
         id: "startup-visa",
