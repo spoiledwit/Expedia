@@ -12,7 +12,7 @@
 
 .glass {
   background: rgba(255, 238, 238, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: #f0f0f0 solid 1px;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
   border-radius: 10px;
@@ -105,7 +105,7 @@
   transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  background: #002336;
+  background: rgb(14 165 233);
   border-radius: 10px;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .button-86:hover {
-  color: yellow;
+  color: rgb(1, 54, 78);
 }
 
 .button-86:hover::after {

@@ -32,8 +32,8 @@ const ImmigrationPage = () => {
   return (
     <div className="flex flex-col gap-20 mb-40">
          <Helmet>
-        <title>{countryData.name.toUpperCase()} | Expedia</title>
-        <meta name="description" content="Home | Expedia" />
+        <title>{countryData.name.toUpperCase()} | CentenniaImmigration</title>
+        <meta name="description" content="Home | CentenniaImmigration" />
       </Helmet>
       <Hero {...countryData.hero} />
       <DiscoverImmigrationOptions {...optionsData} />

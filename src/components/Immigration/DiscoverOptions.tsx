@@ -20,7 +20,7 @@ const DiscoverImmigrationOptions = ({
         <h3 className=" md:-translate-x-10 text-center md:text-start text-lg text-yellow-500 uppercase tracking-wide">
           {slogan}
         </h3>
-        <h2 className=" text-center md:text-start capitalize text-2xl md:text-4xl font-medium text-sky-900 tracking-wide">
+        <h2 className=" text-center md:text-start capitalize text-2xl md:text-4xl font-medium text-sky-700 tracking-wide">
           {title}
         </h2>
         <section
@@ -30,7 +30,7 @@ const DiscoverImmigrationOptions = ({
           }}
         />
       </section>
-      <div className="md:w-5/12 h-min shadow-2xl shadow-gray-500 bg-sky-950 rounded-xl px-4 py-8">
+      <div className="md:w-5/12 h-min shadow-2xl shadow-gray-500 bg-sky-700 rounded-xl px-4 py-8">
         <h2 className="text-white text-xl md:text-3xl text-center tracking-wider">
           Apply For Free Assessment
         </h2>

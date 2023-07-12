@@ -43,6 +43,11 @@ const UsersPage = () => {
 
   return (
     <main className="w-full px-4 md:px-20 mt-28">
+        {loading && (
+        <div className="flex justify-center items-center h-96">
+          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
+          </div>
+          )}
       <DataTable onDelete={deleteUser} onCreate={() => fetchUsers()} users={users} />
     </main>
   );

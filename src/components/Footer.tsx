@@ -1,6 +1,7 @@
 import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Globe from "./Home/Globe";
+import payments1 from "../assets/payments1.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -81,7 +82,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className=" px-8 py-12 md:px-24 xl:px-40 md:py-20 w-full bg-[#002336] flex flex-col">
+    <footer className=" px-8 py-12 md:px-24 xl:px-40 md:py-20 w-full bg-sky-700 flex flex-col">
       <div className="w-full md:flex hidden flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
         <div className="w-1/2 md:grid hidden place-items-center">
           <Globe />
@@ -116,7 +117,7 @@ const Footer = () => {
               <Link
                 onClick={scrollToTop}
                 key={i}
-                className="text-white hover:text-yellow-400 transition-all"
+                className="text-white hover:text-yellow-300 transition-all"
                 to={link.href}
               >
                 {link.name}
@@ -133,7 +134,7 @@ const Footer = () => {
               <Link
                 onClick={scrollToTop}
                 key={i}
-                className="text-white hover:text-yellow-400 transition-all"
+                className="text-white hover:text-yellow-300 transition-all"
                 to={link.href}
               >
                 {link.name}
@@ -150,7 +151,7 @@ const Footer = () => {
               <Link
                 onClick={scrollToTop}
                 key={i}
-                className="text-white hover:text-yellow-400 transition-all"
+                className="text-white hover:text-yellow-300 transition-all"
                 to={link.href}
               >
                 {link.name}
@@ -206,6 +207,15 @@ const Footer = () => {
           />
         </a>
       </div>
+            <hr className="my-5" />
+            <div className="flex justify-between">
+                <p className=" text-white text-sm">
+                    © 2021 All Rights Reserved. Centennial Migration
+                </p>
+                <div className=" md:block hidden">
+                  <img src={payments1} alt="" />
+                </div>
+            </div>
     </footer>
   );
 };
