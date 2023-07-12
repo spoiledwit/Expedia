@@ -19,7 +19,7 @@ const PlanCard = ({
   return (
     <Link
       to={`/immigration/${countryName}/${plan.id}`}
-      className={`${pathname!==`/immigration/${countryName}/${plan.id}` && "hover:scale-105"}  relative transition duration-300 ease-in-out overflow-hidden rounded-2xl`}
+      className={`${pathname!==`/immigration/${countryName.toLocaleLowerCase()}/${plan.id}` && "hover:scale-105"}  relative transition duration-300 ease-in-out overflow-hidden rounded-2xl`}
     >
       <div className="w-full relative h-64 bg-sky-700 rounded-lg overflow-hidden">
         <img
