@@ -1,19 +1,16 @@
 import { useEffect } from "react";
 import ContactForm from "../components/ContactUs/ContactFrom";
 import Hero from "../components/ContactUs/Hero";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 const ContactUsPage = () => {
-
-  useEffect(()=>{
-    window.scrollTo(0,0);
-  }, [])
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="w-full mb-20">
-
-<Helmet>
+      <Helmet>
         <title>Contact Us | Expedia</title>
         <meta name="description" content="About Us | Expedia" />
       </Helmet>

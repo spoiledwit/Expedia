@@ -22,13 +22,13 @@ const Contact = () => {
     if (props.country && props.email && props.name && props.phone) {
       const success = await createAssessment(props);
       if (success) {
-        toast.success("Your form has been submitted successfully");
+        toast.success("Form submitted successfully!");
         e.target.reset();
       } else {
         toast.error("Unable to submit form!");
       }
     } else {
-      toast.error("Please fill all the fields");
+      toast.error("Please fill all the fields.");
     }
   };
 

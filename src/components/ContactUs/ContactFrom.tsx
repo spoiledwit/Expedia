@@ -6,6 +6,7 @@ import { useState } from "react";
 import Input from "../Input";
 import Select from "../Select";
 import { toast } from "react-hot-toast";
+import { createContact } from "../../lib/contact";
 
 const Info = () => {
   return (
@@ -93,27 +94,50 @@ const Info = () => {
   );
 };
 
-type SubmitProps = {
+export type SubmitProps = {
   name: string;
   email: string;
   phone: string;
-  job: string;
-  service: string;
-  message: string;
+  jobTitle: string;
+  country: string;
+  text: string;
 };
 
-const Form = ({ onSubmit }: { onSubmit: (props: SubmitProps) => void }) => {
+const Form = ({
+  onSubmit,
+}: {
+  onSubmit: (props: SubmitProps, e: any) => void;
+}) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [job, setJob] = useState("");
-  const [service, setService] = useState("");
-  const [message, setMessage] = useState("");
+  const [jobTitle, setJobTitle] = useState("");
+  const [country, setCountry] = useState("");
+  const [text, setText] = useState("");
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    onSubmit({ name, email, phone, job, service, message });
+    onSubmit({ name, email, phone, jobTitle, country, text }, e);
   };
+
+  const countries = [
+    {
+      value: "canada",
+      label: "Canada",
+    },
+    {
+      value: "australia",
+      label: "Australia",
+    },
+    {
+      value: "uk",
+      label: "UK",
+    },
+    {
+      value: "europe",
+      label: "Europe",
+    },
+  ];
 
   return (
     <div className="w-full p-8 bg-sky-950 rounded-xl shadow-2xl shadow-gray-500 flex flex-col gap-4">
@@ -136,14 +160,18 @@ const Form = ({ onSubmit }: { onSubmit: (props: SubmitProps) => void }) => {
             onChange={(e) => setEmail(e.target.value)}
           />
           <Input label="Phone" onChange={(e) => setPhone(e.target.value)} />
-          <Input label="Job Title" onChange={(e) => setJob(e.target.value)} />
+          <Input
+            label="Job Title"
+            onChange={(e) => setJobTitle(e.target.value)}
+          />
           <Select
-            options={["canada", "australia", "uk", "europe"]}
-            onChange={(e) => setService(e.target.value)}
+            options={countries}
+            defaultLabel="Select a Country"
+            onChange={(e) => setCountry(e.target.value)}
           />
         </div>
         <textarea
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => setText(e.target.value)}
           className="w-full h-32 caret-sky-500 text-gray-200 bg-transparent border-[2px] border-sky-700 focus:border-sky-500 outline-none ring-0 transition-all rounded-xl p-4"
         />
         <button
@@ -158,11 +186,26 @@ const Form = ({ onSubmit }: { onSubmit: (props: SubmitProps) => void }) => {
 };
 
 const ContactForm = () => {
-  const handleSubmit = (props: SubmitProps) => {
-    if (!props.name || !props.email || !props.phone || !props.message) {
-      return toast.error("Please fill all the required fields");
+  const validateProps = (props: SubmitProps): boolean => {
+    return (
+      !props.name || !props.email || !props.phone || !props.text || !props.country
+    );
+  };
+
+  const handleSubmit = async (props: SubmitProps, e: any) => {
+    e.preventDefault();
+
+    if (validateProps(props)) {
+      toast.error("Please fill all the fields.");
+      return;
     }
-    toast.success("Message Sent Successfully");
+    const success = await createContact(props);
+    if (success) {
+      toast.success("Message sent successfully!");
+      e.target.reset();
+    } else {
+      toast.error("Unable to submit form!");
+    }
   };
 
   return (
