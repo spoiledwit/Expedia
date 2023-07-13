@@ -85,8 +85,8 @@ const Countries = () => {
 
   return (
     <div className="py-20 flex flex-col gap-12 w-full">
-      <div className="py-8 w-full md:bg-sky-700 flex flex-col items-center justify-center">
-        <h2 className=" md:text-white text-sky-700 md:text-3xl text-2xl font-medium">
+      <div className="py-8 w-full md:bg-primary-blue flex flex-col items-center justify-center">
+        <h2 className=" md:text-white text-primary-blue md:text-3xl text-2xl font-medium">
           The countries we support
         </h2>
       </div>

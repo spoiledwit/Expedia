@@ -7,7 +7,7 @@ import { AiFillYoutube } from "react-icons/ai";
 const InfoHeader = () => {
   return (
     <div>
-      <div className="flex flex-col md:flex-row px-4 py-2 md:py-0 md:px-16 xl:px-40 h-16 md:h-10 justify-between items-center bg-sky-700 text-white text-sm">
+      <div className="flex flex-col md:flex-row px-4 py-2 md:py-0 md:px-16 xl:px-40 h-16 md:h-10 justify-between items-center bg-primary-blue text-white text-sm">
         <div className=" w-full md:w-max flex md:gap-4 justify-between">
           <div className="flex items-center">
             <AiOutlineMail className="mr-2" size={18} />
@@ -16,7 +16,7 @@ const InfoHeader = () => {
             </a>
           </div>
 
-          <div className="h-4 hidden md:block w-0.5 bg-yellow-500"></div>
+          <div className="h-4 hidden md:block w-0.5 bg-primary-gold"></div>
           <div className="flex items-center">
             <AiOutlineClockCircle className="mr-2" size={18} />
             <a href="/" className=" whitespace-nowrap">
@@ -28,15 +28,15 @@ const InfoHeader = () => {
         <div className="flex items-center">
           <BsFacebook
             size={18}
-            className="mr-3 hover:text-yellow-400 cursor-pointer transition-all"
+            className="mr-3 hover:text-primary-gold cursor-pointer transition-all"
           />
           <BiLogoTwitter
             size={23}
-            className="mr-2 hover:text-yellow-400 cursor-pointer transition-all"
+            className="mr-2 hover:text-primary-gold cursor-pointer transition-all"
           />
           <AiFillYoutube
             size={23}
-            className="hover:text-yellow-400 cursor-pointer transition-all"
+            className="hover:text-primary-gold cursor-pointer transition-all"
           />
         </div>
       </div>

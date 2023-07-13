@@ -81,7 +81,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className=" px-8 py-12 md:px-24 xl:px-40 md:py-20 w-full bg-sky-700 flex flex-col">
+    <footer className=" px-8 py-12 md:px-24 xl:px-40 md:py-20 w-full bg-primary-blue flex flex-col">
       <div className="w-full md:flex hidden flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
         <div className="w-1/2 md:grid hidden place-items-center">
           <Globe />
@@ -116,7 +116,7 @@ const Footer = () => {
               <Link
                 onClick={scrollToTop}
                 key={i}
-                className="text-white hover:text-yellow-300 transition-all"
+                className="text-white hover:text-primary-gold transition-all"
                 to={link.href}
               >
                 {link.name}
@@ -133,7 +133,7 @@ const Footer = () => {
               <Link
                 onClick={scrollToTop}
                 key={i}
-                className="text-white hover:text-yellow-300 transition-all"
+                className="text-white hover:text-primary-gold transition-all"
                 to={link.href}
               >
                 {link.name}
@@ -150,7 +150,7 @@ const Footer = () => {
               <Link
                 onClick={scrollToTop}
                 key={i}
-                className="text-white hover:text-yellow-300 transition-all"
+                className="text-white hover:text-primary-gold transition-all"
                 to={link.href}
               >
                 {link.name}
@@ -164,19 +164,19 @@ const Footer = () => {
           <h3 className="text-xl md:text-2xl font-medium md:font-bold text-white">Contact Us</h3>
           <div className="flex flex-col gap-2">
             <a
-              className=" text-white hover:text-yellow-400 transition-all"
+              className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
               Address House No. -, Street --, City
             </a>
             <a
-              className=" text-white hover:text-yellow-400 transition-all"
+              className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
               example@domain.com
             </a>
             <a
-              className=" text-white hover:text-yellow-400 transition-all"
+              className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
               +01 2345678910
@@ -190,19 +190,19 @@ const Footer = () => {
         <a href="/">
           <BsFacebook
             size={24}
-            className="text-white hover:text-yellow-400 transition-all"
+            className="text-white hover:text-primary-gold transition-all"
           />
         </a>
         <a href="/">
           <BsTwitter
             size={24}
-            className="text-white hover:text-yellow-400 transition-all"
+            className="text-white hover:text-primary-gold transition-all"
           />
         </a>
         <a href="/">
           <BsYoutube
             size={24}
-            className="text-white hover:text-yellow-400 transition-all"
+            className="text-white hover:text-primary-gold transition-all"
           />
         </a>
       </div>

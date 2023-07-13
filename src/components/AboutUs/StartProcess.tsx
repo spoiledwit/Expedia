@@ -8,11 +8,11 @@ const StartProcess = () => {
   return (
     <div className="w-full h-max  py-10 px-4 md:px-16 lg:px-48 xl:px-80 flex flex-col md:flex-row gap-12 md:gap-16 items-center">
       <section className="md:w-[60%] flex flex-col gap-8 md:gap-12">
-        <h3 className=" text-center md:text-start md:-translate-x-10 text-lg text-yellow-500 uppercase tracking-wide">
+        <h3 className=" text-center md:text-start md:-translate-x-10 text-lg text-primary-gold uppercase tracking-wide">
           WE MAKE A DIFFERENCE
         </h3>
         <div className=" flex flex-col w-full gap-4">
-          <h2 className="text-center md:text-start capitalize text-2xl md:text-4xl font-medium text-sky-700 tracking-wide">
+          <h2 className="text-center md:text-start capitalize text-2xl md:text-4xl font-medium text-primary-blue tracking-wide">
             Welcome to immigration Advisory services
           </h2>
           <p className=" text-center md:text-start text-gray-700 text-sm tracking-wide">
