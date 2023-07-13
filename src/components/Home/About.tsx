@@ -39,11 +39,11 @@ const About = () => {
         }}
         transition={{ duration: 1 }}
       >
-        <h3 className="md:block hidden self-start text-lg text-yellow-500 uppercase tracking-wide">
+        <h3 className="md:block hidden self-start text-lg text-primary-gold uppercase tracking-wide">
           WHO WE ARE
         </h3>
         <div className=" w-full gap-4 flex flex-col items-center">
-          <h2 className="capitalize text-2xl md:text-4xl text-center lg:text-start w-full font-medium text-sky-700 tracking-wide">
+          <h2 className="capitalize text-2xl md:text-4xl text-center lg:text-start w-full font-medium text-primary-blue tracking-wide">
             not just a traditional visa & immigration firm
           </h2>
           <p className=" text-gray-700 text-sm tracking-wide text-center lg:text-justify">

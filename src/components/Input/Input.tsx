@@ -15,12 +15,12 @@ const Input = ({
         onChange={onChange}
         type={type || "text"}
         id="name"
-        className="block appearance-none py-2.5 px-0 w-full h-10 bg-transparent caret-sky-500 text-gray-200 border-b-[2px] border-sky-300 focus:border-sky-300 outline-none ring-0 focus:delay-[99999] peer"
+        className="block appearance-none py-2.5 px-0 w-full h-10 bg-transparent caret-secondary-blue text-gray-200 border-b-[2px] border-secondary-blue focus:border-secondary-blue outline-none ring-0 focus:delay-[99999] peer"
         placeholder=" "
       />
       <label
         htmlFor="name"
-        className="absolute text-sm text-gray-300 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-sky-300 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+        className="absolute text-sm text-gray-300 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-secondary-blue peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
       >
         {label}
       </label>

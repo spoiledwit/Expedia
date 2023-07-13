@@ -70,7 +70,7 @@ const OurMission = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="our-mission bg-sky-700 py-10"
+        className="our-mission bg-primary-blue py-10"
       >
         <section className="mission-intro">
           <h3>We create solutions for your Future</h3>

@@ -10,7 +10,7 @@ const StepSection = ({ step }: { step: Step }) => {
   return (
     <div className="flex flex-col p-5 w-full h-full items-center justify-between">
       <div className="flex flex-col items-center">
-        <div className="w-24 font-serif grid place-items-center aspect-square text-4xl text-white rounded-full bg-sky-700">
+        <div className="w-24 font-serif grid place-items-center aspect-square text-4xl text-white rounded-full bg-primary-blue">
           {step.index}
         </div>
 
@@ -47,7 +47,7 @@ const StepsToApply = () => {
   return (
     <div className="w-full pt-16 px-8 md:px-20 pb-20 flex flex-col items-center bg-white">
       <section className="w-full flex flex-col gap-3 text-center">
-        <h3 className="  text-sky-700 text-lg md:text-4xl tracking-wide">
+        <h3 className="  text-primary-blue text-lg md:text-4xl tracking-wide">
           STEP BY STEP PROCESS FOR YOUR VISA
         </h3>
         <p className="mb-4 tracking-wide text-black">
@@ -65,7 +65,7 @@ const StepsToApply = () => {
               className="w-full flex-wrap flex flex-col lg:flex-row justify-center items-center"
             >
               {i !== 0 && (
-                <div className=" w-[60%] lg:hidden h-[1px] bg-sky-600 my-8" />
+                <div className=" w-[60%] lg:hidden h-[1px] bg-primary-blue my-8" />
               )}
               <StepSection step={s} />
             </div>

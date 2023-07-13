@@ -16,11 +16,11 @@ type Info = {
 function InfoCard({ info }: { info: Info }) {
   return (
     <div className="w-full h-full pb-8 px-12 flex bg-white shadow-xl border-t-2 rounded-lg flex-col justify-between items-center z-10">
-    <div className="w-16 aspect-square -translate-y-1/2 grid place-items-center bg-sky-500 rounded-full">
+    <div className="w-16 aspect-square -translate-y-1/2 grid place-items-center bg-primary-blue rounded-full">
       {info.icon}
     </div>
     <section className="flex flex-col gap-4">
-      <h3 className="text-xl md:text-2xl text-center font-medium md:font-bold text-sky-700">
+      <h3 className="text-xl md:text-2xl text-center font-medium md:font-bold text-primary-blue">
         {info.title}
       </h3>
       <p className="text-black text-center text-sm">{info.description}</p>

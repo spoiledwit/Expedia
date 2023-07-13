@@ -91,7 +91,7 @@ const MobileNav = () => {
                               <Link
                                 onClick={onBeforeNavigate}
                                 to={link.href}
-                                className="hover:text-yellow-500 text-gray-600 transition-all"
+                                className="hover:text-primary-gold text-gray-600 transition-all"
                               >
                                 {link.title}
                               </Link>
@@ -105,7 +105,7 @@ const MobileNav = () => {
                                       onClick={onBeforeNavigate}
                                       key={c.id}
                                       to={c.href}
-                                      className="w-full max-w-[200px] h-10 flex items-center hover:text-yellow-500 transition-all"
+                                      className="w-full max-w-[200px] h-10 flex items-center hover:text-primary-gold transition-all"
                                     >
                                       {c.title}
                                     </Link>
@@ -124,7 +124,7 @@ const MobileNav = () => {
                           onClick={onBeforeNavigate}
                           key={link.id}
                           to={link.href}
-                          className="w-full max-w-[200px] flex items-center text-gray-700 hover:text-yellow-500 transition-all"
+                          className="w-full max-w-[200px] flex items-center text-gray-700 hover:text-primary-gold transition-all"
                         >
                           {link.title}
                         </Link>
@@ -213,7 +213,7 @@ const Navbar = () => {
           <Link
             key={c.id}
             to={c.href}
-            className="w-full px-6 max-w-[200px] text-xs h-10 flex items-center hover:text-sky-500 hover:bg-gray-100 transition-all"
+            className="w-full px-6 max-w-[200px] text-xs h-10 flex items-center hover:text-primary-blue hover:bg-gray-100 transition-all"
           >
             {c.title}
           </Link>
@@ -249,7 +249,7 @@ const Navbar = () => {
           className={`w-full flex py-3 items-center justify-between border-gray-200 px-4 xl:px-24`}
         >
           <Link to={"/"} className="min-w-max">
-            <h2 className={`font-bold md:text-2xl ${isVisible ? "text-sky-900" : "text-white opacity-90"}`}>Centennial Migration</h2>
+            <h2 className={`font-bold md:text-2xl ${isVisible ? "text-primary-blue" : "text-white opacity-90"}`}>Centennial Migration</h2>
             {/* <img src={Logo} alt="logo" className="md:h-14 h-12" /> */}
           </Link>
           <div className="w-full hidden md:block">
@@ -260,7 +260,7 @@ const Navbar = () => {
                   <div
                     id={link.id}
                     key={link.id}
-                    className={`${isActive ? "text-sky-500" : `${isVisible ? "text-black" : "text-white opacity-85"}  hover:text-sky-500`
+                    className={`${isActive ? "text-primary-blue" : `${isVisible ? "text-black" : "text-white opacity-85"}  hover:text-primary-blue`
                       } relative p-3 text-xs lg:text-sm whitespace-nowrap tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
                   >
                     <Link

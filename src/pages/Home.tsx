@@ -18,10 +18,9 @@ const Home = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY < 250) { 
-        setBgColor("#0369a1");
-      }
-      else if (window.innerWidth < 768) {
+      if (window.scrollY < 250) {
+        setBgColor("#142537");
+      } else if (window.innerWidth < 768) {
         setBgColor("#FFFFFF");
       }
     };
@@ -32,8 +31,13 @@ const Home = () => {
   }, [bgColor]);
 
   return (
-    <div className={`w-full transition flex flex-col`}
-      style={{ scrollBehavior: "smooth", transitionDuration: "1s", backgroundColor: bgColor }}
+    <div
+      className={`w-full transition flex flex-col`}
+      style={{
+        scrollBehavior: "smooth",
+        transitionDuration: "1s",
+        backgroundColor: bgColor,
+      }}
     >
       <Helmet>
         <title>Centennial Migration | UAE's top Visa consulting firm</title>
@@ -41,11 +45,11 @@ const Home = () => {
       </Helmet>
       <Hero />
       <div className="md:block hidden">
-      <CountriesSlider setColor={setBgColor}/>
+        <CountriesSlider setColor={setBgColor} />
       </div>
       <Countries />
       <div className=" w-full overflow-hidden">
-      <Contact />
+        <Contact />
       </div>
       <Consultancy />
       <Testimonials />
