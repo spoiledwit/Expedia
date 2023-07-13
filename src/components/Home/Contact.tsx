@@ -59,7 +59,7 @@ const Contact = () => {
 
   return (
     <motion.div
-      className="w-full flex flex-col lg:flex-row gap-20 mt-10 lg:gap-0"
+      className="w-full flex flex-col lg:flex-row gap-20 mt-10 mb-10 lg:gap-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -144,7 +144,7 @@ const Contact = () => {
       >
         <div className="flex">
           <motion.h1
-            className="md:text-3xl text-2xl text-white font-medium px-6"
+            className="md:text-2xl text-2xl text-white font-medium px-6"
             animate={{ scale: 1.2 }}
             transition={{ duration: 1 }}
           >
