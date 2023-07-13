@@ -6,7 +6,6 @@ import Countries from "../components/Home/Countries";
 import Partners from "../components/Partners";
 import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import StepsToApply from "../components/AboutUs/StepsToApply";
 import Info from "../components/Home/Info";
 import CountriesSlider from "../components/Home/CountriesSlider";
 
@@ -48,7 +47,6 @@ const Home = () => {
       <div className=" w-full overflow-hidden">
       <Contact />
       </div>
-      <StepsToApply />
       <Consultancy />
       <Testimonials />
       <div className="md:px-20 py-10 px-4 overflow-hidden xl:px-40">
