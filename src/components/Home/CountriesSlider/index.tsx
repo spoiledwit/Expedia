@@ -120,8 +120,7 @@ const CountriesSlider: React.FC<CountriesSliderProps> = ({ setColor }) => {
     const countryIndex = countryRefs.current.reduce(
       (prevIndex, currRef, index) => {
         //@ts-ignore
-        const prevOffset =
-          countryRefs.current[prevIndex].current.getBoundingClientRect().top;
+        const prevOffset = countryRefs.current[prevIndex].current.getBoundingClientRect().top;
         //@ts-ignore
         const currOffset = currRef.current.getBoundingClientRect().top;
 
