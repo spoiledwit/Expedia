@@ -4,12 +4,12 @@ import { Link, useLocation } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { RiMenu3Fill } from "react-icons/ri";
 import InfoHeader from "./Home/InfoHeader";
-import Logo from "../assets/expedia.png";
 import { AnimatePresence, motion } from "framer-motion";
 import Accordion from "./Accordion";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
+import logo from "../assets/CM22.png";
 
 type LinkWithChildren = {
   id: string;
@@ -51,11 +51,11 @@ const MobileNav = () => {
   }, [lastScrollPos]);
 
   return (
-    <div    style={{ zIndex: 1000 }}>
+    <div style={{ zIndex: 1000 }}>
       <RiMenu3Fill
         size={24}
         className={`md:hidden ${!isVisible ? "text-white" : "text-black"} cursor-pointer`}
-     
+
         onClick={() => setIsOpen(true)}
       />
       {
@@ -138,7 +138,7 @@ const MobileNav = () => {
                 onClick={onBeforeNavigate}
                 className="min-w-max self-center mt-8 opacity-25 grayscale"
               >
-                <img src={Logo} alt="logo" className="md:h-14 h-12" />
+                <img src={logo} alt="logo" className="md:h-14 bg-[#17205B] h-12" />
               </Link>
             </motion.div>
           )}
@@ -268,7 +268,7 @@ const Navbar = () => {
                       className="uppercase flex items-center font-semibold text-sm py-2"
                     >
                       <p className="text-xs">
-                      {link.title}
+                        {link.title}
                       </p>
                       {link.children && <IoMdArrowDropdown size={16} />}
                     </Link>
