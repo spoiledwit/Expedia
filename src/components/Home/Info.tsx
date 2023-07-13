@@ -4,7 +4,8 @@ import { MdOutlineJoinRight } from "react-icons/md";
 import { RiCustomerService2Fill, RiReplyAllLine } from "react-icons/ri";
 import { GiProcessor } from "react-icons/gi";
 import { AiOutlineFileDone, AiOutlineFileSearch } from "react-icons/ai";
-import AnimateToView from "../AnimateToView";
+import line from "../../assets/line.svg";
+import { useEffect, useState } from "react";
 
 type Info = {
   icon: JSX.Element;
@@ -14,17 +15,17 @@ type Info = {
 
 function InfoCard({ info }: { info: Info }) {
   return (
-    <div className="w-full h-full pb-8 px-12 flex bg-white shadow-xl border-t-2 rounded-lg flex-col justify-between items-center">
-      <div className="w-16 aspect-square -translate-y-1/2 grid place-items-center bg-sky-500 rounded-full">
-        {info.icon}
-      </div>
-      <section className="flex flex-col gap-4">
-        <h3 className="text-xl md:text-2xl text-center font-medium md:font-bold text-sky-700">
-          {info.title}
-        </h3>
-        <p className="text-black text-center text-sm">{info.description}</p>
-      </section>
+    <div className="w-full h-full pb-8 px-12 flex bg-white shadow-xl border-t-2 rounded-lg flex-col justify-between items-center z-10">
+    <div className="w-16 aspect-square -translate-y-1/2 grid place-items-center bg-sky-500 rounded-full">
+      {info.icon}
     </div>
+    <section className="flex flex-col gap-4">
+      <h3 className="text-xl md:text-2xl text-center font-medium md:font-bold text-sky-700">
+        {info.title}
+      </h3>
+      <p className="text-black text-center text-sm">{info.description}</p>
+    </section>
+  </div>
   );
 }
 
@@ -80,13 +81,54 @@ export default function Info() {
     },
   ];
 
+  const [top, setTop] = useState(0);
+  const [right, setRight] = useState(0);
+
+  // the following function calculates the position of the line based on the viewport width
+  
+  function calculatePosition() {
+    const vw = Math.max(
+      document.documentElement.clientWidth || 0,
+      window.innerWidth || 0
+    );
+    if (vw > 1280) {
+      setTop(170);
+      setRight(27);
+    }
+    if (vw <= 1280) {
+      setTop(250);
+      setRight(30);
+    }
+    if (vw <= 1170) {
+      setTop(300);
+      setRight(40);
+    }
+    if (vw <= 1124) {
+      setTop(320);
+      setRight(40);
+    }
+    if (vw <= 1040) {
+      setTop(380);
+      setRight(40);
+    }
+  }
+
+  useEffect(() => {
+    calculatePosition();
+    window.addEventListener("resize", calculatePosition);
+    return () => {
+      window.removeEventListener("resize", calculatePosition);
+    };
+  }, [top, right]);
+
   return (
-    <AnimateToView>
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-20 md:gap-x-8 md:gap-y-20 my-20 px-16 md:px-20 xl:px-40">
+      <div className="relative">
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-20 md:gap-x-8 md:gap-y-20 my-20 px-16 md:px-20 xl:px-40">
         {infos.map((info) => (
           <InfoCard key={info.title} info={info} />
         ))}
       </div>
-    </AnimateToView>
+      <img src={line} className="lg:block hidden" style={{position: "absolute", width: "93vw", right: `${right}px`, top: `${top}px`}} alt="" />
+      </div>
   );
 }

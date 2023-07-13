@@ -8,7 +8,6 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import StepsToApply from "../components/AboutUs/StepsToApply";
 import Info from "../components/Home/Info";
-import AnimateToView from "../components/AnimateToView";
 
 const Home = () => {
   useEffect(() => {
@@ -18,21 +17,18 @@ const Home = () => {
   return (
     <div className="w-full flex flex-col md:gap-20 gap-10 mb-40 ">
       <Helmet>
-        <title>CentenniaImmigration | UAE's top Visa consulting firm</title>
+        <title>Centennial Migration | UAE's top Visa consulting firm</title>
         <meta name="description" content="Home | CentenniaImmigration" />
       </Helmet>
       <Hero />
       <Countries />
-
       <Contact />
       <StepsToApply />
       <Consultancy />
       <Testimonials />
-      <AnimateToView>
         <div className="md:px-20 px-4 xl:px-40 my-20">
           <Partners />
         </div>
-      </AnimateToView>
       <Info />
     </div>
   );

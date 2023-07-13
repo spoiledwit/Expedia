@@ -3,8 +3,12 @@ import australia from "../../assets/australia.jpg";
 import { useNavigate } from "react-router-dom";
 import uk from "../../assets/uk.jpg";
 import eu from "../../assets/eu.jpeg";
+import poland from "../../assets/poland.jpg";
+import newzealand from "../../assets/newzeeland.jpg";
 import { HiArrowLongRight } from "react-icons/hi2";
-import AnimateToView from "../AnimateToView";
+import Malta from "../../assets/Malta.jpg"
+import Lithuania from "../../assets/lithinua.jpg";
+import finland from "../../assets/finland.jpeg";
 
 const Countries = () => {
   const navigate = useNavigate();
@@ -38,6 +42,41 @@ const Countries = () => {
         "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/europe",
     },
+    {
+      name: "Newzealand",
+      image: newzealand,
+      descripton:
+        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
+      link: "/immigration/europe",
+    },
+    {
+      name: "Poland",
+      image: poland,
+      descripton:
+        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
+      link: "/immigration/europe",
+    },
+    {
+      name: "Finland",
+      image: finland,
+      descripton:
+        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
+      link: "/immigration/europe",
+    },
+    {
+      name: "Malta",
+      image: Malta,
+      descripton:
+        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
+      link: "/immigration/europe",
+    },
+    {
+      name: "Lithuania",
+      image: Lithuania,
+      descripton:
+        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
+      link: "/immigration/europe",
+    },
   ];
 
   const handleClick = (link: any) => {
@@ -51,7 +90,6 @@ const Countries = () => {
           The countries we support
         </h2>
       </div>
-      <AnimateToView>
         <div className="flex flex-wrap justify-center gap-8 px-4 md:px-40">
           {countries.map((country) => {
             return (
@@ -78,7 +116,6 @@ const Countries = () => {
             );
           })}
         </div>
-      </AnimateToView>
     </div>
   );
 };
