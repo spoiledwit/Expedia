@@ -14,11 +14,11 @@ const Accordion = ({
     <>
       <div
         onClick={onClick}
-        className=" text-sky-700 tracking-wide text-lg flex items-center justify-between w-full cursor-pointer"
+        className=" text-primary-blue tracking-wide text-lg flex items-center justify-between w-full cursor-pointer"
       >
         {data.title}
         <motion.div animate={{ rotate: isOpen ? 0 : 180 }} className="h-4">
-          <IoIosArrowUp size={16} className="text-sky-500" />
+          <IoIosArrowUp size={16} className="text-primary-blue" />
         </motion.div>
       </div>
       <AnimatePresence initial={false}>

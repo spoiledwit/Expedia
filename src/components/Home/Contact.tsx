@@ -76,10 +76,10 @@ const Contact = () => {
         className="w-full lg:w-[60%] flex flex-col items-center lg:items-start pt-5 lg:pl-28 px-8 xl:pl-40 bg-white"
       >
         <div className=" w-full flex flex-col">
-          <h3 className=" lg:-translate-x-10 text-yellow-500 md:mt-16">
+          <h3 className=" lg:-translate-x-10 text-primary-gold md:mt-16">
             WHY CHOOSE CENTENNIA?
           </h3>
-          <h2 className="text-sky-700 text-2xl md:text-3xl my-10 font-medium">
+          <h2 className="text-primary-blue text-2xl md:text-3xl my-10 font-medium">
             Countless Benefits & Easy Processing
           </h2>
           <p className="mb-6">
@@ -94,7 +94,7 @@ const Contact = () => {
               <div className="w-16">
                 <PiAirplaneTakeoffFill
                   size={48}
-                  className="text-sky-500"
+                  className="text-primary-blue"
                 />
               </div>
               <div>
@@ -108,7 +108,7 @@ const Contact = () => {
             </div>
             <div className="flex space-x-8 items-center">
               <div className="w-16">
-                <IoDocumentText size={48} className="text-sky-500" />
+                <IoDocumentText size={48} className="text-primary-blue" />
               </div>
               <div>
                 <p className="font-semibold">Required Documents Support</p>
@@ -140,7 +140,7 @@ const Contact = () => {
           hidden: { opacity: 0, x: 100 },
         }}
         transition={{ duration: 1 }}
-        className=" lg:rounded-3xl border bg-sky-950 lg:w-[450px] lg:shadow-2xl shadow-gray-500 flex flex-col justify-center items-start md:px-14 px-8 gap-12 py-10 space-y-4"
+        className=" lg:rounded-3xl border bg-primary-blue lg:w-[450px] lg:shadow-2xl shadow-gray-500 flex flex-col justify-center items-start md:px-14 px-8 gap-12 py-10 space-y-4"
       >
         <div className="flex">
           <motion.h1
