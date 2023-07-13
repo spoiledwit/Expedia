@@ -11,7 +11,7 @@ const Info = () => {
   return (
     <div className="w-full h-full flex flex-col gap-8">
       <section className=" w-full flex flex-col gap-4 ">
-        <h2 className="capitalize text-2xl md:text-4xl font-medium text-sky-700 tracking-wide">
+        <h2 className="capitalize text-2xl md:text-4xl font-medium text-primary-blue tracking-wide">
           Contact Info
         </h2>
         <p>
@@ -24,39 +24,39 @@ const Info = () => {
         <div className=" w-full flex flex-col gap-8">
           <div className="flex gap-4 items-center">
             <div className="w-6">
-              <AiFillPhone size={24} className="text-yellow-500" />
+              <AiFillPhone size={24} className="text-primary-gold" />
             </div>
             <section className="w-full flex flex-col">
               <h5 className=" text-lg tracking-wide font-bold text-gray-700">
                 Phone
               </h5>
-              <a href="/" className=" text-sky-700 text-sm">
+              <a href="/" className=" text-primary-blue text-sm">
                 +01 2345678910
               </a>
             </section>
           </div>
           <div className="flex gap-4 items-center">
             <div className="w-6">
-              <MdEmail size={24} className="text-yellow-500" />
+              <MdEmail size={24} className="text-primary-gold" />
             </div>
             <section className="w-full flex flex-col">
               <h5 className=" text-lg tracking-wide font-bold text-gray-700">
                 Email
               </h5>
-              <a href="/" className=" text-sky-700 text-sm">
+              <a href="/" className=" text-primary-blue text-sm">
                 example@domain.com
               </a>
             </section>
           </div>
           <div className="flex gap-4 items-center">
             <div className="w-6">
-              <FaLocationDot size={24} className="text-yellow-500" />
+              <FaLocationDot size={24} className="text-primary-gold" />
             </div>
             <section className="w-full flex flex-col">
               <h5 className=" text-lg tracking-wide font-bold text-gray-700">
                 Location
               </h5>
-              <a href="/" className=" text-sky-700 text-sm">
+              <a href="/" className=" text-primary-blue text-sm">
                 Address House No. -, Street --, City
               </a>
             </section>
@@ -68,19 +68,19 @@ const Info = () => {
           <a href="/">
             <BsFacebook
               size={24}
-              className="text-sky-500 hover:text-yellow-400 transition-all"
+              className="text-primary-blue hover:text-primary-gold transition-all"
             />
           </a>
           <a href="/">
             <BsTwitter
               size={24}
-              className="text-sky-500 hover:text-yellow-400 transition-all"
+              className="text-primary-blue hover:text-primary-gold transition-all"
             />
           </a>
           <a href="/">
             <BsYoutube
               size={24}
-              className="text-sky-500 hover:text-yellow-400 transition-all"
+              className="text-primary-blue hover:text-primary-gold transition-all"
             />
           </a>
         </div>
@@ -116,7 +116,7 @@ const Form = ({ onSubmit }: { onSubmit: (props: SubmitProps) => void }) => {
   };
 
   return (
-    <div className="w-full p-8 bg-sky-700 rounded-xl shadow-2xl shadow-gray-500 flex flex-col gap-4">
+    <div className="w-full p-8 bg-primary-blue rounded-xl shadow-2xl shadow-gray-500 flex flex-col gap-4">
       <h2 className="text-2xl md:text-4xl font-medium text-white tracking-wide">
         Get In Touch With Us!
       </h2>
@@ -144,11 +144,11 @@ const Form = ({ onSubmit }: { onSubmit: (props: SubmitProps) => void }) => {
         </div>
         <textarea
           onChange={(e) => setMessage(e.target.value)}
-          className="w-full h-32 caret-sky-500 text-gray-200 bg-transparent border-[2px] border-sky-300 focus:border-sky-500 outline-none ring-0 transition-all rounded-xl p-4"
+          className="w-full h-32 caret-secondary-blue text-gray-200 bg-transparent border-[2px] border-secondary-blue focus:border-secondary-blue outline-none ring-0 transition-all rounded-xl p-4"
         />
         <button
           type="submit"
-          className="mt-4 rounded-xl h-12 px-6 text-white hover:text-yellow-300 text-lg self-end bg-transparent border-[2px] border-sky-300 hover:border-sky-500 transition-all"
+          className="mt-4 rounded-xl h-12 px-6 text-white hover:text-primary-gold text-lg self-end bg-transparent border-[2px] border-secondary-blue hover:border-primary-gold transition-all"
         >
           Submit
         </button>
@@ -167,7 +167,7 @@ const ContactForm = () => {
 
   return (
     <div className="w-full flex flex-col md:flex-row gap-12 md:gap-0">
-      <div className="hidden w-1 md:block bg-sky-500 mr-10 my-24" />
+      <div className="hidden w-1 md:block bg-primary-blue mr-10 my-24" />
       <div className=" md:w-3/5 min-w-[240px] mr-10">
         <Info />
       </div>
