@@ -9,7 +9,7 @@ import Accordion from "./Accordion";
 import { IoMdArrowDropdown } from "react-icons/io";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/CM22.png";
+import logo from "../assets/logo22.png";
 
 type LinkWithChildren = {
   id: string;
@@ -136,7 +136,7 @@ const MobileNav = () => {
               <Link
                 to={"/"}
                 onClick={onBeforeNavigate}
-                className="min-w-max self-center mt-8 opacity-25 grayscale"
+                className="min-w-max self-center mt-8 p-2 bg-[#17205B] rounded-xl"
               >
                 <img src={logo} alt="logo" className="md:h-14 bg-[#17205B] h-12" />
               </Link>
@@ -249,8 +249,7 @@ const Navbar = () => {
           className={`w-full flex py-3 items-center justify-between border-gray-200 px-4 xl:px-24`}
         >
           <Link to={"/"} className="min-w-max">
-            <h2 className={`font-bold md:text-2xl ${isVisible ? "text-primary-blue" : "text-white opacity-90"}`}>Centennial Migration</h2>
-            {/* <img src={Logo} alt="logo" className="md:h-14 h-12" /> */}
+            <img src={logo} alt="logo" className="md:h-16 h-12" />
           </Link>
           <div className="w-full hidden md:block">
             <ul id="desktop-nav" className="w-full flex justify-center">
@@ -260,7 +259,7 @@ const Navbar = () => {
                   <div
                     id={link.id}
                     key={link.id}
-                    className={`${isActive ? "text-primary-blue" : `${isVisible ? "text-black" : "text-white opacity-85"}  hover:text-primary-blue`
+                    className={`${isActive ? "text-primary-gold" : `${isVisible ? "text-black" : "text-white opacity-85"}  hover:text-primary-gold`
                       } relative p-3 text-xs lg:text-sm whitespace-nowrap tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
                   >
                     <Link

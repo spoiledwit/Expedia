@@ -32,49 +32,49 @@ function InfoCard({ info }: { info: Info }) {
 export default function Info() {
   const infos: Info[] = [
     {
-      icon: <AiOutlineFileDone size={40} color="#ffffff" />,
+      icon: <AiOutlineFileDone size={40} color="#e0c98d" />,
       title: "Register Online",
       description:
         "A person with the required work experience and skills can immigrate to a foreign country, register through our website and give wings to your dream.",
     },
     {
-      icon: <RiReplyAllLine size={40} color="#ffffff" />,
+      icon: <RiReplyAllLine size={40} color="#e0c98d" />,
       title: "Quick Response",
       description:
         "After registering with us, you can expect a call from our experts. We offer free consultations!",
     },
     {
-      icon: <GiProcessor size={40} color="#ffffff" />,
+      icon: <GiProcessor size={40} color="#e0c98d" />,
       title: "Know The Process",
       description:
         "Our registered consultants will let you know your requirements and application process after reviewing your details.",
     },
     {
-      icon: <MdOutlineJoinRight size={40} color="#ffffff" />,
+      icon: <MdOutlineJoinRight size={40} color="#e0c98d" />,
       title: "Join Us",
       description:
         "The signup process is convenient & hassle-free. You can use our online payment gateway to start your process quickly and work on gathering the documents.",
     },
     {
-      icon: <AiOutlineFileSearch size={40} color="#ffffff" />,
+      icon: <AiOutlineFileSearch size={40} color="#e0c98d" />,
       title: "Documentation",
       description:
         "Our highly experienced process officers will leave no stone unturned to arrange the documents properly to get you a nomination from the federal or provincial government.",
     },
     {
-      icon: <FaDownLeftAndUpRightToCenter size={40} color="#ffffff" />,
+      icon: <FaDownLeftAndUpRightToCenter size={40} color="#e0c98d" />,
       title: "Submission",
       description:
         "After receiving the provincial or sponsor nomination, our MARA and RCIC representation will file your application, ensuring it is 100% error-free and perfect.",
     },
     {
-      icon: <RiCustomerService2Fill size={40} color="#ffffff" />,
+      icon: <RiCustomerService2Fill size={40} color="#e0c98d" />,
       title: "Post-landing Services",
       description:
         "Our services don’t end here. We are holding your hands until you migrate to Canada. We will help you to complete pre and post-landing formalities and help you settle in Canada.",
     },
     {
-      icon: <BiSolidPlaneAlt size={40} color="#ffffff" />,
+      icon: <BiSolidPlaneAlt size={40} color="#e0c98d" />,
       title: "Get Ready To Fly",
       description:
         "Register with DM today, the best immigration consultants in the Middle East. We are based in seven countries having over 15 offices with 300-plus experts!",

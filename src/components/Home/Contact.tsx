@@ -144,13 +144,13 @@ const Contact = () => {
       >
         <div className="flex">
           <motion.h1
-            className="md:text-2xl text-2xl text-white font-medium px-6"
+            className="md:text-2xl text-2xl text-[#e0c98d] font-medium px-6"
             animate={{ scale: 1.2 }}
             transition={{ duration: 1 }}
           >
             Apply Now For Free Assessment
           </motion.h1>
-          <FiSend className="text-white text-5xl" />
+          <FiSend className="text-[#e0c98d] text-5xl" />
         </div>
         <AssessmentForm onSubmit={handleSubmit} />
       </motion.div>

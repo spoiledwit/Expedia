@@ -9,7 +9,7 @@ const Consultancy = () => {
       <h2 className="capitalize text-center text-2xl md:text-4xl font-medium text-white tracking-wide">
         Unparalleled Consultancy from Experienced Lawyers
       </h2>
-      <h4 className=" text-sky-200 text-center text-lg md:text-xl tracking-wide">
+      <h4 className=" text-[#e0c98d] text-center text-lg md:text-xl tracking-wide">
         CentenniaImmigration gives their consultancy by a registered and experienced lawyer.
       </h4>
 

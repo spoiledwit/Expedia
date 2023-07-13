@@ -14,12 +14,12 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const [bgColor, setBgColor] = useState("#0369a1");
+  const [bgColor, setBgColor] = useState("#141c5b");
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY < 250) {
-        setBgColor("#142537");
+        setBgColor("#141c5b");
       } else if (window.innerWidth < 768) {
         setBgColor("#FFFFFF");
       }

@@ -11,7 +11,7 @@ const Select = ({
     // ! `defaultValue` prop does not work
     <select
       onChange={onChange}
-      className="bg-transparent text-white border border-secondary-blue text-sm rounded-lg focus:ring-secondary-blue focus:border-secondary-blue block w-full p-2.5 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      className="bg-transparent text-white border border-[#e0c98d] text-sm rounded-lg focus:ring-[#e0c98d] focus:border-[#e0c98d] block w-full p-2.5 dark:focus:ring-[#e0c98d] dark:focus:border-[#e0c98d]"
     >
       <option value={""} label={defaultLabel} />
       {options.map((op) => (
