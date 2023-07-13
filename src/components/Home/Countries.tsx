@@ -2,7 +2,7 @@ import canada from "../../assets/canada.jpeg";
 import australia from "../../assets/australia.jpg";
 import { useNavigate } from "react-router-dom";
 import uk from "../../assets/uk.jpg";
-import eu from "../../assets/eu.jpeg";
+// import eu from "../../assets/eu.jpeg";
 import poland from "../../assets/poland.jpg";
 import newzealand from "../../assets/newzeeland.jpg";
 import { HiArrowLongRight } from "react-icons/hi2";
@@ -34,13 +34,6 @@ const Countries = () => {
       descripton:
         "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/uk",
-    },
-    {
-      name: "Europe",
-      image: eu,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
-      link: "/immigration/europe",
     },
     {
       name: "Newzealand",

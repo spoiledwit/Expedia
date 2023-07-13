@@ -68,17 +68,17 @@ export default function Info() {
         "After receiving the provincial or sponsor nomination, our MARA and RCIC representation will file your application, ensuring it is 100% error-free and perfect.",
     },
     {
-      icon: <RiCustomerService2Fill size={40} color="#e0c98d" />,
-      title: "Post-landing Services",
-      description:
-        "Our services don’t end here. We are holding your hands until you migrate to Canada. We will help you to complete pre and post-landing formalities and help you settle in Canada.",
-    },
-    {
       icon: <BiSolidPlaneAlt size={40} color="#e0c98d" />,
       title: "Get Ready To Fly",
       description:
         "Register with DM today, the best immigration consultants in the Middle East. We are based in seven countries having over 15 offices with 300-plus experts!",
     },
+    {
+      icon: <RiCustomerService2Fill size={40} color="#e0c98d" />,
+      title: "Post-landing Services",
+      description:
+        "Our services don’t end here. We are holding your hands until you migrate to Canada. We will help you to complete pre and post-landing formalities and help you settle in Canada.",
+    }
   ];
 
   const [top, setTop] = useState(0);

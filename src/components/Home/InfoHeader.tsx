@@ -1,8 +1,6 @@
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import { BsFacebook } from "react-icons/bs";
-import { BiLogoTwitter } from "react-icons/bi";
-import { AiFillYoutube } from "react-icons/ai";
+import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { AiOutlinePhone } from "react-icons/ai";
 
 const InfoHeader = () => {
@@ -36,19 +34,31 @@ const InfoHeader = () => {
 
 
 
-        <div className="flex items-center">
-          <BsFacebook
-            size={18}
-            className="mr-3 hover:text-primary-gold cursor-pointer transition-all"
-          />
-          <BiLogoTwitter
-            size={23}
-            className="mr-2 hover:text-primary-gold cursor-pointer transition-all"
-          />
-          <AiFillYoutube
-            size={23}
-            className="hover:text-primary-gold cursor-pointer transition-all"
-          />
+        <div className="flex items-center gap-3 mt-1">
+          <a href="https://www.facebook.com/centennialmigration"
+            target="_blank"
+          >
+            <BsFacebook
+              size={20}
+              className="text-white hover:text-primary-gold transition-all"
+            />
+          </a>
+          <a href="https://www.instagram.com/centennialmigration/"
+            target="_blank"
+          >
+            <BsInstagram
+              size={20}
+              className="text-white hover:text-primary-gold transition-all"
+            />
+          </a>
+          <a href="https://www.linkedin.com/company/96444883"
+            target="_blank"
+          >
+            <BsLinkedin
+              size={20}
+              className="text-white hover:text-primary-gold transition-all"
+            />
+          </a>
         </div>
       </div>
     </div>
