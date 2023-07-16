@@ -17,57 +17,41 @@ const Countries = () => {
     {
       name: "Canada",
       image: canada,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/canada",
     },
     {
       name: "Australia",
       image: australia,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/australia",
     },
     {
       name: "UK",
       image: uk,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/uk",
     },
     {
       name: "Newzealand",
       image: newzealand,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/europe",
     },
     {
       name: "Poland",
       image: poland,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/europe",
     },
     {
       name: "Finland",
       image: finland,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/europe",
     },
     {
       name: "Malta",
       image: Malta,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/europe",
     },
     {
       name: "Lithuania",
       image: Lithuania,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/europe",
     },
   ];
@@ -102,7 +86,6 @@ const Countries = () => {
                       <h4 className="  text-xl font-medium">{country.name}</h4>
                       <HiArrowLongRight size={20} />
                     </div>
-                    <p className="  text-xs">{country.descripton}</p>
                   </section>
                 </div>
               </div>

@@ -92,14 +92,14 @@ const Footer = () => {
             Key Services
           </h3>
           <div className="flex flex-col gap-2">
-          <p>1. We predominantly receive inquiries gor Australia and Canada.</p>
+          <p>1. We predominantly receive inquiries for Europe and Canada.</p>
           <p>
             2. Our bespoke services rank us among the top immigration
             consultants for Canada in Dubai.
           </p>
           <p>
             3. Our quality services have also established us as one of the best
-            immigration advisers for Australia in Dubai.
+            immigration advisers for Europe in Dubai.
           </p>
           </div>
         </section>
@@ -174,7 +174,7 @@ const Footer = () => {
               className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
-              example@domain.com
+              info@centennialmigration.com
             </a>
             <a
               className=" text-white hover:text-primary-gold transition-all"
