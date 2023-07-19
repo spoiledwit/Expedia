@@ -83,10 +83,10 @@ const Contact = () => {
             Countless Benefits & Easy Processing
           </h2>
           <p className="mb-6">
-            You choose <strong> CentenniaImmigration Visa Services </strong>{" "}
-            because immigration rules and dynamic, Complicated to apply, and its
+            You choose <strong> Centennial Migration Visa Services </strong>{" "}
+            because immigration rules and dynamic are Complicated to apply, and its
             difficult to deal with the migration department and you need to
-            increase the success rate CentenniaImmigration will help you to get
+            increase the success rate Centennial Migration will help you to get
             that easily.
           </p>
           <div className="space-y-4 mb-8">
@@ -100,7 +100,7 @@ const Contact = () => {
               <div>
                 <p className="font-semibold">Legal Immigration Success</p>
                 <p>
-                  Since 2018 CentenniaImmigration Visa Services immigration
+                  Since 2018 Centennial Migration Visa Services immigration
                   success rate is 97 percent. So you don't need to worry about
                   that.
                 </p>
@@ -114,7 +114,7 @@ const Contact = () => {
                 <p className="font-semibold">Required Documents Support</p>
                 <p>
                   Sometimes it is difficult for the student or people which
-                  document is required and when. CentenniaImmigration will help
+                  document is required and when. Centennial Migration will help
                   you to manage that.
                 </p>
               </div>
@@ -144,13 +144,13 @@ const Contact = () => {
       >
         <div className="flex">
           <motion.h1
-            className="md:text-2xl text-2xl text-white font-medium px-6"
+            className="md:text-2xl text-2xl text-[#e0c98d] font-medium px-6"
             animate={{ scale: 1.2 }}
             transition={{ duration: 1 }}
           >
             Apply Now For Free Assessment
           </motion.h1>
-          <FiSend className="text-white text-5xl" />
+          <FiSend className="text-[#e0c98d] text-5xl" />
         </div>
         <AssessmentForm onSubmit={handleSubmit} />
       </motion.div>

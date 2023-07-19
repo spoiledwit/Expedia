@@ -1,4 +1,4 @@
-import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Globe from "./Home/Globe";
 import payments1 from "../assets/payments1.png";
@@ -92,14 +92,14 @@ const Footer = () => {
             Key Services
           </h3>
           <div className="flex flex-col gap-2">
-          <p>1. We predominantly receive inquiries gor Australia and Canada.</p>
+          <p>1. We predominantly receive inquiries for Europe and Canada.</p>
           <p>
             2. Our bespoke services rank us among the top immigration
             consultants for Canada in Dubai.
           </p>
           <p>
             3. Our quality services have also established us as one of the best
-            immigration advisers for Australia in Dubai.
+            immigration advisers for Europe in Dubai.
           </p>
           </div>
         </section>
@@ -174,7 +174,7 @@ const Footer = () => {
               className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
-              example@domain.com
+              info@centennialmigration.com
             </a>
             <a
               className=" text-white hover:text-primary-gold transition-all"
@@ -188,20 +188,26 @@ const Footer = () => {
 
       {/* Social Links */}
       <div className="mt-16 md:mt-0 w-full justify-center md:justify-end gap-8 md:gap-4 flex">
-        <a href="/">
+        <a href="https://www.facebook.com/centennialmigration"
+          target="_blank"
+        >
           <BsFacebook
             size={24}
             className="text-white hover:text-primary-gold transition-all"
           />
         </a>
-        <a href="/">
-          <BsTwitter
+        <a href="https://www.instagram.com/centennialmigration/"
+        target="_blank"
+        >
+          <BsInstagram
             size={24}
             className="text-white hover:text-primary-gold transition-all"
           />
         </a>
-        <a href="/">
-          <BsYoutube
+        <a href="https://www.linkedin.com/company/96444883"
+        target="_blank"
+        >
+          <BsLinkedin
             size={24}
             className="text-white hover:text-primary-gold transition-all"
           />

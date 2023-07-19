@@ -1,8 +1,8 @@
-import canada from "../../assets/canada.jpeg";
+// import canada from "../../assets/canada.jpeg";
 import australia from "../../assets/australia.jpg";
 import { useNavigate } from "react-router-dom";
 import uk from "../../assets/uk.jpg";
-import eu from "../../assets/eu.jpeg";
+// import eu from "../../assets/eu.jpeg";
 import poland from "../../assets/poland.jpg";
 import newzealand from "../../assets/newzeeland.jpg";
 import { HiArrowLongRight } from "react-icons/hi2";
@@ -15,67 +15,39 @@ const Countries = () => {
 
   const countries = [
     {
-      name: "Canada",
-      image: canada,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
-      link: "/immigration/canada",
-    },
-    {
       name: "Australia",
       image: australia,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/australia",
     },
     {
       name: "UK",
       image: uk,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
       link: "/immigration/uk",
-    },
-    {
-      name: "Europe",
-      image: eu,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
-      link: "/immigration/europe",
     },
     {
       name: "Newzealand",
       image: newzealand,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
-      link: "/immigration/europe",
+      link: "/immigration/newzealand",
     },
     {
       name: "Poland",
       image: poland,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
-      link: "/immigration/europe",
+      link: "/immigration/poland",
     },
     {
       name: "Finland",
       image: finland,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
-      link: "/immigration/europe",
+      link: "/immigration/finland",
     },
     {
       name: "Malta",
       image: Malta,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
-      link: "/immigration/europe",
+      link: "/immigration/malta",
     },
     {
       name: "Lithuania",
       image: Lithuania,
-      descripton:
-        "lorem ipsum aut autem ija fe8f e8f ef lejf jflejfi weiufweif oweuf weoifewifuw efuewi fif ewfiu.",
-      link: "/immigration/europe",
+      link: "/immigration/lithuania",
     },
   ];
 
@@ -109,7 +81,6 @@ const Countries = () => {
                       <h4 className="  text-xl font-medium">{country.name}</h4>
                       <HiArrowLongRight size={20} />
                     </div>
-                    <p className="  text-xs">{country.descripton}</p>
                   </section>
                 </div>
               </div>
