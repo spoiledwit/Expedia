@@ -19,11 +19,12 @@ function InfoCard({ info }: { info: Info }) {
     <div className="w-16 aspect-square -translate-y-1/2 grid place-items-center bg-primary-blue rounded-full">
       {info.icon}
     </div>
-    <section className="flex flex-col gap-4">
+    <section className="flex h-full justify-between flex-col gap-4">
       <h3 className="text-xl md:text-2xl text-center font-medium md:font-bold text-primary-blue">
         {info.title}
       </h3>
       <p className="text-black text-center text-sm">{info.description}</p>
+      <div />
     </section>
   </div>
   );

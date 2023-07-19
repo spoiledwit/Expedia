@@ -6,7 +6,7 @@ const Accordion = ({
   isOpen,
   onClick,
 }: {
-  data: { title: JSX.Element; content: JSX.Element };
+  data: { header: JSX.Element; content: JSX.Element };
   isOpen: boolean;
   onClick: () => void;
 }) => {
@@ -16,7 +16,7 @@ const Accordion = ({
         onClick={onClick}
         className=" text-primary-blue tracking-wide text-lg flex items-center justify-between w-full cursor-pointer"
       >
-        {data.title}
+        {data.header}
         <motion.div animate={{ rotate: isOpen ? 0 : 180 }} className="h-4">
           <IoIosArrowUp size={16} className="text-primary-blue" />
         </motion.div>

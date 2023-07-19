@@ -97,6 +97,11 @@ export const navLinks = [
     title: "Contact Us",
     href: "/contact",
   },
+  {
+    id: "payment",
+    title: "Payment",
+    href: "/payment",
+  },
 ];
 
 export { default as adminNav } from "./admin";

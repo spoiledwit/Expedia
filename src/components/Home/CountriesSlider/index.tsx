@@ -8,12 +8,6 @@ import { useNavigate } from "react-router-dom";
 import React, { useRef, useState, useEffect } from "react";
 
 const countries = [
-  // {
-  //   name: "Canada",
-  //   headline:
-  //     "From the tranquility of the magnificent wilderness to the hustle of cosmopolitan cities, explore the multifaceted charm.",
-  //   image: canada,
-  // },
   {
     name: "Australia",
     headline:
@@ -21,7 +15,7 @@ const countries = [
     image: aus,
   },
   {
-    name: "Poland",
+    name: "Europe",
     headline:
       "Experience the rich tapestry of diverse cultures, fascinating histories, and breathtaking landscapes.",
     image: europe,

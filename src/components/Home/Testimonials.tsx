@@ -27,24 +27,24 @@ const TestimonialCard = ({ testimonial }: { testimonial: Testemonial }) => {
 const Testimonials = () => {
   const testimonials: Testemonial[] = [
     {
-      customerName: "John Doe",
+      customerName: "Emily Johnson",
       rating: 4.7,
-      text: "Highly dedicated and professional immigration advisers helping to achieve Canadian immigration goals. Entire team were quite supportive throughout the process and assisted me in precisely step-by-step. Keep up the good work guys; hope you all will help millions of people like me to reach their milestones.",
+      text: "Highly dedicated and professional immigration advisers helping to achieve my immigration goals. Entire team were quite supportive throughout the process and assisted me in precisely step-by-step. Keep up the good work guys; hope you all will help millions of people like me to reach their milestones.",
     },
     {
-      customerName: "Kim Foe",
+      customerName: "David Rodriguez",
       rating: 5.0,
-      text: "Highly dedicated and professional immigration advisers helping to achieve Canadian immigration goals. Entire team were quite supportive throughout the process and assisted me in precisely step-by-step. Keep up the good work guys; hope you all will help millions of people like me to reach their milestones.",
+      text: "I had a complex immigration case that seemed almost impossible to resolve. However, the immigration company came to my rescue and turned things around for me. Their team's extensive knowledge of immigration laws and regulations was evident from the beginning.",
     },
     {
-      customerName: "Haly Asper",
+      customerName: "Sarah Thompson",
       rating: 5.0,
-      text: "Highly dedicated and professional immigration advisers helping to achieve Canadian immigration goals. Entire team were quite supportive throughout the process and assisted me in precisely step-by-step. Keep up the good work guys; hope you all will help millions of people like me to reach their milestones.",
+      text: "Centennial exceeded all my expectations in helping me navigate the complex immigration process. From day one, their team displayed a remarkable level of professionalism, integrity, and empathy. They patiently answered all my questions, alleviated my concerns, and provided clear guidance at every step.",
     },
   ];
 
   return (
-      <div className="w-full p-4 md:px-40 grid grid-cols-1 md:grid-cols-3 gap-8 xl:gap-20">
+      <div className="w-full p-4 md:px-20 xl:px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-20">
         {testimonials.map((t, i) => (
           <TestimonialCard key={i} testimonial={t} />
         ))}

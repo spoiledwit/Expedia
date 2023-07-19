@@ -1,5 +1,5 @@
 import { totTitleCase } from "../../../lib/utils";
-import { Contact } from "../../../types";
+import { Contact } from "../../../types"
 
 export default function DataTable({ contacts, onDelete }: { contacts: Contact[], onDelete: (id: string) => void }) {
   return (

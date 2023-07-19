@@ -43,7 +43,7 @@ const Faq = () => {
             <div className="h-[2px] w-1/2 my-4 bg-gray-200 self-center" />
           )}
           <Accordion
-            data={{ title: <p>{faq.question}</p>, content: <p>{faq.answer}</p> }}
+            data={{ header: <p>{faq.question}</p>, content: <p>{faq.answer}</p> }}
             isOpen={faq.index === openIndex}
             onClick={() =>
               faq.index === openIndex
