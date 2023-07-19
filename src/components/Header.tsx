@@ -87,7 +87,7 @@ const MobileNav = () => {
                       {link.children ? (
                         <Accordion
                           data={{
-                            title: (
+                            header: (
                               <Link
                                 onClick={onBeforeNavigate}
                                 to={link.href}

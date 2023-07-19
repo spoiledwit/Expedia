@@ -1,7 +1,7 @@
 import { useCookies } from "react-cookie";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import ContactsTable from "../../components/Admin/Contact/DataTable";
+import ContactsList from "../../components/Admin/Contact/DataTable";
 import { Contact } from "../../types";
 import toast from "react-hot-toast";
 
@@ -49,7 +49,7 @@ const ContactsPage = () => {
           <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
           </div>
           )}
-      <ContactsTable contacts={contacts} onDelete={deleteContact} />
+      <ContactsList contacts={contacts} onDelete={deleteContact} />
     </main>
   );
 };
