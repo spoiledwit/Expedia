@@ -5,7 +5,6 @@ import { RiCustomerService2Fill, RiReplyAllLine } from "react-icons/ri";
 import { GiProcessor } from "react-icons/gi";
 import { AiOutlineFileDone, AiOutlineFileSearch } from "react-icons/ai";
 import line from "../../assets/line.svg";
-import { useEffect, useState } from "react";
 
 type Info = {
   icon: JSX.Element;
