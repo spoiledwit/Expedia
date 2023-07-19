@@ -68,14 +68,14 @@ const Countries = () => {
               <div
                 key={country.name}
                 onClick={() => handleClick(country.link)}
-                className="relative w-[240px] h-[325px] hover:scale-105 rounded-lg overflow-hidden transition-all duration-300"
+                className="country-card relative w-[240px] h-[325px] rounded-lg overflow-hidden hover:scale-105 transition-all duration-300"
               >
                 <img
                   src={country.image}
                   alt={country.name}
-                  className="cursor-pointer absolute object-cover w-full h-full transition-all duration-500"
+                  className="cursor-pointer z-[1] hover:scale-110 absolute object-cover object-center w-full h-full"
                 />
-                <div className="flex items-end p-5 justify-center absolute bg-gradient-to-t from-black to-60% to-transparent w-full h-full bg-opacity-20 cursor-pointer">
+                <div className="flex items-end p-5 justify-center absolute z-[2] bg-gradient-to-t from-black to-60% to-transparent w-full h-full bg-opacity-20 cursor-pointer">
                   <section className="text-white flex flex-col gap-2">
                     <div className="w-full flex gap-4 items-center">
                       <h4 className="  text-xl font-medium">{country.name}</h4>
