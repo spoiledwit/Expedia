@@ -12,6 +12,7 @@ import AdminPage from "./pages/Admin/Contacts";
 import AdminLayout from "./AdminLayout";
 import UsersPage from "./pages/Admin/Users";
 import AssessmentsPage from "./pages/Admin/Assessments";
+import SmoothMigrationProcess from "./pages/SmoothMigrationProcess";
 
 const App = () => {
   const [cookies] = useCookies(["Authorization"]);
@@ -32,6 +33,7 @@ const App = () => {
           element={<ImmigrationPage />}
         />
         <Route path="/policy/:article" element={<PolicyPage />} />
+        <Route path="/smooth-migration-process" element={<SmoothMigrationProcess />} />
       </Route>
       <Route
         path="/admin"
