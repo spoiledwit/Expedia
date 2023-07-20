@@ -17,7 +17,6 @@ const AssessmentsPage = () => {
         Authorization: cookies.Authorization,
       },
     });
-    console.log(res.data);
     setAssessments(res.data);
     setLoading(false);
   };

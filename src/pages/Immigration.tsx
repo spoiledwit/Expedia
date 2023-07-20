@@ -14,8 +14,6 @@ const ImmigrationPage = () => {
   const countryData = immigrationData[countryName] as CountryData;
   let planData: PlanData | undefined = undefined;
   if (plan) {
-    console.log(plan, countryData.plans.values);
-    
     planData = countryData.plans.values.find((p) => p.id === plan) as PlanData;
   }
 

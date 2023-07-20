@@ -88,6 +88,53 @@ export const navLinks = [
     ],
   },
   {
+    id: "canada",
+    title: "Canada",
+    href:"immigration/canada",
+    children: [
+      {
+        id: "express-entry",
+        title: "Express Entry",
+        href: "immigration/canada/express-entry",
+      },
+      {
+        id: "aip",
+        title: "AIP",
+        href: "immigration/canada/aip",
+      },
+      {
+        id: "rnip",
+        title: "RNIP",
+        href: "immigration/canada/rnip",
+      },
+      {
+        id: "ycp",
+        title: "YCP",
+        href: "immigration/canada/ycp",
+      },
+      {
+        id: "pnp",
+        title: "PNP",
+        href: "immigration/canada/pnp",
+      },
+      {
+        id: "work-permit",
+        title: "Work Permit",
+        href: "immigration/canada/work-permit",
+      },
+      {
+        id: "study-visa",
+        title: "Study Visa",
+        href: "immigration/canada/study-visa",
+      },
+      {
+        id: "startup-visa",
+        title: "Startup Visa",
+        href: "immigration/canada/startup-visa",
+      },
+    ]
+  },
+  {
     id: "newzealand",
     title: "New Zealand",
     href:"immigration/newzealand",

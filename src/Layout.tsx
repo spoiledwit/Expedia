@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from "framer-motion";
 const Layout = () => {
   const FAB = () => {
     function handleClick() {
-      console.log("whatsapp");
+      console.log("wHaTSupp");
     }
 
     return (
