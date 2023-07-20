@@ -9,6 +9,7 @@ import { HiArrowLongRight } from "react-icons/hi2";
 import Malta from "../../assets/Malta.jpg"
 import Lithuania from "../../assets/lithinua.jpg";
 import finland from "../../assets/finland.jpeg";
+import canada from "../../assets/canada.jpeg";
 
 const Countries = () => {
   const navigate = useNavigate();
@@ -18,6 +19,11 @@ const Countries = () => {
       name: "Australia",
       image: australia,
       link: "/immigration/australia",
+    },
+    {
+      name: "Canada",
+      image: canada,
+      link: "/immigration/canada",
     },
     {
       name: "UK",
