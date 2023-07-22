@@ -110,7 +110,7 @@ const Footer = () => {
 
       <div className="w-full gap-x-5 grid grid-cols-2 md:grid-cols-4 gap-y-16 md:gap-y-0">
         {/* Quick Links */}
-        <section className=" flex flex-col gap-8">
+        <section className=" w-full flex flex-col gap-8">
           <h3 className="text-xl md:text-2xl font-medium md:font-bold text-white">Quick Links</h3>
           <div className="flex flex-col gap-2">
             {quickLinks.map((link, i) => (
@@ -127,7 +127,7 @@ const Footer = () => {
         </section>
 
         {/* Migrat To */}
-        <section className=" flex flex-col gap-8">
+        <section className=" w-full flex flex-col gap-8">
           <h3 className="text-xl md:text-2xl font-medium md:font-bold text-white">Migrate To</h3>
           <div className="flex flex-col gap-2">
             {immigrationCountries.map((link, i) => (
@@ -144,7 +144,7 @@ const Footer = () => {
         </section>
 
         {/* Important Links */}
-        <section className=" flex flex-col gap-8">
+        <section className=" w-full flex flex-col gap-8">
           <h3 className="text-xl md:text-2xl font-medium md:font-bold text-white">Important Links</h3>
           <div className="flex flex-col gap-2">
             {importantLinks.map((link, i) => (
@@ -161,9 +161,9 @@ const Footer = () => {
         </section>
 
         {/* Contact Us */}
-        <section className=" flex flex-col gap-8">
-          <h3 className="text-xl md:text-2xl font-medium md:font-bold text-white">Contact Us</h3>
-          <div className="flex flex-col gap-2">
+        <section className=" w-full flex flex-col gap-8">
+          <h3 className="w-full text-xl md:text-2xl font-medium md:font-bold text-white">Contact Us</h3>
+          <div className="flex w-full flex-col gap-2">
             <a
               className=" text-white hover:text-primary-gold transition-all"
               href="/"
@@ -174,7 +174,7 @@ const Footer = () => {
               className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
-              info@centennialmigration.com
+              info@centennial migration.com
             </a>
             <a
               className=" text-white hover:text-primary-gold transition-all"

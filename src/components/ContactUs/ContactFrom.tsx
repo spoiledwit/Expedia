@@ -172,7 +172,7 @@ const Form = ({
         </div>
         <textarea
           onChange={(e) => setText(e.target.value)}
-          className="w-full h-32 caret-primary-blue text-gray-200 bg-transparent border-[2px] border-primary-blue focus:border-primary-blue outline-none ring-0 transition-all rounded-xl p-4"
+          className="w-full h-32 caret-primary-gold text-gray-200 bg-transparent border-[2px] border-white/30 focus:border-primary-gold outline-none ring-0 transition-all rounded-xl p-4"
         />
         <button
           type="submit"
