@@ -10,6 +10,10 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.whitespace-initial{
+  white-space: initial;
+}
+
 .glass {
   background: rgba(255, 238, 238, 0.15);
   border: #f0f0f0 solid 1px;

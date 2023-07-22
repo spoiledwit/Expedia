@@ -18,10 +18,10 @@ const Layout = () => {
           initial={{ opacity: 0.5 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="bg-[#25D366] rounded-lg text-2xl md:text-3xl text-white hover:scale-110 hover:-translate-y-1 transition-all fixed p-2 bottom-0 right-0 mr-4 cursor-pointer mb-4"
+          className="bg-[#25D366] rounded-lg text-white hover:scale-110 hover:-translate-y-1 transition-all fixed p-2 bottom-8 md:bottom-4 right-4 cursor-pointer"
         >
           <span onClick={handleClick}>
-            <AiOutlineWhatsApp />
+            <AiOutlineWhatsApp className=" text-4xl" />
           </span>
         </motion.div>
       </AnimatePresence>
