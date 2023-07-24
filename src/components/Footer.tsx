@@ -82,7 +82,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className=" px-8 pt-10 pb-6 md:px-24 xl:px-40 md:pt-10 w-full bg-primary-blue flex flex-col">
+    <footer className=" z-10 relative px-8 pt-10 pb-6 md:px-24 xl:px-40 md:pt-10 w-full bg-primary-blue flex flex-col">
       <div className="w-full md:flex hidden flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
         <div className="w-1/2 md:grid hidden place-items-center">
           <Globe />
