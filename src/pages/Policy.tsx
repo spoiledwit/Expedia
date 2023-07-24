@@ -16,7 +16,7 @@ const PolicyPage = () => {
 
   return (
     <main className="w-full my-40 px-4 md:px-40 xl:px-80">
-      <article className="prose" dangerouslySetInnerHTML={{ __html: html }} />
+      <article className="md:prose-xl text-gray-700 prose-h1:text-primary-blue prose-h2:text-primary-blue prose-h3:text-primary-blue prose-lg" dangerouslySetInnerHTML={{ __html: html }} />
     </main>
   );
 };
