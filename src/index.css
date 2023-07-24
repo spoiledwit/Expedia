@@ -19,7 +19,6 @@
   border: #f0f0f0 solid 1px;
   backdrop-filter: blur(13px);
   -webkit-backdrop-filter: blur(13px);
-  border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 

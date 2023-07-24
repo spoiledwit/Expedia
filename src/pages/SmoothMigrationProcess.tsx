@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import img from "../assets/greece.jpg";
 import { motion } from "framer-motion";
 import BackgroundSVGs from "../components/SmoothMigrationProcess/BackgroundSVGs";
@@ -10,6 +11,15 @@ export default function SmoothMigrationProcess() {
 
   return (
     <main className="w-full flex flex-col gap-20 mb-40 bg-white">
+      <Helmet>
+        <title>
+          Successful Visa Consultancy and Application | Centennial Migration
+        </title>
+        <meta
+          name="description"
+          content="Centennial Migration are among the best visa consultancy in Pakistan, Dubai and India, with affordable prices, high success rates, and hassle-free service."
+      />
+      </Helmet>
       <div className=" h-screen bg-red-500 w-full relative">
         <img src={img} className=" h-screen w-full object-cover object-center" />
         <div className=" bg-black/20 w-full h-full absolute top-0 left-0" />
