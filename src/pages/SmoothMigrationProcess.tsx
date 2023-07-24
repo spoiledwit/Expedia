@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 export default function SmoothMigrationProcess() {
   useEffect(() => {
@@ -7,7 +8,17 @@ export default function SmoothMigrationProcess() {
 
   return (
     <main className="w-full my-40 bg-white px-4 md:px-40 xl:px-80">
+      <Helmet>
+        <title>
+        Successful Visa Consultancy and Application | Centennial Migration
+        </title>
+        <meta
+          name="description"
+          content="Centennial Migration are among the best visa consultancy in Pakistan, Dubai and India, with affordable prices, high success rates, and hassle-free service."
+     />
+      </Helmet>
       <article className="prose min-w-full">
+         
         <h1 id="smooth-migration-process-your-guide-to-successful-visa-application-and-consultancy">
           Smooth Migration Process: Your Guide to Successful Visa Application
           and Consultancy
