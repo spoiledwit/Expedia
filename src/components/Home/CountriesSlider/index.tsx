@@ -2,7 +2,7 @@
 import aus from "../../../assets/aus_im_cover.jpg";
 import europe from "../../../assets/europe_im_cover.jpg";
 import uk from "../../../assets/uk_im_cover.jpg";
-import { navLinks } from "../../../navs";
+import { mobileNavs } from "../../../navs";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import React, { useRef, useState, useEffect } from "react";
@@ -114,7 +114,8 @@ const CountriesSlider: React.FC<CountriesSliderProps> = ({ setColor }) => {
     const countryIndex = countryRefs.current.reduce(
       (prevIndex, currRef, index) => {
         //@ts-ignore
-        const prevOffset = countryRefs.current[prevIndex].current.getBoundingClientRect().top;
+        const prevOffset =
+          countryRefs.current[prevIndex].current.getBoundingClientRect().top;
         //@ts-ignore
         const currOffset = currRef.current.getBoundingClientRect().top;
 
@@ -208,7 +209,7 @@ const CountriesSlider: React.FC<CountriesSliderProps> = ({ setColor }) => {
               {activeCountry.headline}
             </p>
           </span>
-          {navLinks.map((link, index) => (
+          {mobileNavs.map((link, index) => (
             <div key={index} className=" flex flex-wrap gap-2 max-w-[500px]">
               {link.id === activeCountry.name.toLowerCase() &&
                 link.children?.map((child, index) => (

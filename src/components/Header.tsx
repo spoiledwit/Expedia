@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { navLinks } from "../navs";
+import { desktopNav, mobileNavs } from "../navs";
 import { Link, useLocation } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { RiMenu3Fill } from "react-icons/ri";
@@ -54,8 +54,9 @@ const MobileNav = () => {
     <div style={{ zIndex: 1000 }}>
       <RiMenu3Fill
         size={24}
-        className={`md:hidden ${!isVisible ? "text-white" : "text-black"} cursor-pointer`}
-
+        className={`md:hidden ${
+          !isVisible ? "text-white" : "text-black"
+        } cursor-pointer`}
         onClick={() => setIsOpen(true)}
       />
       {
@@ -79,7 +80,7 @@ const MobileNav = () => {
                   transition={{ ease: "easeOut", duration: 0.15 }}
                   className=" w-full flex flex-col"
                 >
-                  {navLinks.map((link, i) => (
+                  {mobileNavs.map((link, i) => (
                     <div key={link.id} className="flex flex-col w-full">
                       {i !== 0 && (
                         <div className="h-[2px] bg-gray-200 w-1/2 self-center my-[6px]" />
@@ -138,7 +139,11 @@ const MobileNav = () => {
                 onClick={onBeforeNavigate}
                 className="min-w-max self-center mt-8 p-2 bg-[#17205B] rounded-xl"
               >
-                <img src={logo} alt="logo" className="md:h-14 bg-[#17205B] h-12" />
+                <img
+                  src={logo}
+                  alt="logo"
+                  className="md:h-14 bg-[#17205B] h-12"
+                />
               </Link>
             </motion.div>
           )}
@@ -180,7 +185,6 @@ const Navbar = () => {
     visible: { opacity: 1, height: "auto" },
     hidden: { opacity: 0, height: 0 },
   };
-
 
   useEffect(() => {
     const linkEles = document.getElementsByClassName("nav-links");
@@ -241,9 +245,10 @@ const Navbar = () => {
         ) : null}
       </AnimatePresence>
 
-
       <header
-        className={`${isVisible ? "bg-white border" : "pt-5"} mt-5 mx-5 rounded-full flex flex-col  transition duration-200 ease-in-out z-50`}
+        className={`${
+          isVisible ? "bg-white border" : "pt-5"
+        } mt-5 mx-5 rounded-full flex flex-col  transition duration-200 ease-in-out z-50`}
       >
         <nav
           className={`w-full flex py-3 items-center justify-between border-gray-200 px-4 xl:px-24`}
@@ -253,25 +258,30 @@ const Navbar = () => {
           </Link>
           <div className="w-full hidden md:block">
             <ul id="desktop-nav" className="w-full flex justify-center">
-              {navLinks.map((link) => {
+              {desktopNav.map((link) => {
                 const isActive = location.pathname === link.href;
                 return (
                   <div
                     id={link.id}
                     key={link.id}
-                    className={`${isActive ? "text-primary-gold" : `${isVisible ? "text-black" : "text-white opacity-85"}  hover:text-primary-gold`
-                      } relative p-3 text-xs lg:text-sm whitespace-nowrap tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
+                    className={`${
+                      isActive
+                        ? "text-primary-gold"
+                        : `${
+                            isVisible ? "text-black" : "text-white opacity-85"
+                          }  hover:text-primary-gold`
+                    } relative p-3 text-xs lg:text-sm whitespace-nowrap tracking-wide font-poppins font-medium cursor-pointer transition-all nav-links `}
                   >
                     <Link
                       to={link.href}
                       className="uppercase flex items-center font-semibold text-sm py-2"
                     >
-                      <p className="text-xs">
-                        {link.title}
-                      </p>
+                      <p className="text-xs">{link.title}</p>
                       {link.children && <IoMdArrowDropdown size={16} />}
                     </Link>
-                    {link.children && <LinkDropdown key={link.id} link={link} />}
+                    {link.children && (
+                      <LinkDropdown key={link.id} link={link} />
+                    )}
                   </div>
                 );
               })}
