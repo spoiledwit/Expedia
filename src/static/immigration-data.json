@@ -262,6 +262,88 @@
       ]
     }
   },
+  "czech": {
+    "name": "czech republic",
+    "hero": {
+      "title": "Immigration To The Czech Republic",
+      "imageURL": "https://loremflickr.com/cache/resized/65535_52684007018_05b6e462c1_h_1280_720_nofilter.jpg",
+      "description": "Experience the allure of the Czech Republic's immigration opportunity, where ancient castles coexist with dynamic cities. Forge your future in a country known for its rich history."
+    },
+    "description": {
+      "title": "Discover All Czech Republic Immigration Options",
+      "html": "<p>Embrace a vibrant new chapter in your life by choosing Czech Republic's welcoming shores! Our immigration plan offers a seamless pathway to a land of opportunity, where you can thrive amidst stunning landscapes, rich culture, and a booming economy. Czech Republic's golden visa program opens doors to a plethora of benefits, granting you and your family the chance to experience Europe at its finest.</p><p>With Czech Republic's golden visa, you can enjoy hassle-free access to a country known for its warm climate, breathtaking coastlines, and an ever-growing cosmopolitan lifestyle. Unleash your potential by investing in Czech Republic's booming real estate market or contributing to its economic development, unlocking a world of possibilities for your future. Embrace a high-quality lifestyle, rich with diverse traditions, flavorsome cuisine, and a strong sense of community, as you embark on a transformative journey that will leave an indelible mark on your life.</p><p>Seize the opportunity today and embark on a remarkable adventure in Czech Republic - a land of opportunity, diversity, and endless enchantment awaits!</p>",
+      "slogan": "YOUR FUTURE, OUR PRIORITY"
+    },
+    "plans": {
+      "title": "WHY CHOOSE NOVUS VISA?",
+      "description": "Czech Republic's one of the most diverse countries of Europian Continent and without a doubt, one of the most beautiful, too. It is a country that has history surrounded its every nook and corner. It wears its culture and architectural heritage as a crown on its head. It has a very appropriate climate and weather for those who want to live and work in a safe, secure and stable place. A perfect environment to open a business and a family to settle down in, Czech Republic has it all, really. Plus, the technological, educational and occupational advancements and the overall development has given birth to ample amount of opportunities in the country, which has made it an ideal place for investors and people who want to open up their own businesses.",
+      "values": [
+        {
+          "id": "work-permit",
+          "name": "Work Permit",
+          "imageURL": "https://loremflickr.com/640/480/work",
+          "subtitle": "Work and live in Czech Republic with our work permit program.",
+          "description": {
+            "title": "Czech Republic Work Permit Program",
+            "slogan": "Work in Czech Republic",
+            "html": "<p>The Czech Republic Work Permit is available to any non-EU/EEA and non-Swiss foreign national who intends to work in Czech Republic. The permit is issued in conjunction with an employment license (formerly known as the employment permit) which is obtained by the employer. This permit allows the holder to legally reside and work in Czech Republic.</p><p>The process for obtaining a Czech Republic Work Permit includes a labor market test, and the employer must prove that the job was first advertised to the local and EU workforce. The permit is typically granted for a year and can be renewed.</p>"
+          }
+        },
+        {
+          "id": "investor-visa",
+          "name": "Investor Visa",
+          "imageURL": "https://loremflickr.com/640/480/investment",
+          "subtitle": "Secure your future with the Czech Republic Investor Visa program.",
+          "description": {
+            "title": "Czech Republic Investor Visa Program",
+            "slogan": "Invest and live in Czech Republic",
+            "html": "<p>The Czech Republic Individual Investor Programme (IIP) allows for the granting of citizenship by a certificate of naturalization to foreign individuals and their families who contribute to the economic and social development of Czech Republic. Applicants must meet several requirements, including a contribution to the national development fund, an investment in stocks or bonds, and a property transaction. Once granted, citizenship is passed on to future generations by descent.</p><p>Successful applicants gain the right to live, work and study in any of the 27 EU countries and Switzerland. They can also enjoy visa-free travel to more than 160 countries, including the USA.</p>"
+          }
+        }
+      ]
+    }
+  },
+  "portugal": {
+    "name": "Portugal",
+    "hero": {
+      "title": "Immigration To Portugal",
+      "imageURL": "https://loremflickr.com/cache/resized/65535_52684007018_05b6e462c1_h_1280_720_nofilter.jpg",
+      "description": "Experience the allure of the Portugal's immigration opportunity, where ancient castles coexist with dynamic cities. Forge your future in a country known for its rich history."
+    },
+    "description": {
+      "title": "Discover All Portugal Immigration Options",
+      "html": "<p>Embrace a vibrant new chapter in your life by choosing Portugal's welcoming shores! Our immigration plan offers a seamless pathway to a land of opportunity, where you can thrive amidst stunning landscapes, rich culture, and a booming economy. Portugal's golden visa program opens doors to a plethora of benefits, granting you and your family the chance to experience Europe at its finest.</p><p>With Portugal's golden visa, you can enjoy hassle-free access to a country known for its warm climate, breathtaking coastlines, and an ever-growing cosmopolitan lifestyle. Unleash your potential by investing in Portugal's booming real estate market or contributing to its economic development, unlocking a world of possibilities for your future. Embrace a high-quality lifestyle, rich with diverse traditions, flavorsome cuisine, and a strong sense of community, as you embark on a transformative journey that will leave an indelible mark on your life.</p><p>Seize the opportunity today and embark on a remarkable adventure in Portugal - a land of opportunity, diversity, and endless enchantment awaits!</p>",
+      "slogan": "YOUR FUTURE, OUR PRIORITY"
+    },
+    "plans": {
+      "title": "WHY CHOOSE NOVUS VISA?",
+      "description": "Portugal's one of the most diverse countries of Europian Continent and without a doubt, one of the most beautiful, too. It is a country that has history surrounded its every nook and corner. It wears its culture and architectural heritage as a crown on its head. It has a very appropriate climate and weather for those who want to live and work in a safe, secure and stable place. A perfect environment to open a business and a family to settle down in, Portugal has it all, really. Plus, the technological, educational and occupational advancements and the overall development has given birth to ample amount of opportunities in the country, which has made it an ideal place for investors and people who want to open up their own businesses.",
+      "values": [
+        {
+          "id": "work-permit",
+          "name": "Work Permit",
+          "imageURL": "https://loremflickr.com/640/480/work",
+          "subtitle": "Work and live in Portugal with our work permit program.",
+          "description": {
+            "title": "Portugal Work Permit Program",
+            "slogan": "Work in Portugal",
+            "html": "<p>The Portugal Work Permit is available to any non-EU/EEA and non-Swiss foreign national who intends to work in Portugal. The permit is issued in conjunction with an employment license (formerly known as the employment permit) which is obtained by the employer. This permit allows the holder to legally reside and work in Portugal.</p><p>The process for obtaining a Portugal Work Permit includes a labor market test, and the employer must prove that the job was first advertised to the local and EU workforce. The permit is typically granted for a year and can be renewed.</p>"
+          }
+        },
+        {
+          "id": "investor-visa",
+          "name": "Investor Visa",
+          "imageURL": "https://loremflickr.com/640/480/investment",
+          "subtitle": "Secure your future with the Portugal Investor Visa program.",
+          "description": {
+            "title": "Portugal Investor Visa Program",
+            "slogan": "Invest and live in Portugal",
+            "html": "<p>The Portugal Individual Investor Programme (IIP) allows for the granting of citizenship by a certificate of naturalization to foreign individuals and their families who contribute to the economic and social development of Portugal. Applicants must meet several requirements, including a contribution to the national development fund, an investment in stocks or bonds, and a property transaction. Once granted, citizenship is passed on to future generations by descent.</p><p>Successful applicants gain the right to live, work and study in any of the 27 EU countries and Switzerland. They can also enjoy visa-free travel to more than 160 countries, including the USA.</p>"
+          }
+        }
+      ]
+    }
+  },
   "australia": {
     "name": "australia",
     "hero": {
@@ -286,7 +368,7 @@
           "description": {
             "title": "Australia Visit Visa",
             "slogan": "Australian Immigration",
-            "html": "<p>Congratulations! Are you planning to visit Australia to explore the beautiful and relaxing beaches? Hold on a minute, have you applied for an Australia visitor visa yet? If not, we are here to help you secure your Australia visit visa hassle-free and faster. Centennial Migration Visas, the <strong>best immigration consultant</strong> and visit visa agency, provides visit visa services for significant countries like the US, UK, Thailand, Australia, and all major tourist destinations. <strong>Centennial Migration Visas</strong> is here to help you apply for your Australian visa through a smooth, hassle-free, and seamless process. We will guide you along the way and provide end-to-end guidance to ensure that your application and all required documentation are submitted on time. Schedule a free consultation with us to know how we can assist you with your travel requirements.</p><h3 id=\"documents-required-to-apply-for-an-australian-visit-visa\">Documents Required to Apply for an Australian Visit Visa</h3><p>The eligibility requirements to apply for an <strong>Australian visit visa</strong> are as follows:</p><ul><li>Valid passport with a validity of at least six months</li><li>Prove that you have enough funds to meet the trip costs</li><li>Police clearance certificate with zero criminal record</li><li>Meet all the health standards and submit the medical &amp; health examination report, if required</li><li>Provide all the valid documents and letters of Invitation from the sponsors</li><li>Be ready to provide all the supporting documents, if the case officer asks for</li><li>Travel itinerary (complete details of your trip, accommodation details, and point of contact details)</li><li>Passport-sized photographs</li><li>Proof of your return with a valid return ticket</li><li>Filled Australia tourist visa application</li></ul>"
+            "html": "<p>Congratulations! Are you planning to visit Australia from Dubai to explore the beautiful and relaxing beaches? Hold on a minute, have you applied for an Australia visitor visa from Dubai? If not, we are here to help you secure your Australia visit visa from Dubai hassle-free and faster. Centennial Migration Visas, the <strong>best immigration consultant</strong> and visit visa agency in Dubai, provides visit visa services for significant countries like the US, UK, Thailand, Australia, and all major tourist destinations. <strong>Centennial Migration Visas</strong> is here to help you apply for your Australian visa in Dubai through a smooth, hassle-free, and seamless process. We will guide you along the way and provide end-to-end guidance to ensure that your application and all required documentation are submitted on time. Schedule a free consultation with us to know how we can assist you with your travel requirements.</p><h3 id=\"documents-required-to-apply-for-an-australian-visit-visa\">Documents Required to Apply for an Australian Visit Visa</h3><p>The eligibility requirements to apply for an <strong>Australian visit visa</strong> are as follows:</p><ul><li>Valid passport with a validity of at least six months</li><li>Prove that you have enough funds to meet the trip costs</li><li>Police clearance certificate with zero criminal record</li><li>Meet all the health standards and submit the medical &amp; health examination report, if required</li><li>Provide all the valid documents and letters of Invitation from the sponsors</li><li>Be ready to provide all the supporting documents, if the case officer asks for</li><li>Travel itinerary (complete details of your trip, accommodation details, and point of contact details)</li><li>Passport-sized photographs</li><li>Proof of your return with a valid return ticket</li><li>Filled Australia tourist visa application</li></ul>"
           }
         },
         {

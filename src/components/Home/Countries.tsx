@@ -55,6 +55,16 @@ const Countries = () => {
       image: Lithuania,
       link: "/immigration/lithuania",
     },
+    {
+      name:"Czech Republic",
+      image: Lithuania,
+      link:"/immigration/czech"
+    },
+    {
+      name:"Portugal",
+      image: Lithuania,
+      line:"/immigration/portugal"
+    }
   ];
 
   const handleClick = (link: any) => {
