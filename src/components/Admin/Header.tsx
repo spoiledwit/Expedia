@@ -3,7 +3,7 @@ import { adminNav } from "../../navs";
 import { Link, useLocation } from "react-router-dom";
 
 export default function Header() {
-  const [_, __, removeCookie] = useCookies(["Authorization"]);
+  const cookie = useCookies(["Authorization"]);
 
   const location = useLocation();
   function isActiveLink(href: string) {
@@ -30,7 +30,7 @@ export default function Header() {
       </nav>
       <button
         className="disabled:cursor-wait whitespace-nowrap bg-green-500 hover:bg-green-400 disabled:bg-gray-500 disabled:hover:bg-gray-500 border rounded-lg px-6 flex items-center justify-center text-white h-10 outline-none"
-        onClick={() => removeCookie("Authorization")}
+        onClick={() => cookie[2]("Authorization")}
       >
         Log out
       </button>
