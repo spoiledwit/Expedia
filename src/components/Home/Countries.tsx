@@ -1,8 +1,7 @@
 // import canada from "../../assets/canada.jpeg";
-import australia from "../../assets/australia.jpg";
 import { useNavigate } from "react-router-dom";
+import australia from "../../assets/australia.jpg";
 import uk from "../../assets/uk.jpg";
-// import eu from "../../assets/eu.jpeg";
 import poland from "../../assets/poland.jpg";
 import newzealand from "../../assets/newzeeland.jpg";
 import { HiArrowLongRight } from "react-icons/hi2";
@@ -10,6 +9,8 @@ import Malta from "../../assets/Malta.jpg";
 import Lithuania from "../../assets/lithinua.jpg";
 import finland from "../../assets/finland.jpeg";
 import canada from "../../assets/canada.jpeg";
+import portugal from "../../assets/portugal.jpg";
+import czech from "../../assets/czech.jpg";
 
 const Countries = () => {
   const navigate = useNavigate();
@@ -47,12 +48,12 @@ const Countries = () => {
     },
     {
       name: "Portugal",
-      image: finland,
+      image: portugal,
       link: "/immigration/portugal",
     },
     {
       name: "Czech Republic",
-      image: finland,
+      image: czech,
       link: "/immigration/czech",
     },
     {

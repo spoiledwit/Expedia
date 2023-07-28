@@ -92,7 +92,7 @@ const MobileNav = () => {
                               <Link
                                 onClick={onBeforeNavigate}
                                 to={link.href}
-                                className="hover:text-primary-gold text-gray-600 transition-all"
+                                className="hover:text-primary-gold py-1 text-gray-600 transition-all"
                               >
                                 {link.title}
                               </Link>
@@ -125,7 +125,7 @@ const MobileNav = () => {
                           onClick={onBeforeNavigate}
                           key={link.id}
                           to={link.href}
-                          className="w-full max-w-[200px] flex items-center text-gray-700 hover:text-primary-gold transition-all"
+                          className="w-full max-w-[200px] py-1 flex items-center text-gray-700 hover:text-primary-gold transition-all"
                         >
                           {link.title}
                         </Link>
