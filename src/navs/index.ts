@@ -294,6 +294,19 @@ export const mobileNavs = [
     id: "czech",
     title: "Czech Republic",
     href: "immigration/czech",
+    children: [
+      {
+        id: "investor",
+        title: "Investor",
+        href: "immigration/czech/investor",
+      },
+
+      {
+        id: "work-permit",
+        title: "Work Permit",
+        href: "immigration/czech/work-permit",
+      },
+    ],
   },
   {
     id: "portugal",

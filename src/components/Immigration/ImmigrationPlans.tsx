@@ -13,23 +13,52 @@ const PlanCard = ({
   countryName: string;
   plan: PlanData;
 }) => {
-
   const pathname = useLocation().pathname;
 
   return (
     <Link
-      to={`/immigration/${countryName.toLocaleLowerCase()}/${plan.id}`}
-      className={`${pathname!==`/immigration/${countryName.toLocaleLowerCase()}/${plan.id}` && "hover:scale-105"}  relative transition duration-300 ease-in-out overflow-hidden rounded-2xl`}
+      to={`/immigration/${countryName.split(" ")[0].toLocaleLowerCase()}/${
+        plan.id
+      }`}
+      className={`${
+        pathname !==
+          `/immigration/${countryName.toLocaleLowerCase()}/${plan.id}` &&
+        "hover:scale-105"
+      }  relative transition duration-300 ease-in-out overflow-hidden rounded-2xl`}
     >
       <div className="w-full relative h-64 bg-primary-blue rounded-lg overflow-hidden">
         <img
-          src={countryName == "canada" ? canada : countryName == "europe" ? eu : countryName == "UK" ? uk : aus}
+          src={
+            countryName == "canada"
+              ? canada
+              : countryName == "europe"
+              ? eu
+              : countryName == "UK"
+              ? uk
+              : aus
+          }
           alt="Canada"
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className={`absolute inset-0 w-full h-full ${pathname===`/immigration/${countryName.toLocaleLowerCase()}/${plan.id}` ? "bg-black" : "bg-black"} opacity-50`}></div>
+        <div
+          className={`absolute inset-0 w-full h-full ${
+            pathname ===
+            `/immigration/${countryName.toLocaleLowerCase()}/${plan.id}`
+              ? "bg-black"
+              : "bg-black"
+          } opacity-50`}
+        ></div>
         <div className="absolute inset-0 px-3 py-5 justify-between w-full h-full flex flex-col bottom-0 gap-4">
-          <h4 className={`text-lg text-white uppercase  ${pathname===`/immigration/${countryName.toLocaleLowerCase()}/${plan.id}` ? "text-primary-gold" : "text-white"}`}>{plan.name}</h4>
+          <h4
+            className={`text-lg text-white uppercase  ${
+              pathname ===
+              `/immigration/${countryName.toLocaleLowerCase()}/${plan.id}`
+                ? "text-primary-gold"
+                : "text-white"
+            }`}
+          >
+            {plan.name}
+          </h4>
           <p className="text-white text-xs">{plan.subtitle}</p>
         </div>
       </div>

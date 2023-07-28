@@ -386,22 +386,22 @@
           "id": "work-permit",
           "name": "Work Permit",
           "imageURL": "https://loremflickr.com/640/480/work",
-          "subtitle": "Work and live in Malta with our work permit program.",
+          "subtitle": "Work and live in Czech Republic with our work permit program.",
           "description": {
-            "title": "Malta Work Permit Program",
-            "slogan": "Work in Malta",
-            "html": "<p>The Malta Work Permit is available to any non-EU/EEA and non-Swiss foreign national who intends to work in Malta. The permit is issued in conjunction with an employment license (formerly known as the employment permit) which is obtained by the employer. This permit allows the holder to legally reside and work in Malta.</p><p>The process for obtaining a Malta Work Permit includes a labor market test, and the employer must prove that the job was first advertised to the local and EU workforce. The permit is typically granted for a year and can be renewed.</p>"
+            "title": "Czech Republic Work Permit Program",
+            "slogan": "Work in Czech Republic",
+            "html": "<p>The Czech Republic Work Permit is available to any non-EU/EEA and non-Swiss foreign national who intends to work in Czech Republic. The permit is issued in conjunction with an employment license (formerly known as the employment permit) which is obtained by the employer. This permit allows the holder to legally reside and work in Czech Republic.</p><p>The process for obtaining a Czech Republic Work Permit includes a labor market test, and the employer must prove that the job was first advertised to the local and EU workforce. The permit is typically granted for a year and can be renewed.</p>"
           }
         },
         {
           "id": "investor-visa",
           "name": "Investor Visa",
           "imageURL": "https://loremflickr.com/640/480/investment",
-          "subtitle": "Secure your future with the Malta Investor Visa program.",
+          "subtitle": "Secure your future with the Czech Republic Investor Visa program.",
           "description": {
-            "title": "Malta Investor Visa Program",
-            "slogan": "Invest and live in Malta",
-            "html": "<p>The Malta Individual Investor Programme (IIP) allows for the granting of citizenship by a certificate of naturalization to foreign individuals and their families who contribute to the economic and social development of Malta. Applicants must meet several requirements, including a contribution to the national development fund, an investment in stocks or bonds, and a property transaction. Once granted, citizenship is passed on to future generations by descent.</p><p>Successful applicants gain the right to live, work and study in any of the 27 EU countries and Switzerland. They can also enjoy visa-free travel to more than 160 countries, including the USA.</p>"
+            "title": "Czech Republic Investor Visa Program",
+            "slogan": "Invest and live in Czech Republic",
+            "html": "<p>The Czech Republic Individual Investor Programme (IIP) allows for the granting of citizenship by a certificate of naturalization to foreign individuals and their families who contribute to the economic and social development of Czech Republic. Applicants must meet several requirements, including a contribution to the national development fund, an investment in stocks or bonds, and a property transaction. Once granted, citizenship is passed on to future generations by descent.</p><p>Successful applicants gain the right to live, work and study in any of the 27 EU countries and Switzerland. They can also enjoy visa-free travel to more than 160 countries, including the USA.</p>"
           }
         }
       ]
