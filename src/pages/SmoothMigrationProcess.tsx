@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 import img from "../assets/greece.jpg";
 import { motion } from "framer-motion";
-import BackgroundSVGs from "../components/SmoothMigrationProcess/BackgroundSVGs";
+// import BackgroundSVGs from "../components/SmoothMigrationProcess/BackgroundSVGs";
 
 export default function SmoothMigrationProcess() {
   useEffect(() => {
@@ -37,7 +37,7 @@ export default function SmoothMigrationProcess() {
       </div>
 
       <div className=" -z-0 w-full relaive h-max ">
-        <BackgroundSVGs />
+        
         <article className=" z-10 px-4 md:px-40 xl:px-80 prose-lg text-primary-blue prose-p:text-xl prose-p:text-gray-700 prose-h3:text-gray-700 min-w-full">
           <p>
             Planning to migrate to a new country can be an exciting but
@@ -56,7 +56,7 @@ export default function SmoothMigrationProcess() {
             The first step in any migration journey is to conduct thorough
             research about the country you wish to migrate to. Consider factors
             such as the immigration{" "}
-            <a href="https://centennialmigration.com/policy/privacy">
+            <a className="underline" href="https://centennialmigration.com/policy/privacy">
               policies
             </a>
             , job opportunities, cost of living, healthcare, education, and
@@ -167,7 +167,7 @@ export default function SmoothMigrationProcess() {
           <p>
             Embarking on a migration journey requires careful planning,
             comprehensive understanding of{" "}
-            <a href="https://mofa.gov.pk/visa-requirement/">
+            <a className="underline" href="https://mofa.gov.pk/visa-requirement/">
               visa requirements
             </a>
             , and expert guidance. Centennial Migration, with its years of
@@ -179,7 +179,7 @@ export default function SmoothMigrationProcess() {
           </p>
           <p>
             To learn more about{" "}
-            <a href="https://centennialmigration.com/">Centennial Migration</a>{" "}
+            <a className="underline" href="https://centennialmigration.com/">Centennial Migration</a>{" "}
             and begin your migration journey, you can contact them at:
           </p>
           <p>Email: info@centennialmigration.com</p>
