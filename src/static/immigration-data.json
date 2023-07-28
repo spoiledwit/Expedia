@@ -381,7 +381,30 @@
     "plans": {
       "title": "WHY CHOOSE NOVUS VISA?",
       "description": "Czech Republic's one of the most diverse countries of Europian Continent and without a doubt, one of the most beautiful, too. It is a country that has history surrounded its every nook and corner. It wears its culture and architectural heritage as a crown on its head. It has a very appropriate climate and weather for those who want to live and work in a safe, secure and stable place. A perfect environment to open a business and a family to settle down in, Czech Republic has it all, really. Plus, the technological, educational and occupational advancements and the overall development has given birth to ample amount of opportunities in the country, which has made it an ideal place for investors and people who want to open up their own businesses.",
-      "values": []
+      "values": [
+        {
+          "id": "work-permit",
+          "name": "Work Permit",
+          "imageURL": "https://loremflickr.com/640/480/work",
+          "subtitle": "Work and live in Malta with our work permit program.",
+          "description": {
+            "title": "Malta Work Permit Program",
+            "slogan": "Work in Malta",
+            "html": "<p>The Malta Work Permit is available to any non-EU/EEA and non-Swiss foreign national who intends to work in Malta. The permit is issued in conjunction with an employment license (formerly known as the employment permit) which is obtained by the employer. This permit allows the holder to legally reside and work in Malta.</p><p>The process for obtaining a Malta Work Permit includes a labor market test, and the employer must prove that the job was first advertised to the local and EU workforce. The permit is typically granted for a year and can be renewed.</p>"
+          }
+        },
+        {
+          "id": "investor-visa",
+          "name": "Investor Visa",
+          "imageURL": "https://loremflickr.com/640/480/investment",
+          "subtitle": "Secure your future with the Malta Investor Visa program.",
+          "description": {
+            "title": "Malta Investor Visa Program",
+            "slogan": "Invest and live in Malta",
+            "html": "<p>The Malta Individual Investor Programme (IIP) allows for the granting of citizenship by a certificate of naturalization to foreign individuals and their families who contribute to the economic and social development of Malta. Applicants must meet several requirements, including a contribution to the national development fund, an investment in stocks or bonds, and a property transaction. Once granted, citizenship is passed on to future generations by descent.</p><p>Successful applicants gain the right to live, work and study in any of the 27 EU countries and Switzerland. They can also enjoy visa-free travel to more than 160 countries, including the USA.</p>"
+          }
+        }
+      ]
     }
   },
   "portugal": {
