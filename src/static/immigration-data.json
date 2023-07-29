@@ -322,25 +322,14 @@
         {
           "id": "work-permit",
           "name": "Work Permit",
-          "imageURL": "https://loremflickr.com/640/480/work",
-          "subtitle": "Work and live in Portugal with our work permit program.",
+          "imageURL": "https://loremflickr.com/640/480/nature",
+          "subtitle": "Portugal offers abundant opportunities for workers, making it a fantastic place to kick-start your career with a work permit.",
           "description": {
             "title": "Portugal Work Permit Program",
-            "slogan": "Work in Portugal",
-            "html": "<p>The Portugal Work Permit is available to any non-EU/EEA and non-Swiss foreign national who intends to work in Portugal. The permit is issued in conjunction with an employment license (formerly known as the employment permit) which is obtained by the employer. This permit allows the holder to legally reside and work in Portugal.</p><p>The process for obtaining a Portugal Work Permit includes a labor market test, and the employer must prove that the job was first advertised to the local and EU workforce. The permit is typically granted for a year and can be renewed.</p>"
+            "html": "<p>Portugal, a member of the European Union, is an appealing destination for immigrants due to its steady economic growth and high living standards. It continues to open its doors to foreign workers to address labour shortages in certain sectors.</p><p>Portugal is still processing work permit applications. The following foreign workers are eligible:</p><ul><li><strong>Temporary workers</strong> holding a valid work permit or those approved for a work permit but have not yet been issued the permit</li><li><strong>IEC participants</strong> who have not yet activated their work permits must have a valid job offer to enter</li><li><strong>IEC participants</strong> who have already activated their work permits and were outside the country temporarily do not require a valid job offer to re-enter</li><li>If you’re <strong>travelling by air</strong>, you need to follow all airline requirements and pass a health check conducted by airlines before you’re allowed to board your flight. Anyone who shows symptoms of COVID-19 will <strong>not be allowed to enter</strong> Portugal by air.</li><li>Upon arrival in Portugal, your health will be assessed before you leave the port of entry. You must have a plan to <strong>quarantine for 14 days</strong> when you arrive in Portugal. <strong>This is mandatory, even if you have no symptoms</strong>. If you don’t have a plan, you should not travel to Portugal.</li><li>Only people who provide essential services, for example, truck drivers who regularly cross the border to maintain the flow of goods, are exempt from the quarantine requirements.</li></ul>",
+            "slogan": "PORTUGAL IMMIGRATION"
           }
-        },
-        {
-          "id": "investor-visa",
-          "name": "Investor Visa",
-          "imageURL": "https://loremflickr.com/640/480/investment",
-          "subtitle": "Secure your future with the Portugal Investor Visa program.",
-          "description": {
-            "title": "Portugal Investor Visa Program",
-            "slogan": "Invest and live in Portugal",
-            "html": "<p>The Portugal Individual Investor Programme (IIP) allows for the granting of citizenship by a certificate of naturalization to foreign individuals and their families who contribute to the economic and social development of Portugal. Applicants must meet several requirements, including a contribution to the national development fund, an investment in stocks or bonds, and a property transaction. Once granted, citizenship is passed on to future generations by descent.</p><p>Successful applicants gain the right to live, work and study in any of the 27 EU countries and Switzerland. They can also enjoy visa-free travel to more than 160 countries, including the USA.</p>"
-          }
-        }
+        }        
       ]
     }
   },

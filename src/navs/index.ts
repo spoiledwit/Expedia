@@ -85,6 +85,16 @@ export const navLinks = [
         title: "Lithuania",
         href: "immigration/lithuania",
       },
+      {
+        id: "portugal",
+        title: "Portugal",
+        href:"immigration/portugal"
+      },
+      {
+        id: "czech",
+        title: "Czech Republic",
+        href:"immigration/czech"
+      }
     ],
   },
   {
