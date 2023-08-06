@@ -11,7 +11,7 @@ const InfoHeader = () => {
           <div className="flex items-center">
             <AiOutlineMail className="mr-2" size={18} />
             <a href="/" className=" whitespace-nowrap">
-              info@skypass.com
+              info@centennialmigration.com
             </a>
           </div>
 
