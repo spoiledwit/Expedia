@@ -168,7 +168,7 @@ const Footer = () => {
               className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
-              Address House No. -, Street --, City
+             307C Capital Golden Tower, Business Bay, Dubai, United Arab Emirates
             </a>
             <a
               className=" text-white hover:text-primary-gold transition-all"

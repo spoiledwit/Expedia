@@ -1,4 +1,4 @@
-// import canada from "../../assets/canada.jpeg";
+
 import { useNavigate } from "react-router-dom";
 import australia from "../../assets/australia.jpg";
 import uk from "../../assets/uk.jpg";
@@ -66,6 +66,16 @@ const Countries = () => {
       image: Lithuania,
       link: "/immigration/lithuania",
     },
+    {
+      name:"Czech Republic",
+      image: czhech,
+      link:"/immigration/czech"
+    },
+    {
+      name:"Portugal",
+      image: portugal,
+      line:"/immigration/portugal"
+    }
   ];
 
   const handleClick = (link: any) => {
