@@ -28,8 +28,9 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "@types/react-slick": "^0.23.10",
     "autoprefixer": "10.4.15",
-    "postcss": "8.4.29",
-    "@types/react-slick": "^0.23.10"
+    "postcss": "8.4.29"
   }
 }
