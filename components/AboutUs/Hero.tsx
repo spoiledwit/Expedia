@@ -1,4 +1,4 @@
-import greece from "../../assets/greece.jpg";
+import london from "../../assets/london.jpeg";
 import Link from "next/link";
 import Motion from "../Motion";
 import AnimateToView from "../AnimateToView";
@@ -12,8 +12,8 @@ const Hero = () => {
         <Image
           layout="fill"
           objectFit="cover"
-          src={greece.src}
-          alt="greece wallpaper"
+          src={london.src}
+          alt="london wallpaper"
         />
       </div>
 

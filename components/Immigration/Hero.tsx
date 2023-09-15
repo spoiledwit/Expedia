@@ -2,7 +2,7 @@ import Image from "next/image";
 import canada from "../../assets/canada_im_cover.jpg";
 import australia from "../../assets/aus_im_cover.jpg";
 import europe from "../../assets/europe_im_cover.jpg";
-import uk from "../../assets/uk.jpg";
+import uk from "../../assets/europe_im_cover.jpg";
 import poland from "../../assets/poland.jpg";
 import newzealand from "../../assets/newzeeland.jpg";
 import malta from "../../assets/Malta.jpg";

@@ -29,36 +29,11 @@ const MobileNav = () => {
     setIsOpen(false);
   };
 
-  const [isVisible] = useState(false);
-  // const [lastScrollPos, setLastScrollPos] = useState(0);
-
-  // const handleScroll = () => {
-  //   const currentScrollPos = window.scrollY;
-  //   setIsVisible(
-  //     !(
-  //       (lastScrollPos > currentScrollPos && currentScrollPos < 100) ||
-  //       currentScrollPos < 100
-  //     )
-  //   );
-  //   setLastScrollPos(currentScrollPos);
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   // Cleanup function to remove the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [lastScrollPos]);
-
   return (
     <div style={{ zIndex: 1000 }}>
       <RiMenu3Fill
         size={24}
-        className={`md:hidden ${
-          !isVisible ? "text-white" : "text-black"
-        } cursor-pointer`}
+        className={`md:hidden text-white cursor-pointer`}
         onClick={() => setIsOpen(true)}
       />
       {
@@ -139,13 +114,13 @@ const MobileNav = () => {
               <Link
                 href={"/"}
                 onClick={onBeforeNavigate}
-                className="min-w-max relative self-center mt-8 p-2 bg-[#17205B] rounded-xl"
+                className=" w-24 h-24 relative self-center mt-8 p-2 rounded-xl"
               >
                 <Image
+                  objectFit="contain"
                   layout="fill"
                   src={logo.src}
                   alt="logo"
-                  className="md:h-14 bg-[#17205B] h-12"
                 />
               </Link>
             </motion.div>
@@ -248,13 +223,13 @@ const Navbar = () => {
 
       <header
         className={`${
-          isVisible ? "bg-white border" : "pt-5"
+          isVisible ? "md:bg-white md:border" : "pt-5"
         } mt-5 mx-5 rounded-full flex flex-col  transition duration-200 ease-in-out z-50`}
       >
         <nav
           className={`w-full flex py-3 items-center justify-between border-gray-200 px-4 xl:px-24`}
         >
-          <Link href={"/"} className=" relative w-80 h-full bg-black">
+          <Link href={"/"} className=" relative w-32 h-12">
             <Image
               objectFit="contain"
               layout="fill"
