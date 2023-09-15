@@ -173,7 +173,7 @@ const Footer = () => {
               className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
-              307C Capital Golden Tower, Business Bay, Dubai, United Arab
+              Regal Tower, 1608, Business Bay, Al Mustaqbal Street, Dubai, UAE
               Emirates
             </a>
             <a
