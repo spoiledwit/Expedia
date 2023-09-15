@@ -223,7 +223,7 @@ const Navbar = () => {
 
       <header
         className={`${
-          isVisible ? "md:bg-white md:border" : "pt-5"
+          isVisible ? "bg-white border" : "pt-5"
         } mt-5 mx-5 rounded-full flex flex-col  transition duration-200 ease-in-out z-50`}
       >
         <nav
