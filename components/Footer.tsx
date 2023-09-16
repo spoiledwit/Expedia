@@ -1,7 +1,5 @@
 import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
-import Globe from "./Home/Globe";
-import payments1 from "../assets/payments1.png";
 import Image from "next/image";
 
 const Footer = () => {
@@ -82,7 +80,6 @@ const Footer = () => {
     <footer className=" z-10 relative px-8 pt-10 pb-6 md:px-24 xl:px-40 md:pt-10 w-full bg-primary-blue flex flex-col">
       <div className="w-full md:flex hidden flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
         <div className="w-1/2 md:grid hidden place-items-center">
-          <Globe />
         </div>
         <section className=" text-white md:flex hidden text-lg font-medium flex-col w-full">
           <h3 className=" mb-8 text-white font-medium text-2xl md:text-4xl tracking-wide">
@@ -222,12 +219,12 @@ const Footer = () => {
           © 2021 All Rights Reserved. Centennial Migration
         </p>
         <div className=" md:block hidden relative w-full">
-          <Image
+          {/* <Image
             layout="fill"
             objectFit="contain"
             src={payments1.src}
             alt="payment providers"
-          />
+          /> */}
         </div>
       </div>
     </footer>
