@@ -12,7 +12,16 @@ export async function POST(req: Request) {
 
     const resp = await db
       .collection("contacts")
-      .insertOne({ name, email, phone, jobTitle, country, text });
+      .insertOne({
+        name,
+        email,
+        phone,
+        jobTitle,
+        country,
+        text,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      });
 
     if (resp.acknowledged) {
       return new Response("contact created", { status: 201 });
@@ -26,7 +35,7 @@ export async function POST(req: Request) {
 export async function GET() {
   try {
     const db = await getDb();
-    const contacts = db.collection("contacts").find().toArray();
+    const contacts = await db.collection("contacts").find().toArray();
 
     return successResponse(contacts);
   } catch (error) {

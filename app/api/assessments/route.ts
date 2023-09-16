@@ -20,17 +20,15 @@ export async function POST(req: Request) {
 
     const db = await getDb();
 
-    const resp = await db
-      .collection("assessments")
-      .insertOne({
-        name,
-        email,
-        phone,
-        jobTitle,
-        country,
-        visaType,
-        education,
-      });
+    const resp = await db.collection("assessments").insertOne({
+      name,
+      email,
+      phone,
+      jobTitle,
+      country,
+      visaType,
+      education,
+    });
 
     if (resp.acknowledged) {
       return new Response("contact created", { status: 201 });

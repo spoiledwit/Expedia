@@ -1,13 +1,20 @@
+"use client";
+
+import { toast } from "react-hot-toast";
 import { totTitleCase } from "../../../lib/utils";
 import { Contact } from "../../../types";
+import { deleteContact } from "@/lib/contact";
 
-export default function DataTable({
-  contacts,
-  onDelete,
-}: {
-  contacts: Contact[];
-  onDelete: (id: string) => void;
-}) {
+export default function DataTable({ contacts }: { contacts: Contact[] }) {
+  async function handleDelete(id: string) {
+    const success = await deleteContact(id);
+    if (success) {
+      toast.success("Item deleted!");
+    } else {
+      toast.error("Unable to delete item.");
+    }
+  }
+
   return (
     <main className="w-full overflow-x-scroll shadow-xl sm:rounded-lg">
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -44,11 +51,11 @@ export default function DataTable({
               <td className="px-6 py-4">{c.phone}</td>
               <td className="px-6 py-4">{c.jobTitle || "-"}</td>
               <td className="px-6 py-4">{totTitleCase(c.country)}</td>
-              <td className="px-6 py-4">{c.createdAt.substring(0, 10)}</td>
+              <td className="px-6 py-4">{c.createdAt?.substring(0, 10)}</td>
 
               <td className="px-6 py-4">
                 <button
-                  onClick={() => onDelete(c._id)}
+                  onClick={() => handleDelete(c._id)}
                   className="text-xs text-red-500 hover:underline underline-offset-1"
                 >
                   Delete
