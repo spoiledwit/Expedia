@@ -5,7 +5,6 @@ import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { BsChevronCompactDown } from "react-icons/bs";
-// import Slider from "react-slick";
 import home from "../../assets/hero_cover3.jpg";
 import canada from "../../assets/canada_im_cover.jpg";
 import aus from "../../assets/aus_im_cover.jpg";
@@ -13,8 +12,6 @@ import europe from "../../assets/europe_im_cover.jpg";
 import uk from "../../assets/uk_im_cover.jpg";
 import Link from "next/link";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useState } from "react";
 
 const Hero = () => {

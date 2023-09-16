@@ -1,6 +1,7 @@
 import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
-import Globe from "./Home/Globe";
+// import Globe from "./Home/Globe";
+import globe from "@/assets/globe.png";
 import payments1 from "../assets/payments1.png";
 import Image from "next/image";
 
@@ -81,8 +82,13 @@ const Footer = () => {
   return (
     <footer className=" z-10 relative px-8 pt-10 pb-6 md:px-24 xl:px-40 md:pt-10 w-full bg-primary-blue flex flex-col">
       <div className="w-full md:flex hidden flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
-        <div className="w-1/2 md:grid hidden place-items-center">
-          <Globe />
+        <div className="w-1/2 aspect-square relative md:grid hidden place-items-center">
+          <Image
+            src={globe.src}
+            alt="tranparent globe png"
+            layout="fill"
+            objectFit="contain"
+          />
         </div>
         <section className=" text-white md:flex hidden text-lg font-medium flex-col w-full">
           <h3 className=" mb-8 text-white font-medium text-2xl md:text-4xl tracking-wide">

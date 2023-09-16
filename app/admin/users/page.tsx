@@ -1,10 +1,10 @@
 "use client";
 
 import DataTable from "@/components/Admin/Users/DataTable";
-import axios from "axios";
-import { useCookies } from "react-cookie";
-import { User } from "@/types";
-import { toast } from "react-hot-toast";
+// import axios from "axios";
+// import { useCookies } from "react-cookie";
+// import { User } from "@/types";
+// import { toast } from "react-hot-toast";
 import { useState } from "react";
 
 const UsersPage = () => {
