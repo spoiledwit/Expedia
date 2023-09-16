@@ -8,7 +8,7 @@ type Testemonial = {
 
 const TestimonialCard = ({ testimonial }: { testimonial: Testemonial }) => {
   return (
-    <div className="w-full my-10 border-[1px] border-gray-200 rounded-2xl shadow-xl flex flex-col justify-between items-center">
+    <div className="w-full border-[1px] border-gray-200 rounded-2xl shadow-xl flex flex-col justify-between items-center">
       <div className="h-max flex flex-col items-end px-4 pt-4 md:pt-8 rounded-t-2xl">
         <p className="font-semibold text-slate-500 tracking-tight text-sm text-center">
           {testimonial.text}
@@ -44,7 +44,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className=" mt-40 mb-20 w-full p-4 md:px-20 lg:px-60 xl:px-60 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-20">
+    <div className=" mt-10 mb-10 w-full p-4 md:px-20 lg:px-60 xl:px-60 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 xl:gap-20">
       {testimonials.map((t, i) => (
         <TestimonialCard key={i} testimonial={t} />
       ))}
