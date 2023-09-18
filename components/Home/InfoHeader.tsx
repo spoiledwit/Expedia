@@ -27,7 +27,7 @@ const InfoHeader = () => {
           <div className="md:flex hidden items-center">
             <AiOutlinePhone className="mr-2" size={18} />
             <a href="/" className=" whitespace-nowrap">
-              +1 234 567 890
+              +971 58 244 6381
             </a>
           </div>
         </div>

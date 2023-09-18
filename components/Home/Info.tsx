@@ -84,7 +84,7 @@ export default function Info() {
 
   return (
     <div className="relative">
-      <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-20 md:gap-x-8 md:gap-y-20 my-20 px-16 md:px-20 xl:px-40">
+      <div className="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-20 md:gap-x-8 md:gap-y-20 my-10 px-16 md:px-20 xl:px-40">
         {infos.map((info) => (
           <InfoCard key={info.title} info={info} />
         ))}

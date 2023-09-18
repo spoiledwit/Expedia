@@ -28,20 +28,20 @@ const Contact = () => {
     );
   };
 
-  const handleSubmit = async (props: SubmitProps, e: any) => {
-    e.preventDefault();
-    if (validateProps(props)) {
-      const success = await createAssessment(props);
-      if (success) {
-        toast.success("Form submitted successfully!");
-        e.target.reset();
-      } else {
-        toast.error("Unable to submit form!");
-      }
-    } else {
-      toast.error("Please fill all the fields.");
-    }
-  };
+  // const handleSubmit = async (props: SubmitProps, e: any) => {
+  //   e.preventDefault();
+  //   if (validateProps(props)) {
+  //     const success = await createAssessment(props);
+  //     if (success) {
+  //       toast.success("Form submitted successfully!");
+  //       e.target.reset();
+  //     } else {
+  //       toast.error("Unable to submit form!");
+  //     }
+  //   } else {
+  //     toast.error("Please fill all the fields.");
+  //   }
+  // };
 
   const controlsForm = useAnimation();
   const { ref: refForm, inView: inViewForm } = useInView({
