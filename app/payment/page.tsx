@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ContactForm from "@/components/ContactUs/ContactFrom";
+import ContactForm from "@/components/ContactUs/ContactSection";
 import Hero from "@/components/ContactUs/Hero";
 import { Metadata } from "next";
 

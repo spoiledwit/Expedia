@@ -1,6 +1,8 @@
 import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
-// import Image from "next/image";
+import globe from "@/assets/globe.png";
+import payments1 from "../assets/payments1.png";
+import Image from "next/image";
 
 const Footer = () => {
   const quickLinks = [

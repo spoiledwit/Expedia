@@ -1,7 +1,7 @@
 "use client";
 
 // import canada from "../../../assets/canada_im_cover.jpg";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import aus from "../../../assets/aus_im_cover.jpg";
 import europe from "../../../assets/europe_im_cover.jpg";
 import uk from "../../../assets/uk_im_cover.jpg";
@@ -39,7 +39,6 @@ interface SmallSliderProps {
   activeCountry: {
     name: string;
   };
-  setActiveCountry: (country: { name: string }) => void;
   countryRefs: React.MutableRefObject<
     (React.RefObject<HTMLDivElement> | null)[]
   >;
@@ -53,36 +52,32 @@ const SmallSlider: React.FC<SmallSliderProps> = ({
   scrollPosition,
   imageHeight,
 }) => {
-  const handleImageClick = (country: any) => {
-    // find the index of the clicked country
-    const index = countries.findIndex((c) => c.name === country.name);
+  const handleImageClick = (index: number) => {
+    const clamp = 0.75;
 
-    // find the corresponding larger image
-    const targetImage = countryRefs.current[index];
+    // index of currently focused image
+    const currentIndex = Math.max(Math.floor(scrollPosition / imageHeight), 0);
+    // difference between current scroll position and new position
+    const dpos = (index - currentIndex) * imageHeight;
 
-    // smoothly scroll to the image
-    if (targetImage?.current) {
-      const targetPosition =
-        targetImage.current.getBoundingClientRect().top + scrollPosition;
-      window.scrollTo({
-        top: targetPosition,
-        behavior: "smooth",
-      });
-    }
+    window.scrollTo({
+      top: document.documentElement.scrollTop + dpos * clamp,
+      behavior: "smooth",
+    });
   };
 
   return (
     <div className="w-full h-full relative flex items-center justify-center">
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 bg-black">
         {countries.map((country, index) => (
           <div
             key={index}
-            className={`flex flex-col gap-2 relative bg-green-400 ${
+            onClick={() => handleImageClick(index)}
+            className={`relative border-2 aspect-square h-24 bg-gray-200 text-gray-800 transition-all ${
               Math.floor(scrollPosition / imageHeight) === index
-                ? "border-2 border-white"
-                : ""
-            } transition duration-500`}
-            onClick={() => handleImageClick(country)}
+                ? " border-white"
+                : " border-primary-blue"
+            }`}
           >
             <Image
               layout="fill"
@@ -102,7 +97,7 @@ const CountriesSlider: React.FC<CountriesSliderProps> = ({ setColor }) => {
   const [activeCountry, setActiveCountry] = useState(countries[0]);
   const countryRefs = useRef([]);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const imageHeight = 600; // Height of a single image
+  const imageHeight = 480; // Height of a single image
   countryRefs.current = countries.map(
     (_, i) => countryRefs.current[i] ?? React.createRef()
   );
@@ -131,6 +126,9 @@ const CountriesSlider: React.FC<CountriesSliderProps> = ({ setColor }) => {
     );
 
     setActiveCountry(countries[countryIndex]);
+    if (!setColor) {
+      return;
+    }
 
     // Check if all countries have been scrolled past
     const allCountriesPassed = countryRefs.current.every((ref) => {
@@ -138,10 +136,6 @@ const CountriesSlider: React.FC<CountriesSliderProps> = ({ setColor }) => {
       const offset = ref.current.getBoundingClientRect().top;
       return offset < 0;
     });
-
-    if (!setColor) {
-      return;
-    }
 
     if (allCountriesPassed) {
       setColor("#FFFFFF"); // Set color to white
@@ -158,6 +152,42 @@ const CountriesSlider: React.FC<CountriesSliderProps> = ({ setColor }) => {
     };
   }, []);
 
+  function CountryHero() {
+    const index = Math.max(Math.floor(scrollPosition / imageHeight), 0);
+    let _country: {
+      name: string;
+      headline: string;
+      image: StaticImageData;
+    };
+
+    if (index < countries.length) {
+      _country = countries[index];
+    } else {
+      _country = countries.at(-1);
+    }
+
+    return (
+      <div className="relative w-full h-full flex bg-pink-500 ">
+        <Link
+          href={`/immigration/${_country.name.toLowerCase()}`}
+          className=" w-full h-full bg-white cursor-pointer"
+        >
+          <Image
+            layout="fill"
+            objectFit="cover"
+            src={_country.image.src}
+            alt="country"
+          />
+        </Link>
+        <h2>
+          <span className="absolute bottom-10 right-10 text-white text-5xl font-bold p-5">
+            {_country.name}
+          </span>
+        </h2>
+      </div>
+    );
+  }
+
   return (
     <div
       style={{
@@ -168,27 +198,10 @@ const CountriesSlider: React.FC<CountriesSliderProps> = ({ setColor }) => {
       }}
     >
       <div className=" w-full overflow-hidden">
-        {countries.map((country, index) => (
-          <div className="relative w-full h-full flex bg-pink-500 " key={index}>
-            <Link
-              href={`/immigration/${country.name.toLowerCase()}`}
-              className=" w-full h-full bg-white cursor-pointer"
-            >
-              <Image
-                layout="fill"
-                objectFit="cover"
-                ref={countryRefs.current[index]}
-                src={country.image.src}
-                alt="country"
-              />
-            </Link>
-            <h2>
-              <span className="absolute bottom-10 right-10 text-white text-5xl font-bold p-5">
-                {country.name}
-              </span>
-            </h2>
-          </div>
-        ))}
+        {/* {countries.map((country, index) => ( */}
+
+        <CountryHero />
+        {/* ))} */}
       </div>
       <div className="sticky h-[310px] w-[200px] overflow-hidden top-80">
         <SmallSlider

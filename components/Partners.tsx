@@ -6,10 +6,6 @@ import test5 from "../assets/test5.svg";
 import test6 from "../assets/test6.svg";
 import test7 from "../assets/test7.svg";
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-// import Slider from "react-slick";
-
 const Partners = () => {
   const imageArray = [test1, test2, test3, test4, test5, test6, test7];
 
