@@ -1,6 +1,6 @@
 import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
 import Link from "next/link";
-import Image from "next/image";
+// import Image from "next/image";
 
 const Footer = () => {
   const quickLinks = [
@@ -171,7 +171,6 @@ const Footer = () => {
               href="/"
             >
               Regal Tower, 1608, Business Bay, Al Mustaqbal Street, Dubai, UAE
-              Emirates
             </a>
             <a
               className=" text-white hover:text-primary-gold transition-all"
@@ -183,7 +182,7 @@ const Footer = () => {
               className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
-              +01 2345678910
+              +971 58 244 6381
             </a>
           </div>
         </section>
