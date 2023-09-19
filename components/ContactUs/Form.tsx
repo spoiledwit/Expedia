@@ -4,7 +4,7 @@ import { useState } from "react";
 import Input from "../Input";
 import Select from "../Select";
 import { toast } from "react-hot-toast";
-import { createContact } from "../../lib/contact";
+// import { createContact } from "../../lib/contact";
 
 export type SubmitProps = {
   name: string;
@@ -42,13 +42,13 @@ export default function Form() {
       toast.error("Please fill all the fields.");
       return;
     }
-    const success = await createContact(props);
-    if (success) {
-      toast.success("Message sent successfully!");
-      e.target.reset();
-    } else {
-      toast.error("Unable to submit form!");
-    }
+    // const success = await createContact(props);
+    // if (success) {
+    //   toast.success("Message sent successfully!");
+    //   e.target.reset();
+    // } else {
+    //   toast.error("Unable to submit form!");
+    // }
   };
 
   const countries = [

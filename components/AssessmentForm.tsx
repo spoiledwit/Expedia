@@ -4,7 +4,7 @@ import { useState } from "react";
 import Input from "./Input";
 import Select from "./Select";
 import toast from "react-hot-toast";
-import { createAssessment } from "@/lib/assessment";
+// import { createAssessment } from "@/lib/assessment";
 
 export type SubmitProps = {
   name: string;
@@ -37,13 +37,13 @@ const AssessmentForm = () => {
       phone,
       visaType,
     };
-    const success = await createAssessment(props);
+    // const success = await createAssessment(props);
 
-    if (success) {
-      toast.success("Application Recieved!");
-    } else {
-      toast.error("Unable to submit application.");
-    }
+    // if (success) {
+    //   toast.success("Application Recieved!");
+    // } else {
+    //   toast.error("Unable to submit application.");
+    // }
   };
 
   const countries = [
