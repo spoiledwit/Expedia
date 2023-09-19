@@ -13,6 +13,5 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "react-hooks/exhaustive-deps": "off",
     "@typescript-eslint/ban-ts-comment": "off",
-    // ...other rules
   },
 }
