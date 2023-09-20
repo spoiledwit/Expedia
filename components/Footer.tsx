@@ -181,7 +181,7 @@ const Footer = () => {
               className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
-              +971 58 244 6381
+              +971565497013
             </a>
           </div>
         </section>
