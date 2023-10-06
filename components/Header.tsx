@@ -33,7 +33,7 @@ const MobileNav = () => {
     <div style={{ zIndex: 1000 }}>
       <RiMenu3Fill
         size={24}
-        className={`md:hidden text-white cursor-pointer`}
+        className={`md:hidden text-primary-blue mr-5 cursor-pointer`}
         onClick={() => setIsOpen(true)}
       />
       {
@@ -147,13 +147,9 @@ const Navbar = () => {
         currentScrollPos < 100
       )
     );
-    
-    // setting the header always visible when on payment page
     if (pathname === "/payment") {
       setIsVisible(true);
     }
-
-
     setLastScrollPos(currentScrollPos);
   };
 

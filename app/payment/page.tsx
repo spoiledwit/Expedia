@@ -13,7 +13,6 @@ const ContactUsPage = () => {
   const [loading, setLoading] = useState(false);
 
   const handlePayment = async () => {
-    //getting the payment link from the backend
     if (!name || !email || !amount) {
       return toast.error("Please fill all the fields");
     }
@@ -41,7 +40,7 @@ const ContactUsPage = () => {
         <title>Payment | Centennial Migration</title>
         <meta name="description" content="About Us | Expedia" />
       </Head>
-      <div className="md:px-32 mt-40 px-20">
+      <div className="md:px-32 mt-40 px-10">
        <h2 className=" font-serif text-center text-4xl">Pay Online</h2>
        <div
        className=" bg-primary-blue rounded-lg shadow-lg p-10 mt-10 flex flex-col gap-5"
