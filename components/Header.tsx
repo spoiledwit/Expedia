@@ -147,6 +147,13 @@ const Navbar = () => {
         currentScrollPos < 100
       )
     );
+    
+    // setting the header always visible when on payment page
+    if (pathname === "/payment") {
+      setIsVisible(true);
+    }
+
+
     setLastScrollPos(currentScrollPos);
   };
 
