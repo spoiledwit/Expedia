@@ -19,7 +19,7 @@ const ContactUsPage = () => {
     setLoading(true);
     try {
       setAmount(amount);
-      const res = await axios.post("http://localhost:4000/orders", {
+      const res = await axios.post("https://centennialpayment.vercel.app/orders", {
         amount: amount * 100,
         currency: "AED",
         customerEmail: email,
