@@ -10,7 +10,22 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Centennial Migration",
-  description: "Centennial Migration is a migration agency based in Dubai, UAE.",
+  description:
+    "Centennial Migration is a migration agency based in Dubai, UAE.",
+  icons: {
+    icon: [
+      {
+        media: "(prefers-color-scheme: dark)",
+        url: "/logo.svg",
+        href: "/logo.svg",
+      },
+      {
+        media: "(prefers-color-scheme: light)",
+        url: "/logo.svg",
+        href: "/logo.svg",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({

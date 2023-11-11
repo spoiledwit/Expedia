@@ -4,10 +4,10 @@ import australia from "../../assets/aus_im_cover.jpg";
 import europe from "../../assets/europe_im_cover.jpg";
 import uk from "../../assets/europe_im_cover.jpg";
 import poland from "../../assets/poland.jpg";
-import newzealand from "../../assets/newzeeland.jpg";
-import malta from "../../assets/Malta.jpg";
-import lithuania from "../../assets/lithinua.jpg";
-import finland from "../../assets/finland.jpeg";
+import newzealand from "../../assets/hero_cover3.jpg";
+import malta from "../../assets/hero_cover3.jpg";
+import lithuania from "../../assets/hero_cover3.jpg";
+import finland from "../../assets/hero_cover3.jpg";
 import portugal from "../../assets/portugal.jpg";
 import czech from "../../assets/czech.jpg";
 
@@ -54,9 +54,13 @@ const Hero = ({
   }
 
   return (
-    <div className="flex w-full h-[calc(100vh)] justify-center items-center">
-      <div className="absolute w-full h-[100vh] bg-black opacity-30"></div>
-      <div className=" w-full h-screen relative bg-green-300">
+    <div className="flex w-full h-[100vh] justify-center items-center">
+      <div 
+        className="absolute w-full h-screen bg-black opacity-30"
+        style={{ zIndex: 10 }}
+      />
+      <div 
+      className=" w-full h-screen relative bg-blue-900">
         <Image
           layout="fill"
           objectFit="cover"
@@ -65,7 +69,9 @@ const Hero = ({
           style={{ width: "100%" }}
         />
       </div>
-      <div className="absolute w-full h-screen flex px-4 md:px-20 xl:px-40">
+      <div
+      style={{ zIndex: 20 }}
+      className="absolute w-full h-screen flex px-4 md:px-20 xl:px-40">
         <div className="flex flex-col mt-20 justify-center items-start">
           <AnimateToView>
             <Motion

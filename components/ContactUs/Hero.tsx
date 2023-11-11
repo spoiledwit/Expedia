@@ -1,5 +1,5 @@
 import { BsChevronCompactDown } from "react-icons/bs";
-import pic from "../../assets/london.jpg";
+import pic from "../../assets/hero_cover3.jpg";
 import Image from "next/image";
 
 const Hero = () => {
