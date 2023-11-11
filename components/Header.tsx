@@ -154,6 +154,12 @@ const Navbar = () => {
   };
 
   useEffect(() => {
+    if (pathname === "/payment") {
+      setIsVisible(true);
+    }
+  }, [pathname]);
+
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 
     // Cleanup function to remove the event listener when the component unmounts
