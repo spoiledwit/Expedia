@@ -40,7 +40,7 @@ export default function ContactInfo() {
                 Email
               </h5>
               <a href="/" className=" text-primary-blue text-sm">
-                example@domain.com
+                info@centennialmigration.com
               </a>
             </section>
           </div>
