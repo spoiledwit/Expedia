@@ -5,13 +5,14 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 import { FAB } from "@/components/fab";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Centennial Migration",
   description:
-    "Centennial Migration is a migration agency based in Dubai, UAE.",
+    "Centennial Migration is an immigration agency based in Dubai, UAE.",
   icons: {
     icon: [
       {
@@ -44,6 +45,7 @@ export default function RootLayout({
           {children}
           <Footer />
           <FAB />
+          <SpeedInsights />
         </div>
       </body>
     </html>
