@@ -1,7 +1,7 @@
 import Consultancy from "@/components/Home/Consultancy";
 import Contact from "@/components/Home/Contact";
 import Countries from "@/components/Home/Countries";
-import CountriesSlider from "@/components/Home/CountriesSlider";
+// import CountriesSlider from "@/components/Home/CountriesSlider";
 import Hero from "@/components/Home/Hero";
 import Info from "@/components/Home/Info";
 import Testimonials from "@/components/Home/Testimonials";
@@ -29,7 +29,7 @@ export default function Home() {
         <Hero />
         <div className="md:block hidden">
           {/* <CountriesSlider setColor={setBgColor} /> */}
-          <CountriesSlider />
+          {/* <CountriesSlider /> */}
         </div>
       </div>
 
