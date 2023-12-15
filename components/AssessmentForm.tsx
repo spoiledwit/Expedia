@@ -4,62 +4,63 @@ import { useState } from "react";
 import Input from "./Input";
 import Select from "./Select";
 import toast from "react-hot-toast";
+import axios from "axios";
 // import { createAssessment } from "@/lib/assessment";
 
 export type SubmitProps = {
   name: string;
   email: string;
   phone: string;
-  jobTitle: string;
+  job: string;
   education: string;
-  country: string;
-  visaType: string;
+  nationality: string;
 };
 
 const AssessmentForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [jobTitle, setJobTitle] = useState("");
+  const [job, setJob] = useState("");
   const [education, setEducation] = useState("");
-  const [country, setCountry] = useState("");
-  const [visaType, setVisaType] = useState("");
+  const [nationality, setNationality] = useState("");
+
+  const validateProps = (props: SubmitProps): boolean => {
+    return (
+      !props.name ||
+      !props.email ||
+      !props.phone ||
+      !props.nationality ||
+      !props.job ||
+      !props.education
+    );
+  };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-
-    const props = {
-      name,
-      email,
-      jobTitle,
-      education,
-      country,
-      phone,
-      visaType,
-    };
-    // const success = await createAssessment(props);
-
-    // if (success) {
-    //   toast.success("Application Recieved!");
-    // } else {
-    //   toast.error("Unable to submit application.");
-    // }
+    const props = { name, email, phone, nationality, education, job };
+    if (validateProps(props)) {
+      toast.error("Please fill all the fields.");
+      return;
+    }
+    const response = await axios.post(`/api/contact`, props);
+    toast.success(response.data.message);
+    e.target.reset();
   };
 
-  const countries = [
-    { label: "Pakistan", value: "pakistan" },
-    { label: "India", value: "india" },
-    { label: "Bangladesh", value: "bangladesh" },
-  ];
+  // const countries = [
+  //   { label: "Pakistan", value: "pakistan" },
+  //   { label: "India", value: "india" },
+  //   { label: "Bangladesh", value: "bangladesh" },
+  // ];
 
-  const visaTypes = [
-    { label: "Study Visa", value: "study-visa" },
-    { label: "Work Visa", value: "work-visa" },
-    {
-      label: "Visit Visa",
-      value: "visit-visa",
-    },
-  ];
+  // const visaTypes = [
+  //   { label: "Study Visa", value: "study-visa" },
+  //   { label: "Work Visa", value: "work-visa" },
+  //   {
+  //     label: "Visit Visa",
+  //     value: "visit-visa",
+  //   },
+  // ];
 
   return (
     <form onSubmit={handleSubmit} className="w-full flex flex-col gap-8">
@@ -70,17 +71,14 @@ const AssessmentForm = () => {
         type="email"
         onChange={(e) => setEmail(e.target.value)}
       />
-      <Input label="Job Title" onChange={(e) => setJobTitle(e.target.value)} />
-      <Input label="Education" onChange={(e) => setEducation(e.target.value)} />
-      <Select
-        defaultLabel="Select a Country"
-        onChange={(e) => setCountry(e.target.value)}
-        options={countries}
+      <Input label="Job Title" onChange={(e) => setJob(e.target.value)} />
+      <Input
+        label="Education"
+        onChange={(e) => setNationality(e.target.value)}
       />
-      <Select
-        defaultLabel="Select a Visa Type"
-        onChange={(e) => setVisaType(e.target.value)}
-        options={visaTypes}
+      <Input
+        label="Nationality"
+        onChange={(e) => setEducation(e.target.value)}
       />
       <button
         type="submit"

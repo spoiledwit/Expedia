@@ -4,71 +4,48 @@ import { useState } from "react";
 import Input from "../Input";
 import Select from "../Select";
 import { toast } from "react-hot-toast";
+import axios from "axios";
 // import { createContact } from "../../lib/contact";
 
 export type SubmitProps = {
   name: string;
   email: string;
   phone: string;
-  jobTitle: string;
-  country: string;
-  text: string;
+  job: string;
+  education: string;
+  nationality: string;
 };
 
 export default function Form() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-  const [jobTitle, setJobTitle] = useState("");
-  const [country, setCountry] = useState("");
-  const [text, setText] = useState("");
+  const [job, setJob] = useState("");
+  const [education, setEducation] = useState("");
+  const [nationality, setNationality] = useState("");
 
   const validateProps = (props: SubmitProps): boolean => {
     return (
       !props.name ||
       !props.email ||
       !props.phone ||
-      !props.text ||
-      !props.country
+      !props.nationality ||
+      !props.job ||
+      !props.education
     );
   };
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
-
-    const props = { name, email, phone, text, country, jobTitle };
-
+    const props = { name, email, phone, nationality, education, job };
     if (validateProps(props)) {
       toast.error("Please fill all the fields.");
       return;
     }
-    // const success = await createContact(props);
-    // if (success) {
-    //   toast.success("Message sent successfully!");
-    //   e.target.reset();
-    // } else {
-    //   toast.error("Unable to submit form!");
-    // }
+    const response = await axios.post(`/api/contact`, props);
+    toast.success(response.data.message);
+    e.target.reset();
   };
-
-  const countries = [
-    {
-      value: "canada",
-      label: "Canada",
-    },
-    {
-      value: "australia",
-      label: "Australia",
-    },
-    {
-      value: "uk",
-      label: "UK",
-    },
-    {
-      value: "europe",
-      label: "Europe",
-    },
-  ];
 
   return (
     <div className="w-full p-8 bg-primary-blue rounded-xl shadow-2xl shadow-gray-500 flex flex-col gap-4">
@@ -91,19 +68,15 @@ export default function Form() {
             onChange={(e) => setEmail(e.target.value)}
           />
           <Input label="Phone" onChange={(e) => setPhone(e.target.value)} />
+          <Input label="Job Title" onChange={(e) => setJob(e.target.value)} />
           <Input
-            label="Job Title"
-            onChange={(e) => setJobTitle(e.target.value)}
-          />
-          <Select
-            options={countries}
-            defaultLabel="Select a Country"
-            onChange={(e) => setCountry(e.target.value)}
+            label="Education"
+            onChange={(e) => setEducation(e.target.value)}
           />
         </div>
-        <textarea
-          onChange={(e) => setText(e.target.value)}
-          className="w-full h-32 caret-primary-gold text-gray-200 bg-transparent border-[2px] border-white/30 focus:border-primary-gold outline-none ring-0 transition-all rounded-xl p-4"
+        <Input
+          onChange={(e) => setNationality(e.target.value)}
+          label="Nationality"
         />
         <button
           type="submit"
