@@ -49,7 +49,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
 
     const mailOptions = {
       from: "tbcgulfmarketing@gmail.com",
-      to: "talhabinay@gmail.com",
+      to: "spoiledwit@gmail.com",
       subject: "New Enquiry Received from Website",
       text: `You have a new enquiry from the website:
                  
