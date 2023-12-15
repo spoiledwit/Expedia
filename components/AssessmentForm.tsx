@@ -23,6 +23,7 @@ const AssessmentForm = () => {
   const [job, setJob] = useState("");
   const [education, setEducation] = useState("");
   const [nationality, setNationality] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const validateProps = (props: SubmitProps): boolean => {
     return (
@@ -37,13 +38,26 @@ const AssessmentForm = () => {
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
+    setLoading(true);
     const props = { name, email, phone, nationality, education, job };
     if (validateProps(props)) {
       toast.error("Please fill all the fields.");
       return;
     }
-    const response = await axios.post(`/api/contact`, props);
-    toast.success(response.data.message);
+    try {
+      const response = await axios.post(`/api/contact`, props);
+      toast.success(response.data.message);
+    } catch (error) {
+      console.log(error);
+      toast.error("Something went wrong!");
+    }
+    setLoading(false);
+    setName("");
+    setEmail("");
+    setEducation("");
+    setJob("");
+    setNationality("");
+    setPhone("");
     e.target.reset();
   };
 
@@ -81,10 +95,11 @@ const AssessmentForm = () => {
         onChange={(e) => setEducation(e.target.value)}
       />
       <button
+        disabled={loading}
         type="submit"
         className="mt-4 rounded-lg h-12 px-6 text-white hover:text-primary-gold text-lg bg-transparent border-[2px] border-secondary-blue hover:border-primary-gold transition-all"
       >
-        Submit
+        {loading ? "Submitting" : "Submit"}
       </button>
     </form>
   );
