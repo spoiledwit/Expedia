@@ -4,13 +4,6 @@ import axios from "axios";
 import { useState } from "react";
 import Input from "@/components/Input";
 import toast from "react-hot-toast";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Payment | Centennial Migration",
-  description:
-    "Centennial Migration are among the best visa consultancy in UAE, and India, with affordable prices, high success rates, and hassle-free service.",
-};
 
 const ContactUsPage = () => {
 
@@ -41,9 +34,12 @@ const ContactUsPage = () => {
     setLoading(false);
   };
 
-
   return (
     <div className="w-full min-h-screen mb-20">
+      <Head>
+        <title>Payment | Centennial Migration</title>
+        <meta name="description" content="Centennial Migration are among the best visa consultancy firms in UAE, and India, with affordable prices and hassle-free immigration services." />
+      </Head>
       <div className="md:px-32 mt-40 px-10">
        <h2 className=" font-serif text-center text-4xl">Pay Online</h2>
        <div
