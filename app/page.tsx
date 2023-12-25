@@ -11,6 +11,22 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Centennial Migration | UAE's top Visa consulting firm",
   description: "Centennial Migration: Your leading visa consultant and immigration agency in Dubai, UAE. Streamlining global relocation with expert guidance.",
+  openGraph: {
+    title: 'Centennial Migration | UAE\'s top Visa consulting firm',
+    description: 'Centennial Migration: Your leading visa consultant and immigration agency in Dubai, UAE. Streamlining global relocation with expert guidance.',
+    url: 'https://centennialmigration.com',
+    type: 'website',
+    siteName: 'Centennial Migration',
+    locale: 'en_US',
+    images: [
+      {
+        url: 'https://centennialmigration.com/ogimg.jpeg',
+        width: 800,
+        height: 500,
+        alt: 'Centennial Migration | UAE\'s top Visa consulting firm',
+      },
+    ],
+  }
 };
 
 export default function Home() {
