@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Centennial Migration",
   description:
-    "Centennial Migration is an immigration agency based in Dubai, UAE.",
+    "Centennial Migration: Your leading visa consultant and immigration agency in Dubai, UAE. Streamlining global relocation with expert guidance.",
   icons: {
     icon: [
       {
@@ -27,6 +27,9 @@ export const metadata: Metadata = {
         href: "/logo.svg",
       },
     ],
+  },
+  alternates: {
+    canonical: `https://www.centennialmigration.com`,
   },
 };
 

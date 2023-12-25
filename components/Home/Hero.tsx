@@ -81,7 +81,7 @@ const Hero = () => {
           <Image
             layout="fill"
             src={images[0].src}
-            alt=""
+            alt="Hero ImageCentennial Migration: Your leading visa consultant and immigration agency in Dubai, UAE. Streamlining global relocation with expert guidance."
             className="w-full h-full object-cover object-center"
           />
         </div>
