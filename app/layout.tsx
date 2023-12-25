@@ -5,9 +5,9 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
 import { Toaster } from "react-hot-toast";
 import { FAB } from "@/components/fab";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from '@vercel/analytics/react'
-import Script from 'next/script'
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,6 +34,67 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLD = {
+  "@context": "https://schema.org/",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://www.centennialmigration.com/",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "About",
+      item: "https://www.centennialmigration.com/about-us",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Immigration To Australia",
+      item: "https://www.centennialmigration.com/immigration/australia",
+    },
+    {
+      "@type": "ListItem",
+      position: 4,
+      name: "Immigration To UK",
+      item: "https://www.centennialmigration.com/immigration/uk",
+    },
+    {
+      "@type": "ListItem",
+      position: 5,
+      name: "Immigration To Europe",
+      item: "https://www.centennialmigration.com/immigration/europe",
+    },
+    {
+      "@type": "ListItem",
+      position: 6,
+      name: "Immigration To Canada",
+      item: "https://www.centennialmigration.com/immigration/canada",
+    },
+    {
+      "@type": "ListItem",
+      position: 7,
+      name: "Immigration To New Zealand",
+      item: "https://www.centennialmigration.com/immigration/newzealand",
+    },
+    {
+      "@type": "ListItem",
+      position: 8,
+      name: "Contact Us",
+      item: "https://www.centennialmigration.com/contact",
+    },
+    {
+      "@type": "ListItem",
+      position: 9,
+      name: "Payment",
+      item: "https://www.centennialmigration.com/payment",
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -41,7 +102,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-       <Script src="https://www.googletagmanager.com/gtag/js?id=G-5Y9K5KWPXV" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-5Y9K5KWPXV" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
@@ -51,8 +112,13 @@ export default function RootLayout({
           gtag('config', 'G-5Y9K5KWPXV');
         `}
       </Script>
+
       <body className={inter.className}>
         <Toaster />
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
+        />
         <div className="w-full fixed top-0 z-50">
           <Header />
         </div>
