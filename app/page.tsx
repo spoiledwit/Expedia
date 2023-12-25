@@ -22,7 +22,7 @@ export const metadata: Metadata = {
       {
         url: 'https://centennialmigration.com/ogimg.jpeg',
         width: 800,
-        height: 500,
+        height: 400,
         alt: 'Centennial Migration | UAE\'s top Visa consulting firm',
       },
     ],
