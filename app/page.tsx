@@ -10,7 +10,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Centennial Migration | UAE's top Visa consulting firm",
-  description: "Home | CentenniaImmigration",
+  description: "Centennial Migration: Your leading visa consultant and immigration agency in Dubai, UAE. Streamlining global relocation with expert guidance.",
 };
 
 export default function Home() {
