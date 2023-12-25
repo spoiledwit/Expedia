@@ -8,7 +8,7 @@ import { IoDocumentText } from "react-icons/io5";
 import AssessmentForm, { type SubmitProps } from "../AssessmentForm";
 import { FiSend } from "react-icons/fi";
 import { toast } from "react-hot-toast";
-import { createAssessment } from "../../lib/assessment";
+// import { createAssessment } from "../../lib/assessment";
 import Link from "next/link";
 
 const Contact = () => {
@@ -18,15 +18,15 @@ const Contact = () => {
     threshold: 0.1,
   });
 
-  const validateProps = (props: SubmitProps): boolean => {
-    return (
-      !!props.country &&
-      !!props.email &&
-      !!props.name &&
-      !!props.phone &&
-      !!props.visaType
-    );
-  };
+  // const validateProps = (props: SubmitProps): boolean => {
+  //   return (
+  //     !!props.country &&
+  //     !!props.email &&
+  //     !!props.name &&
+  //     !!props.phone &&
+  //     !!props.visaType
+  //   );
+  // };
 
   // const handleSubmit = async (props: SubmitProps, e: any) => {
   //   e.preventDefault();

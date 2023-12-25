@@ -6,7 +6,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Successful Visa Consultancy and Application | Centennial Migration",
   description:
-    "Centennial Migration are among the best visa consultancy in Pakistan, Dubai and India, with affordable prices, high success rates, and hassle-free service.",
+    "Centennial Migration are among the best visa consultancy in UAE, and India, with affordable prices, high success rates, and hassle-free service.",
 };
 
 export default function SmoothMigrationProcess() {

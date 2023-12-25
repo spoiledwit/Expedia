@@ -1,4 +1,12 @@
 import policies from "@/content/policies.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Privacy Policy | Centennial Migration",
+  description:
+    "Centennial Migration are among the best visa consultancies in UAE, and India, with affordable prices, high success rates, and hassle-free immigration services.",
+};
+
 
 const PolicyPage = ({ params }: { params: { article: string } }) => {
   // @ts-ignore

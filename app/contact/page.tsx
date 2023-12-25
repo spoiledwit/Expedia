@@ -3,8 +3,9 @@ import Hero from "@/components/ContactUs/Hero";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Expedia",
-  description: "Contact Us | Expedia",
+  title: "Contact Us | Centennial Migration",
+  description:
+    "Centennial Migration are among the best visa consultancy in UAE, and India, with affordable prices, high success rates, and hassle-free service.",
 };
 
 const ContactUsPage = () => {

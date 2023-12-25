@@ -4,9 +4,11 @@ import StartProcess from "@/components/AboutUs/StartProcess";
 import StepsToApply from "@/components/AboutUs/StepsToApply";
 import { Metadata } from "next";
 
+
 export const metadata: Metadata = {
-  title: "About Us | CentenniaImmigration",
-  description: "About Us | CentenniaImmigration",
+  title: "About Us | Centennial Migration",
+  description:
+    "Centennial Migration are among the best visa consultancies in UAE, and India, with affordable prices, high success rates, and hassle-free immigration services.",
 };
 
 export default function AboutUs() {

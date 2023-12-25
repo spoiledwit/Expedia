@@ -16,9 +16,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (plan) {
     title = `${totTitleCase(plan)} | ${totTitleCase(
       country
-    )} | CentenniaImmigration`;
+    )} | Centennial Migration`;
   } else {
-    title = `${totTitleCase(country)} | CentenniaImmigration`;
+    title = `${totTitleCase(country)} | Centennial Migration`;
   }
 
   return {
