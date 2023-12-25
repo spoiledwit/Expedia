@@ -112,6 +112,7 @@ export default function RootLayout({
           gtag('config', 'G-5Y9K5KWPXV');
         `}
       </Script>
+      
 
       <body className={inter.className}>
         <Toaster />
