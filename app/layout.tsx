@@ -7,6 +7,7 @@ import { Toaster } from "react-hot-toast";
 import { FAB } from "@/components/fab";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/react'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,6 +41,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+       <Script src="https://www.googletagmanager.com/gtag/js?id=G-5Y9K5KWPXV" />
+      <Script id="google-analytics">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'G-5Y9K5KWPXV');
+        `}
+      </Script>
       <body className={inter.className}>
         <Toaster />
         <div className="w-full fixed top-0 z-50">
