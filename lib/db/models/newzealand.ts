@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+import mongoose from "mongoose";
 
 const EducationSchema = new mongoose.Schema({
   masterOrBachelors: { type: String, required: true },
