@@ -1,3 +1,10 @@
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
 export const totTitleCase = (s: string): string =>
   s
     .replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())

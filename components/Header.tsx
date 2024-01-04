@@ -30,7 +30,8 @@ const MobileNav = () => {
   };
 
   return (
-    <div style={{ zIndex: 1000 }}>
+    <div
+    style={{ zIndex: 1000 }}>
       <RiMenu3Fill
         size={24}
         className={`md:hidden text-primary-blue mr-5 cursor-pointer`}
@@ -147,7 +148,7 @@ const Navbar = () => {
         currentScrollPos < 100
       )
     );
-    if (pathname === "/payment") {
+    if (pathname === "/payment" || pathname === "/verifier") {
       setIsVisible(true);
     }
     setLastScrollPos(currentScrollPos);
@@ -198,7 +199,7 @@ const Navbar = () => {
           ease: "circOut",
           duration: 0.15,
         }}
-        className="px-0 rounded-xl z-[100] overflow-hidden min-w-[180px] rounded-b-md shadow-xl shadow-black/[0.2] bg-white "
+        className={`px-0 rounded-xl z-[100] overflow-hidden min-w-[180px] rounded-b-md shadow-xl shadow-black/[0.2] bg-white`}
       >
         {link.children.map((c) => (
           <Link
@@ -233,7 +234,7 @@ const Navbar = () => {
       <header
         className={`${
           isVisible ? "bg-white border" : "pt-5"
-        } mt-5 mx-5 rounded-full flex flex-col  transition duration-200 ease-in-out z-50`}
+        } ${usePathname().includes("dashboard") ? "hidden" : ""} mt-5 mx-5 rounded-full flex flex-col  transition duration-200 ease-in-out z-50`}
       >
         <nav
           className={`w-full flex py-3 items-center justify-between border-gray-200 px-4 xl:px-24`}

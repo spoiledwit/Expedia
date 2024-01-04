@@ -3,10 +3,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
-import { Toaster } from "react-hot-toast";
 import { FAB } from "@/components/fab";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -133,7 +133,7 @@ fbq('track', 'PageView');
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLD) }}
         />
-        <div className="w-full fixed top-0 z-50">
+        <div className={`w-full fixed top-0 z-50`}>
           <Header />
         </div>
         <div className="relative">
