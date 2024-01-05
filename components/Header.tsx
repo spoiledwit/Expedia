@@ -30,8 +30,7 @@ const MobileNav = () => {
   };
 
   return (
-    <div
-    style={{ zIndex: 1000 }}>
+    <div style={{ zIndex: 1000 }}>
       <RiMenu3Fill
         size={24}
         className={`md:hidden text-primary-blue mr-5 cursor-pointer`}
@@ -232,9 +231,13 @@ const Navbar = () => {
       </AnimatePresence>
 
       <header
-        className={`${
-          isVisible ? "bg-white border" : "pt-5"
-        } ${usePathname().includes("dashboard") ? "hidden" : ""} mt-5 mx-5 rounded-full flex flex-col  transition duration-200 ease-in-out z-50`}
+        className={`${isVisible ? "bg-white border" : "pt-5"} ${
+          usePathname().includes("dashboard") ||
+          usePathname().includes("applications") ||
+          usePathname().includes("admin") 
+            ? "hidden"
+            : ""
+        } mt-5 mx-5 rounded-full flex flex-col  transition duration-200 ease-in-out z-50`}
       >
         <nav
           className={`w-full flex py-3 items-center justify-between border-gray-200 px-4 xl:px-24`}

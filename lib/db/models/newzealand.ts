@@ -90,5 +90,5 @@ const FormSchema = new mongoose.Schema({
     timestamps: true,
 });
 
-const NewzealandForm = mongoose.models.Form || mongoose.model('Form', FormSchema);
+const NewzealandForm = mongoose.models.NewzealandForm || mongoose.model('NewzealandForm', FormSchema);
 export default NewzealandForm;

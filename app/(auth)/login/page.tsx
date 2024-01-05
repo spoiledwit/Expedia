@@ -33,7 +33,6 @@ const Login = () => {
     },
   });
 
-  const router = useRouter();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
@@ -58,7 +57,7 @@ const Login = () => {
         title: "Success!",
         description: "You have successfully logged in.",
       });
-      window.location.href = "/dashboard";
+      window.location.href = "/";
     }
     setIsSubmitting(false);
   }

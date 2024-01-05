@@ -23,7 +23,7 @@ const Sidebar = () => {
     {
       id: 1,
       name: "Applications",
-      href: "/dashboard",
+      href: "/applications",
     },
   ];
 
