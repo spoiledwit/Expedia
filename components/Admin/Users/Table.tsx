@@ -22,7 +22,7 @@ export function UsersTable() {
   const fetchusers = async () => {
     setloading(true);
     try {
-      const res = await axios.get("/api/admin/users");
+      const res = await axios.get(`/api/admin/users?_=${new Date().getTime()}`);
       setusers(res.data.users);
     } catch (error) {
       console.log(error);
