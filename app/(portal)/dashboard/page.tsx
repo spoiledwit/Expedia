@@ -18,7 +18,8 @@ const DashboardPage = () => {
     try {
       setLoading(true);
       const response = await axios.get("/api/newzealand");
-      if (response.data) {
+      console.log(response.data);
+      if (response.data.applications.length > 0) {
         setHasApplications(true);
       } else {
         setHasApplications(false);
