@@ -74,7 +74,9 @@ const CreateUser = () => {
     "Poland Work Permit Process",
     "Czech Republic",
     "Australia",
-    "UK Work Permit"
+    "UK Work Permit",
+    "Malta Work Permit",
+    "Finland Work Permit",
   ];
 
   const handleCountryChange = (country: string, checked: boolean) => {
