@@ -35,7 +35,6 @@ export const authOptions = {
           const user = await login(credentials);
           return user;
         } catch (err: any) {
-          console.log(err);
           throw new Error(err.message);
         }
       },
@@ -46,12 +45,14 @@ export const authOptions = {
       if (user) {
         token.email = user.email;
         token.id = user.id;
+        token.isAdmin = await ensureAdmin(user.id);
       }
       return token;
     },
     async session({ session, token }: { session: any; token: any }) {
       session.user.email = token.email;
       session.user.id = token.id;
+      session.user.isAdmin = token.isAdmin;
       return session;
     },
   },

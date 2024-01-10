@@ -12,16 +12,12 @@ const Footer = () => {
       href: "/about-us",
     },
     {
-      name: "Services",
-      href: "/",
+      name: "Admin Portal",
+      href: "/admin",
     },
     {
-      name: "Pay Online",
-      href: "/",
-    },
-    {
-      name: "Free Assessment",
-      href: "/",
+      name: "Client Portal",
+      href: "/dashboard",
     },
   ];
 

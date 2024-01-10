@@ -5,9 +5,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { signIn } from "next-auth/react";
 import { useToast } from "@/components/ui/use-toast";
+import { getSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import {
   Form,
@@ -25,6 +25,7 @@ const formSchema = z.object({
 });
 
 const Login = () => {
+  const router = useRouter();
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -37,28 +38,44 @@ const Login = () => {
   const { toast } = useToast();
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
     setIsSubmitting(true);
     const { email, password } = values;
-    const result = await signIn("credentials", {
-      redirect: false,
-      email,
-      password,
-    });
-
-    if (result?.error) {
+    try {
+      const result = await signIn("credentials", {
+        redirect: false,
+        email,
+        password,
+      });
+      if (result?.error) {
+        toast({
+          title: "Error",
+          description: result.error,
+          variant: "destructive",
+        });
+        setIsSubmitting(false);
+        return;
+      } else {
+        toast({
+          title: "Logged in successfully!",
+          description: "You are now logged in to your account.",
+        });
+        const session = await getSession();
+        //@ts-ignore
+        if (session?.user?.isAdmin) {
+          router.push("/admin/dashboard");
+        } else {
+          router.push("/dashboard");
+        }
+      }
+    } catch (error) {
+      console.log(error);
       toast({
-        title: result.error,
-        description: "Please try again.",
+        title: "Error",
+        description: "Something went wrong. Please try again.",
         variant: "destructive",
       });
-    } else {
-      toast({
-        title: "Success!",
-        description: "You have successfully logged in.",
-      });
-      window.location.href = "/";
     }
+
     setIsSubmitting(false);
   }
 
@@ -66,7 +83,7 @@ const Login = () => {
     <div className="flex items-center justify-center flex-col min-h-screen">
       <h1 className="text-3xl font-semibold mb-8">
         Welcome{" "}
-        <span className="text-white bg-yellow-500 px-2 italic">Back!</span>{" "}
+        <span className="text-white bg-primary-gold px-2 italic">Back!</span>{" "}
       </h1>
       <div className=" min-w-[300px]">
         <Form {...form}>
@@ -97,19 +114,13 @@ const Login = () => {
                 </FormItem>
               )}
             />
-            <div className="flex items-center justify-between">
+
+            {/* <div className="flex items-center justify-between">
               <a href="#" className="text-sm text-gray-400 hover:text-gray-600">
                 Forgot password?
               </a>
-            </div>
-            <div className="flex items-center justify-between">
-              <Link
-                href="/register"
-                className="text-sm text-gray-400 hover:text-gray-600"
-              >
-                Don't have an account? Sign up
-              </Link>
-            </div>
+            </div> */}
+
             <Button type="submit">
               {isSubmitting ? "Submitting..." : "Login"}
             </Button>

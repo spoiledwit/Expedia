@@ -9,38 +9,42 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const { setStatus } = useAuthStore();
+
   useEffect(() => {
-    storeInitializer();
+    handleStoreInit();
+  }, []);
+
+  const handleStoreInit = async () => {
+    setStatus("loading");
+    await storeInitializer();
     if (auth) {
       setStatus("success");
     } else {
       setStatus("error");
     }
-  }, []);
-  const { auth, status } = useAuthStore();
+  };
 
-  if (status === "error" || !auth) {
+  const { auth } = useAuthStore();
+
+  if (!auth) {
     return (
       <div className=" min-h-screen flex flex-col justify-center items-center">
         <h1 className="text-4xl text-gray-900">
           Please login to access this page
         </h1>
+        <Button
+        className="mt-3"
+        >
+          <Link href="/login">Login</Link>
+        </Button>
       </div>
     );
   }
-
-  // if (!auth.isAdmin) {
-  //   return (
-  //     <div className=" min-h-screen flex flex-col justify-center items-center">
-  //       <h1 className="text-4xl text-gray-900">
-  //         You are not authorized to access this page
-  //       </h1>
-  //     </div>
-  //   );
-  // }
 
   return (
     <ResizablePanelGroup

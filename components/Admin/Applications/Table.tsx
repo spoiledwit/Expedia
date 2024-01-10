@@ -23,6 +23,7 @@ export function ApplicationsTable() {
     setLoading(true);
     try {
       const res = await axios.get("/api/admin/applications");
+      console.log(res.data.applications);
       setApplications(res.data.applications);
     } catch (error) {
       console.log(error);
@@ -55,7 +56,7 @@ export function ApplicationsTable() {
           <TableRow key={application._id}>
             <TableCell className="font-medium">{application._id}</TableCell>
             <TableCell>{application.givenName}</TableCell>
-            <TableCell>{application.user.email}</TableCell>
+            <TableCell>{application.user?.email}</TableCell>
             <TableCell>{application.contactNumber}</TableCell>
             <TableCell>{application.education.length} {application.education ? "Education Listed" : "Not Educated"}</TableCell>
             <TableCell>{application.jobs.length} {application.jobs.length > 0 ? "Jobs listed" : "No Jobs Listed"}</TableCell>

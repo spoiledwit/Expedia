@@ -3,35 +3,42 @@
 import useAuthStore from "@/store/authStore";
 import Link from "next/link";
 import React, { useEffect } from "react";
-import {Button} from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { storeInitializer } from "@/lib/actions/storeInitializer";
 
-export default function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function Layout({ children }: { children: React.ReactNode }) {
   const { auth, status } = useAuthStore();
   const { setStatus } = useAuthStore();
   useEffect(() => {
-    storeInitializer();
+    handleStoreInit();
+  }, []);
+
+  const handleStoreInit = async () => {
+    setStatus("loading");
+    await storeInitializer();
     if (auth) {
       setStatus("success");
     } else {
       setStatus("error");
     }
-  }, []);
+  };
 
-  if (status === "error" || !auth) {
+  if (status === "loading") {
+    return (
+      <div className=" min-h-screen flex flex-col justify-center items-center">
+        <h1 className="text-4xl text-gray-900">Loading...</h1>
+      </div>
+    );
+  }
+
+  if (!auth) {
     return (
       <div className=" min-h-screen flex flex-col justify-center items-center">
         <h1 className="text-4xl text-gray-900">
-          Please login to access this page
+          Hey Admin, Please login to access this page!
         </h1>
         <Link href="/login">
-          <Button
-          className="mt-2"
-          >Login</Button>
+          <Button className="mt-2">Login</Button>
         </Link>
       </div>
     );

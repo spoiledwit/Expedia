@@ -42,7 +42,6 @@ export const GET = async (req: NextRequest): Promise<NextResponse> => {
     const applications = await NewzealandForm.find({}).countDocuments();
     const users = await User.find({}).countDocuments();
     const contacts = await Contact.find({}).countDocuments();
-    // those are pending which dont have status completed
     const pendingApplications = await NewzealandForm.find({
       status: { $ne: "Completed" },
     }).countDocuments();
