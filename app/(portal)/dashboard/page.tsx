@@ -2,13 +2,11 @@
 import React, { useEffect, useState } from "react";
 import NewzealandApplication from "@/components/Portal/applications/newzealand";
 import NewzealandSteps from "@/components/Portal/steps/newzealand";
-import useAuthStore from "@/store/authStore";
 import axios from "axios";
 
 const DashboardPage = () => {
   const [loading, setLoading] = useState(false);
   const [hasApplications, setHasApplications] = React.useState(false);
-  const {status} = useAuthStore();
 
   useEffect(() => {
     haveApplications();
@@ -30,7 +28,7 @@ const DashboardPage = () => {
     }
   };
 
-  if (loading || status === "loading" || status  === "error") {
+  if (loading) {
     return <div>Loading...</div>;
   }
 
