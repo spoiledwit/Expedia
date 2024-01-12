@@ -8,7 +8,9 @@ const ProductsPage = () => {
   const [createUser, setCreateUser] = React.useState(false);
 
   return (
-    <div className="p-8 w-full">
+    <div 
+    style={{ overflowX: 'auto' }} 
+    className="p-8">
       <div className="flex items-center justify-between w-full">
         <h2 className="text-2xl font-semibold mb-4">User Managment</h2>
         <div className="flex justify-between mb-4">

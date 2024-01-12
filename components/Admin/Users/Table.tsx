@@ -44,6 +44,8 @@ export function UsersTable() {
           <TableHead>Name</TableHead>
           <TableHead>Email</TableHead>
           <TableHead>Privilege Level</TableHead>
+          <TableHead>Country Access</TableHead>
+          <TableHead>Countries</TableHead>
           <TableHead>Created At</TableHead>
         </TableRow>
       </TableHeader>
@@ -54,6 +56,12 @@ export function UsersTable() {
             <TableCell>{user.name}</TableCell>
             <TableCell>{user.email}</TableCell>
             <TableCell>{user.isAdmin ? "Admin" : "User"}</TableCell>
+            <TableCell>{user.countries?.length}</TableCell>
+            <TableCell>
+              {user.countries?.map((country: any) => (
+                <span key={country}>{country}, </span>
+              ))}
+            </TableCell>
             <TableCell>{user.createdAt}</TableCell>
           </TableRow>
         ))}
