@@ -68,39 +68,39 @@ const NewzealandApplication = () => {
     }),
 
     // Spouse Information
-    spouseSurname: z.string().min(1, { message: "required" }),
-    spouseGivenName: z.string().min(1, { message: "required" }),
-    spouseDob: z.string().min(1, { message: "required" }),
-    spousePlaceOfBirth: z.string().min(1, { message: "required" }),
-    spouseCityCountry: z.string().min(1, { message: "required" }),
-    spouseNationality: z.string().min(1, { message: "required" }),
+    spouseSurname: z.string(),
+    spouseGivenName: z.string(),
+    spouseDob: z.string(),
+    spousePlaceOfBirth: z.string(),
+    spouseCityCountry: z.string(),
+    spouseNationality: z.string(),
     spouseNic: z.number().nullable().optional(),
     spouseNicDateOfIssue: z.string().optional(),
     spouseNicDateOfExpiry: z.string().optional(),
-    spousePassportNumber: z.string().min(1, { message: "required" }),
-    spousePassportDateOfIssue: z.string().min(1, { message: "required" }),
-    spousePassportDateOfExpiry: z.string().min(1, { message: "required" }),
-    spousePassportCityOfIssue: z.string().min(1, { message: "required" }),
-    spouseCurrentResidentialAddress: z.string().min(1, { message: "required" }),
-    spouseContactNumber: z.string().min(1, { message: "required" }),
+    spousePassportNumber: z.string(),
+    spousePassportDateOfIssue: z.string(),
+    spousePassportDateOfExpiry: z.string(),
+    spousePassportCityOfIssue: z.string(),
+    spouseCurrentResidentialAddress: z.string(),
+    spouseContactNumber: z.string(),
     children: z.array(
       z.object({
-        surname: z.string().min(1, { message: "required" }),
-        givenName: z.string().min(1, { message: "required" }),
-        dob: z.string().min(1, { message: "required" }),
-        placeOfBirth: z.string().min(1, { message: "required" }),
-        cityAndCountry: z.string().min(1, { message: "required" }),
-        nationality: z.string().min(1, { message: "required" }),
+        surname: z.string(),
+        givenName: z.string(),
+        dob: z.string(),
+        placeOfBirth: z.string(),
+        cityAndCountry: z.string(),
+        nationality: z.string(),
         nic: z.string().nullable().optional(),
         nicDateOfIssue: z.string().optional(),
         nicDateOfExpiry: z.string().optional(),
-        passportNumber: z.string().min(1, { message: "required" }),
-        passportDateOfIssue: z.string().min(1, { message: "required" }),
-        passportDateOfExpiry: z.string().min(1, { message: "required" }),
-        passportCityOfIssue: z.string().min(1, { message: "required" }),
-        currentResidentialAddress: z.string().min(1, { message: "required" }),
-        education: z.string().min(1, { message: "required" }),
-        currentGradeInSchool: z.string().min(1, { message: "required" }),
+        passportNumber: z.string(),
+        passportDateOfIssue: z.string(),
+        passportDateOfExpiry: z.string(),
+        passportCityOfIssue: z.string(),
+        currentResidentialAddress: z.string(),
+        education: z.string(),
+        currentGradeInSchool: z.string(),
       })
     ),
     passportImage: z.string().min(1, { message: "required" }),
@@ -174,11 +174,32 @@ const NewzealandApplication = () => {
       spouseCurrentResidentialAddress: "",
       passportImage: "",
       cvPdf: "",
+      children: [
+        {
+          surname: "",
+          givenName: "",
+          dob: "",
+          placeOfBirth: "",
+          cityAndCountry: "",
+          nationality: "",
+          nic: "",
+          nicDateOfIssue: "",
+          nicDateOfExpiry: "",
+          passportNumber: "",
+          passportDateOfIssue: "",
+          passportDateOfExpiry: "",
+          passportCityOfIssue: "",
+          currentResidentialAddress: "",
+          education: "",
+          currentGradeInSchool: "",
+        }
+      ]
     },
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
+      console.log(values);
       await sendApplication(values);
       toast({
         title: "Success",
@@ -195,9 +216,7 @@ const NewzealandApplication = () => {
 
   const [step, setStep] = useState(1);
   const [noOfEducation, setNoOfEducation] = useState(1);
-  const [noOfEducationSpouse, setNoOfEducationSpouse] = useState(1);
   const [noOfJobs, setNoOfJobs] = useState(1);
-  const [noOfJobsSpouse, setNoOfJobsSpouse] = useState(1);
   const [noOfChildren, setNoOfChildren] = useState(1);
 
   const removeEducation = (index:number) => {
@@ -592,7 +611,7 @@ const NewzealandApplication = () => {
             <Button
               type="submit"
             >
-              Submit Application
+              {form.formState.isSubmitting ? "Submitting..." : "Submit"}
             </Button>
           )}
         </form>

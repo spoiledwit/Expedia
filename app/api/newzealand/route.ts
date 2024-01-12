@@ -21,6 +21,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
         }
       );
     }
+
   
     const { id } = session.user;
 
@@ -38,6 +39,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       );
     }
 
+
     const data = await req.json();
     const application = await NewzealandForm.create({
       ...data,
@@ -45,12 +47,15 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       status: "Pending",
     });
 
+
+
     return NextResponse.json({
       status: "success",
       message: "Application Submitted Successfully",
       data: application,
     });
   } catch (error) {
+    console.log(error);
     return NextResponse.json(
       {
         status: "Error",

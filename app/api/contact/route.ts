@@ -6,7 +6,7 @@ import nodemailer from "nodemailer";
 export const POST = async (req: NextRequest): Promise<NextResponse> => {
   try {
     await dbConnect();
-    const { name, phone, email, job, education, nationality } =
+    const { name, phone, email, job, education, nationality, message } =
       await req.json();
 
     const result = await Contact.create({
@@ -16,6 +16,7 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
       job,
       education,
       nationality,
+      message,
     });
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -36,7 +37,9 @@ export const POST = async (req: NextRequest): Promise<NextResponse> => {
           Email: ${email}
           Job: ${job}
           Education: ${education}
-          Nationality: ${nationality}`,
+          Nationality: ${nationality}
+          Message: ${message ? message : "No Message Provided"}
+          `,
     };
     await transporter.sendMail(mailOptions);
 

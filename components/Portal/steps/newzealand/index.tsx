@@ -23,45 +23,45 @@ const NewzealandSteps = () => {
       icon: <FaCheckCircle />,
       completed: true,
     },
-    {
-      title: 'Step 4',
-      description: 'Document verification by the admin',
-      hasForm: false,
-      icon: <FaRegCircle />,
-      completed: false,
-    },
-    {
-      title: 'Step 5',
-      description: 'Report Preparation Stage',
-      hasForm: false,
-      icon: <FaRegCircle />,
-      completed: false,
-    },
-    {
-      title: 'Step 6',
-      description: 'CV Revision Stage',
-      hasForm: true,
-      icon: <FaRegCircle />,
-      completed: false,
-    },
-    {
-      title: 'Step 9',
-      description: 'Job Offer Stage',
-      hasForm: false,
-      icon: <FaRegCircle />,
-      completed: false,
-    },
-    {
-      title: 'Step 10',
-      description: 'Visa Application Stage',
-      hasForm: false,
-      icon: <FaRegCircle />,
-      completed: false,
-    },
+    // {
+    //   title: 'Step 4',
+    //   description: 'Document verification by the admin',
+    //   hasForm: false,
+    //   icon: <FaRegCircle />,
+    //   completed: false,
+    // },
+    // {
+    //   title: 'Step 5',
+    //   description: 'Report Preparation Stage',
+    //   hasForm: false,
+    //   icon: <FaRegCircle />,
+    //   completed: false,
+    // },
+    // {
+    //   title: 'Step 6',
+    //   description: 'CV Revision Stage',
+    //   hasForm: true,
+    //   icon: <FaRegCircle />,
+    //   completed: false,
+    // },
+    // {
+    //   title: 'Step 9',
+    //   description: 'Job Offer Stage',
+    //   hasForm: false,
+    //   icon: <FaRegCircle />,
+    //   completed: false,
+    // },
+    // {
+    //   title: 'Step 10',
+    //   description: 'Visa Application Stage',
+    //   hasForm: false,
+    //   icon: <FaRegCircle />,
+    //   completed: false,
+    // },
   ];
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap flex-col">
       {steps.map((step, index) => (
         <div key={index} className={`p-4 border rounded-lg m-2 ${step.completed ? 'border-primary-blue' : 'border-primary-gold'}`}>
           <div className="flex items-center">
@@ -80,6 +80,16 @@ const NewzealandSteps = () => {
           </div>
         </div>
       ))}
+      <p
+      className=' cursor-default ml-2 mt-2'
+      >
+        4 more steps to go.
+      </p>
+      <p
+      className='text-sm text-gray-400 cursor-default ml-2'
+      >
+        You'd see the steps once it's processed by the system.
+      </p>
     </div>
   );
 };

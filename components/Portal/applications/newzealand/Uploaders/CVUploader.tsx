@@ -9,7 +9,6 @@ import {
 
 const CvUploader = ({ form }: { form: any }) => {
 
-  console.log(form.getValues())
   const [pdfs, setPdfs] = React.useState<any>([]);
   useEffect(() => {
     if (pdfs.length > 0) {
