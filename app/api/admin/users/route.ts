@@ -8,7 +8,7 @@ export const GET = async (req: NextRequest): Promise<NextResponse> => {
       await dbConnect();
       await checkAdmin(req);
   
-      const users = await User.find({})
+      const users = await User.find({}).sort({ createdAt: -1 });
       if (!users || users.length === 0) {
         return NextResponse.json(
           { status: "error", message: "No Users Found" },
@@ -29,3 +29,7 @@ export const GET = async (req: NextRequest): Promise<NextResponse> => {
     }
   };
   
+
+
+
+export const revalidate = 0;
