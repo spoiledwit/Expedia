@@ -22,8 +22,11 @@ export function UsersTable() {
   const fetchusers = async () => {
     setloading(true);
     try {
-      const res = await axios.get(`/api/admin/users?_=${new Date().getTime()}`);
-      setusers(res.data.users);
+      const res = await fetch(`/api/admin/users`, {
+        cache: "no-store",
+      });
+      const data = await res.json();
+      setusers(data.users);
     } catch (error) {
       console.log(error);
     } finally {
