@@ -7,6 +7,7 @@ type AuthStore = {
         name: string;
         email: string;
         isAdmin: boolean;
+        countries: string[];
     } | null;
 
     setStatus: (status: "loading" | "error" | "success") => void;

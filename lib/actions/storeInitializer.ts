@@ -7,12 +7,12 @@ export const storeInitializer = async () => {
       status: "loading",
     })
     const { data } = await axios.get(`/api/users`);
-    const { name, email, id, wishlist, cart, isAdmin } = data.result;
-    console.log(data);
+    const { name, email, id, countries, isAdmin } = data.result;
     useAuthStore.setState({
       status: "success",
       auth: {
         id,
+        countries,
         name,
         isAdmin,
         email,

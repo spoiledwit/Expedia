@@ -34,7 +34,7 @@ export async function GET(req: NextRequest, params:any) {
         }
       );
     }
-    const {name, email, wishlist, cart, city, country, isAdmin} = userData;
+    const {name, email, countries, isAdmin} = userData;
     return NextResponse.json(
       {
         status: "success",
@@ -42,11 +42,8 @@ export async function GET(req: NextRequest, params:any) {
           id,
           name,
           email,
-          wishlist,
-          cart,
-          isAdmin,
-          city,
-          country
+          countries,
+          isAdmin
         }
       },
       {

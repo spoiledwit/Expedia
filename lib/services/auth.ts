@@ -45,6 +45,7 @@ export const authOptions = {
       if (user) {
         token.email = user.email;
         token.id = user.id;
+        token.countries = user.countries;
         token.isAdmin = await ensureAdmin(user.id);
       }
       return token;
@@ -52,6 +53,7 @@ export const authOptions = {
     async session({ session, token }: { session: any; token: any }) {
       session.user.email = token.email;
       session.user.id = token.id;
+      session.user.countries = token.countries;
       session.user.isAdmin = token.isAdmin;
       return session;
     },
