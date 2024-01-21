@@ -11,14 +11,6 @@ const Footer = () => {
       name: "About Us",
       href: "/about-us",
     },
-    {
-      name: "Admin Portal",
-      href: "/admin",
-    },
-    {
-      name: "Client Portal",
-      href: "/dashboard",
-    },
   ];
 
   const immigrationCountries = [
@@ -171,7 +163,7 @@ const Footer = () => {
               className=" text-white hover:text-primary-gold transition-all"
               href="/"
             >
-              info@centennial migration.com
+              info@centennialmigration.com
             </a>
             <a
               className=" text-white hover:text-primary-gold transition-all"
