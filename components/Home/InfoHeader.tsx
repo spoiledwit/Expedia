@@ -1,6 +1,12 @@
 import { AiOutlineMail } from "react-icons/ai";
 import { AiOutlineClockCircle } from "react-icons/ai";
-import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsLinkedin,
+  BsTwitter,
+  BsYoutube,
+} from "react-icons/bs";
 import { AiOutlinePhone } from "react-icons/ai";
 
 const InfoHeader = () => {
@@ -32,10 +38,9 @@ const InfoHeader = () => {
           </div>
         </div>
 
-
-
-        <div className="flex items-center gap-3 mt-1">
-          <a href="https://www.facebook.com/centennialmigration"
+        <div className="flex items-center gap-4 mt-1">
+          <a
+            href="https://www.facebook.com/centennialmigration"
             target="_blank"
           >
             <BsFacebook
@@ -43,7 +48,8 @@ const InfoHeader = () => {
               className="text-white hover:text-primary-gold transition-all"
             />
           </a>
-          <a href="https://www.instagram.com/centennialmigration/"
+          <a
+            href="https://www.instagram.com/centennialmigration/"
             target="_blank"
           >
             <BsInstagram
@@ -51,11 +57,24 @@ const InfoHeader = () => {
               className="text-white hover:text-primary-gold transition-all"
             />
           </a>
-          <a href="https://www.linkedin.com/company/96444883"
-            target="_blank"
-          >
+          <a href="https://www.linkedin.com/company/96444883" target="_blank">
             <BsLinkedin
               size={20}
+              className="text-white hover:text-primary-gold transition-all"
+            />
+          </a>
+          <a href="https://twitter.com/Centennial_M" target="_blank">
+            <BsTwitter
+              size={20}
+              className="text-white hover:text-primary-gold transition-all"
+            />
+          </a>
+          <a
+            href="https://www.youtube.com/@CentennialMigration"
+            target="_blank"
+          >
+            <BsYoutube
+              size={24}
               className="text-white hover:text-primary-gold transition-all"
             />
           </a>

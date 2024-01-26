@@ -1,4 +1,10 @@
-import { BsFacebook, BsInstagram, BsLinkedin } from "react-icons/bs";
+import {
+  BsFacebook,
+  BsInstagram,
+  BsLinkedin,
+  BsTwitter,
+  BsYoutube,
+} from "react-icons/bs";
 import Link from "next/link";
 
 const Footer = () => {
@@ -66,8 +72,7 @@ const Footer = () => {
   return (
     <footer className=" z-10 relative px-8 pt-10 pb-6 md:px-24 xl:px-40 md:pt-10 w-full bg-primary-blue flex flex-col">
       <div className="w-full md:flex hidden flex-col md:flex-row gap-12 md:gap-0 justify-between items-center">
-        <div className="w-1/2 md:grid hidden place-items-center">
-        </div>
+        <div className="w-1/2 md:grid hidden place-items-center"></div>
         <section className=" text-white md:flex hidden text-lg font-medium flex-col w-full">
           <h3 className=" mb-8 text-white font-medium text-2xl md:text-4xl tracking-wide">
             Key Services
@@ -195,6 +200,18 @@ const Footer = () => {
         <a href="https://www.linkedin.com/company/96444883" target="_blank">
           <BsLinkedin
             size={24}
+            className="text-white hover:text-primary-gold transition-all"
+          />
+        </a>
+        <a href="https://twitter.com/Centennial_M" target="_blank">
+          <BsTwitter
+            size={24}
+            className="text-white hover:text-primary-gold transition-all"
+          />
+        </a>
+        <a href="https://www.youtube.com/@CentennialMigration" target="_blank">
+          <BsYoutube
+            size={28}
             className="text-white hover:text-primary-gold transition-all"
           />
         </a>

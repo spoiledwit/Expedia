@@ -61,19 +61,19 @@ export default function ContactInfo() {
 
         {/* Social Links */}
         <div className="md:w-full flex flex-col md:flex-row justify-center gap-6 md:gap-4">
-          <a href="/">
+          <a href="https://www.facebook.com/centennialmigration">
             <BsFacebook
               size={24}
               className="text-primary-blue hover:text-primary-gold transition-all"
             />
           </a>
-          <a href="/">
+          <a href="https://twitter.com/Centennial_M">
             <BsTwitter
               size={24}
               className="text-primary-blue hover:text-primary-gold transition-all"
             />
           </a>
-          <a href="/">
+          <a href="https://www.youtube.com/@CentennialMigration">
             <BsYoutube
               size={24}
               className="text-primary-blue hover:text-primary-gold transition-all"
