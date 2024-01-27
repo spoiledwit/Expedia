@@ -166,15 +166,21 @@ const Footer = () => {
             </a>
             <a
               className=" text-white hover:text-primary-gold transition-all"
-              href="/"
+              href="mailto:info@centennialmigration.com"
             >
               info@centennialmigration.com
             </a>
             <a
               className=" text-white hover:text-primary-gold transition-all"
-              href="/"
+              href="tel:+971565497013"
             >
               +971565497013
+            </a>
+            <a
+              className=" text-white hover:text-primary-gold transition-all"
+              href="tel:+97148928635"
+            >
+              +97148928635
             </a>
           </div>
         </section>
