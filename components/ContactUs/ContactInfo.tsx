@@ -27,7 +27,7 @@ export default function ContactInfo() {
                 Phone
               </h5>
               <a href="/" className=" text-primary-blue text-sm">
-                +971565497013
+                +971 4 8928635
               </a>
             </section>
           </div>
